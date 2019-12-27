@@ -1,0 +1,56 @@
+<h1 id="site-title"><a href="/">{{ .Site.Title }}</a></h1>
+<h5>{{ .Site.Params.subtitle }}</h5>
+
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="sidebar nav-list sidebar-nav span 2">
+        <!-- sidebar menu start-->
+        <ul style="list-style: none; padding-left:0;" class="sidebar-menu">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+ 
+            <li>
+            <a href="{{.URL}}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+          </li>
+          {{end}}
+        </ul>
+        <!-- sidebar menu end-->
+        <ul class="list-inline">
+  <li>
+    <a href="mailto:{{.Site.Params.email}}">
+      <i class="fa fa-fw fa-envelope-o"></i>
+    </a>
+  </li>
+{{ if isset .Site.Params "twitter_username" }}
+  <li> 
+    <a href="https://twitter.com/{{.Site.Params.twitter_username}}">
+      <i class="fa fa-lg fa-twitter"></i>
+    </a>
+  </li>
+{{ end }}
+{{ if isset .Site.Params "github_username" }}
+  <li> 
+    <a href="https://github.com/{{.Site.Params.github_username}}">
+{{ end }}
+      <i class="fa fa-lg fa-github"></i>
+    </a>
+  </li>
+{{ if isset .Site.Params "gscholar_code" }}
+  <li> 
+    <a href="https://scholar.google.com/citations?user={{.Site.Params.gscholar_code}}">
+      <i class="ai ai-google-scholar"></i>
+    </a>
+  </li>
+{{ end }}
+</ul>
+    </div>
+</aside>
+<!--sidebar end-->
+
+
+
+
+<hr class="hidden-md hidden-lg">
