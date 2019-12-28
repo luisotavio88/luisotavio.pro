@@ -41,8 +41,8 @@ blogdir = "blog"
 
     author = "Your Name"
     dateFormat = "2006/01/02"
-    email = "your_email@uppermidwest.edu"
-    github_username = "your_github_username"
+    email = "contato@luisotavio.pro"
+    github_username = "luisotavio88"
     twitter_username = "your_twitter_username"  # leave empty quotes to omit
     gscholar_code = "your_gscholar_code"        # leave empty quotes to omit    
 
