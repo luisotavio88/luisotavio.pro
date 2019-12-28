@@ -10,8 +10,7 @@ tags: []
 
 Esse é o teste de vídeo do Youtube
 
-<iframe width="560" height="315" src="https://youtu.be/Bb6jjFnc2WY" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z7-ggoyJQII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
