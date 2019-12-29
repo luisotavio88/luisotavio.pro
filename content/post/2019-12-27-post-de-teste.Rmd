@@ -12,9 +12,8 @@ Esse é o teste de vídeo do Youtube
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z7-ggoyJQII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
-```
+<iframe src="https://luisotavio.shinyapps.io/form_teste/" width=1000 height=800"></iframe>
+
 
 # R Markdown
 
