@@ -1,0 +1,28 @@
+---
+title: Post de teste
+author: Luis Otavio
+date: '2019-12-27'
+slug: teste-lead-yt
+categories:
+  - R
+tags: []
+---
+
+Esse é o teste de vídeo do Youtube
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z7-ggoyJQII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe src="https://luisotavio.shinyapps.io/form_teste/" frameborder="0" width=300 height=150"></iframe>
+
+
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+fit <- lm(dist ~ speed, data = cars)
+fit
+```

@@ -1,0 +1,22 @@
+library(blogdown)
+
+# blogdown::new_site(theme = "fsolt/hugo-prof", theme_example = TRUE)
+blogdown::new_site(theme = "themefisher/liva-hugo", theme_example = TRUE)
+
+blogdown::new_site()
+
+new_content() # use the add-in toggle on top! 
+serve_site() 
+
+
+file.create("netlify.toml")
+
+library(RMySQL)
+
+library(RMySQL)
+#conectar ao host
+mydb = dbConnect(MySQL(), user='admin', password='fj7js7ujx', host='guru3.cbnesfjpjilo.us-east-1.rds.amazonaws.com',encoding = "utf8")
+# creating a database using RMySQL in R
+dbSendQuery(mydb, "CREATE DATABASE luisotaviopro;")
+
+
