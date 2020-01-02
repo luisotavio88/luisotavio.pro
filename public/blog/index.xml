@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on Luis Otavio | Ciência de dados</title>
+    <title>Blogs on Luis Otavio | Ciência de dados</title>
     <link>/blog/</link>
-    <description>Recent content in blog on Luis Otavio | Ciência de dados</description>
+    <description>Recent content in Blogs on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -126,15 +126,6 @@
       
       <guid>/blog/post-9/</guid>
       <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/blog/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/blog/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.</description>
     </item>
     
   </channel>

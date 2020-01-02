@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/contact/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url>
@@ -34,6 +29,11 @@
   
   <url>
     <loc>/categories/android-and-gmaing/</loc>
+    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
   
@@ -118,12 +118,12 @@
   </url>
   
   <url>
-    <loc>/categories/html/</loc>
+    <loc>/tags/html/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/html/</loc>
+    <loc>/categories/html/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
   
@@ -170,31 +170,6 @@
   <url>
     <loc>/categories/web-design/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/regression/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
 </urlset>
