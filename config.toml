@@ -1,11 +1,12 @@
 ######################## default configuration ####################
-baseURL = "https://luisotavio.pro"
+baseURL = "https://www.luisotavio.pro"
 languageCode = "en-us"
 title = "Luis Otavio | Ciência de dados:"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
 disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
 [outputs]
   home = ["HTML", "AMP", "RSS", "JSON"]
