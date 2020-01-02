@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = "https://luisotavio.pro"
 languageCode = "en-us"
-title = "Luis Otavio | Ciência de dados"
+title = "Luis Otavio | Ciência de dados:"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
