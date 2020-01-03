@@ -86,9 +86,8 @@ author = "Themefisher"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 # Contact Information
-mobile = "0124857985320"
-email = "demo@email.com"
-location = "Dhaka, Bangladedsh"
+email = "contato@luisotavio.pro"
+location = "Belo Horizonte, Brasil"
 # copyright
 copyright = "| @2019 [Themefisher](https://themefisher.com) All Rights Reserved |"
 
@@ -104,31 +103,31 @@ enable = true
 ############################ news letter ########################
 [params.newsletter]
 enable = true
-title = "Join Our Newsletter"
-content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero"
+title = "Receba nosso conteúdo exclusivo"
+content = "Faça parte do nosso grupo exclusivo e receba as novidades mais interessantes sobre Data Sciente e R em primeira mão."
 
 ############################# social site ########################
-[[params.social]]
-title = "facebook"
-icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
-link = "#"
+#[[params.social]]
+#title = "facebook"
+#icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
+#link = "#"
 
 [[params.social]]
 title = "twitter"
 icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
-link = "#"
+link = "https://twitter.com/luisotaviopro"
 
 [[params.social]]
 title = "instagram"
 icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
-link = "#"
+link = "https://instagram.com/_u/luisotavio.pro"
 
-[[params.social]]
-title = "github"
-icon = "ti-github" # themify icon : https://themify.me/themify-icons
-link = "#"
+#[[params.social]]
+#title = "github"
+#icon = "ti-github" # themify icon : https://themify.me/themify-icons
+#link = "#"
 
 [[params.social]]
 title = "linkedin"
 icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
-link = "#"
+link = "https://www.linkedin.com/in/luís-otávio-marques-fernandes-93308b97/"
