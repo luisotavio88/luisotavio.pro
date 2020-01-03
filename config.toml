@@ -1,11 +1,11 @@
 ####################### default configuration ####################
 baseURL = "https://luisotavio.pro"
-languageCode = "en-us"
+languageCode = "pt-br"
 title = "Luis Otavio | Ciência de dados"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
-disqusShortname = ""
+disqusShortname = "luisotavio-pro"
 
 [outputs]
 home = ["HTML", "AMP", "RSS", "JSON"]
@@ -89,7 +89,7 @@ googleAnalitycsID = "Your ID"
 email = "contato@luisotavio.pro"
 location = "Belo Horizonte, Brasil"
 # copyright
-copyright = "| @2019 [Themefisher](https://themefisher.com) All Rights Reserved |"
+copyright = "| ®2019 [Luís Otávio](https://luisotavio.pro) Todos os direitos reservados |"
 
 # Preloader
 [params.preloader]
