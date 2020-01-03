@@ -1,6 +1,6 @@
 ####################### default configuration ####################
 baseURL = "https://luisotavio.pro"
-languageCode = "pt-br"
+languageCode = "en-us"
 title = "Luis Otavio | Ciência de dados"
 theme = "liva-hugo"
 summaryLength = "10"
@@ -45,33 +45,33 @@ URL = "plugins/search/search.js"
 
 # main menu
 [[menu.main]]
-name = "About"
+name = "Sobre"
 URL = "about/about"
 weight = 2
 
 [[menu.main]]
-name = "Post"
+name = "Blog"
 URL = "blog"
 weight = 3
 
 [[menu.main]]
-name = "Contact"
+name = "Contato"
 URL = "contact"
 weight = 4
 
 # footer menu
 [[menu.footer]]
-name = "About"
+name = "Sobre"
 URL = "about/about"
 weight = 2
 
 [[menu.footer]]
-name = "Post"
+name = "Blog"
 URL = "blog"
 weight = 3
 
 [[menu.footer]]
-name = "Contact"
+name = "Contato"
 URL = "contact"
 weight = 4
 

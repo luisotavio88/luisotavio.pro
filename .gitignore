@@ -4,5 +4,6 @@
 .Ruserdata
 .Rmd
 .Rmarkdown
+.toml
 public/
 Thumbs.db
