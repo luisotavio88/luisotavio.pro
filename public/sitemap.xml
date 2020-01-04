@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/new/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/post-no-sub-de-post/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/programming-language/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
     <lastmod>2019-11-29T10:07:47+06:00</lastmod>
   </url>
   
@@ -28,16 +58,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/new/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/photos/</loc>
     <lastmod>2019-11-29T10:07:47+06:00</lastmod>
   </url>
@@ -53,22 +73,12 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/post-10/</loc>
     <lastmod>2019-11-05T10:07:47+06:00</lastmod>
   </url>
   
   <url>
     <loc>/blog/post-12/</loc>
-    <lastmod>2019-11-03T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/programming-language/</loc>
     <lastmod>2019-11-03T10:07:47+06:00</lastmod>
   </url>
   
