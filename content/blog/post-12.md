@@ -1,7 +1,7 @@
 ---
 categories:
 - Programming Language
-date: "2019-10-29T10:07:47+06:00"
+date: "2019-11-03T10:07:47+06:00"
 description: this is meta description
 draft: false
 image: images/post/post-3.jpg

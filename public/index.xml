@@ -6,18 +6,54 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate>
+    <lastBuildDate>Tue, 05 Nov 2019 10:07:47 +0600</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About Me</title>
+      <title>How To Use Checklists To Improve Your UX</title>
+      <link>/blog/post-10/</link>
+      <pubDate>Tue, 05 Nov 2019 10:07:47 +0600</pubDate>
+      
+      <guid>/blog/post-10/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
+    <item>
+      <title>How To Use Checklists To Improve Your UX</title>
+      <link>/blog/post-12/</link>
+      <pubDate>Sun, 03 Nov 2019 10:07:47 +0600</pubDate>
+      
+      <guid>/blog/post-12/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
+    <item>
+      <title>Segundo post criado</title>
+      <link>/blog/post-15/</link>
+      <pubDate>Fri, 01 Nov 2019 10:07:47 +0600</pubDate>
+      
+      <guid>/blog/post-15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Primeiro post criado</title>
+      <link>/blog/post-14/</link>
+      <pubDate>Wed, 30 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>/blog/post-14/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sobre mim</title>
       <link>/about/about/</link>
       <pubDate>Tue, 29 Oct 2019 13:49:23 +0600</pubDate>
       
       <guid>/about/about/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>Eu sou o Luís Otávio. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
     <item>
@@ -31,28 +67,10 @@
     
     <item>
       <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-10/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-10/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
       <link>/blog/post-11/</link>
       <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
       <guid>/blog/post-11/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-12/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-12/</guid>
       <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
     </item>
     

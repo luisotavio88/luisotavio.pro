@@ -3,8 +3,78 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/about/about/</loc>
-    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
+    <loc>/blog/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/game/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/go-language/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/post-10/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/html/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/new/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/photos/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/post-12/</loc>
+    <lastmod>2019-11-03T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/programming-language/</loc>
+    <lastmod>2019-11-03T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/post-15/</loc>
+    <lastmod>2019-11-01T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/post-14/</loc>
+    <lastmod>2019-10-30T10:07:47+06:00</lastmod>
   </url>
   
   <url>
@@ -18,12 +88,12 @@
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/search/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url>
   
   <url>
-    <loc>/search/</loc>
+    <loc>/about/about/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url>
   
@@ -33,42 +103,12 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/game/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/go-language/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/post-1/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/post-10/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/post-11/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-12/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
   
@@ -118,11 +158,6 @@
   </url>
   
   <url>
-    <loc>/tags/html/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/html/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
@@ -133,37 +168,12 @@
   </url>
   
   <url>
-    <loc>/tags/new/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/photos/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/programming-language/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/python/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/python/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/react/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
   </url>
   

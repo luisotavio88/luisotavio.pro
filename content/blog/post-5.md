@@ -11,7 +11,7 @@ tags:
 - Python
 - New
 title: How To Use Checklists To Improve Your UX
-type: post
+type: recente
 ---
 
 # Heading 1

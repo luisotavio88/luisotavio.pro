@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>About Me</title>
+      <title>Sobre mim</title>
       <link>/about/about/</link>
       <pubDate>Tue, 29 Oct 2019 13:49:23 +0600</pubDate>
       
       <guid>/about/about/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>Eu sou o Luís Otávio. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
     </item>
     
   </channel>

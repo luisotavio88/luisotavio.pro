@@ -6,7 +6,7 @@
     <description>Recent content in Go Language on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate>
+    <lastBuildDate>Tue, 05 Nov 2019 10:07:47 +0600</lastBuildDate>
     
 	<atom:link href="/categories/go-language/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,28 @@
     <item>
       <title>How To Use Checklists To Improve Your UX</title>
       <link>/blog/post-10/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <pubDate>Tue, 05 Nov 2019 10:07:47 +0600</pubDate>
       
       <guid>/blog/post-10/</guid>
       <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
+    <item>
+      <title>Segundo post criado</title>
+      <link>/blog/post-15/</link>
+      <pubDate>Fri, 01 Nov 2019 10:07:47 +0600</pubDate>
+      
+      <guid>/blog/post-15/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Primeiro post criado</title>
+      <link>/blog/post-14/</link>
+      <pubDate>Wed, 30 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>/blog/post-14/</guid>
+      <description></description>
     </item>
     
     <item>
