@@ -6,24 +6,15 @@
     <description>Recent content in Categories on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Nov 2019 10:07:47 +0600</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Android And Gmaing</title>
-      <link>/categories/android-and-gmaing/</link>
-      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/android-and-gmaing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Go Language</title>
       <link>/categories/go-language/</link>
-      <pubDate>Tue, 05 Nov 2019 10:07:47 +0600</pubDate>
+      <pubDate>Fri, 29 Nov 2019 10:07:47 +0600</pubDate>
       
       <guid>/categories/go-language/</guid>
       <description></description>
@@ -35,6 +26,15 @@
       <pubDate>Sun, 03 Nov 2019 10:07:47 +0600</pubDate>
       
       <guid>/categories/programming-language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android And Gmaing</title>
+      <link>/categories/android-and-gmaing/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>/categories/android-and-gmaing/</guid>
       <description></description>
     </item>
     

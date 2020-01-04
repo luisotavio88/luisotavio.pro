@@ -1,10 +1,16 @@
 ---
-title: post de teste 3
-author: Luis Otavio
-date: '2020-01-04'
-slug: slug-do-post-3
 categories:
-  - Android And Gmaing
+- Go Language
+date: "2019-11-29T10:07:47+06:00"
+description: this is meta description
+draft: false
+image: images/post/post-1.jpg
 tags:
-  - New
+- Photos
+- Game
+- HTML
+- Python
+- New
+title: post de teste 3
+type: post
 ---
