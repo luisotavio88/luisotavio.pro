@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>teste</title>
+      <link>/blog/captura/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/captura/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>post de teste 3</title>
       <link>/blog/2020-01-04-post-de-teste-3/</link>
       <pubDate>Fri, 29 Nov 2019 10:07:47 +0600</pubDate>
@@ -171,6 +180,15 @@
       
       <guid>/blog/post-9/</guid>
       <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/captura/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/captura/</guid>
+      <description></description>
     </item>
     
   </channel>

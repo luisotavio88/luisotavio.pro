@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url>
@@ -38,8 +43,8 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
+    <loc>/blog/captura/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -195,6 +200,11 @@
   <url>
     <loc>/categories/web-design/</loc>
     <lastmod>2019-10-29T10:07:47+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/captura/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
