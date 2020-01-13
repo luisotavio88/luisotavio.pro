@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instalação on Luis Otavio | Ciência de dados</title>
+    <link>/tags/instala%C3%A7%C3%A3o/</link>
+    <description>Recent content in Instalação on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 09 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/instala%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como instalar o R e o Rstudio</title>
+      <link>/blog/como-instalar-o-r-e-o-rstudio/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/como-instalar-o-r-e-o-rstudio/</guid>
+      <description>Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.</description>
+    </item>
+    
+  </channel>
+</rss>

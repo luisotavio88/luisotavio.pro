@@ -1,0 +1,100 @@
+---
+title: Como ler sua planilha de excel no R
+author: Luis Otavio
+date: '2020-01-10'
+slug: como-ler-planilha-excel-no-R
+categories:
+  - Post
+tags:
+  - Excel
+  - R
+  - RStudio
+image: images/post_principal/excel_to_R.png
+type: recente
+---
+
+Precisa importar seus dados de Excel usando o R ou o RStudio?
+**Nesse post você vai aprender três formas rápidas para ler dados do Excel** 
+O seu arquivo pode estar nos fomatos xls ou xlsx, ambos funcionarão! :) 
+
+## Método 1 – Copiando os dados do Excel e importando para o R.
+
+1 – Abra o seu arquivo de Excel, selecione os dados que deseja copiar e copie os dados (Ctrl + C). 
+
+2 – Execute o código abaixo para importar os dados copiados no Excel. 
+
+```{r,eval=F}
+meus_dados <- read.table(file = "clipboard", sep = "\t", header=TRUE)
+```
+
+Quando copiamos os dados no Excel, eles ficam armazenados no clipboard do nosso computador, então o que estamos fazendo é falando para o R ler a tabela (função read.table) que estão no clipboard e atribuir essa tabela aos “meus_dados”.
+
+3 – Pronto!
+
+## Método 2 – Importar arquivos do Excel sem usar programação
+
+Agora vamos ver como importar um arquivo do Excel para o R usando apenas o nosso mouse, é muito simples!
+
+1 - Na aba __“Enviroment”__, vamos clicar em __Import Dataset__ e escolher __From Excel__.
+
+<center>
+![Excel para R](/images/post_interno/post_excel.png){ width=85% }
+</center>
+
+2 – Você provavelmente ainda não instalou o pacote __readxl__, então o RStudio vai te perguntar se deseja instalar o pacote. Confirme a instalação.
+
+<center>
+![Excel para R](/images/post_interno/post_excel2.png){ width=85% }
+</center>
+
+3 -  Aparecerá uma aba para você fazer a leitura dos dados desejados. 
+Clique em __Browse__ para escolher o arquivo de Excel que você irá importar.
+Depois em __Sheet__ escolha a aba de seu arquivo onde está a tabela que você quer importar.
+(Caso queira importar várias abas é só repetir os passos, importando uma aba de cada vez)
+
+<center>
+![Excel para R](/images/post_interno/post_excel3.png){ width=85% }
+</center>
+
+4 – Clique em Import.
+
+## Método 3 – Abrir os dados do Excel no R usando o pacote __readxl__
+
+Esse método é bem parecido com o segundo, porém aqui vamos usar um pouco de programação.
+
+1 - Caso você ainda não tenha instalado o pacote readxl, execute o seguinte comando:
+```{r, eval=FALSE}
+install.packages("readxl")
+```
+
+2 -  Vamos carregar o pacote que iremos usar (readxl):
+Execute o comando:
+
+```{r}
+library("readxl")
+```
+
+3 – Agora vamos buscar a planilha que você precisa usando a função ```read_excel```.
+
+Os argumentos que vamos usar na função são: 
+
+a)	o endereço e nome do seu arquivo;
+b)	a aba da planilha que você quer ler.
+
+Excute o código:
+
+```{r,eval=FALSE}
+meus_dados <- read_excel("seu_arquivo.xlsx", sheet = "nome da aba")
+```
+
+-	caso o seu arquivo esteja na mesma pasta do seu projeto, você não precisa colocar todo o endereço do arquivo.
+
+-	Em sheet você pode colocar o nome da aba do Excel que você quer ler ou seu número (1, 2, 3, etc). Caso você coloque o número, não use aspas.
+
+-	Essa função serve tanto para arquivos xls como para xlsx.
+
+Escolha o seu método preferido entre os três!
+
+Agora que nossos dados já estão no R, maos à obra!! Bons trabalhos! 
+
+

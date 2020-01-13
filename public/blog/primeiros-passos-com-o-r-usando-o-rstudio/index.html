@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+  <meta charset="utf-8">
+  <title>Luis Otavio | Ciência de dados</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="Luís Otávio">
+  <meta name="generator" content="Hugo 0.62.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
+      <a class="navbar-brand mobile-view" href="/"><img class="img-fluid"
+          src="/images/logo.png" alt="Luis Otavio | Ciência de dados"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/luisotavio88"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/user/luisotavio1988/"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/luisotaviopro"><i class="ti-twitter-alt"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://instagram.com/_u/luisotavio.pro"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/lu%c3%ads-ot%c3%a1vio-marques-fernandes-93308b97/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="/"><img class="img-fluid"
+            src="/images/logo.png" alt="Luis Otavio | Ciência de dados"></a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"> Home </a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/about">Sobre</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contato</a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/tutorial"
+          class="text-primary">Tutorial</a>
+        
+        <h2>Os primeiros passos com o R - usando o Rstudio</h2>
+        <div class="mb-3 post-meta">
+          <span>Por Luís Otávio</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>10 January 2020</span>
+          
+        </div>
+        
+        <img src="/images/post_principal/primeirospassos.png" class="img-fluid w-100 mb-4" alt="Os primeiros passos com o R - usando o Rstudio">
+        
+        <div class="content mb-5">
+          
+
+
+<p>Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa.</p>
+<p>O primeiro passo é criar um novo Projeto.
+O que é um Projeto no RStudio?
+O Projeto é o espaço que irá reunir tudo que for desenvolvido com um mesmo objetivo.</p>
+<p>Olha só:</p>
+<p>Você cria um projeto no RStudio para desenvolver atividades dentro de um determinado contexto, por exemplo: uma pesquisa da universidade, um estudo para o seu trabalho, uma análise de consultoria, etc.</p>
+<p>Então, contextos diferentes, exigem projetos diferentes (para sua própria organização).</p>
+<p>Em seu projeto, você vai conseguir ver todos os códigos que você desenvolveu, todas as tabelas que você está usando, os seus resultados, arquivos, etc.</p>
+<p>Então vamos criar o nosso primeiro projeto?</p>
+<p>É muito fácil, clique em “File” e depois “New Project”, depois disso vai aparecer essa tela:</p>
+<center>
+<img src="/images/post_interno/primeirospassos1.png" title="fig:" alt="download R" style="width:75.0%" />
+</center>
+<p>Se você quiser criar uma nova pasta para guardar todos os arquivos do seu projeto, clique em “New Directory”. Se quiser usar uma pasta que já existe, clique na opção “Existing Directory”.</p>
+<p>Se você escolheu criar uma nova pasta, agora clique em “New Project”.</p>
+<center>
+<img src="/images/post_interno/primeirospassos2.png" title="fig:" alt="download R" style="width:75.0%" />
+</center>
+<p>Agora é só dar um nome para o seu projeto, escolher onde vai salvá-lo e clicar em “Create Project”. Pronto! :)</p>
+<p>Nossos primeiros passos dentro do nosso Projeto – por dentro do RStudio.</p>
+<p>Quando abrimos o RStudio, notamos que a tela está dividida em 4 partes: Editor, Console, Ambiente e Output.</p>
+<center>
+<img src="/images/post_interno/primeirospassos3.png" title="fig:" alt="download R" style="width:95.0%" />
+</center>
+<p>Vou te explicar pra que serve cada uma das partes e como elas vão facilitar nossa vida!</p>
+<div id="editor" class="section level2">
+<h2>EDITOR</h2>
+<p>Essa é a parte onde vamos <strong>escrever o nosso código.</strong>
+Para rodar um código escrito no editor, basta deixar o cursor do mouse na linha que você deseja rodar e apertar o botão “run” ou CTRL + Enter. Você também pode selecionar várias linhas e executá-lo da mesma forma.</p>
+<p>Os códigos serão salvos como arquivos comuns e tem a extensão “.R”.</p>
+<p>Quando criarmos um novo código, que não tem relação com o primeiro, podemos criar um novo arquivo. Assim fica tudo mais organizado. Nesse caso, cada arquivo vai ser uma aba no editor.</p>
+<p>No editor, você vai escrever o seu código e também pode fazer comentários. O comentário é simplesmente para te lembrar o que você fez ali, caso você volte a ver o código alguns dias depois. Os comentários devem ser escritos depois do “#”.</p>
+<p>Assim o R irá saber que aquilo não é um código.</p>
+</div>
+<div id="console" class="section level2">
+<h2>CONSOLE</h2>
+<p>Aqui é onde você vê a mágica acontecendo.</p>
+<p>No console vemos o código rodando e o que está acontecendo.</p>
+<p>Você poderá ver aqui as respostas que serão geradas pelo seu código e também mensagens do R para você.</p>
+<p>Por exemplo, se tiver algum erro no seu código ou algum alerta do R, ele te irá escrever uma mensagem para você aqui no console. Essas mensagens aparecem em vermelho.</p>
+<p>Também é possível colocar o seu código diretamente no Console e apertar Enter para ele rodar. Mas fazendo isso você acaba perdendo em organização.</p>
+</div>
+<div id="ambiente" class="section level2">
+<h2>AMBIENTE</h2>
+<p>Na aba ambiente, conseguimos ver as nossas fontes de dados e o resultados que já conseguimos com o nosso código.</p>
+<p>Então se você tiver importado uma tabela do Excel, ela vai ficar descrita aqui. E basta você clicar nela para ela abrir dentro do próprio R.</p>
+<p>Se você tiver feito um cálculo e guardado o resultado em uma variável, vai aparecer aqui também!</p>
+<p>Nessa parte também temos o botão “Import Dataset”, ele nos ajuda muito quando queremos usar uma tabela que está fora do R.</p>
+<p>Por exemplo: uma tabela do excel, em csv, txt ou vários outros formatos…</p>
+</div>
+<div id="output" class="section level2">
+<h2>OUTPUT</h2>
+<p>Nessa última parte, temos algumas abas: Files, Plots, Packages, Help e Viewer.</p>
+<p>Na aba Files, o RStudio nos mostra os arquivos que estão na pasta que estamos com o nosso projeto aberto.</p>
+<p>Na aba Plots, podemos ver os gráficos que geramos com o nosso código. Podemos usar as setinhas para passar os gráficos quando tivermos mais de um.</p>
+<p>A aba Packages é muito útil para instalarmos ou atualizarmos os pacotes do R. Para saber mais o que são os Pacotes, <a href="https://luisotavio.pro/" target="_blank">CLIQUE AQUI.</a></p>
+<p>A aba Help será um grande amigo, ela serve para tirar as nossas dúvidas. Lá descreve cada pacote do R, fala para o que serve e também como utilizar cada função.</p>
+<p>Além disso, no final da descrição de cada função, sempre tem exemplos de uso. Os exemplos nos ajudam muito no aprendizado.</p>
+</div>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "luisotavio-pro" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2>Receba nosso conteúdo exclusivo</h2>
+        <p class="text-light px-md-5 py-4 border-left border-right border-primary">
+          Faça parte do nosso grupo exclusivo e receba as novidades mais interessantes sobre Data Sciente e R em primeira mão.</p>
+        <form action="#" class="row justify-content-center">
+          <div class="input-group col-md-8">
+            <input type="text" class="form-control" placeholder="Seu melhor e-mail">
+            <div class="input-group-append">
+              <button class="input-group-text btn btn-primary">Inscrever!</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Meu contato</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Belo Horizonte, Brasil</li>
+          <li class="mb-3"><a class="text-dark" href="mailto:contato@luisotavio.pro"><i
+                class="ti-email mr-3 text-primary"></i>contato@luisotavio.pro</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Redes Sociais</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/luisotavio88">facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.youtube.com/user/luisotavio1988/">youtube</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://twitter.com/luisotaviopro">twitter</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://instagram.com/_u/luisotavio.pro">instagram</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/lu%c3%ads-ot%c3%a1vio-marques-fernandes-93308b97/">linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categorias</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/post">Post</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/tutorial">Tutorial</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Atalhos</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="/about/about">Sobre</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/blog">Blog</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/contact">Contato</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | ®2019 <a href="https://luisotavio.pro">Luís Otávio</a> Todos os direitos reservados |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="/plugins/jQuery/jquery.min.js"></script>
+
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="/plugins/slick/slick.min.js"></script>
+
+<script src="/plugins/venobox/venobox.min.js"></script>
+
+<script src="/plugins/search/fuse.min.js"></script>
+
+<script src="/plugins/search/mark.js"></script>
+
+<script src="/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-155426013-1', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>

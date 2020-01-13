@@ -1,6 +1,10 @@
 {
-    "path" : "~/ESTATISTICA NA PRATICA/luisotavio.pro/content",
+    "path" : "~/ESTATISTICA NA PRATICA/luisotavio.pro/themes/liva-hugo/assets/scss/templates",
     "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 4
+        },
         {
             "ascending" : true,
             "columnIndex" : 2

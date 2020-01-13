@@ -3,98 +3,118 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/principais-motivos-para-voc%C3%AA-usar-o-r/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ajuda/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/arquivo-de-texto/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/como-conseguir-ajuda-no-r/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/como-instalar-um-pacote-no-r/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/como-ler-planilha-excel-no-r/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/csv/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/excel/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/new/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <loc>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/post-no-sub-de-post/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <loc>/tags/pacote/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <loc>/categories/post/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/programming-language/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <loc>/tags/primeiros-passos/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rstudio/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/captura/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <loc>/categories/tutorial/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/game/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
+    <loc>/tags/txt/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/go-language/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
+    <loc>/blog/como-instalar-o-r-e-o-rstudio/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/html/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/photos/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/2020-01-04-post-de-teste-3/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/python/</loc>
-    <lastmod>2019-11-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-10/</loc>
-    <lastmod>2019-11-05T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-12/</loc>
-    <lastmod>2019-11-03T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-15/</loc>
-    <lastmod>2019-11-01T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-14/</loc>
-    <lastmod>2019-10-30T10:07:47+06:00</lastmod>
+    <loc>/tags/instala%C3%A7%C3%A3o/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -115,96 +135,6 @@
   <url>
     <loc>/about/about/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/android-and-gmaing/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-1/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-11/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-13/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-2/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-3/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-4/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-5/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-6/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-7/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-8/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/post-9/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/html/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/html-css/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/python/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/react/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/web-design/</loc>
-    <lastmod>2019-10-29T10:07:47+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/captura/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

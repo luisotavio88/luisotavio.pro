@@ -6,71 +6,26 @@
     <description>Recent content in Categories on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Programming Language</title>
-      <link>/categories/programming-language/</link>
-      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Post</title>
+      <link>/categories/post/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/programming-language/</guid>
+      <guid>/categories/post/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Go Language</title>
-      <link>/categories/go-language/</link>
-      <pubDate>Fri, 29 Nov 2019 10:07:47 +0600</pubDate>
+      <title>Tutorial</title>
+      <link>/categories/tutorial/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/go-language/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android And Gmaing</title>
-      <link>/categories/android-and-gmaing/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/categories/android-and-gmaing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HTML</title>
-      <link>/categories/html/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/categories/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HTML &amp; CSS</title>
-      <link>/categories/html-css/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/categories/html-css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>/categories/python/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web Design</title>
-      <link>/categories/web-design/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/categories/web-design/</guid>
+      <guid>/categories/tutorial/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,80 @@
+---
+title: Como conseguir ajuda no R?
+author: Luis Otavio
+date: '2020-01-10'
+slug: como-conseguir-ajuda-no-r
+categories:
+  - Tutorial
+tags:
+  - R
+  - Ajuda
+  - RStudio
+image: images/post_principal/help.jpg
+type: recente
+---
+
+O que faz o R ser um dos mais conhecidos e potentes softwares de Estatística com certeza é a sua comunidade.
+
+A comunidade são todas as pessoas que usam e contribuem com o R.
+
+Como já falamos aqui, o R é um software Open Source. Isso quer dizer que os usuários (incluindo você) podem contribuir no desenvolvimento do programa.
+
+A comunidade do R é extremamente ativa! Isso faz que seja muito provável já existir um pacote com a função que você precisa (porque alguém já desenvolveu).
+
+Outro benefício enorme de uma comunidade ativa é o auxílio quando precisamos de ajuda. É muito fácil solucionar nossas dúvidas com essa ajuda externa. 
+
+Além disso, o R possui uma ajuda interna.
+
+Você pode seguir a seguinte direção quando precisar de ajuda:
+
+## Você já sabe qual o pacote e função precisa usar?
+
+Se esse é o seu caso, a ajuda do próprio R será suficiente. 
+
+Todos os pacotes possuem uma documentação explicando como usar o pacote e cada função, com exemplos!
+
+Ajuda para usar uma função:
+
+Para tirar suas dúvidas sobre uma função específica, você deve ter certeza que o pacote da função está carregado no R.
+
+Exemplo: A função ```arrange``` está dentro do pacote ```"dplyr"``` e serve para ordenar as linhas de uma tabela de acordo com os valores de uma variável (coluna). O que eu faço se preciso pedir ajuda para usar essa função?
+
+Basta carregar o pacote ```"dplyr"``` rodando o seguinte comando: ```library(dplyr)``` e depois digitar diretamente no Console: ```?arrange``` e rodar o comando.
+
+Então vai abrir uma tela de ajuda, explicando tudo sobre a função **arrange.**
+
+O texto de ajuda das funções estará estruturado com as seguintes partes principais:
+
+Description – com uma breve descrição da função
+Usage – como está estruturada a função e o que você precisa informar para calcular o que deseja
+Arguments – informações sobre cada INPUT que você precisa colocar na função.
+Examples – Casos práticos de uso da função e que são reproduzíveis no seu computador.
+
+## E se você não sabe nem a função que deseja usar?
+
+Nesse caso, a melhor forma é pedir ajuda para o Google! :)
+Coloque no Google: 
+R + palavras chaves do que você deseja fazer
+Dica: se você ficar a busca em inglês, irá aumentar as suas chances de achar uma resposta rapidamente. Já que o mundo inteiro poderá te ajudar...
+
+## O melhor site de ajuda para o R
+
+O site Stack OverFlow é um site de perguntas e respostas usado por programadores. É uma plataforma excepcional e que certamente irá te ajudar muito nessa caminhada.
+
+Quando você fizer a busca no Google (passo anterior), provavelmente verá que os primeiros resultados da busca são do Stack OverFlow. 
+
+Dê preferência aos resultados do Stack OverFlow. Certamente vão te ajudar muito.
+
+E se você não achar a resposta de jeito nenhum para a sua dúvida?
+
+Se a sua pergunta ainda não estiver lá no Stack OverFlow, você pode criar a sua pergunta e, em pouco tempo, é provável que o pessoal te responda.
+
+Como fazer uma boa pergunta no Stack OverFlow?
+
+Veja as dicas do próprio site. [CLIQUE AQUI.](https://pt.stackoverflow.com/help/how-to-ask){target="_blank"}
+
+Além das dicas que já estão nesse link, tente colocar um exemplo que a pessoa possa reproduzir no computador dela. Isso irá facilitar para o pessoa entender qual é exatamente a sua dúvida.
+
+Essas são as principais formas de conseguir ajuda no R. **Agora mãos à obra!**
+
+

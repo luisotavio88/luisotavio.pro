@@ -6,72 +6,72 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>post no sub de post</title>
-      <link>/post/post-no-sub-de-post/</link>
-      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <title>6 principais motivos para você usar o R</title>
+      <link>/blog/principais-motivos-para-voc%C3%AA-usar-o-r/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/post-no-sub-de-post/</guid>
-      <description></description>
+      <guid>/blog/principais-motivos-para-voc%C3%AA-usar-o-r/</guid>
+      <description>O R é o queridinho dos estudantes e profissionais que buscam analisar dados, construir modelos ou Dashboards com autonomia e facilidade.</description>
     </item>
     
     <item>
-      <title>teste</title>
-      <link>/blog/captura/</link>
-      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Como conseguir ajuda no R?</title>
+      <link>/blog/como-conseguir-ajuda-no-r/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/captura/</guid>
-      <description></description>
+      <guid>/blog/como-conseguir-ajuda-no-r/</guid>
+      <description>O que faz o R ser um dos mais conhecidos e potentes softwares de Estatística com certeza é a sua comunidade.</description>
     </item>
     
     <item>
-      <title>post de teste 3</title>
-      <link>/blog/2020-01-04-post-de-teste-3/</link>
-      <pubDate>Fri, 29 Nov 2019 10:07:47 +0600</pubDate>
+      <title>Como instalar um pacote no R</title>
+      <link>/blog/como-instalar-um-pacote-no-r/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2020-01-04-post-de-teste-3/</guid>
-      <description></description>
+      <guid>/blog/como-instalar-um-pacote-no-r/</guid>
+      <description>Esse post vai te ensinar o que são os pacotes no R, como eles vão te ajudar e também como fazer para instalar.</description>
     </item>
     
     <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-10/</link>
-      <pubDate>Tue, 05 Nov 2019 10:07:47 +0600</pubDate>
+      <title>Como ler sua planilha de excel no R</title>
+      <link>/blog/como-ler-planilha-excel-no-r/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/post-10/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <guid>/blog/como-ler-planilha-excel-no-r/</guid>
+      <description>Precisa importar seus dados de Excel usando o R ou o RStudio?</description>
     </item>
     
     <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-12/</link>
-      <pubDate>Sun, 03 Nov 2019 10:07:47 +0600</pubDate>
+      <title>Como ler um arquivo de texto (txt ou csv) no R ou RStudio</title>
+      <link>/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/post-12/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <guid>/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</guid>
+      <description>Quer importar os seus dados em arquivo de texto ou csv para o RStudio de uma forma bem simples e sem precisar de programação?</description>
     </item>
     
     <item>
-      <title>Segundo post criado</title>
-      <link>/blog/post-15/</link>
-      <pubDate>Fri, 01 Nov 2019 10:07:47 +0600</pubDate>
+      <title>Os primeiros passos com o R - usando o Rstudio</title>
+      <link>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/post-15/</guid>
-      <description></description>
+      <guid>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</guid>
+      <description>Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa.</description>
     </item>
     
     <item>
-      <title>Primeiro post criado</title>
-      <link>/blog/post-14/</link>
-      <pubDate>Wed, 30 Oct 2019 10:07:47 +0600</pubDate>
+      <title>Como instalar o R e o Rstudio</title>
+      <link>/blog/como-instalar-o-r-e-o-rstudio/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/post-14/</guid>
-      <description></description>
+      <guid>/blog/como-instalar-o-r-e-o-rstudio/</guid>
+      <description>Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.</description>
     </item>
     
     <item>
@@ -81,114 +81,6 @@
       
       <guid>/about/about/</guid>
       <description>Eu sou o Luís Otávio. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-1/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-1/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-11/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-11/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-13/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-13/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-2/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-2/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-3/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-3/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-4/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-4/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-5/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-5/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-6/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-6/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-7/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-7/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-8/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-8/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>/blog/post-9/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>/blog/post-9/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/captura/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/captura/</guid>
-      <description></description>
     </item>
     
   </channel>

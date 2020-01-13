@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Primeiros passos on Luis Otavio | Ciência de dados</title>
+    <link>/tags/primeiros-passos/</link>
+    <description>Recent content in Primeiros passos on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/primeiros-passos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>6 principais motivos para você usar o R</title>
+      <link>/blog/principais-motivos-para-voc%C3%AA-usar-o-r/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/principais-motivos-para-voc%C3%AA-usar-o-r/</guid>
+      <description>O R é o queridinho dos estudantes e profissionais que buscam analisar dados, construir modelos ou Dashboards com autonomia e facilidade.</description>
+    </item>
+    
+    <item>
+      <title>Os primeiros passos com o R - usando o Rstudio</title>
+      <link>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</guid>
+      <description>Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa.</description>
+    </item>
+    
+    <item>
+      <title>Como instalar o R e o Rstudio</title>
+      <link>/blog/como-instalar-o-r-e-o-rstudio/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/como-instalar-o-r-e-o-rstudio/</guid>
+      <description>Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.</description>
+    </item>
+    
+  </channel>
+</rss>
