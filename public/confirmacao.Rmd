@@ -1,0 +1,13 @@
+---
+title: Confirmação
+author: ''
+date: '2020-01-14'
+slug: confirmacao
+categories: []
+tags: []
+---
+
+
+A sua inscrição foi confirmada!
+
+[Clique aqui para voltar a navegar no Blog.](https://luisotavio.pro/)

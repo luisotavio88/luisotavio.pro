@@ -6,10 +6,20 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Confirmação</title>
+      <link>/confirmacao/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/confirmacao/</guid>
+      <description>A sua inscrição foi confirmada!
+Clique aqui para voltar a navegar no Blog.</description>
+    </item>
     
     <item>
       <title>6 principais motivos para você usar o R</title>
