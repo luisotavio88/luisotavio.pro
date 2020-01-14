@@ -1,0 +1,14 @@
+---
+title: Confirmação  Formulário
+author: ''
+date: '2020-01-14'
+slug: confirmacao-formulario
+categories: []
+tags: []
+---
+
+Opa! Muito obrigado pela sua mensagem!
+
+Assim que der já vou dar uma olhada e te responder.
+
+[Clique aqui para voltar a navegar no Blog.](https://luisotavio.pro/)
