@@ -12,32 +12,31 @@
     
     
     <item>
-      <title>Confirmação</title>
+      <title>A sua inscrição foi confirmada!</title>
       <link>/confirmacao/</link>
       <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/confirmacao/</guid>
-      <description>A sua inscrição foi confirmada!
-Clique aqui para voltar a navegar no Blog.</description>
+      <description>Quer ter certeza que você vai receber o e-mail que vou te enviar?</description>
     </item>
     
     <item>
-      <title>Confirmação  Formulário</title>
+      <title>Meu Layout</title>
+      <link>/meulayout/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/meulayout/</guid>
+      <description>Aqui eu coloco o conteúdo!</description>
+    </item>
+    
+    <item>
+      <title>Sua mensagem foi enviada!</title>
       <link>/confirmacao-formulario/</link>
       <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/confirmacao-formulario/</guid>
       <description>Opa! Muito obrigado pela sua mensagem!
 Assim que der já vou dar uma olhada e te responder.</description>
-    </item>
-    
-    <item>
-      <title>teste</title>
-      <link>/teste/</link>
-      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/teste/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -109,7 +108,7 @@ Assim que der já vou dar uma olhada e te responder.</description>
       <pubDate>Tue, 29 Oct 2019 13:49:23 +0600</pubDate>
       
       <guid>/about/about/</guid>
-      <description>Eu sou o Luís Otávio. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <description>Antes de mais nada, eu preciso começar te contando que esse blog foi desenvolvido no R, a linguagem estatística que uso e falo em provavelmente todos os posts.</description>
     </item>
     
   </channel>

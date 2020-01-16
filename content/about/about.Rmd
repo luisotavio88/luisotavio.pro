@@ -1,0 +1,56 @@
+---
+date: "2019-10-29T13:49:23+06:00"
+description: this is meta description
+draft: false
+image: images/author.jpg
+title: Sobre mim
+type: about
+---
+
+Antes de mais nada, eu preciso começar te contando que esse blog foi desenvolvido no R, a linguagem estatística que uso e falo em provavelmente todos os posts.
+
+E porque isso é tão importante?
+
+Eu já usei poucas linguagens de programação, mas tenho praticamente 100% de certeza que o R não é a linguagem mais indicada para construir sites.
+
+Aliás, hoje já existem várias e várias ferramentas para construir sites excelentes sem nenhuma linha de código.
+
+Mas, mesmo não sendo a forma mais fácil ou a mais indicada por desenvolvedores de site, fez um sentido enorme para mim construir o meu próprio blog no R. 
+
+Faz parte do meu propósito escrever aqui sobre o que faz parte da vida real da minha vida como cientista de dados e sobre o que eu uso no meu dia a dia. 
+
+____________________________
+
+Atualmente, a maior parte do meu tempo é dedicada ao site gurudocartola.com. A ideia inicial do projeto era aplicar Machine Learning no futebol, mais especificamente no fantasy game da Globo, o Cartola.
+
+Comecei a trabalhar nesse projeto em agosto de 2016 e lancei o site em 10 de maio de 2017. 
+
+Desde então, foram várias aventuras, várias noites viradas, muitos meses trabalhando de 12 a 18 horas por dia e o projeto teve uma evolução significativa.
+
+Até o momento que escrevo esse texto, 2.697.741 usuários únicos já visitaram o site e puderam usar as nossas estatísticas.
+
+E o que eu fazia antes de decidir abrir o Guru do Cartola?
+
+Eu formei em Estatística em dezembro de 2010 e na mesma época passei em um concurso como Estatístico na Força Aérea Brasileira. Fiz um treinamento militar e fui designado para servir no Centro de Inteligência da Aeronáutica, em Brasília. Lá eu fui o responsável por coordenar os cursos a distância do Centro. 
+
+No meio de 2012, me mudei para São Paulo. Fiquei cerca de 1 ano e meio, trabalhando no TRE-SP. Nessa época, evolui muito usando o R e como Estatístico. 
+
+Criei uma metodologia e fiz os cálculos amostrais para uma pesquisa de opinião com o eleitorado de cada Zona Eleitoral de São Paulo. Além disso, montei um treinamento para as 425 Zonas Eleitorais e relatórios personalizados com os resultados da pesquisa para cada uma. Isso só foi possível graças ao nosso amigo R. 
+
+Em 2014, voltei para Brasília. Desta vez para trabalhar na Agência Nacional de Transportes Terrestres. Nessa mesma época conclui minha formação como Data Scientist pela John Hopkins University. E, sinceramente, valeu muito mais do que os 4 anos de Estatística na UFMG.
+
+A partir daí cresceu muito o meu interesse por Machine Learning, Data Visualization, Business Intelligence e também Webscraping.
+
+A partir de outubro de 2018 comecei a me dedicar integralmente ao projeto Guru do Cartola e a partir de janeiro de 2020 também pretendo fazer postagens constantes aqui no luisotavio.pro.
+
+Meu objetivo é sempre gerar conteúdo 100% útil para quem deseja aplicar a Ciência de Dados no trabalho. De teoria já basta os anos que perdemos na faculdade...
+
+Como você está aqui, espero que eu possa te ajudar!
+
+Caso você queira acompanhar mais sobre o meu trabalho, me siga nas [redes sociais](https://www.instagram.com/_u/luisotavio.pro){target="_blank"} ou me envie uma mensagem pela [página de contato](http://www.luisotavio.pro/contact){target="_blank"} e vamos nos falando.
+
+Um abraço!
+
+Luís Otávio
+
+
