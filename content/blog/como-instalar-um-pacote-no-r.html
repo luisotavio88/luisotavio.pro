@@ -20,7 +20,8 @@ type: post
 <h2>O que são os pacotes do R?</h2>
 <p>O R é um programa voltado principalmente para a Estatística. Como a Estatística é uma ciência extremamente ampla, são os pacotes que permitem o R ser um software tão completo!</p>
 <p>Olha só:</p>
-<p>O R é utilizado por pessoas da área de economia, previsões do tempo, área de saúde, demografia e várias outras… Sendo que cada uma das áreas citadas ainda tem vários subnichos.</p>
+<p>O R é utilizado por pessoas da área de economia, previsões do tempo, área de saúde, demografia e várias outras…</p>
+<p>Sendo que cada uma das áreas citadas ainda tem vários subnichos.</p>
 <p>Então o que acontece é o seguinte:</p>
 <p>existem milhares de pessoas ao redor do mundo que são muito boas em suas áreas e criam pacotes dentro do R para atender demandas específicas. Que, geralmente, ainda não tinham sido solucionadas de forma eficaz.</p>
 <p>Isso só é possível porque o R é um software Open Source. Isso significa que as pessoas podem contribuir para melhorar as funcionalidades do programa! Com certeza, isso é determinante para o R ser tão completo.</p>
@@ -37,7 +38,7 @@ type: post
 <p>E para isso vamos fazer o download desse pacote, é muito simples!</p>
 <p>O ggplot2 é um pacote muito usado para fazer gráficos mais elaborados, com grande capacidade de personalização.</p>
 <p>Vamos usá-lo aqui como exemplo.</p>
-<p>Existem duas maneiras muito simples para instalar um pacote. Escolha a sua preferida!</p>
+<p><strong>Existem duas maneiras muito simples para instalar um pacote. Escolha a sua preferida!</strong></p>
 <div id="usando-o-botão-de-instalação" class="section level3">
 <h3>1 – Usando o botão de instalação</h3>
 <p>Essa forma é muito intuitiva, clique na aba “Packages” (veja na imagem) e depois em “Install”.
@@ -52,7 +53,7 @@ Irá abrir uma tela para você escolher o pacote que deseja instalar.</p>
 <p>Agora o pacote já está instalado no R, em sua biblioteca.</p>
 <p>Mas falta um detalhe, precisamos ir lá na biblioteca e buscar esse pacote!</p>
 <p>Para carregar qualquer pacote de sua biblioteca (alguns já estão carregados por padrão), basta executar o seguinte código:</p>
-<pre class="r"><code>library(&quot;ggplot2&quot;) #Esse exemplo irá carregar o pacote ggplot2, 
+<pre class="r"><code>library(ggplot2) #Esse exemplo irá carregar o pacote ggplot2, 
 #então coloque o nome do pacote que você instalou e deseja carregar.</code></pre>
 </div>
 <div id="usando-o-comando-de-instalação" class="section level3">
@@ -61,7 +62,8 @@ Irá abrir uma tela para você escolher o pacote que deseja instalar.</p>
 <center>
 <img src="/images/post_interno/post3_3.png" title="fig:" alt="download R" style="width:95.0%" />
 </center>
-<p>Para rodar qualquer código, você poder escrevê-lo no editor e pressionar Crtl + R ou clicar em <em>Run</em>, o cursor do mouse deve estar na linha que você deseja executar ou então selecione todo o código que você deseja executar (útil para rodar várias linhas de uma vez).</p>
+<p>Para rodar qualquer código, você poder escrevê-lo no editor e pressionar Crtl + R ou clicar em <em>Run</em>.</p>
+<p><strong>O cursor do mouse deve estar na linha que você deseja executar ou então selecione todo o código que você deseja executar (útil para rodar várias linhas de uma vez).</strong></p>
 <p>Execute o código:</p>
 <pre class="r"><code>install.packages(&quot;ggplot2&quot;) #Esse exemplo irá instalar o pacote ggplot2, 
 # então coloque o nome do pacote que você deseja instalar.</code></pre>
@@ -71,33 +73,40 @@ Irá abrir uma tela para você escolher o pacote que deseja instalar.</p>
 <p>Para carregar qualquer pacote de sua biblioteca (alguns já estão carregados por padrão), basta executar o seguinte código:</p>
 <pre class="r"><code>library(&quot;ggplot2&quot;) #Esse exemplo irá carregar o pacote ggplot2,
 # então coloque o nome do pacote que você instalou e deseja carregar.</code></pre>
-<p>É isso, agora você já sabe como instalar e carregar um pacote no R.</p>
+<p>É isso, agora que você já sabe como instalar e carregar um pacote no R, vamos .</p>
 </div>
 </div>
 <div id="lista-de-pacotes-do-r---exemplos" class="section level2">
 <h2>Lista de pacotes do R - Exemplos</h2>
-<p>É isso, agora você já sabe como instalar e carregar um pacote no R.</p>
 <p>Como tinha prometido no começo, vou dar alguns exemplos de pacotes e seus objetivos principais.</p>
 <div id="manipulação-de-dados" class="section level3">
 <h3>Manipulação de dados</h3>
-<p>dplyr – Manipulação de dados de forma simples e rápida.
-lubridate – Ferramentas para facilitar o trabalho com datas e horas.</p>
+<ul>
+<li>dplyr – Manipulação de dados de forma simples e rápida.</li>
+<li>lubridate – Ferramentas para facilitar o trabalho com datas e horas.</li>
+</ul>
 </div>
 <div id="visualização-de-dados" class="section level3">
 <h3>Visualização de dados</h3>
-<p>ggplot2 – Para fazer gráficos bonitos e customizáveis
-ggvis – Gráficos interativos com o usuário
-rgl – Visualizações interativas no R
-shiny – Gráficos interativos com o usuário – Permite até a construção de site.</p>
+<ul>
+<li>ggplot2 – Para fazer gráficos bonitos e customizáveis</li>
+<li>ggvis – Gráficos interativos com o usuário</li>
+<li>rgl – Visualizações interativas no R</li>
+<li>shiny – Gráficos interativos com o usuário – Permite até a construção de site.</li>
+</ul>
 </div>
 <div id="modelagem-de-dados" class="section level3">
 <h3>Modelagem de dados</h3>
-<p>Caret – ferramentas para modelos de regressão e classificação (Machine Learning)
-randomForest – Métodos de Random Forest (Machine Learning)
-Survival – Ferramentas para análise de sobrevivência</p>
+<ul>
+<li>Caret – ferramentas para modelos de regressão e classificação (Machine Learning)</li>
+<li>randomForest – Métodos de Random Forest (Machine Learning)</li>
+<li>Survival – Ferramentas para análise de sobrevivência</li>
+</ul>
 </div>
 <div id="series-temporais-e-finanças" class="section level3">
 <h3>Series Temporais e Finanças</h3>
-<p>xts – Ferramentas para manipular Séries Temporais.</p>
+<ul>
+<li>xts – Ferramentas para manipular Séries Temporais.</li>
+</ul>
 </div>
 </div>

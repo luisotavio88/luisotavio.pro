@@ -10,7 +10,7 @@ tags:
   - R
   - RStudio
 image: images/post_principal/primeirospassos.png
-type: post
+type: recente
 ---
 
 Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa. 

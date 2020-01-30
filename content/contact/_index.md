@@ -6,4 +6,4 @@ title: Entre em contato
 type: contact
 ---
 
-Será que eu posso te ajudar em alguma questão relacionada ao site? Estou esperando sua mensagem!
+Será que eu posso te ajudar em alguma questão relacionada ao conteúdo do site? Estou esperando sua mensagem!

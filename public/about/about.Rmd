@@ -11,7 +11,7 @@ Antes de mais nada, eu preciso começar te contando que esse blog foi desenvolvi
 
 E porque isso é tão importante?
 
-Eu já usei poucas linguagens de programação, mas tenho praticamente 100% de certeza que o R não é a linguagem mais indicada para construir sites.
+Eu já usei poucas linguagens de programação, mas tenho certeza que o R não é a linguagem mais usada para construir blogs.
 
 Aliás, hoje já existem várias e várias ferramentas para construir sites excelentes sem nenhuma linha de código.
 
@@ -25,23 +25,26 @@ Atualmente, a maior parte do meu tempo é dedicada ao site gurudocartola.com. A 
 
 Comecei a trabalhar nesse projeto em agosto de 2016 e lancei o site em 10 de maio de 2017. 
 
-Desde então, foram várias aventuras, várias noites viradas, muitos meses trabalhando de 12 a 18 horas por dia e o projeto teve uma evolução significativa.
+Desde então, foram várias aventuras, várias noites viradas. Depois de muitos meses trabalhando de 12 a 18 horas por dia, o projeto teve uma evolução significativa.
 
 Até o momento que escrevo esse texto, 2.697.741 usuários únicos já visitaram o site e puderam usar as nossas estatísticas.
 
 E o que eu fazia antes de decidir abrir o Guru do Cartola?
 
-Eu formei em Estatística em dezembro de 2010 e na mesma época passei em um concurso como Estatístico na Força Aérea Brasileira. Fiz um treinamento militar e fui designado para servir no Centro de Inteligência da Aeronáutica, em Brasília. Lá eu fui o responsável por coordenar os cursos a distância do Centro. 
+Eu formei em Estatística em dezembro de 2010 e na mesma época passei em um concurso como Estatístico na Força Aérea Brasileira. Fiz um treinamento militar e fui designado para servir no Centro de Inteligência da Aeronáutica, em Brasília. Lá eu fui o responsável por coordenar os cursos a distância do Centro de Inteligência. 
 
-No meio de 2012, me mudei para São Paulo. Fiquei cerca de 1 ano e meio, trabalhando no TRE-SP. Nessa época, evolui muito usando o R e como Estatístico. 
+No meio de 2012, me mudei para São Paulo. Fiquei cerca de 1 ano e meio, trabalhando no TRE-SP. Nessa época, evolui muito como usuário do R e como Estatístico. 
 
-Criei uma metodologia e fiz os cálculos amostrais para uma pesquisa de opinião com o eleitorado de cada Zona Eleitoral de São Paulo. Além disso, montei um treinamento para as 425 Zonas Eleitorais e relatórios personalizados com os resultados da pesquisa para cada uma. Isso só foi possível graças ao nosso amigo R. 
+Criei o planejamento amostral e a metodologia completa para fazermos uma pesquisa de opinião com o eleitorado de cada Zona Eleitoral de São Paulo. Além disso, montei um treinamento para as 425 Zonas Eleitorais realizarem as pesquisas. 
+Então, achei uma forma de automatizar relatórios com os resultados personalizados da pesquisa para cada uma usando o R + VBA.
+
+Se fosse hoje, já daria pra fazer tudo no R tranquilamente! 
 
 Em 2014, voltei para Brasília. Desta vez para trabalhar na Agência Nacional de Transportes Terrestres. Nessa mesma época conclui minha formação como Data Scientist pela John Hopkins University. E, sinceramente, valeu muito mais do que os 4 anos de Estatística na UFMG.
 
 A partir daí cresceu muito o meu interesse por Machine Learning, Data Visualization, Business Intelligence e também Webscraping.
 
-A partir de outubro de 2018 comecei a me dedicar integralmente ao projeto Guru do Cartola e a partir de janeiro de 2020 também pretendo fazer postagens constantes aqui no luisotavio.pro.
+A partir de outubro de 2018 comecei a me dedicar integralmente ao projeto Guru do Cartola e a partir de fevereiro de 2020 também pretendo fazer postagens constantes aqui no luisotavio.pro.
 
 Meu objetivo é sempre gerar conteúdo 100% útil para quem deseja aplicar a Ciência de Dados no trabalho. De teoria já basta os anos que perdemos na faculdade...
 

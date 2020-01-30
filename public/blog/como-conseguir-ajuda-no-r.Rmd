@@ -19,7 +19,9 @@ A comunidade são todas as pessoas que usam e contribuem com o R.
 
 Como já falamos aqui, o R é um software Open Source. Isso quer dizer que os usuários (incluindo você) podem contribuir no desenvolvimento do programa.
 
-A comunidade do R é extremamente ativa! Isso faz que seja muito provável já existir um pacote com a função que você precisa (porque alguém já desenvolveu).
+A comunidade do R é extremamente ativa! Isso faz que seja muito provável já existir um pacote com a função específica que você precisa (porque alguém já desenvolveu).
+
+Então, quando um expert da sua área criar e publicar um pacote no R voltado para a sua área de atuação, você poderá usufruir de todo esse trabalho que ele construiu. Com o tempo, você vai ver o tanto que isso vai facilitar a sua vida.
 
 Outro benefício enorme de uma comunidade ativa é o auxílio quando precisamos de ajuda. É muito fácil solucionar nossas dúvidas com essa ajuda externa. 
 
@@ -45,21 +47,24 @@ Então vai abrir uma tela de ajuda, explicando tudo sobre a função **arrange.*
 
 O texto de ajuda das funções estará estruturado com as seguintes partes principais:
 
-Description – com uma breve descrição da função
-Usage – como está estruturada a função e o que você precisa informar para calcular o que deseja
-Arguments – informações sobre cada INPUT que você precisa colocar na função.
-Examples – Casos práticos de uso da função e que são reproduzíveis no seu computador.
+* Description – com uma breve descrição da função
+* Usage – como está estruturada a função e o que você precisa informar para calcular o que deseja
+* Arguments – informações sobre cada INPUT que você precisa colocar na função.
+* Examples – Casos práticos de uso da função e que são reproduzíveis no seu computador.
 
 ## E se você não sabe nem a função que deseja usar?
 
 Nesse caso, a melhor forma é pedir ajuda para o Google! :)
+
 Coloque no Google: 
+
 R + palavras chaves do que você deseja fazer
+
 Dica: se você ficar a busca em inglês, irá aumentar as suas chances de achar uma resposta rapidamente. Já que o mundo inteiro poderá te ajudar...
 
 ## O melhor site de ajuda para o R
 
-O site Stack OverFlow é um site de perguntas e respostas usado por programadores. É uma plataforma excepcional e que certamente irá te ajudar muito nessa caminhada.
+O site **Stack OverFlow** é um site de perguntas e respostas usado por programadores. É uma plataforma excepcional e que certamente irá te ajudar muito nessa caminhada.
 
 Quando você fizer a busca no Google (passo anterior), provavelmente verá que os primeiros resultados da busca são do Stack OverFlow. 
 
@@ -69,7 +74,7 @@ E se você não achar a resposta de jeito nenhum para a sua dúvida?
 
 Se a sua pergunta ainda não estiver lá no Stack OverFlow, você pode criar a sua pergunta e, em pouco tempo, é provável que o pessoal te responda.
 
-Como fazer uma boa pergunta no Stack OverFlow?
+*Como fazer uma boa pergunta no Stack OverFlow?
 
 Veja as dicas do próprio site. [CLIQUE AQUI.](https://pt.stackoverflow.com/help/how-to-ask){target="_blank"}
 
