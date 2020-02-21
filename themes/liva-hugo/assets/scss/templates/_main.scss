@@ -222,7 +222,7 @@
 /* markdown style */
 .content {
   * {
-    margin-bottom: 20px;
+    margin-bottom: 8px; /* espaço entre os paragrafos p */
   }
 
   h1,
@@ -231,7 +231,7 @@
   h4,
   h5,
   h6 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* espaço depois dos títulos */
   }
 
   ol {

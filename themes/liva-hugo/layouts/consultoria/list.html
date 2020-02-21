@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+<section class="section-sm pb-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <div class="content mb-4">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-sm pb-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <form action="https://sendy.gurudocartola.com/subscribe" method="POST" class="row">
+          <div class="col-lg-6">
+            <input type="text" class="form-control mb-4" id="name" name="name" placeholder="seu nome">
+          </div>
+          <div class="col-lg-6">
+            <input type="email" class="form-control mb-4" id="email" name="email" placeholder="seu e-mail">
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control mb-4" id="subject" name="subject" placeholder="Área do problema que você deseja resolver">
+          </div>
+          <div class="col-12">
+            <textarea name="message" id="message" class="form-control mb-4" placeholder="Me conte aqui um pouco do seu desafio. Fale qual o problema você gostaria de resolver e quais dados/informações estão disponíveis para solucionar o problema."></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enviar!</button>
+          </div>
+          <input type="hidden" name="list" value="yKGQiEJ6763gu2x6jEor8sMg"/>
+	        <input type="hidden" name="subform" value="yes"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm pb-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

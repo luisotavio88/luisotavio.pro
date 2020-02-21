@@ -58,16 +58,16 @@ a:hover {
 }
 
 .section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 16px; /* espaçamento entre titulos - parte de cima*/
+  padding-bottom: 16px; /* espaçamento entre titulos - parte de baixo */
 
   &-sm {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 40px; /* espaçamento entre sections - parte de cima */
+    padding-bottom: 40px; /* espaçamento entre sections - parte de baixo */
   }
 
   &-title {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 }
 
