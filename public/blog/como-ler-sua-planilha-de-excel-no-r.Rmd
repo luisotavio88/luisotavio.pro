@@ -1,7 +1,7 @@
 ---
 title: Como ler sua planilha de excel no R
 author: Luis Otavio
-date: '2020-01-10'
+date: '2020-03-05'
 slug: como-ler-planilha-excel-no-R
 categories:
   - Post

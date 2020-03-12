@@ -6,63 +6,63 @@
     <description>Recent content in R on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>6 principais motivos para você usar o R</title>
-      <link>/blog/principais-motivos-para-voc%C3%AA-usar-o-r/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      <link>/blog/principais-motivos-para-voce-usar-o-r/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/principais-motivos-para-voc%C3%AA-usar-o-r/</guid>
+      <guid>/blog/principais-motivos-para-voce-usar-o-r/</guid>
       <description>O R é o queridinho dos estudantes e profissionais que buscam analisar dados, construir modelos ou Dashboards com autonomia e facilidade.</description>
-    </item>
-    
-    <item>
-      <title>Como conseguir ajuda no R?</title>
-      <link>/blog/como-conseguir-ajuda-no-r/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/como-conseguir-ajuda-no-r/</guid>
-      <description>O que faz o R ser um dos mais conhecidos e potentes softwares de Estatística com certeza é a sua comunidade.</description>
-    </item>
-    
-    <item>
-      <title>Como instalar um pacote no R</title>
-      <link>/blog/como-instalar-um-pacote-no-r/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/como-instalar-um-pacote-no-r/</guid>
-      <description>Esse post vai te ensinar o que são os pacotes no R, como eles vão te ajudar e também como fazer para instalar.</description>
     </item>
     
     <item>
       <title>Como ler sua planilha de excel no R</title>
       <link>/blog/como-ler-planilha-excel-no-r/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/como-ler-planilha-excel-no-r/</guid>
       <description>Precisa importar seus dados de Excel usando o R ou o RStudio?</description>
     </item>
     
     <item>
-      <title>Os primeiros passos com o R - usando o Rstudio</title>
-      <link>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Como instalar um pacote no R</title>
+      <link>/blog/como-instalar-um-pacote-no-r/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</guid>
-      <description>Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa.</description>
+      <guid>/blog/como-instalar-um-pacote-no-r/</guid>
+      <description>Esse post vai te ensinar o que são os pacotes no R, como eles vão te ajudar e também como fazer para instalar.</description>
+    </item>
+    
+    <item>
+      <title>Como conseguir ajuda no R?</title>
+      <link>/blog/como-conseguir-ajuda-no-r/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/como-conseguir-ajuda-no-r/</guid>
+      <description>O que faz o R ser um dos mais conhecidos e potentes softwares de Estatística com certeza é a sua comunidade.</description>
     </item>
     
     <item>
       <title>Como instalar o R e o Rstudio</title>
       <link>/blog/como-instalar-o-r-e-o-rstudio/</link>
-      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/como-instalar-o-r-e-o-rstudio/</guid>
       <description>Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.</description>
+    </item>
+    
+    <item>
+      <title>Os primeiros passos com o R - usando o Rstudio</title>
+      <link>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/primeiros-passos-com-o-r-usando-o-rstudio/</guid>
+      <description>Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa.</description>
     </item>
     
   </channel>

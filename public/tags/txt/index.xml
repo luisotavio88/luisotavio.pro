@@ -6,7 +6,7 @@
     <description>Recent content in TXT on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/txt/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Como ler um arquivo de texto (txt ou csv) no R ou RStudio</title>
       <link>/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</guid>
       <description>Quer importar os seus dados em arquivo de texto ou csv para o RStudio de uma forma bem simples e sem precisar de programação?</description>
