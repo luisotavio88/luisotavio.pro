@@ -1,7 +1,7 @@
 ---
 title: Como ler um arquivo de texto (txt ou csv) no R ou RStudio
 author: Luis Otavio
-date: '2020-01-10'
+date: '2020-03-09'
 slug: como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio
 categories:
   - Post
