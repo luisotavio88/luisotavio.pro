@@ -1,5 +1,5 @@
 ---
-title: 6 principais motivos para você usar o R
+title: 7 principais motivos para você usar o R
 author: Luis Otavio
 date: '2020-03-12'
 slug: principais-motivos-para-voce-usar-o-r
