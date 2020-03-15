@@ -10,7 +10,7 @@ tags:
   - RStudio
   - Primeiros passos
 image: images/post_principal/porqueR.jpg
-type: featured
+type: recente
 ---
 
 O R é o queridinho dos estudantes e profissionais que buscam analisar dados, construir modelos ou Dashboards com autonomia e facilidade.
