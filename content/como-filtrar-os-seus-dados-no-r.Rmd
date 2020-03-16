@@ -9,7 +9,7 @@ tags:
   - arquivo de texto
   - CSV
   - TXT
-image: images/post_principal/porqueR.jpg
+image: images/post_principal/filtro.png
 type: post
 ---
 
