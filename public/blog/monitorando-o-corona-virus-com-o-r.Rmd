@@ -52,5 +52,5 @@ Quando for analisar o mapa abaixo, lembre de escolher o intervalo de dias que vo
 
 Qualquer dúvida, mande um e-mail para contato@luisotavio.pro.
 
-<iframe src="http://34.194.149.214/shiny/corona/" width=1200 height=950 frameborder=0"></iframe>
-<!-- knitr::include_app("http://34.194.149.214/shiny/corona/", height = "100%") -->
+<iframe src="https://luisotavio.info/shiny/corona/" width=1200 height=950 frameborder=0"></iframe>
+
