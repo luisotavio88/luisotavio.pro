@@ -10,7 +10,7 @@ type: mylayout
 
 Quer ter certeza que você vai receber o e-mail que vou te enviar?
 
-**Me adicione aos seus contatos!** 
+**Adicione o e-mail contato@luisotavio.pro aos seus contatos!** 
 
 Eu nunca vou te enviar SPAM, mas esse procedimento é importante para o seu e-mail saber disso!
 
