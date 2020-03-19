@@ -52,5 +52,7 @@ Quando for analisar o mapa abaixo, lembre de escolher o intervalo de dias que vo
 
 Qualquer dúvida, mande um e-mail para contato@luisotavio.pro.
 
+[**RECOMENDO TAMBÉM QUE ASSISTA O VÍDEO QUE GRAVEI SOBRE ESSE POST. CLIQUE AQUI**](https://youtu.be/fMPOZOC20ao){target="_blank"}
+
 <iframe src="https://luisotavio.info/shiny/corona/" width=1200 height=950 frameborder=0"></iframe>
 
