@@ -10,7 +10,7 @@ tags:
   - R
   - RStudio
 image: images/post_principal/excel_to_R.png
-type: recente
+type: post
 ---
 
 Precisa importar seus dados de Excel usando o R ou o RStudio?

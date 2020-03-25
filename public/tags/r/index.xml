@@ -6,10 +6,19 @@
     <description>Recent content in R on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>É assim que estão essas ações da Bolsa de Valores!</title>
+      <link>/blog/e-assim-que-estao-essas-a%C3%A7%C3%B5es-da-bolsa-de-valores/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/e-assim-que-estao-essas-a%C3%A7%C3%B5es-da-bolsa-de-valores/</guid>
+      <description>De forma bem simplificada, a bolsa de valores brasileira vai refletir os resultados da economia do país.</description>
+    </item>
     
     <item>
       <title>7 principais motivos para você usar o R</title>

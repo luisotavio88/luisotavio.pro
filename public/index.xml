@@ -6,10 +6,19 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>É assim que estão essas ações da Bolsa de Valores!</title>
+      <link>/blog/e-assim-que-estao-essas-a%C3%A7%C3%B5es-da-bolsa-de-valores/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/e-assim-que-estao-essas-a%C3%A7%C3%B5es-da-bolsa-de-valores/</guid>
+      <description>De forma bem simplificada, a bolsa de valores brasileira vai refletir os resultados da economia do país.</description>
+    </item>
     
     <item>
       <title>5 maneiras de filtrar os seus dados no R</title>
@@ -127,6 +136,15 @@ Assim que der já vou dar uma olhada e te responder.</description>
       
       <guid>/about/about/</guid>
       <description>Antes de mais nada, eu preciso começar te contando que esse blog foi desenvolvido no R, a linguagem estatística que uso e falo em provavelmente todos os posts.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/blog/2020-03-24-%C3%A9-assim-que-est%C3%A3o-as-a%C3%A7%C3%B5es-da-bolsa-de-valores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2020-03-24-%C3%A9-assim-que-est%C3%A3o-as-a%C3%A7%C3%B5es-da-bolsa-de-valores/</guid>
+      <description>É assim que estão essas ações da Bolsa de Valores!</description>
     </item>
     
   </channel>
