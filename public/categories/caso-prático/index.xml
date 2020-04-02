@@ -6,10 +6,19 @@
     <description>Recent content in Caso prático on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/caso-pr%C3%A1tico/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Análise de Sentimentos - Descubra o que estão falando da sua empresa</title>
+      <link>/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa/</guid>
+      <description>Você sabe o que é análise de sentimentos e porque ela é INDISPENSÁVEL para uma marca?</description>
+    </item>
     
     <item>
       <title>É assim que estão essas ações da Bolsa de Valores!</title>

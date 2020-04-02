@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Análise de sentimentos on Luis Otavio | Ciência de dados</title>
+    <link>/tags/an%C3%A1lise-de-sentimentos/</link>
+    <description>Recent content in Análise de sentimentos on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/an%C3%A1lise-de-sentimentos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Análise de Sentimentos - Descubra o que estão falando da sua empresa</title>
+      <link>/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa/</guid>
+      <description>Você sabe o que é análise de sentimentos e porque ela é INDISPENSÁVEL para uma marca?</description>
+    </item>
+    
+  </channel>
+</rss>
