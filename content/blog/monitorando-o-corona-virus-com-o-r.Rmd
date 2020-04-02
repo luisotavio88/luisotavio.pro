@@ -8,7 +8,7 @@ categories:
 tags:
   - maps
   - shiny
-type: featured
+type: recente
 image: images/post_principal/corona.png
 ---
 
