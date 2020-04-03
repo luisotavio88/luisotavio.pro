@@ -1,0 +1,68 @@
+---
+title: O que é ciência de dados?
+author: Luis Otavio
+date: '2020-04-03'
+slug: o-que-e-ciencia-de-dados
+categories:
+  - Post
+tags:
+  - R
+  - Primeiros passos
+type: recente
+image: images/post_principal/ciencia_dados.jpg
+---
+  
+De acordo com o relatório do Fórum Econômico Mundial, **a ciência de dados é a profissão mais promissora no Brasil entre 2020 e 2022**.
+
+O Linkedin também considerou a profissão entre as 5 que mais crescem no Brasil.
+
+Certamente não é uma moda que vai passar. A era digital torna extremamente fácil a coleta de dados.
+
+Afinal de contas passamos horas e horas em nossos celulares e computadores todos os dias. Essas são apenas duas formas de gerar dados.
+
+E, que esses dados são super valiosos, não podemos ter dúvidas! :)
+
+Quanto vale para uma empresa saber que uma pessoa tem exatamente as mesmas características de seus melhores clientes? 
+
+Também é extremamente valioso para um e-commerce saber exatamente o que recomendar para um cliente que acabou de realizar uma compra. Os sistemas de recomendação são muito utilizados dentro da Ciência de Dados.
+
+E eles não são utilizados apenas no e-commerce, você certamente já viu os sistemas de recomendação em ação no Youtube ou no Netflix! Quando você termina de assistir um vídeo ou então uma série, você já recebe uma recomendação do próximo!
+
+São artifícios que as plataformas utilizam para reter seus usuários. Quanto mais elas forem precisas nas recomendações, mais conseguirão manter os usuários. 
+
+A ciência de dados também pode ser utilizada no mercado financeiro para tentar prever quais serão os investimentos mais rentáveis em curto, médio e longo prazo. Ou até mesmo com ferramentas de visualização de dados, para auxiliar os especialistas em suas análises.
+
+Até pouco tempo atrás, a cultura analítica buscava analisar os dados para saber o que estava acontecendo. 
+
+##### **A Ciência de Dados propõe usar os dados não só para saber o que está acontecendo, mas também para prever ou até mesmo melhorar o que irá acontecer.** 
+
+Essa melhoria pode ser representada por mais vendas, mais tempo usando uma plataforma/rede social ou até mesmo escutando músicas novas que você goste mais no Spotify. 
+
+### Quais são as principais atividades de um Cientista de Dados?
+
+O cientista de dados pode atuar em várias áreas, desde a otimização de vendas como a cura de doenças. Porém, algumas atividades serão comuns em todas essas áreas:
+
+- Coletar, organizar e limpar grandes quantidades de dados
+
+- Analisar situações do negócio, formular hipóteses e entender junto com especialistas da área qual problema deve ser resolvido
+
+- Criar uma solução para o problema, realizar testes e aperfeiçoar a solução
+
+- Comunicação com as outras áreas envolvidas 
+
+### Qual o salário de um cientista de dados?
+
+Segundo o site glassdoor.com - plataforma internacional de recrutamento - o salário médio de um cientista de dados no Brasil é de **R$ 7.657/mês**.
+
+O site salario.com.br calculou que a média salarial da categoria é de R$ 7.059,77.
+
+Pelo guia de salários da empresa global de recrutamento especializado Michael Page, o salário mínimo de um cientista de dados em uma empresa pequena ou média é de R$ 9.000 e pode chegar até a R$ 12.000. Para empresas grandes o salário varia entre R$ 12.000 e R$ 15.000.
+
+Já o site [viacarreira.com](https://viacarreira.com/cientista-de-dados/) é ainda mais otimista e afirma que o salário do cientista de dados varia de R$ 12.000 a R$ 22.000.
+
+
+
+
+
+
+
