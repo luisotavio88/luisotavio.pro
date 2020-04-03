@@ -20,7 +20,13 @@ Certamente não é uma moda que vai passar. A era digital torna extremamente fá
 
 Afinal de contas passamos horas e horas em nossos celulares e computadores todos os dias. Essas são apenas duas formas de gerar dados.
 
-E, que esses dados são super valiosos, não podemos ter dúvidas! :)
+Estima-se que 90% dos dados do mundo tenham sido criados nos últimos dois anos. Segundo a Oracle, o número de dispositivos conectados no mundo deve crescer para mais de 75 bilhões até 2025.
+
+Afinal, não nos conectamos na internet apenas em nossos computadores, como era antigamente. Mas também com nossos celulares, televisões, video-games, sistemas de automação da casa e, daqui a pouco, até com a geladeira!
+
+E, que esses dados gerados são super valiosos, não podemos ter dúvidas! :)
+
+### Qual a utilidade da Ciência de dados?
 
 Quanto vale para uma empresa saber que uma pessoa tem exatamente as mesmas características de seus melhores clientes? 
 
@@ -31,6 +37,8 @@ E eles não são utilizados apenas no e-commerce, você certamente já viu os si
 São artifícios que as plataformas utilizam para reter seus usuários. Quanto mais elas forem precisas nas recomendações, mais conseguirão manter os usuários. 
 
 A ciência de dados também pode ser utilizada no mercado financeiro para tentar prever quais serão os investimentos mais rentáveis em curto, médio e longo prazo. Ou até mesmo com ferramentas de visualização de dados, para auxiliar os especialistas em suas análises.
+
+Na área de saúde, por exemplo, a ciência de dados vem sendo utilizada com sucesso para interpretar exames de imagem e se mostrado mais precisa do que os próprios médicos especialistas.
 
 Até pouco tempo atrás, a cultura analítica buscava analisar os dados para saber o que estava acontecendo. 
 
@@ -54,13 +62,14 @@ O cientista de dados pode atuar em várias áreas, desde a otimização de venda
 
 Segundo o site glassdoor.com - plataforma internacional de recrutamento - o salário médio de um cientista de dados no Brasil é de **R$ 7.657/mês**.
 
-O site salario.com.br calculou que a média salarial da categoria é de R$ 7.059,77.
+O site salario.com.br calculou que a média salarial da categoria é de **R$ 7.059,77**.
 
-Pelo guia de salários da empresa global de recrutamento especializado Michael Page, o salário mínimo de um cientista de dados em uma empresa pequena ou média é de R$ 9.000 e pode chegar até a R$ 12.000. Para empresas grandes o salário varia entre R$ 12.000 e R$ 15.000.
+Pelo guia de salários da empresa global de recrutamento especializado Michael Page, o salário mínimo de um cientista de dados em uma empresa pequena ou média é de **R$ 9.000** e pode chegar até a **R$ 12.000**. Para empresas grandes o salário varia entre **R$ 12.000 e R$ 15.000**.
 
-Já o site [viacarreira.com](https://viacarreira.com/cientista-de-dados/) é ainda mais otimista e afirma que o salário do cientista de dados varia de R$ 12.000 a R$ 22.000.
+Já o site [viacarreira.com](https://viacarreira.com/cientista-de-dados/){target="_blank"} é ainda mais otimista e afirma que o salário do cientista de dados varia de **R$ 12.000 a R$ 22.000**.
 
 
+Interessou pela carreira? O objetivo aqui do blog é ajudar as pessoas a **saírem do zero** e construírem a sua carreira como **cientista de dados**. Conte comigo, estou à sua disposição em minhas redes sociais ou e-mail (contato@luisotavio.pro).
 
 
 
