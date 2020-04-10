@@ -9,7 +9,7 @@ tags:
   - shiny
   - R
 image: images/post_principal/bolsa.jpg
-type: recente
+type: post
 ---
 
 
