@@ -8,7 +8,7 @@ categories:
 tags:
   - Text Mining
   - Análise de sentimentos
-type: recente
+type: post
 image: images/post_principal/sentimento.jpg
 ---
 

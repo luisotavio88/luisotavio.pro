@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>É possível prever pandemias usando o Google Trends?</title>
+      <link>/blog/e-possivel-prever-pandemias-usando-o-google-trends/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/e-possivel-prever-pandemias-usando-o-google-trends/</guid>
+      <description>O que é Google Trends?Uma quantidade absurda de buscas são feitas diariamente no Google.</description>
+    </item>
     
     <item>
       <title>Marketing Digital | A importância da ciência de dados nas Campanhas do Facebook e Instagram</title>
