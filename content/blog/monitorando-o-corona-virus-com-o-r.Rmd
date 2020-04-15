@@ -46,7 +46,7 @@ Para complementar o trabalho da Universidade, o Dr. Fabach utilizou o R e uma da
 
 Eu reproduzi o trabalho do Dr. Fabach aqui no blog, para que possam acompanhar.
 
-[Caso queira dar uma olhada no código desenvolvido por ele, está disponível nesse link.](https://github.com/DrFabach/Corona/blob/master/shiny.r){target="_blank"}
+[Caso queira dar uma olhada no código desenvolvido por ele, está disponível nesse link.](https://github.com/DrFabach/Corona/blob/master/app.r){target="_blank"}
 
 Quando for analisar o mapa abaixo, lembre de escolher o intervalo de dias que você deseja pesquisar. E também não esqueça de clicar em cima do país para ter mais informações.
 
