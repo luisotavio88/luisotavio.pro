@@ -6,13 +6,31 @@
     <description>Recent content in Tags on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Shiny</title>
+      <title>Música</title>
+      <link>/tags/m%C3%BAsica/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/m%C3%BAsica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Mining</title>
+      <link>/tags/text-mining/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/text-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
       <link>/tags/shiny/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -53,15 +71,6 @@
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/an%C3%A1lise-de-sentimentos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Text Mining</title>
-      <link>/tags/text-mining/</link>
-      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/text-mining/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,19 @@
     <description>Recent content in Text Mining on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/text-mining/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Música | É possível aplicar Ciência de Dados?</title>
+      <link>/blog/musica-e-possivel-aplicar-ciencia-de-dados/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/musica-e-possivel-aplicar-ciencia-de-dados/</guid>
+      <description>É um desafio encontrar uma área que não possa ser melhorada pela Ciência de Dados.</description>
+    </item>
     
     <item>
       <title>Análise de Sentimentos - Descubra o que estão falando da sua empresa</title>
