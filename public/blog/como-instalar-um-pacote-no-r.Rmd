@@ -113,7 +113,7 @@ library("ggplot2") #Esse exemplo irá carregar o pacote ggplot2,
 # então coloque o nome do pacote que você instalou e deseja carregar.
 ```
 
-É isso, agora que você já sabe como instalar e carregar um pacote no R, vamos . 
+É isso, agora que você já sabe como instalar e carregar um pacote no R, vamos conhecer algumas das principais bibliotecas. 
 
 ## Lista de pacotes do R - Exemplos
 

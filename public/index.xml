@@ -6,10 +6,19 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aplicação de Ciência de Dados nas vagas de emprego</title>
+      <link>/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</guid>
+      <description>É importante que eu já comece te avisando que esse post não é sobre vagas de emprego na área de Data Science.</description>
+    </item>
     
     <item>
       <title>Música | É possível aplicar Ciência de Dados?</title>

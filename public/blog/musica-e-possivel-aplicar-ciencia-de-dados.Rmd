@@ -8,7 +8,7 @@ categories:
 tags:
   - Música
   - Text Mining
-type: featured
+type: post
 image: images/post_principal/freddie.jpg
 ---
 
