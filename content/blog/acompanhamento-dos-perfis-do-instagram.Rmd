@@ -1,0 +1,68 @@
+---
+title: Acompanhamento dos perfis do Instagram
+author: Luis Otavio
+date: '2020-05-13'
+slug: acompanhamento-dos-perfis-do-instagram
+categories:
+  - Caso prático
+tags:
+  - Marketing Digital
+  - Shiny
+type: featured
+image: images/post_principal/instagram.jpeg
+---
+
+### Se o seu negócio não está na internet, ele não existe!
+
+A frase acima pode ser pesada, mas vamos ser sinceros: quando você precisa de uma solução, eu aposto que você não procura no catálogo telefônico ou em um jornal.
+
+
+As redes sociais são muito mais do que um simples entretenimento no nosso dia a dia. 
+
+
+A verdade é que elas nos influenciam de várias maneiras: onde vamos, o que compramos, quais cursos escolhemos para nos dedicarmos e, até mesmo, influenciando o nosso estilo de vida. 
+
+
+Como consequência disso, as redes sociais se tornaram uma ferramenta de trabalho para construir a imagem e o relacionamento de pessoas e empresas com os seus seguidores. 
+
+
+Mas já vou fazer uma *consideração importante* aqui antes de seguir com o post:
+
+
+Seguidor, likes, comentários e engajamento NÃO PAGAM A CONTA DE NINGUÉM. 
+
+
+Ter um milhão de seguidores não quer dizer ganhar muito dinheiro e ter 20 mil seguidores não significa ganhar pouco. Inclusive, já vi na prática perfil com 10 mil seguidores fazendo infinitamente mais dinheiro do que outro perfil de 1 milhão de seguidores.
+
+
+E, mesmo assim, eu acho importante e resolvi analisar as métricas do Instagram!
+
+
+Eu acredito ser parte do processo de crescimento você saber com que tipo de conteúdo o seu nicho está se interessando e engajando mais. 
+
+
+Qual a chamada fazem os seguidores comentarem mais na publicação?
+
+
+Quem está crescendo mais nas mídias sociais e o que está fazendo pra isso?
+
+
+É importante analisar os próprios números e ter esse retorno sobre o conteúdo que foi gerado. 
+
+
+Mas também é interessante analisar os outros perfis que estão no mesmo nicho. Quais estão se saindo melhor ou pior e porque?
+
+
+*Para responder todas essas perguntas, criei uma ferramenta para acompanhar alguns perfis do nicho de FINANÇAS.*
+
+Você poderá acompanhar:
+
+- Informações gerais sobre o perfil (Seguidores, likes, comentários, engajamentos..)
+- Informações de um perfil específico por dia (*Ganhou ou perdeu seguidores?*, engajamento, etc)
+- Informações de cada post (todos os perfis ou escolher um específico)
+- Comparar os perfis
+
+* Os dados são atualizados automaticamente, uma vez por dia.
+** Como sempre, a ferramenta foi 100% desenvolvida utilizando o R. :)
+
+<iframe src="https://luisotavio.info/shiny/instagram/" width=1200 height=950 frameborder=0"></iframe>
