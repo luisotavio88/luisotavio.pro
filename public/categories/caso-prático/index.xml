@@ -6,10 +6,19 @@
     <description>Recent content in Caso prático on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/caso-pr%C3%A1tico/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Segmentação de clientes no E-commerce</title>
+      <link>/blog/segmentacao-de-clientes-no-e-commerce/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/segmentacao-de-clientes-no-e-commerce/</guid>
+      <description>Todos os clientes de uma marca possuem um desejo em comum, afinal isso que faz todos tomarem a mesma decisão de compra.</description>
+    </item>
     
     <item>
       <title>Acompanhamento dos perfis do Instagram</title>

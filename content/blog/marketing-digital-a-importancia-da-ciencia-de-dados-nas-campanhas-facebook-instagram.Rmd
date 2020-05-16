@@ -8,7 +8,7 @@ categories:
 tags:
   - Shiny
   - Marketing Digital
-type: recente
+type: post
 image: images/post_principal/mkt_digital.jfif
 ---
 
