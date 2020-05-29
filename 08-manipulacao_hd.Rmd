@@ -1,0 +1,216 @@
+# Manipulação de Hora e Data
+
+Existem algumas peculiaridades para tratar hora e data nas linguagens de programação, por isso, resolvi separar um capítulo só para isso.
+
+Vamos fazer isso da maneira mais simples possível e de forma que você resolva todos os problemas que vai encontrar na prática.
+
+Uma questão que devemos estar atentos é o formato que estão os nossos dados. Isso porque existem vários formatos para a variável data e hora.
+
+Por exemplo, você pode importar os seus dados em qualquer uma das formas a seguir:
+
+- 15/01/2019 13:10:57 (dia, mês, ano com 4 dígitos, horas, minutos e segundos)
+- 01/15/17 13:10 (mês, dia, ano com 2 dígitos, horas e minutos)
+- 15 Novembro 2019 (dia, mês por extenso e ano com 4 dígitos)
+
+Enfim, cada fonte de dados irá definir um padrão de hora e data diferente. Porém, o R tem um formato padrão que irá facilitar a manipulação dos dados.
+
+## Formato de data no R
+
+O formato tradicional usado no R para data e hora é o seguinte:
+
+2019-11-30 15:33:51 (ano com 4 dígitos, mês, dia, hora, minutos e segundos)
+
+ou, somente a data:
+
+2019-11-30 (ano com 4 dígitos, mês, dia)
+
+Isso quer dizer que quando os seus dados tiverem uma variável de hora e data, é recomendável transformá-la para o formato padrão do R caso você queira usá-la.
+
+### Como transformar o formato da variável de data e hora?
+
+Para transformar os seus dados originais de data e hora para o formato padrão do R, basta informar ao R qual é o padrão original. 
+
+Ou seja, se os dados que você importou para o R seguem o padrão 13-01-2019, basta definir que o formato é dia, mês e ano com 4 dígitos.
+
+Isso já irá transformar a variável para padrão do R. Vamos ver na prática:
+
+```{r}
+date<-c("13-01-2019")
+strptime(date,format="%d-%m-%Y")
+```
+
+Quando definimos que o formato original dos dados é "%d-%m-%Y", estamos avisando ao R que originalmente a nossa variável de data está no formato dia (%d), mês (%m) e ano com 4 dígitos (%Y).
+
+Com essa informação, o R irá transformar a nossa variável de data para o formato padrão.
+
+Importante: Para saber cada letra que irá representar o formato da sua variável de data, basta pesquisar com o comando:
+```{r}
+?strptime
+```
+
+São muitas possibilidades diferentes e, com certeza, não vale a pena gastar tempo memorizando cada uma delas.
+
+Também é importante reparar que a data foi importada como *character* e transformada para a classe *date*.
+
+Vamos ver um outro exemplo:
+
+
+```{r}
+date2<-c("10 Dezembro 2017")
+class(date2) ## a classe do objeto date2 é character
+
+date2_R <- strptime(date2, "%d %B %Y")
+class(date2_R)
+date2_R
+```
+
+Então, quando eu aviso ao R que o formato original da variável de data é "%d %B %Y", estou falando que primeiro é o dia (%d), depois o mês por extenso (%B) e depois o ano com 4 dígitos (%Y).
+
+Desta forma, o R irá transformar a variável para o padrão da linguagem. Além disso, o objeto que era da classe character, é transformado para Date.
+
+Novamente, aproveito para te lembrar que executar o comando ```?strptime``` e ler sua documentação é a maneira mais fácil para saber quais símbolos você deve usar para transformar do formato original dos seus dados para o padrão do R.
+
+Quando os seus dados também tiverem os valores de horário, o raciocínio é o mesmo:
+
+```{r}
+data_hora<-c("22 Janeiro 17, 17:12:53")
+data_hora <- strptime(data_hora, "%d %B %y, %H:%M:%S")
+data_hora
+
+```
+
+## Extrair ano, mês, dia, horas, minutos ou segundos.
+
+Em alguns casos, precisaremos desmembrar as informações de data e hora. Isso é necessário quando o nosso único interesse é trabalhar com o ano, por exemplo.
+
+Portanto, vamos aprender como extrair o ano, mês, dia, hora, minuto ou segundo da variável de datae hora.
+
+Irei considerar que a nossa variável de data e hora já foi transformada para o padrão do R, como demonstado no item anterior.
+
+```{r}
+data_hora #variável definida no exemplo anterior
+
+#extrair apenas o ano:
+format(data_hora,"%Y")
+```
+
+```{r}
+#extrair apenas o mês:
+format(data_hora,"%m")
+```
+
+```{r}
+#extrair apenas o dia:
+format(data_hora,"%d")
+```
+
+```{r}
+#extrair apenas a hora:
+format(data_hora,"%H")
+```
+
+```{r}
+#extrair apenas o minuto:
+format(data_hora,"%M")
+```
+
+```{r}
+#extrair apenas o segundo:
+format(data_hora,"%S")
+```
+
+Caso seja interessante em sua análise extrair mais um valor ao mesmo tempo, é só seguir o mesmo raciocínio.
+
+Para extrair apenas a horas e os minutos:
+
+```{r}
+#extrair apenas as horas e os minutos
+format(data_hora,"%H:%M")
+```
+
+
+## Fuso horário
+
+Em alguns casos vamos precisar alterar o fuso horário da nossa variável de data. Casos mais comuns:
+
+- O R foi configurado no seu computador como se você não estivesse onde você realmente está. Por exemplo, por algum motivo as suas configurações de locale estão em Inglês e o fuso horário corresponde ao fuso horário de Londres. Isso será super comum caso você utilize o R na nuvem, uma vez que possivelmente o servidor de nuvem não estará no mesmo fuso horário que o seu.
+
+- Caso os horários do seu banco de dados esteja em um fuso horário diferente do que você deseja trabalhar, seja porque você está trabalhando com dados mundiais ou qualquer outro motivo.
+
+Para resolver isso, é bem simples. Veja o exemplo:
+
+```{r}
+## Vamos atribuir ao objeto hora_londres um horário registrado considerando o fuso horário de Londres
+hora_londres <- "2019-07-03 18:30"  
+## Vamos atribuir o fuso horário ao objeto. Pois o R ainda não sabia qual o fuso horário do objeto hora_londres.
+hora_londres <- as.POSIXct(hora_londres, tz="Europe/London") 
+## Criando um novo objeto com o mesmo valor
+hora_sao_paulo<-hora_londres
+## Transformando o fuso horário do objeto hora_sao_paulo
+attributes(hora_sao_paulo)$tzone <- "America/Sao_Paulo"  
+# hora do objeto hora_londres
+hora_londres
+# hora do objeto hora_sao_paulo
+hora_sao_paulo  
+```
+
+Portanto, o valor do objeto *hora_sao_paulo* é 4 horas mais cedo do que o do objeto *hora_londres*. 
+
+O valor '-03' no objeto hora_sao_paulo se refere ao GMT -3, fuso horário típico do Brasil e de São Paulo.
+
+## Operação com datas
+
+Vamos considerar os objetos que já utilizamos nesse capítulo para calcular a diferença entre eles:
+
+```{r}
+hora_sao_paulo
+```
+
+```{r}
+data_hora
+```
+
+```{r}
+hora_sao_paulo - data_hora
+```
+
+Como os dois objetos estão no formato padrão do R, é possível fazer a subtração de forma direta (hora_sao_paulo - data_hora).
+
+Caso seja interessante você definir qual a medida do resultado de diferença entre as datas, use a função **difftime**. 
+
+```{r}
+diferenca_horas <- difftime(hora_sao_paulo, data_hora, units='hours')
+diferenca_horas
+```
+
+No exemplo acima, defini que gostaria de ter a resposta de diferença entre as datas em **horas** (units='hours').
+
+Também é possível somar ou subtrair valores do seu objeto de data e hora.
+
+Suponha que desejamos **somar 1 hora** no objeto data_hora:
+
+```{r}
+data_hora
+data_hora + 60*60
+```
+
+A menor unidade do objeto é **um segundo**. Ou seja, quando adicionamos 60 unidades, estamos adicionando 1 minuto. Quando adicionamos 60\*60 estamos adicionando 60 vezes 1 minuto, portanto adicionamos 1 hora. 
+
+Agora um exemplo com apenas datas:
+
+```{r}
+data_inicio<-strptime("10 Dezembro 2017", format="%d %B %Y")
+data_fim<-strptime("17 Dezembro 2018", format="%d %B %Y")
+
+data_fim - data_inicio
+```
+
+Para somar 2 dias ao objeto que contém as datas, devemos somar o valor de 2\*60\*60\*24.
+
+60*60 representa a quantidade de segundos em 1 hora. Já 24 representa as 24 horas do dia.
+
+Então, para adicionar dois dias, devemos multiplicar 2 por 60\*60\*24.
+```{r}
+data_inicio + 2*60*60*24
+```
+

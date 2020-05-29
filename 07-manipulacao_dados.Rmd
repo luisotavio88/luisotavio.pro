@@ -1,0 +1,251 @@
+# Manipulação de dados com o dplyr
+
+## O que é um Data Frame?
+
+Provavelmente você já utilizou o Excel para construir ou analisar uma tabela com os seus dados de interesse. Geralmente, as tabelas já tem a mesma estrutura de um Data Frame, conceito que será muito útil em seus trabalhos e será apresentado aqui.
+
+Em um Data Frame cada registro será inserido em uma linha, já as colunas representarão as suas variáveis.
+
+Por exemplo, em uma pesquisa de opinião, as informações de uma linha serão os dados de uma pessoa respondente específica. Enquanto cada coluna da tabela corresponderá as respostas para uma pergunta específca.
+
+Diferentemente de uma matriz tradicional, as colunas podem misturar vários tipos de variáveis.
+
+No caso da pesquisa de opinião, pode-se ter uma coluna para Idade (variável numérica), outra para o Gênero (variável categórica) e outra pergunta aberta (variável de texto).
+
+Regras básicas de um Data Frame:
+
+- Cada coluna deve ter um nome
+- Todas as colunas devem ser do mesmo tamanho. Não é permitido que uma coluna tenha 40 registros e outra 39.
+- As colunas podem ser numéricas (numeric), categóricas (factor) ou texto (character)
+- Sempre terão duas dimensões (linhas e colunas)
+
+## Manipulação de um Data Frame
+
+Seja qual for a sua área dentro da Ciência de Dados, os conceitos a seguir serão muito úteis e irão facilitar muito a vida em suas análises. 
+
+Seja para econometria, bioestatística, demografia, machine learning ou qualquer outra.
+
+O melhor pacote do R para manipular dados para manipular Data Frames se chama *dplyr*.
+
+Porque usar o *dplyr*:
+
+- Facilidade de criação e leitura do código - Código limpo.
+
+- Manipulação básica ou avançada em poucas linhas
+
+- É muito mais veloz comparando com as funções correspondentes de outros pacotes.
+
+- É simples. Baseado em apenas 6 funções principais.
+
+
+## As funções do Dplyr
+
+O Dplyr é bastante conhecido e usado pelos 6 verbos que representam suas principais funções:
+
+- Summarise -> Calcula valores para uma coluna. Ex: mínimo, máximo, média, desvio padrão, etc.
+- Mutate -> Cria uma nova variável que seja uma função entre variáveis que já existem
+- Select -> Seleciona colunas que já existem pelo nome delas.
+- Filter -> Selectiona registros (linhas) de acordo com uma condição estabelecida.
+- Arrange -> Ordena as linhas do data frame.
+- Rename -> Renomear o nome das variáveis.
+
+Essas são as principais funções que você irá utilizar em uma manipulação de dados. Apesar de serem simples, são muito poderosas.
+
+## As propriedades das funções do pacote Dplyr
+
+Esses conceitos apresentados agora irão facilitar muito o seu entendimento para qualquer uma das funções usadas no pacote.
+
+Características comuns as funções citadas do pacote:
+
+- O primeiro argumento da função é sempre o seu conjunto de dados que será manipulado.
+- Os argumentos seguintes vão definir o que será feito com o seu conjunto de dados
+- O resultado também será um data frame.
+- Ao inserir os nomes de colunas (variáveis) não é necessário (e nem permitido) usar "" ou o operador $.
+
+Na prática será bem fácil identificar esse padrão. Então, vamos ver como funciona cada uma das funções.
+
+## A função Summarise e a função group_by
+
+A função summarise é útil para calcular estatísticas das colunas de um data frame.
+
+Muitas vezes é utilizada com uma função auxiliar também muito importante: a função *group_by*.
+
+Suponha que você tenho um conjunto de dados com vários carros (cada carro será uma linha) e várias características dos carros (colunas).
+
+Para calcular a média de uma dessas características, por exemplo a quantidade de cavalos dos carros, você usaria a função *summarise*. 
+
+Mas imagine agora que você não precisa simplesmente calcular a quantidade de cavalos de todos os carros, você precisar calcular essa média de acordo com a quantidade de cilindros dos carros. 
+
+Nesse caso, a função __group_by__ irá separar seus dados de acordo com uma variável (quantidade de cilindros) e assim você poderá usar a função __summarise__ para calcular a média da quantidade de cavalos.
+
+Vamos usar o mtcarts - dataset nativo no R.
+
+Para mais informações sobre as variáveis do dataset, execute o comando *?mtcarts*
+
+
+```{r}
+library(dplyr)
+mtcars_grupo<-group_by(mtcars,cyl)  ##a variável cyl é a quantidade de cilindros do carro
+summarise(mtcars_grupo,mean(hp))    ## a variável hp é a quantidade de cavalos do carro (horse power)
+```
+
+Caso você deseje continuar trabalhando com o mesmo dataset (usando o mesmo objeto), é importante que você desfaça o agrupamento. Isso irá evitar futuros erros na execução do seu código.
+
+```{r}
+# desagrupando o data frame
+mtcars_grupo<-ungroup(mtcars_grupo)
+```
+
+
+## Mutate
+
+A função __mutate__ serve para criar uma nova coluna que seja uma função entre as variáveis que já existem.
+
+Então, usando o mesmo data frame __mtcars__, temos a variável __wt__ que representa o peso do carro (em libras) e a variável __qsec__ que representa o tempo (em segundos) que o carro precisa para percorrer a distância de 0,25 milhas. 
+
+Portanto, como exemplo, vamos criar uma nova coluna para relativizar o tempo que o carro gasta para percorrer 0,25 milhas (__qsec__) pelo seu peso (__wt__). A fómula para isso seria: __qsec__/__wt__.
+
+O nome da nova coluna será __tempo_peso__.
+
+Portanto:
+
+```{r}
+library(dplyr)
+novo_dataframe<-mutate(mtcars,tempo_peso = qsec/wt) # a função irá adicionar a nova coluna e atribuir ao seu data frame
+```
+
+
+## Select
+
+A função __select__ serve para selecionar colunas em um data frame.
+
+Então, ainda usando o dataframe __mtcars__, suponha que somente as variáveis __mpg__ e __gear__ serão úteis em nossa análise.
+
+Para filtrar essas variáveis, precisamos executar o seguinte comando:
+
+```{r}
+select(mtcars,mpg,gear)
+```
+
+Então, o primeiro argumento é o dataset (mtcars) e os argumentos restantes na função __select__ são as colunas que você deseja manter.
+
+## Filter
+
+Enquanto a função __select__ seleciona as colunas do dataframe, a função *filter* é utilizada para selecionar as *linhas* do dataframe.
+
+Então, quando precisamos selecionar registros de um data frame usando determinada condição, a função recomendada é a __filter__.
+
+Utilizando o mesmo data frame, suponha que precisamos filtrar todos os carros com 6 cilindros.
+
+Neste caso, a variável em questão é a __cyl__, então a nossa condição é que o registro atenda a condição cyl==6.
+
+Repare que o sinal de igual é *duplo*, pois é uma condição lógica.
+
+Quando usamos cyl=6 estamos atribuindo o valor 6 para o objeto cyl. Mas não é o que desejamos aqui.
+
+Desejamos filtrar os dados por uma condição lógica (verdadeira ou falsa). Para fazer testes lógicos no R, usamos == para retornar TRUE caso os valores sejam iguais e FALSE caso os valores sejam diferentes.
+
+Quando for necessário inverter a lógica e buscar pelos valores diferentes (ao invés de buscar os iguais) o teste lógico será feito por "!=" (testa se os valores são diferentes).
+
+Então, em nosso exemplo, o código seria o seguinte:
+
+```{r}
+filter(mtcars,cyl==6)  #filtra todos as observações (carros) que possuem 6 cilindros. 
+```
+
+Também é possível combinar outros operadores lógicos quando vamos filtrar os dados, como E/OU.
+
+Então, suponha que não basta que o carro tenha 6 cilindros, além disso você deseja que ele tenha menos que 3 toneladas. Neste caso, o peso do carro é representado pela variável __wt__.
+
+Para filtrar os carros que tenham 6 cilindros (cyl==6) e tenham menos que 3 toneladas (wt<3), vamos executar o seguinte código:
+
+```{r}
+filter(mtcars,cyl==6 & wt<3)
+```
+
+O operador lógico **E** é representado pelo símbolo **&**.
+
+Já o operador lógico **OU** é representado pelo símbolo **|**.
+
+Caso o objetivo fosse filtrar carros com 6 cilindros OU peso menor que 3 toneladas, o código seria o seguinte:
+
+```{r}
+filter(mtcars,cyl==6 | wt<3)
+```
+
+Para a condição "cyl==6 | wt<3" ser verdadeira, basta que pelo menos uma das condições sejam atingidas. Ou seja, o carro tenha 6 cilindros ou menos de 3 toneladas. Caso as duas condições sejam atendidas simultaneamente o carro também estará na tabela filtrada.
+
+## Arrange
+
+A função __arrange__ é responsável por ordenar as linhas do data frame seguindo uma nova ordem estabelecida.
+
+Então, suponha que em nosso exemplo, queremos ordenar o data frame __mtcars__ do carro com menor número de marchas para o maior número de marchas. 
+
+Porém, há vários carros que irão empatar para esse critério, já que a tabela tem 15 carros com 3 marchas, 12 carros com 4 marchas e 5 carros com 5 marchas.
+
+```{r}
+table(mtcars$gear)
+```
+
+Portanto, vou definir que os dados também sejam ordenados pelo peso (variável __wt__).
+
+```{r}
+arrange(mtcars,gear,wt)
+```
+
+É possível usar a função __arrange__ para ordenar os dados usando muitas variáveis para ordenar os dados. Porém, a ordem que as colunas forem inseridas na função __arrange__ representam uma *ordem de prioridade*.
+
+Portanto, a função só irá ordenar pela segunda coluna caso haja empates na primeira, por exemplo.
+
+## Rename
+
+Alterar os nomes de uma variável de um data frame é algo conceitualmente simples. Mas, na prática pode ser bem trabalhoso de fazer sem a função __rename__.
+
+Quais são os nomes das colunas da tabela mtcats?
+
+```{r}
+names(mtcars)
+```
+
+Agora suponha que você deseje alterar o nome da coluna __cyl__ para *cilindros* e __hp__ para *cavalos*.
+
+```{r}
+mtcars_<-rename(mtcars,cilindros=cyl,cavalos=hp)
+head(mtcars_)
+```
+
+Esse é o padrão. Após informar o data frame onde se aplicará as alterações, coloca-se o novo nome da coluna antes do sinal de igual e logo após o nome antigo da coluna.
+
+
+## O operador %>% (leia-se pipe)
+
+O operador ```%>%``` facilita muito a nossa vida, tornando o código mais limpo e fácil de ser compreendido.
+
+O operador funciona da seguinte forma:
+```{r}
+# dataset %>% função()
+```
+
+Isso significa que o objeto do lado esquerdo do operador (dataset) será inserido na função ao lado direito do operador no **primeiro argumento** da função.
+
+O operador ```%>%``` pode ser usado conjuntamente com inúmeras funções, incluindo todas que aprendemos nesse capítulo.
+
+Exemplos práticos:
+
+Algumas linhas atrás, ordenamos o dataset ```mtcars``` em ordem crescente pelas colunas *gear* e *wt*, usando o código:
+
+```{r}
+dataset_ordenado <- arrange(mtcars,gear,wt)
+```
+
+Utilizando o operador %>%, o código ficaria da seguinte maneira:
+
+```{r}
+dataset_ordenado <- mtcars %>%
+                      arrange(gear,wt)
+```
+
+Então, o dataset ```mtcars``` é inserido no primeiro argumento da função ```arrange```.
+
+*A diferença é pequena para casos simples como esse, porém em casos mais complexos a utilização do operador %>% (pipe) fará uma diferença enorme na organização do seu código.*
+

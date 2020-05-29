@@ -1,0 +1,199 @@
+# Estruturas de Controle
+
+Duas das principais vantagens da maioria das linguagens computacionais são:
+
+- Executar tarefas repetitivas
+- Fazer decisões lógicas
+
+Para executar tarefas repetitivas, vamos criar **loopings**. É como se o nosso código desse voltas e repetisse de acordo com a regra estabelecida.
+
+Os loopings irão usar as funções **for** e **while**.
+
+Para adicionar decisões lógicas ao nosso algoritmo, as principais funções são o *if-else* e o *ifelse*.
+
+Existem outras estruturas de controle que não serão abordadas aqui. Porém essas são as mais importante.
+
+As estruturas de controle podem ser combinadas quando necessário. Ou seja, você pode utilizar a função ```for``` juntamente com outra função ```for```. Ou então a função ```while``` juntamente com a função ```if```.
+
+Essas combinações irão depender somente da demanda do algoritmo que você precisa desenvolver.
+
+## for
+
+A função ```for``` é usada para criar loopings, ou seja, para executar uma tarefa diversas vezes. 
+
+Para usar a função ```for```, você precisa criar uma variável para te auxiliar. Essa variável terá o seu valor alterado a cada ciclo de execução do ```for```. 
+
+Além disso, essa variável irá percorrer uma sequência, definida por você. 
+
+Veja na prática:
+
+Vamos criar um vetor que irá receber o valor do dobro de sua posição. Esse vetor irá ter tamanho igual a 10.
+
+```{r}
+nosso_vetor<-c()     #criei o 'nosso_vetor'
+for(posicao in 1:10){ #a nossa variável auxiliar é a 'posicao'. Ela irá percorrer o vetor 1:10.
+                      #O vetor 1:10 é a mesma coisa que criar um vetor com todos os números de 1 a 10.
+                      #O primeiro valor para a variável 'posicao' será 1, depois 2 até o último valor que é 10.
+  nosso_vetor[posicao]<-2*posicao  #O vetor 'nosso_vetor' irá receber o dobro de sua posição.
+}
+```
+
+```{r}
+nosso_vetor
+```
+
+Outro exemplo:
+
+```{r}
+for(auxiliar in 1:10){
+  print(nosso_vetor[auxiliar])
+}
+```
+
+No exemplo acima, a nossa variável **auxiliar** também irá percorrer a sequência 1, 2, 3, 4, 5, 6, 7, 8, 9 e 10.
+
+A tarefa a ser repetida é imprimir o elemento dentro do 'nosso_vetor' que está posicionado no valor da variável 'auxiliar'. A variável irá percorrer o looping começando com valor igual a 1 e irá até o valor 10.
+
+Ou seja, o que o looping faz é exatamente equivalente ao código:
+
+```{r}
+print(nosso_vetor[1])
+print(nosso_vetor[2])
+print(nosso_vetor[3])
+print(nosso_vetor[4])
+print(nosso_vetor[5])
+print(nosso_vetor[6])
+print(nosso_vetor[7])
+print(nosso_vetor[8])
+print(nosso_vetor[9])
+print(nosso_vetor[10])
+```
+
+
+## while
+
+Note que a função ```for``` segue uma sequência já definida antes do início do looping. A variável auxiliar percorre essa sequência e elas não sofrem nenhuma alteração pelo código dentro do ```for```.
+
+Porém, em alguns casos, vai ser mais interessante manter o looping rodadando **enquanto** alguma condição ainda não foi atendida. **Para isso usaremos a função ```while```.**
+
+Esse é o caso, por exemplo, de um modelo de previsões que irá sofrer um número indefinido de iterações e só irá encerrar o looping quando o erro for menor do que determinado valor.
+
+```{r}
+i<-0
+while(i < 1){
+  i<-rnorm(1) #a função rnorm(1) irá gerar 1 número aleatório com a distribuição normal padrão.
+  print(i)    #a função print(i) irá imprimir o valor atribuído a i na linha anterior.
+}
+```
+
+A condição para o looping acontecer é que o valor de ```i``` seja menor do que 1.
+
+A cada nova interação, o valor de ```i``` é atualizado por um novo valor. 
+
+A função ```print(i)``` imprime o valor atribuído ao elemento ```i```.
+
+Então, o looping irá dar voltas **enquanto** o valor de ```i``` for menor do que 1. O último valor impresso é maior do que 1 e isso significa que a condição ```i < 1``` não é mais atendida e o looping irá se encerrar.
+
+## if - else
+
+As funções ```for``` e ```while``` são úteis para criarmos loopings e repetir determinada tarefa. Já as funções ```if``` ou ```ifelse``` são funções de decisões lógicas.
+
+Ou seja, você irá estabelecer uma condição e, caso ela seja atentida, o código será executado.
+
+Caso a condição estabelecida seja atendida (TRUE), será seguido o roteiro estabelecido quando a condição for verdadeira. Caso a condição não seja atendida (FALSE), será seguido outro roteiro. 
+
+Nesse item, vamos utilizar as funções ```if``` e ```else``` separadas, primeiro uma e depois a outra.
+
+O exemplo abaixo, vamos criar a condição lógica ```a < b```. Portanto, se **a** for menor que **b**, a condição lógica será verdadeira e a parte seguinte do código será executada:
+
+
+```{r}
+a<-2
+b<-5
+if(a < b){
+  print("Condição verdadeira. 'a' é menor que 'b'")
+}
+```
+
+Agora, vamos adicionar a função ```else``` que é simplemente o SENÃO. Caso a condição lógica seja FALSA, o *script* contido dentro da função ```else``` é executado.
+
+```{r}
+if(a > b){ #a condição lógica foi invertida e será FALSA
+    print("Condição verdadeira. 'a' é maior que 'b'")
+}else{
+      print("Condição falsa. 'a' não é maior que 'b'")
+}
+```
+
+O uso da função ```else``` é opicional. Caso ela não esteja presente, nada irá acontecer quando a condição lógica não for atendida.
+
+Repare que as duas formas apresentadas seguem os padrões:
+
+```{r,eval=F}
+## if
+if(condicao_logica){ #a condição lógica deve ser sempre TRUE ou FALSE
+  #SCRIPT CASO A CONDIÇÃO FOR ATENTIDA
+}
+```
+
+```{r eval=FALSE}
+## if - else
+if(condicao_logica){ #a condição lógica deve ser sempre TRUE ou FALSE
+  #SCRIPT CASO A CONDIÇÃO FOR ATENTIDA (TRUE)
+}else{
+    #SCRIPT CASO A CONDIÇÃO NÃO FOR ATENTIDA (FALSE)
+}
+```
+
+## ifelse
+
+O raciocínio lógico utilizado na função ```ifelse``` é o mesmo que aprendemos com as funções ```if``` e ```else```.
+
+A função será utilizada da seguinte forma:
+
+- ifelse(Condição,Ação se for a condição for verdadeira, Ação se a condição for falsa)
+
+Porém, a diferença é que a função ifelse é aplicada a um **vetor**. Isso a torna extremamente útil e facilitará a nossa vida em alguns casos.
+
+Exemplo:
+
+```{r}
+vetor<-c(2,10,5,50,9,15,3,0,25)
+
+vetor2 <- ifelse(vetor<10,"menor","MAIOR")
+
+vetor2
+```
+
+A solução acima não pode ser aplicada ao método if-else ensinado no item anterior.
+
+```{r}
+if(vetor<10){
+  vetor2<-"menor"
+}else{
+  vetor2<-"MAIOR"
+}
+vetor2  
+```
+
+Portanto, caso precise usar uma função condicional para vetores, a função ```ifelse``` é uma das opções que você deve considerar.
+
+Lembre também que caso você esteja trabalhando com um data frame, cada coluna de seu data frame pode ser tratada como um vetor.
+
+A seguir vamos criar uma nova coluna em um data frame baseada em uma condição lógica:
+
+```{r}
+head(mtcars)
+# Suponha que o objetivo seja criar duas categorias de carros, os que gastam muito combustível e os que gastam pouco.
+# para isso, vamos usar a variável mpg (milhas por galão).
+
+mtcars$consumo_combustivel<-ifelse(mtcars$mpg<20,"Bebe muito","Bebe pouco")
+
+head(mtcars)
+```
+
+Então, colocamos as colunas (que são vetores) do data frame ```mtcars``` como argumentos da função  ```ifelse```.
+
+
+
+

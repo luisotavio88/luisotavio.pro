@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 6 Como ler ou salvar seus dados | O primeiro passo como Cientista de Dados</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 6 Como ler ou salvar seus dados | O primeiro passo como Cientista de Dados" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 6 Como ler ou salvar seus dados | O primeiro passo como Cientista de Dados" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Luís Otávio" />
+
+
+<meta name="date" content="2020-05-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="instalar-pacotes-no-r.html"/>
+<link rel="next" href="manipulação-de-objetos.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">luisotavio.pro</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Quem sou eu</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introdução</a></li>
+<li class="chapter" data-level="3" data-path="oquefaz.html"><a href="oquefaz.html"><i class="fa fa-check"></i><b>3</b> O que faz um cientista de dados?</a></li>
+<li class="chapter" data-level="4" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html"><i class="fa fa-check"></i><b>4</b> Iniciando com o R</a><ul>
+<li class="chapter" data-level="4.1" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#instalação"><i class="fa fa-check"></i><b>4.1</b> Instalação</a></li>
+<li class="chapter" data-level="4.2" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#lógica-de-programação-no-r"><i class="fa fa-check"></i><b>4.2</b> Lógica de programação no R</a></li>
+<li class="chapter" data-level="4.3" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#objetos"><i class="fa fa-check"></i><b>4.3</b> Objetos</a></li>
+<li class="chapter" data-level="4.4" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#vetores"><i class="fa fa-check"></i><b>4.4</b> Vetores</a></li>
+<li class="chapter" data-level="4.5" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#matrizes"><i class="fa fa-check"></i><b>4.5</b> Matrizes</a></li>
+<li class="chapter" data-level="4.6" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#listas"><i class="fa fa-check"></i><b>4.6</b> Listas</a></li>
+<li class="chapter" data-level="4.7" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#fatores"><i class="fa fa-check"></i><b>4.7</b> Fatores</a></li>
+<li class="chapter" data-level="4.8" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#coerção-de-classes"><i class="fa fa-check"></i><b>4.8</b> Coerção de classes</a></li>
+<li class="chapter" data-level="4.9" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#valores-faltantes"><i class="fa fa-check"></i><b>4.9</b> Valores faltantes</a></li>
+<li class="chapter" data-level="4.10" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#data-frames"><i class="fa fa-check"></i><b>4.10</b> Data Frames</a></li>
+<li class="chapter" data-level="4.11" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#names"><i class="fa fa-check"></i><b>4.11</b> Names</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html"><i class="fa fa-check"></i><b>5</b> Instalar Pacotes no R</a><ul>
+<li class="chapter" data-level="5.1" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#como-instalar-um-pacote-no-r-ou-rstudio"><i class="fa fa-check"></i><b>5.1</b> Como instalar um pacote no R ou RStudio</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#usando-o-botão-de-instalação"><i class="fa fa-check"></i><b>5.1.1</b> Usando o botão de instalação</a></li>
+<li class="chapter" data-level="5.1.2" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#usando-o-comando-de-instalação"><i class="fa fa-check"></i><b>5.1.2</b> Usando o comando de instalação</a></li>
+<li class="chapter" data-level="5.1.3" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#usando-o-devtools"><i class="fa fa-check"></i><b>5.1.3</b> Usando o Devtools</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html"><i class="fa fa-check"></i><b>6</b> Como ler ou salvar seus dados</a><ul>
+<li class="chapter" data-level="6.1" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#como-importar-uma-tabela-em-arquivo-txt-ou-csv-para-o-rstudio"><i class="fa fa-check"></i><b>6.1</b> Como importar uma tabela em arquivo txt ou csv para o RStudio</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#método-sem-nenhuma-linha-de-código"><i class="fa fa-check"></i><b>6.1.1</b> Método sem nenhuma linha de código</a></li>
+<li class="chapter" data-level="6.1.2" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#importando-dados-com-a-função-read.table"><i class="fa fa-check"></i><b>6.1.2</b> Importando dados com a função read.table</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#como-importar-dados-do-excel-para-o-rstudio"><i class="fa fa-check"></i><b>6.2</b> Como importar dados do Excel para o RStudio</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#copiando-os-dados-do-excel-e-importando-para-o-r."><i class="fa fa-check"></i><b>6.2.1</b> Copiando os dados do Excel e importando para o R.</a></li>
+<li class="chapter" data-level="6.2.2" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#importando-arquivos-do-excel-sem-usar-programação"><i class="fa fa-check"></i><b>6.2.2</b> Importando arquivos do Excel sem usar programação</a></li>
+<li class="chapter" data-level="6.2.3" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#abrir-os-dados-do-excel-no-r-usando-o-pacote-readxl"><i class="fa fa-check"></i><b>6.2.3</b> Abrir os dados do Excel no R usando o pacote readxl</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html"><i class="fa fa-check"></i><b>7</b> Manipulação de objetos</a><ul>
+<li class="chapter" data-level="7.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#manipulação-de-vetores"><i class="fa fa-check"></i><b>7.1</b> Manipulação de vetores</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-extrair-elementos-de-um-vetor"><i class="fa fa-check"></i><b>7.1.1</b> Como extrair elementos de um vetor</a></li>
+<li class="chapter" data-level="7.1.2" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-atribuir-valores-a-elementos-de-um-vetor"><i class="fa fa-check"></i><b>7.1.2</b> Como atribuir valores a elementos de um vetor</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#manipulação-de-matrizes"><i class="fa fa-check"></i><b>7.2</b> Manipulação de matrizes</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-extrair-elementos-de-uma-matriz"><i class="fa fa-check"></i><b>7.2.1</b> Como extrair elementos de uma matriz</a></li>
+<li class="chapter" data-level="7.2.2" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-atribuir-valores-a-elementos-de-uma-matriz"><i class="fa fa-check"></i><b>7.2.2</b> Como atribuir valores a elementos de uma matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#manipulação-de-listas"><i class="fa fa-check"></i><b>7.3</b> Manipulação de Listas</a></li>
+<li class="chapter" data-level="7.4" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-extrair-elementos-ou-objetos-de-uma-lista"><i class="fa fa-check"></i><b>7.4</b> Como extrair elementos ou objetos de uma lista</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-atribuir-valores-a-elementos-de-uma-lista"><i class="fa fa-check"></i><b>7.4.1</b> Como atribuir valores a elementos de uma lista</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html"><i class="fa fa-check"></i><b>8</b> Manipulação de dados com o dplyr</a><ul>
+<li class="chapter" data-level="8.1" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#o-que-é-um-data-frame"><i class="fa fa-check"></i><b>8.1</b> O que é um Data Frame?</a></li>
+<li class="chapter" data-level="8.2" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#manipulação-de-um-data-frame"><i class="fa fa-check"></i><b>8.2</b> Manipulação de um Data Frame</a></li>
+<li class="chapter" data-level="8.3" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#as-funções-do-dplyr"><i class="fa fa-check"></i><b>8.3</b> As funções do Dplyr</a></li>
+<li class="chapter" data-level="8.4" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#as-propriedades-das-funções-do-pacote-dplyr"><i class="fa fa-check"></i><b>8.4</b> As propriedades das funções do pacote Dplyr</a></li>
+<li class="chapter" data-level="8.5" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#a-função-summarise-e-a-função-group_by"><i class="fa fa-check"></i><b>8.5</b> A função Summarise e a função group_by</a></li>
+<li class="chapter" data-level="8.6" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#mutate"><i class="fa fa-check"></i><b>8.6</b> Mutate</a></li>
+<li class="chapter" data-level="8.7" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#select"><i class="fa fa-check"></i><b>8.7</b> Select</a></li>
+<li class="chapter" data-level="8.8" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#filter"><i class="fa fa-check"></i><b>8.8</b> Filter</a></li>
+<li class="chapter" data-level="8.9" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#arrange"><i class="fa fa-check"></i><b>8.9</b> Arrange</a></li>
+<li class="chapter" data-level="8.10" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#rename"><i class="fa fa-check"></i><b>8.10</b> Rename</a></li>
+<li class="chapter" data-level="8.11" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#o-operador-leia-se-pipe"><i class="fa fa-check"></i><b>8.11</b> O operador %&gt;% (leia-se pipe)</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html"><i class="fa fa-check"></i><b>9</b> Manipulação de Hora e Data</a><ul>
+<li class="chapter" data-level="9.1" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#formato-de-data-no-r"><i class="fa fa-check"></i><b>9.1</b> Formato de data no R</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#como-transformar-o-formato-da-variável-de-data-e-hora"><i class="fa fa-check"></i><b>9.1.1</b> Como transformar o formato da variável de data e hora?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#extrair-ano-mês-dia-horas-minutos-ou-segundos."><i class="fa fa-check"></i><b>9.2</b> Extrair ano, mês, dia, horas, minutos ou segundos.</a></li>
+<li class="chapter" data-level="9.3" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#fuso-horário"><i class="fa fa-check"></i><b>9.3</b> Fuso horário</a></li>
+<li class="chapter" data-level="9.4" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#operação-com-datas"><i class="fa fa-check"></i><b>9.4</b> Operação com datas</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html"><i class="fa fa-check"></i><b>10</b> Estruturas de Controle</a><ul>
+<li class="chapter" data-level="10.1" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#for"><i class="fa fa-check"></i><b>10.1</b> for</a></li>
+<li class="chapter" data-level="10.2" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#while"><i class="fa fa-check"></i><b>10.2</b> while</a></li>
+<li class="chapter" data-level="10.3" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#if---else"><i class="fa fa-check"></i><b>10.3</b> if - else</a></li>
+<li class="chapter" data-level="10.4" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#ifelse"><i class="fa fa-check"></i><b>10.4</b> ifelse</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html"><i class="fa fa-check"></i><b>11</b> Explore os seus dados</a><ul>
+<li class="chapter" data-level="11.1" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#nome-das-colunas"><i class="fa fa-check"></i><b>11.1</b> Nome das colunas</a></li>
+<li class="chapter" data-level="11.2" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#estrutura-do-dataset"><i class="fa fa-check"></i><b>11.2</b> Estrutura do Dataset</a></li>
+<li class="chapter" data-level="11.3" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#o-começo-e-o-final-do-seu-conjunto-de-dados"><i class="fa fa-check"></i><b>11.3</b> O começo e o final do seu conjunto de dados</a></li>
+<li class="chapter" data-level="11.4" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#frequência"><i class="fa fa-check"></i><b>11.4</b> Frequência</a></li>
+<li class="chapter" data-level="11.5" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#estatísticas-descritivas-básicas"><i class="fa fa-check"></i><b>11.5</b> Estatísticas descritivas básicas</a></li>
+<li class="chapter" data-level="11.6" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#gráficos-usados-na-análise-exploratória"><i class="fa fa-check"></i><b>11.6</b> Gráficos usados na Análise Exploratória</a><ul>
+<li class="chapter" data-level="11.6.1" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#histograma"><i class="fa fa-check"></i><b>11.6.1</b> Histograma</a></li>
+<li class="chapter" data-level="11.6.2" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#boxplot"><i class="fa fa-check"></i><b>11.6.2</b> Boxplot</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html"><i class="fa fa-check"></i><b>12</b> Criando Gráficos no R</a><ul>
+<li class="chapter" data-level="12.1" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#criando-gráficos-com-a-biblioteca-ggplot2"><i class="fa fa-check"></i><b>12.1</b> Criando gráficos com a biblioteca <em>ggplot2</em></a><ul>
+<li class="chapter" data-level="12.1.1" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#seu-primeiro-gráfico"><i class="fa fa-check"></i><b>12.1.1</b> Seu primeiro gráfico</a></li>
+<li class="chapter" data-level="12.1.2" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#incrementando-o-gráfico"><i class="fa fa-check"></i><b>12.1.2</b> Incrementando o gráfico</a></li>
+<li class="chapter" data-level="12.1.3" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-bolhas---bubble-chart"><i class="fa fa-check"></i><b>12.1.3</b> O Gráfico de Bolhas - Bubble Chart</a></li>
+<li class="chapter" data-level="12.1.4" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-correlação"><i class="fa fa-check"></i><b>12.1.4</b> O gráfico de correlação</a></li>
+<li class="chapter" data-level="12.1.5" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#aperfeiçoando-o-gráfico"><i class="fa fa-check"></i><b>12.1.5</b> Aperfeiçoando o gráfico</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://www.luisotavio.pro" target="blank">100% feito usando o R</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">O primeiro passo como Cientista de Dados</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="como-ler-ou-salvar-seus-dados" class="section level1">
+<h1><span class="header-section-number"> 6</span> Como ler ou salvar seus dados</h1>
+<p>Nesse capítulo vou te apresentar as principais formas de importar os seus dados para o R.</p>
+<p>Em alguns casos específicos, a importação dos dados pode depender de pacotes desenvolvidos especialmente para o caso. Aqui vou abotar a importação de arquivos de texto, CSV ou Excel.</p>
+<p>Vou tratar sobre a importação de dados do Excel no final deste capítulo. Porém, caso você queira importar poucas abas de uma planilha do Excel, recomendo que você a salve como arquivo TXT e faça a importação usando o método a seguir.</p>
+<div id="como-importar-uma-tabela-em-arquivo-txt-ou-csv-para-o-rstudio" class="section level2">
+<h2><span class="header-section-number">6.1</span> Como importar uma tabela em arquivo txt ou csv para o RStudio</h2>
+<div id="método-sem-nenhuma-linha-de-código" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Método sem nenhuma linha de código</h3>
+<p>Após aplicar esse método, você terá importado seus dados em segundos e, além disso, o R te mostrará qual o código ele executou para abrir a sua tabela! Ou seja, uma ótima oportunidade pra você entender melhor sobre a linguagem.</p>
+<p><em>Passo 1 - Na parte “Enviroment” clique em Import Dataset -&gt; From Txt (readr)</em></p>
+<p>Lembre-se que os seus dados devem estar salvos no formato txt ou csv.</p>
+<div class="figure">
+<img src="imagens/5_importacao1.png" alt="Importar dados no R-RStudio" />
+<p class="caption">Importar dados no R-RStudio</p>
+</div>
+<p>Para ler os dados vamos usar a biblioteca “readr”, então, caso você ainda não tenha ela instalada em seu computador, o RStudio irá solicitar a sua instalação.</p>
+<p><em>Passo 2 - Instale a biblioteca “readr”, caso ela já não esteja instalada</em></p>
+<div class="figure">
+<img src="imagens/5_importacao2.png" alt="Importar dados no R-RStudio" />
+<p class="caption">Importar dados no R-RStudio</p>
+</div>
+<p>Clique em “Yes” e aguarde a instalação.</p>
+<p><em>Passo 3 - Ajustes para importar a sua tabela</em></p>
+<div class="figure">
+<img src="imagens/5_importacao3.png" alt="Importar dados no R-RStudio" />
+<p class="caption">Importar dados no R-RStudio</p>
+</div>
+<p>Primeiramente, clique em “Browse” e selecione o arquivo que você deseje importar.</p>
+<p>Uma pequena parte dos dados do arquivo que você selecionou irão aparecer na sua tela, para te auxiliar na importação.</p>
+<p>Então, agora você precisa fazer alguns ajustes para o R ler o seu dataset.</p>
+<p><em>O ajuste mais importante é como as suas colunas estão separadas/delimitadas.</em></p>
+<p>É muito comum usar tabulação (tab), vírgula, ponto e vírgula ou espaço para separar as colunas de arquivos de texto.</p>
+<p>Mas nessa parte da importação, <em>você deve escolher exatamente o mesmo delimitador que já foi utilizado em seu arquivo.</em></p>
+<p>Nessa seção, você também pode fazer vários outros ajustes, por exemplo:</p>
+<ul>
+<li><p>escolher o nome da tabela que será importada</p></li>
+<li><p>definir qual se os números decimais da sua tabela estão separados por ponto ou vírgula. No R o separador decimal é por ponto, então caso o seu arquivo use vírgula, o R saberá que deve transformar pra ficar dentro do padrão.</p></li>
+<li><p>alterar qual a codificação dos seus dados (ASCII, utf8, etc…)</p></li>
+<li><p>definir se a primeira linha dos seus dados é cabeçalho ou não</p></li>
+</ul>
+<p>Note que nessa etapa, na parte de “Code Preview”, o RStudio está mostrando exatamente o código que será executado para fazer a leitura dos seus dados.</p>
+<p>Esse código vai alterando a medida que você muda os ajustes! (ótima oportunidade para aprender e ir entendendo melhor o funcionamento da linguagem).</p>
+<p>Após realizar os ajustes necessários (que vão depender da sua própria tabela), clique em Import</p>
+<p>Pronto, agora os seus dados foram importados.</p>
+<p>Você pode conferir que a sua tabela irá aparecer em “Enviroment”. É só clicar nela para visualizar os dados.</p>
+</div>
+<div id="importando-dados-com-a-função-read.table" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Importando dados com a função read.table</h3>
+<p>A função mais comum para importar dados no R é a <code>read.table</code>. A função é bem simples, vou mostrar a seguir:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1">meus_dados&lt;-<span class="kw">read.table</span>(<span class="dt">file=</span><span class="st">&quot;nome_do_arquivo.txt&quot;</span>,<span class="dt">header =</span> <span class="ot">TRUE</span>,<span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a></code></pre></div>
+<p>Portanto, esse comando irá ler o arquivo “nome_do_arquivo.txt”. Além disso, foi informado que o arquivo possui cabeçalho (nome para cada coluna da tabela) e está separado por tabulação, representado pelo símbolo ".</p>
+<p>Você pode atribuir valores para outros argumentos, como: dec (para definir o separador de números decimais), row.names (para atribuir nomes para cada linha), encoding (definir a codificação dos seus dados) e vários outros.</p>
+<p>Essas opções só precisarão ser utilizadas em casos especiais, quando seus dados não estiverem no padrão definido pelo R.</p>
+<p>Como qualquer função no R, você terá acesso a documentação da função executanto o comando <code>?read.table</code>.</p>
+</div>
+</div>
+<div id="como-importar-dados-do-excel-para-o-rstudio" class="section level2">
+<h2><span class="header-section-number">6.2</span> Como importar dados do Excel para o RStudio</h2>
+<p>A seguir temos 3 métodos para ler dados do Excel no RStudio. Todos são bem simples e cada um será mais útil em um tipo de situação.</p>
+<div id="copiando-os-dados-do-excel-e-importando-para-o-r." class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Copiando os dados do Excel e importando para o R.</h3>
+<p>1 – Abra o seu arquivo de Excel, selecione os dados que deseja copiar e copie os dados (Ctrl + C).</p>
+<p>2 – Execute o código abaixo para importar os dados copiados no Excel.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="dt">file =</span> <span class="st">&quot;clipboard&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<p>Quando copiamos os dados no Excel, eles ficam armazenados no clipboard do nosso computador, então o que estamos fazendo é falando para o R ler a tabela (função read.table) que estão no clipboard e atribuir essa tabela aos “meus_dados”.</p>
+<p>3 – Pronto!</p>
+</div>
+<div id="importando-arquivos-do-excel-sem-usar-programação" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Importando arquivos do Excel sem usar programação</h3>
+<p>Agora vamos ver como importar um arquivo do Excel para o R usando apenas o nosso mouse, é muito simples!</p>
+<p>1 - Na aba <strong>“Enviroment”</strong>, vamos clicar em <em>Import Dataset</em> e escolher <em>From Excel</em>.</p>
+<div class="figure">
+<img src="imagens/5_excel1.png" alt="Importar dados no R-RStudio" />
+<p class="caption">Importar dados no R-RStudio</p>
+</div>
+<p>2 – Você provavelmente ainda não instalou o pacote readxl, então o RStudio vai te perguntar se deseja instalar o pacote. Confirme a instalação.</p>
+<div class="figure">
+<img src="imagens/5_excel2.png" alt="Importar dados no R-RStudio" />
+<p class="caption">Importar dados no R-RStudio</p>
+</div>
+<p>3 - Aparecerá uma aba para você fazer a leitura dos dados desejados. Clique em Browse para escolher o arquivo de Excel que você irá importar. Depois em Sheet escolha a aba de seu arquivo onde está a tabela que você quer importar.</p>
+<p>(Caso queira importar várias abas é só repetir os passos, importando uma aba de cada vez)</p>
+<div class="figure">
+<img src="imagens/5_excel3.png" alt="Importar dados no R-RStudio" />
+<p class="caption">Importar dados no R-RStudio</p>
+</div>
+<p>4 – Clique em Import.</p>
+</div>
+<div id="abrir-os-dados-do-excel-no-r-usando-o-pacote-readxl" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Abrir os dados do Excel no R usando o pacote readxl</h3>
+<p>Esse método é bem parecido com o último, porém aqui vamos usar linhas de código.</p>
+<p>1 - Caso você ainda não tenha instalado o pacote readxl, execute o seguinte comando:</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
+<p>2 - Vamos carregar o pacote que iremos usar (readxl): Execute o comando:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1"><span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
+<pre><code>## Warning: package &#39;readxl&#39; was built under R version 3.6.3</code></pre>
+<p>3 – Agora vamos buscar a planilha que você precisa usando a função <code>read_excel</code>.</p>
+<p>Os argumentos que vamos usar na função são:</p>
+<ul>
+<li>o endereço e nome do seu arquivo;</li>
+<li>a aba da planilha que você quer ler.</li>
+</ul>
+<p>Excute o código:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;seu_arquivo.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="st">&quot;nome da aba&quot;</span>)</a></code></pre></div>
+<ul>
+<li><p>caso o seu arquivo esteja na mesma pasta do seu projeto, você não precisa colocar todo o endereço do arquivo.</p></li>
+<li><p>em sheet você pode colocar o nome da aba do Excel que você quer ler ou seu número (1, 2, 3, etc). Caso você coloque o número, não use aspas.</p></li>
+<li><p>essa função serve tanto para arquivos xls como para xlsx.</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="instalar-pacotes-no-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="manipulação-de-objetos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "instagram"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["livro.pdf", "livro.epub"],
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>
