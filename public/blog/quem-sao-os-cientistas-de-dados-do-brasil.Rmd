@@ -398,7 +398,7 @@ tree<-treemap(datahackers_sel,
 load("datahackers.RData")
 ```
 
-Como mostrado na tabela acima, serão consideradas as variáveis *Tempo de experiência*, *Cargo* e *Área de atuação*.
+Como mostrado na tabela acima, serão consideradas as variáveis **Tempo de experiência**, **Cargo** e **Área de atuação**.
 
 ```{r, eval=T,warning=F,message=F}
   d3tree2(tree,  rootname = "Todos" )
