@@ -1,9 +1,12 @@
 bookdown::gitbook:
+  includes:
+    in_header: [ga_fb_script.html]
   css: style.css
   config:
     toc:
+      collapse: section
       before: |
-        <li><a href="./">luisotavio.pro</a></li>
+        <li><a href="https://www.luisotavio.pro">luisotavio.pro</a></li>
       after: |
         <li><a href="https://www.luisotavio.pro" target="blank">100% feito usando o R</a></li>
     download: no

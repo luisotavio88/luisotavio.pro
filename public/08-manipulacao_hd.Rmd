@@ -44,7 +44,7 @@ Quando definimos que o formato original dos dados é "%d-%m-%Y", estamos avisand
 Com essa informação, o R irá transformar a nossa variável de data para o formato padrão.
 
 Importante: Para saber cada letra que irá representar o formato da sua variável de data, basta pesquisar com o comando:
-```{r}
+```{r,eval=FALSE}
 ?strptime
 ```
 
@@ -214,3 +214,14 @@ Então, para adicionar dois dias, devemos multiplicar 2 por 60\*60\*24.
 data_inicio + 2*60*60*24
 ```
 
+```{r, echo=F}
+shiny::HTML('<tr><center>
+    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
+  <img src="imagens/insta.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
+  <img src="imagens/youtube.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
+  </center></tr>')
+```
