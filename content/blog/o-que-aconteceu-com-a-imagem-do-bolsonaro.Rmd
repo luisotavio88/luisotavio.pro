@@ -29,14 +29,14 @@ O contrário também vale: se os seus amigos e a sua família ficaram orgulhosos
 
 E sabe qual é a verdade?
 
-- O ambiente em que vivemos é extremamente viciado e não refletem o resto do mundo.
+- O ambiente em que vivemos é extremamente viciado e não reflete o resto do mundo.
 
 Pensando nisso, criei uma ferramenta para que pudéssemos acompanhar a influência dos principais nomes do cenário político de forma objetiva.
 
 A ferramenta irá medir dois quesitos:
 
-- A presença de cada um na internet.
-- A moral com a população
+- A presença de cada um na internet
+- A sua moral na internet 
 
 A **presença na internet** representa apenas a relevância da pessoa avaliada. Um valor alto de presença significa que estão falando muito da pessoa, mas não informa nada sobre falar bem ou mal.
 
@@ -68,5 +68,5 @@ Os escolhidos para essa análise foram:
 Esse é o resultado até o momento:
 (atualizações a cada 1 hora)
 
-<iframe src="https://luisotavio.info/shiny/indice_politicos/" width=1200 height=950 frameborder=0"></iframe>
+<iframe src="https://luisotavio.info/shiny/indice_politicos/" width=1200 height=650 frameborder=0"></iframe>
 
