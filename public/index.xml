@@ -6,10 +6,19 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 22 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>O que aconteceu com a imagem do Bolsonaro?</title>
+      <link>/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</guid>
+      <description>Como um cientista de dados esforçado, eu estava fazendo uma reflexão logo após a divulgação do polêmico vídeo da reunião entre o Bolsonaro e seus ministros:</description>
+    </item>
     
     <item>
       <title>Quem são os Cientistas de Dados do Brasil?</title>
