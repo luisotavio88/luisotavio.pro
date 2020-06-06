@@ -7,11 +7,11 @@ Duas das principais vantagens da maioria das linguagens computacionais são:
 
 Para executar tarefas repetitivas, vamos criar **loopings**. É como se o nosso código desse voltas e repetisse de acordo com a regra estabelecida.
 
-Os loopings irão usar as funções **for** e **while**.
+Os *loopings* irão usar as funções **for** e **while**.
 
 Para adicionar decisões lógicas ao nosso algoritmo, as principais funções são o *if-else* e o *ifelse*.
 
-Existem outras estruturas de controle que não serão abordadas aqui. Porém essas são as mais importante.
+Existem outras estruturas de controle que não serão abordadas aqui. Porém essas são as mais importantes.
 
 As estruturas de controle podem ser combinadas quando necessário. Ou seja, você pode utilizar a função ```for``` juntamente com outra função ```for```. Ou então a função ```while``` juntamente com a função ```if```.
 
@@ -19,7 +19,7 @@ Essas combinações irão depender somente da demanda do algoritmo que você pre
 
 ## for
 
-A função ```for``` é usada para criar loopings, ou seja, para executar uma tarefa diversas vezes. 
+A função ```for``` é usada para criar *loopings*, ou seja, para executar uma tarefa diversas vezes. 
 
 Para usar a função ```for```, você precisa criar uma variável para te auxiliar. Essa variável terá o seu valor alterado a cada ciclo de execução do ```for```. 
 
@@ -74,7 +74,7 @@ print(nosso_vetor[10])
 
 Note que a função ```for``` segue uma sequência já definida antes do início do looping. A variável auxiliar percorre essa sequência e elas não sofrem nenhuma alteração pelo código dentro do ```for```.
 
-Porém, em alguns casos, vai ser mais interessante manter o looping rodadando **enquanto** alguma condição ainda não foi atendida. **Para isso usaremos a função ```while```.**
+Porém, em alguns casos, vai ser mais interessante manter o looping rodando **enquanto** alguma condição ainda não foi atendida. **Para isso usaremos a função ```while```.**
 
 Esse é o caso, por exemplo, de um modelo de previsões que irá sofrer um número indefinido de iterações e só irá encerrar o looping quando o erro for menor do que determinado valor.
 
@@ -96,9 +96,9 @@ Então, o looping irá dar voltas **enquanto** o valor de ```i``` for menor do q
 
 ## if - else
 
-As funções ```for``` e ```while``` são úteis para criarmos loopings e repetir determinada tarefa. Já as funções ```if``` ou ```ifelse``` são funções de decisões lógicas.
+As funções ```for``` e ```while``` são úteis para criarmos *loopings* e repetir determinada tarefa. Já as funções ```if``` ou ```ifelse``` são funções de decisões lógicas.
 
-Ou seja, você irá estabelecer uma condição e, caso ela seja atentida, o código será executado.
+Ou seja, você irá estabelecer uma condição e, caso ela seja atendida, o código será executado.
 
 Caso a condição estabelecida seja atendida (TRUE), será seguido o roteiro estabelecido quando a condição for verdadeira. Caso a condição não seja atendida (FALSE), será seguido outro roteiro. 
 
@@ -115,7 +115,7 @@ if(a < b){
 }
 ```
 
-Agora, vamos adicionar a função ```else``` que é simplemente o SENÃO. Caso a condição lógica seja FALSA, o *script* contido dentro da função ```else``` é executado.
+Agora, vamos adicionar a função ```else``` que é simplesmente o SENÃO. Caso a condição lógica seja FALSA, o *script* contido dentro da função ```else``` é executado.
 
 ```{r}
 if(a > b){ #a condição lógica foi invertida e será FALSA
@@ -178,9 +178,9 @@ vetor2
 
 Portanto, caso precise usar uma função condicional para vetores, a função ```ifelse``` é uma das opções que você deve considerar.
 
-Lembre também que caso você esteja trabalhando com um data frame, cada coluna de seu data frame pode ser tratada como um vetor.
+Lembre-se também que caso você esteja trabalhando com um *data frame*, cada coluna de seu *data frame* pode ser tratada como um vetor.
 
-A seguir vamos criar uma nova coluna em um data frame baseada em uma condição lógica:
+A seguir vamos criar uma nova coluna em um *data frame* baseada em uma condição lógica:
 
 ```{r}
 head(mtcars)
@@ -192,7 +192,7 @@ mtcars$consumo_combustivel<-ifelse(mtcars$mpg<20,"Bebe muito","Bebe pouco")
 head(mtcars)
 ```
 
-Então, colocamos as colunas (que são vetores) do data frame ```mtcars``` como argumentos da função  ```ifelse```.
+Então, colocamos as colunas (que são vetores) do *data frame* ```mtcars``` como argumentos da função  ```ifelse```.
 
 ```{r, echo=F}
 shiny::HTML('<tr><center>

@@ -1,0 +1,21 @@
+---
+title: O e-book está no seu e-mail!
+author: ''
+date: '2020-01-14'
+slug: confirmacao-ebook
+categories: []
+tags: []
+type: mylayout
+---
+
+Pronto! :)
+
+**Já enviei o e-book para o seu e-mail.**
+
+Esse e-book foi criado para fazer diferença na sua carreira.
+
+Aproveite bastante.
+
+Luís Otávio
+
+[Clique aqui para voltar a navegar no Blog.](https://luisotavio.pro/)

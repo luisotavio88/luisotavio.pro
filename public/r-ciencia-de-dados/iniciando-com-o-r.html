@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 3 Iniciando com o R | O primeiro passo como Cientista de Dados</title>
+  <title> 3 Iniciando com o R | O seu primeiro passo para ser um Cientista de Dados</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 3 Iniciando com o R | O primeiro passo como Cientista de Dados" />
+  <meta property="og:title" content=" 3 Iniciando com o R | O seu primeiro passo para ser um Cientista de Dados" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="imagens/cover.png" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 3 Iniciando com o R | O primeiro passo como Cientista de Dados" />
+  <meta name="twitter:title" content=" 3 Iniciando com o R | O seu primeiro passo para ser um Cientista de Dados" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="twitter:image" content="imagens/cover.png" />
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="oquefaz.html"/>
+<link rel="prev" href="a-ciência-de-dados.html"/>
 <link rel="next" href="instalar-pacotes-no-r.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -158,8 +158,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bem-vindos</a></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introdução</a></li>
-<li class="chapter" data-level="2" data-path="oquefaz.html"><a href="oquefaz.html"><i class="fa fa-check"></i><b>2</b> O que faz um cientista de dados?</a></li>
+<li class="chapter" data-level="1" data-path="quem-sou-eu.html"><a href="quem-sou-eu.html"><i class="fa fa-check"></i><b>1</b> Quem sou eu</a></li>
+<li class="chapter" data-level="2" data-path="a-ciência-de-dados.html"><a href="a-ciência-de-dados.html"><i class="fa fa-check"></i><b>2</b> A Ciência de Dados</a></li>
 <li class="chapter" data-level="3" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html"><i class="fa fa-check"></i><b>3</b> Iniciando com o R</a><ul>
 <li class="chapter" data-level="3.1" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#instalação"><i class="fa fa-check"></i><b>3.1</b> Instalação</a></li>
 <li class="chapter" data-level="3.2" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#lógica-de-programação-no-r"><i class="fa fa-check"></i><b>3.2</b> Lógica de programação no R</a></li>
@@ -264,7 +264,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">O primeiro passo como Cientista de Dados</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">O seu primeiro passo para ser um Cientista de Dados</a>
           </h1>
         </div>
 
@@ -281,16 +281,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Então, primeiramente, você precisa ter o software R instalado no seu computador.</p>
 <p>E, logo depois, instalar o RStudio. O RStudio é uma interface para facilitar a sua vida.</p>
 <p>Ele irá deixar a sua tela de programação muito mais amigável, organizada e você terá várias funções que irão facilitar o desenvolvimento do seu projeto.</p>
-<p>Usar o R sem o RStudio é inimaginável hoje em dia. Não tem nenhum motivo pra você fazer isso, então instale também o RStudio.</p>
+<p>Usar o R sem o RStudio é inimaginável hoje em dia. Não tem nenhum motivo para você fazer isso, então instale também o RStudio.</p>
 <p>Caso você precise de ajuda para instalar o R e o RStudio, veja o passo a passo:</p>
-<p><a href="https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/">Clique aqui para ver o passo a passo de instalação do R e do RStudio.</a></p>
+<p><a href="https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/" target="_blank">Clique aqui para ver o passo a passo de instalação do R e do RStudio.</a></p>
 </div>
 <div id="lógica-de-programação-no-r" class="section level2">
 <h2><span class="header-section-number">3.2</span> Lógica de programação no R</h2>
-<p>A linguagem R é orientada a objetos e, na prática,isso significa que tudo no R será um objeto.</p>
+<p>A linguagem R é orientada a objetos e, na prática, isso significa que tudo no R será um objeto.</p>
 <p>Imagine que esse “objeto” é uma variável capaz de armazenar um valor ou uma estrutura de dados. Por exemplo:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">variavel1&lt;-<span class="st"> </span><span class="dv">5</span></a>
-<a class="sourceLine" id="cb3-2" title="2">dataset1 &lt;-<span class="st"> </span>cars</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">variavel1&lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb1-2" title="2">dataset1 &lt;-<span class="st"> </span>cars</a></code></pre></div>
 <p>Na primeira linha do código eu estou atribuindo o valor 5 para o <strong>objeto</strong> “variavel1”, criado por mim.</p>
 <p>O <strong>operador de atribuição</strong> é representado pelo “&lt;-”.</p>
 <p>Você vai escolher o nome que mais fizer mais sentido para o seu objeto, de forma que fique fácil de saber do que se trata.</p>
@@ -306,10 +306,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Essa função é A <code>mean()</code>.</p>
 <p>Para usar uma função, você vai inserir dentro da função os <strong>argumentos</strong> necessários.</p>
 <p>Para calcular a média, o único argumento necessário são os números dos quais você quer saber a média.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">numeros &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:</span><span class="dv">15</span>  <span class="co"># estou atribuindo os números 10, 11, 12, 13, 14 e 15 para o objeto &quot;numeros&quot;</span></a>
-<a class="sourceLine" id="cb4-2" title="2">numeros           <span class="co"># pedi para o R imprimir no Console o objeto &quot;numeros&quot; </span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">numeros &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:</span><span class="dv">15</span>  <span class="co"># estou atribuindo os números 10, 11, 12, 13, 14 e 15 para o objeto &quot;numeros&quot;</span></a>
+<a class="sourceLine" id="cb2-2" title="2">numeros           <span class="co"># pedi para o R imprimir no Console o objeto &quot;numeros&quot; </span></a></code></pre></div>
 <pre><code>## [1] 10 11 12 13 14 15</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">mean</span>(numeros)     <span class="co"># pedi para o R imprimir a média do objeto &quot;numeros&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">mean</span>(numeros)     <span class="co"># pedi para o R imprimir a média do objeto &quot;numeros&quot;</span></a></code></pre></div>
 <pre><code>## [1] 12.5</code></pre>
 <p>obs.: Sempre que você usar uma # (hashtag) em seu código, o R irá ignorar o que está à direita da Hashtag.
 Isso é muito útil para que você faça comentários no seu código. Isso vai facilitar muito quando você for ler o código depois de alguns dias que escreveu. E também será extremamente útil se outra pessoa precisar ler o seu código.</p>
@@ -323,79 +323,79 @@ Isso é muito útil para que você faça comentários no seu código. Isso vai f
 <p>Cada objeto irá ter uma <strong>Classe</strong>. Ela é definida pela forma do objeto e será muito importante na maneira que o objeto será manipulado pelas funções.</p>
 <p>Existem 5 classes básicas (atômicas) para um objeto no R:</p>
 <ul>
-<li>Caractere (character)</li>
-<li>Números reais (numeric)</li>
-<li>Inteiros (integer)</li>
-<li>Números complexos (complex)</li>
-<li>Verdadeiro/Falso (logical)</li>
+<li>Caractere (<em>character</em>)</li>
+<li>Números reais (<em>numeric</em>)</li>
+<li>Inteiros (<em>integer</em>)</li>
+<li>Números complexos (<em>complex</em>)</li>
+<li>Verdadeiro/Falso (<em>logical</em>)</li>
 </ul>
 <p>Para descobrir qual é a <strong>Classe</strong> do objeto, podemos usar a função class().</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">class</span>(<span class="st">&quot;Essa é uma frase.&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">class</span>(<span class="st">&quot;Essa é uma frase.&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">class</span>(<span class="fl">5.6761</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">class</span>(<span class="fl">5.6761</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">class</span>(<span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">class</span>(<span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
 <p>Sempre que usarmos texto, ele deve estar entre aspas. Assim o R irá entender que é um texto e não um objeto.</p>
 <p>Por exemplo:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">texto &lt;-<span class="st"> &quot;palavra&quot;</span> <span class="co">#aqui estou atribuindo &quot;palavra&quot; para o objeto texto. </span></a>
-<a class="sourceLine" id="cb14-2" title="2">                   <span class="co"># Então quando eu escrever texto sem aspas, o R saberá que </span></a>
-<a class="sourceLine" id="cb14-3" title="3">                   <span class="co"># não é um texto e sim um objeto. Veja:</span></a>
-<a class="sourceLine" id="cb14-4" title="4"></a>
-<a class="sourceLine" id="cb14-5" title="5">texto</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">texto &lt;-<span class="st"> &quot;palavra&quot;</span> <span class="co">#aqui estou atribuindo &quot;palavra&quot; para o objeto texto. </span></a>
+<a class="sourceLine" id="cb12-2" title="2">                   <span class="co"># Então quando eu escrever texto sem aspas, o R saberá que </span></a>
+<a class="sourceLine" id="cb12-3" title="3">                   <span class="co"># não é um texto e sim um objeto. Veja:</span></a>
+<a class="sourceLine" id="cb12-4" title="4"></a>
+<a class="sourceLine" id="cb12-5" title="5">texto</a></code></pre></div>
 <pre><code>## [1] &quot;palavra&quot;</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">                   <span class="co"># o R irá acusar erro, porque não existe um objeto chamado palavra.</span></a>
-<a class="sourceLine" id="cb16-2" title="2">palavra</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">                   <span class="co"># o R irá acusar erro, porque não existe um objeto chamado palavra.</span></a>
+<a class="sourceLine" id="cb14-2" title="2">palavra</a></code></pre></div>
 <pre><code>## Error in eval(expr, envir, enclos): objeto &#39;palavra&#39; não encontrado</code></pre>
 </div>
 <div id="vetores" class="section level2">
 <h2><span class="header-section-number">3.4</span> Vetores</h2>
 <p><strong>Vetor</strong> é um conjunto de valores da mesma classe. Por exemplo:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">inteiros &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>) <span class="co">#A função &quot;c&quot; irá organizar os valores em vetor. </span></a>
-<a class="sourceLine" id="cb18-2" title="2">                       <span class="co"># Os elementos do vetor são separados por vírgula.</span></a>
-<a class="sourceLine" id="cb18-3" title="3">                      <span class="co"># veja que todos os valores tem a mesma classe - a classe </span></a>
-<a class="sourceLine" id="cb18-4" title="4">                      <span class="co"># de números inteiros.</span></a>
-<a class="sourceLine" id="cb18-5" title="5"></a>
-<a class="sourceLine" id="cb18-6" title="6"></a>
-<a class="sourceLine" id="cb18-7" title="7">logicos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>) <span class="co">#Vetor com valores lógicos verdadeiro/falso</span></a>
-<a class="sourceLine" id="cb18-8" title="8">logicos &lt;-<span class="st"> </span><span class="kw">c</span>(T,F,T) <span class="co">#Você pode escrever TRUE ou somente T, FALSE </span></a>
-<a class="sourceLine" id="cb18-9" title="9">                    <span class="co"># ou somente F e o R irá entender </span></a>
-<a class="sourceLine" id="cb18-10" title="10">                    <span class="co"># que se trata de valores lógicos</span></a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">inteiros &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>) <span class="co">#A função &quot;c&quot; irá organizar os valores em vetor. </span></a>
+<a class="sourceLine" id="cb16-2" title="2">                       <span class="co"># Os elementos do vetor são separados por vírgula.</span></a>
+<a class="sourceLine" id="cb16-3" title="3">                      <span class="co"># veja que todos os valores tem a mesma classe - a classe </span></a>
+<a class="sourceLine" id="cb16-4" title="4">                      <span class="co"># de números inteiros.</span></a>
+<a class="sourceLine" id="cb16-5" title="5"></a>
+<a class="sourceLine" id="cb16-6" title="6"></a>
+<a class="sourceLine" id="cb16-7" title="7">logicos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>) <span class="co">#Vetor com valores lógicos verdadeiro/falso</span></a>
+<a class="sourceLine" id="cb16-8" title="8">logicos &lt;-<span class="st"> </span><span class="kw">c</span>(T,F,T) <span class="co">#Você pode escrever TRUE ou somente T, FALSE </span></a>
+<a class="sourceLine" id="cb16-9" title="9">                    <span class="co"># ou somente F e o R irá entender </span></a>
+<a class="sourceLine" id="cb16-10" title="10">                    <span class="co"># que se trata de valores lógicos</span></a></code></pre></div>
 </div>
 <div id="matrizes" class="section level2">
 <h2><span class="header-section-number">3.5</span> Matrizes</h2>
 <p>Imagine alguns vetores do mesmo tamanho:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1">vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb19-2" title="2">vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">0</span>)</a>
-<a class="sourceLine" id="cb19-3" title="3">vetor3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb17-2" title="2">vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb17-3" title="3">vetor3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a></code></pre></div>
 <p>Uma matriz é um conjunto de vetores do mesmo tamanho. Ou uma tabela com linhas e colunas. Como você preferir!</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">matrix</span>(<span class="kw">cbind</span>(vetor1,vetor2,vetor3),<span class="dt">ncol=</span><span class="dv">3</span>) <span class="co">#a função matrix é usada para criar uma matriz</span></a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">matrix</span>(<span class="kw">cbind</span>(vetor1,vetor2,vetor3),<span class="dt">ncol=</span><span class="dv">3</span>) <span class="co">#a função matrix é usada para criar uma matriz</span></a></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    0    3    1
 ## [2,]    1    2    1
 ## [3,]    2    1    1
 ## [4,]    3    0    1</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">                                       <span class="co">#o primeiro argumento da padrão matrix são os dados da matriz</span></a>
-<a class="sourceLine" id="cb22-2" title="2">                                       <span class="co">#além disso o argumento &quot;ncol&quot; irá informar que desejamos formar 3 colunas.</span></a>
-<a class="sourceLine" id="cb22-3" title="3">                                       <span class="co">#Assim, cada vetor definido anteriormente será uma coluna da matriz</span></a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1">                                       <span class="co">#o primeiro argumento da função matrix são os dados da matriz</span></a>
+<a class="sourceLine" id="cb20-2" title="2">                                       <span class="co">#além disso o argumento &quot;ncol&quot; irá informar que desejamos formar 3 colunas.</span></a>
+<a class="sourceLine" id="cb20-3" title="3">                                       <span class="co">#Assim, cada vetor definido anteriormente será uma coluna da matriz</span></a></code></pre></div>
 <p>Outro exemplo:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1"><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>) <span class="co">#Foram definidos os valores de 1 a 6 no argumento de dados da função.</span></a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>) <span class="co">#Foram definidos os valores de 1 a 6 no argumento de dados da função.</span></a></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    3    5
 ## [2,]    2    4    6</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">                                <span class="co">#e também foi definido que número de linhas (nrow) igual a 2</span></a>
-<a class="sourceLine" id="cb25-2" title="2">                                <span class="co">#e o número de colunas igual a 3.</span></a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1">                                <span class="co">#e também foi definido que número de linhas (nrow) igual a 2</span></a>
+<a class="sourceLine" id="cb23-2" title="2">                                <span class="co">#e o número de colunas igual a 3.</span></a></code></pre></div>
 <p>Importante: todas as colunas de uma matriz possuem a mesma classe. Ou seja, são todas numéricas, lógicas, caracteres, etc.</p>
 </div>
 <div id="listas" class="section level2">
 <h2><span class="header-section-number">3.6</span> Listas</h2>
 <p>Você vai usar bastante as <strong>listas</strong> em seus trabalhos. A principal característica delas é aceitar elementos de diferentes classes. Além disso, podem armazenar vetores e matrizes em um único objeto.</p>
 <p>Exemplo:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>)        <span class="co">#Vetor com valores lógicos</span></a>
-<a class="sourceLine" id="cb26-2" title="2">vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)        <span class="co">#Vetor com valores inteiros</span></a>
-<a class="sourceLine" id="cb26-3" title="3">valor_texto &lt;-<span class="st"> &quot;Esse é um texto.&quot;</span>   <span class="co">#Elemento da classe character</span></a>
-<a class="sourceLine" id="cb26-4" title="4">lista &lt;-<span class="st"> </span><span class="kw">list</span>(vetor1,vetor2,valor_texto)</a>
-<a class="sourceLine" id="cb26-5" title="5">lista</a></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1">vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>)        <span class="co">#Vetor com valores lógicos</span></a>
+<a class="sourceLine" id="cb24-2" title="2">vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)        <span class="co">#Vetor com valores inteiros</span></a>
+<a class="sourceLine" id="cb24-3" title="3">valor_texto &lt;-<span class="st"> &quot;Esse é um texto.&quot;</span>   <span class="co">#Elemento da classe character</span></a>
+<a class="sourceLine" id="cb24-4" title="4">lista &lt;-<span class="st"> </span><span class="kw">list</span>(vetor1,vetor2,valor_texto)</a>
+<a class="sourceLine" id="cb24-5" title="5">lista</a></code></pre></div>
 <pre><code>## [[1]]
 ## [1]  TRUE FALSE  TRUE
 ## 
@@ -407,15 +407,15 @@ Isso é muito útil para que você faça comentários no seu código. Isso vai f
 </div>
 <div id="fatores" class="section level2">
 <h2><span class="header-section-number">3.7</span> Fatores</h2>
-<p>Até agora usamos em nossos exemplos valores lógicos (TRUE/FALSE), valores númericos ou de texto (character). Porém, é essencial conhecer outra classe de valores: os fatores.</p>
+<p>Até agora usamos em nossos exemplos valores lógicos (TRUE/FALSE), valores numéricos ou de texto (<em>character</em>). Porém, é essencial conhecer outra classe de valores: os fatores.</p>
 <p>Fator é a classe das variáveis categóricas.</p>
 <p>Uma variável categórica pode ser ordenada, como a renda: salários até R$ 5.000, entre R$ 5.001 e 10.000 e acima de R$ 10.000.</p>
 <p>Ou podemos ter categorias que não possuem nenhuma ordem, como cursos: Administração, Economia, Ciência Contábeis.</p>
 <p>Nos dois exemplos, as variáveis <em>renda</em> e <em>cursos</em> poderiam assumir a classe “factor” em nossas análises.</p>
-<p>Também seria possível classificar renda e cursos (ou qualquer variável categórica) como uma variável de texto (character). Então pra que serve a classe dos fatores?</p>
-<p>Sempre que você tiver poucos valores únicos para uma variável, prefira a classicação de fator à character. Essa opção irá otimizar o armazenamento dos dados e também será necessária para utilizar algumas funções do R com seus dados.</p>
+<p>Também seria possível classificar renda e cursos (ou qualquer variável categórica) como uma variável de texto (<em>character</em>). Então para o que serve a classe dos fatores?</p>
+<p>Sempre que você tiver poucos valores únicos para uma variável, prefira a classificação de fator à <em>character</em>. Essa opção irá otimizar o armazenamento dos dados e também será necessária para utilizar algumas funções do R com seus dados.</p>
 <p>Exemplo:</p>
-<p>Uma pergunta aberta em um questionário irá gerar várias respostas diferentes, então não há sentido nenhum em classificar as respostas em categorias. Portanto, a classificação adequada é character.</p>
+<p>Uma pergunta aberta em um questionário irá gerar várias respostas diferentes, então não há sentido nenhum em classificar as respostas em categorias. Portanto, a classificação adequada é <em>character</em>.</p>
 <p>Porém, caso o respondente tenha que escolher uma resposta entre algumas opções disponíveis para esse questionário, a melhor classificação da variável seria como fator.</p>
 <p><em>O R sempre irá assumir uma classificação para a sua variável e, a priori, você não precisará fazer essa classificação. Ela só é necessária quando a classificação automática feita pelo R for indevida para o seu caso.</em></p>
 </div>
@@ -423,17 +423,17 @@ Isso é muito útil para que você faça comentários no seu código. Isso vai f
 <h2><span class="header-section-number">3.8</span> Coerção de classes</h2>
 <p>Em alguns casos, você pode precisar alterar a classe de objetos.</p>
 <p>Suponha, por exemplo, que você criou o seguinte vetor x.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1">x&lt;-<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">x&lt;-<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a></code></pre></div>
 <p>O R irá automaticamente entender que o vetor <em>x</em> é <em>numeric</em></p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1"><span class="kw">class</span>(x)</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1"><span class="kw">class</span>(x)</a></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <p>Porém, pode ser que você precise desse vetor como <em>integer</em> (números inteiros) ou <em>logical</em> (verdadeiro/falso). Por definição 0 seria FALSO e 1 seria VERDADEIRO.</p>
 <p>Para alterar a classe de um objeto por coerção, basta você usar uma função de coerção. As função são definidas por <em>as.</em> + <em>classe que o objeto vai assumir</em>.</p>
-<p>Ou seja: as.integer, as.logical, as.numeric, as.factor as.complex ou as.character.</p>
+<p>Ou seja: as.integer, as.logical, as.numeric, as.factor as.complex ou as.<em>character</em>.</p>
 <p>Para o exemplo acima, teríamos:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="kw">as.integer</span>(x)</a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1"><span class="kw">as.integer</span>(x)</a></code></pre></div>
 <pre><code>## [1] 0 1 0 1 1</code></pre>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="kw">as.logical</span>(x)</a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="kw">as.logical</span>(x)</a></code></pre></div>
 <pre><code>## [1] FALSE  TRUE FALSE  TRUE  TRUE</code></pre>
 <p><em>Dica importante</em>: Muito cuidado ao converter objetos classificados como FATORES para NUMÉRICOS. Para fazer isso sem perder informação, você precisa converter primeiramente para <strong>character</strong> e, posteriormente, para <strong>numeric</strong>.</p>
 </div>
@@ -441,19 +441,19 @@ Isso é muito útil para que você faça comentários no seu código. Isso vai f
 <h2><span class="header-section-number">3.9</span> Valores faltantes</h2>
 <p>Os valores faltantes, também chamados de <strong>missing values</strong> são representados por <em>NA</em> ou <em>NaN</em>.</p>
 <p>Eles não irão influenciar a classe de um objeto, por exemplo:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1">x&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="co">#apesar de ser representado por duas letras, pelo padrão do R, ele saberá que não se trata de um texto e sim de valores faltantes.</span></a>
-<a class="sourceLine" id="cb35-2" title="2"><span class="kw">class</span>(x)</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1">x&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="co">#apesar de ser representado por duas letras, pelo padrão do R, ele saberá que não se trata de um texto e sim de valores faltantes.</span></a>
+<a class="sourceLine" id="cb33-2" title="2"><span class="kw">class</span>(x)</a></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="data-frames" class="section level2">
 <h2><span class="header-section-number">3.10</span> Data Frames</h2>
 <p>Provavelmente esse é o objeto mais usado no R. É similar a uma matriz, porém com mais possibilidades.</p>
-<p>Os Data Frames são tabelas que aceitam colunas de todas as classes. Por exemplo, podemos ter uma coluna com classe <strong>numeric</strong>, outra <strong>logical</strong> e outra <strong>character</strong>. Isso não é possível em uma matriz, onde todas as colunas devem ter a mesma classe.</p>
-<p>Cada coluna em um Data Frame terá um nome. É altamente recomendável que você atribua nomes que realmente representem a variável ali contida. Ou seja, evite nomes como X1, X2, X3, etc.</p>
+<p>Os <em>Data Frames</em> são tabelas que aceitam colunas de todas as classes. Por exemplo, podemos ter uma coluna com classe <strong>numeric</strong>, outra <strong>logical</strong> e outra <strong>character</strong>. Isso não é possível em uma matriz, onde todas as colunas devem ter a mesma classe.</p>
+<p>Cada coluna em um <em>Data Frame</em> terá um nome. É altamente recomendável que você atribua nomes que realmente representem a variável ali contida. Ou seja, evite nomes como X1, X2, X3, etc.</p>
 <p>Também é possível atribuir nomes para as linhas de seu <strong>data frame</strong>.</p>
-<p>É muito comum que você importe seus dados/tabela para o R, porém veja como você pode criar um data frame de forma bem simples:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">produto=</span><span class="kw">c</span>(<span class="st">&quot;roda&quot;</span>,<span class="st">&quot;pneu&quot;</span>,<span class="st">&quot;suspensão&quot;</span>), <span class="dt">preco =</span> <span class="kw">c</span>(<span class="dv">30</span>,<span class="dv">20</span>,<span class="dv">15</span>), <span class="dt">esta_disponivel =</span> <span class="kw">c</span>(T, T, F))</a>
-<a class="sourceLine" id="cb37-2" title="2">meus_dados</a></code></pre></div>
+<p>É muito comum que você importe seus dados/tabela para o R, porém veja como você pode criar um <em>data frame</em> de forma bem simples:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">produto=</span><span class="kw">c</span>(<span class="st">&quot;roda&quot;</span>,<span class="st">&quot;pneu&quot;</span>,<span class="st">&quot;suspensão&quot;</span>), <span class="dt">preco =</span> <span class="kw">c</span>(<span class="dv">30</span>,<span class="dv">20</span>,<span class="dv">15</span>), <span class="dt">esta_disponivel =</span> <span class="kw">c</span>(T, T, F))</a>
+<a class="sourceLine" id="cb35-2" title="2">meus_dados</a></code></pre></div>
 <pre><code>##     produto preco esta_disponivel
 ## 1      roda    30            TRUE
 ## 2      pneu    20            TRUE
@@ -462,15 +462,15 @@ Isso é muito útil para que você faça comentários no seu código. Isso vai f
 </div>
 <div id="names" class="section level2">
 <h2><span class="header-section-number">3.11</span> Names</h2>
-<p>Os <strong>names</strong> são muito úteis na manipulação dos dados contidos nas matrizes, listas ou data frames.</p>
-<p>Por exemplo, no data frame <strong>meus_dados</strong> criado no item anterior, foi definido que o nome das variáveis são: produto, preco e esta_disponivel.</p>
+<p>Os <strong>names</strong> são muito úteis na manipulação dos dados contidos nas matrizes, listas ou <em>data frames</em>.</p>
+<p>Por exemplo, no <em>data frame</em> <strong>meus_dados</strong> criado no item anterior, foi definido que o nome das variáveis são: produto, preco e esta_disponivel.</p>
 <p>Isso pode ser identificado pela função names()</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">names</span>(meus_dados)</a></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw">names</span>(meus_dados)</a></code></pre></div>
 <pre><code>## [1] &quot;produto&quot;         &quot;preco&quot;           &quot;esta_disponivel&quot;</code></pre>
 <p>Então, para manipular a primeira coluna, podemos chamá-la de “roda” no comando que for utilizado. Isso será melhor explicado no capítulo de manipulação de dados.</p>
-<p>Para alterar os nomes das colunas ou linhas de um data frame, usa-se as funções names() e row.names().</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1"><span class="kw">names</span>(meus_dados)&lt;-<span class="kw">c</span>(<span class="st">&quot;novo_nome&quot;</span>,<span class="st">&quot;preco&quot;</span>,<span class="st">&quot;esta_disponivel&quot;</span>) <span class="co">#alterando o nome da 1a coluna</span></a>
-<a class="sourceLine" id="cb41-2" title="2">meus_dados</a></code></pre></div>
+<p>Para alterar os nomes das colunas ou linhas de um <em>data frame</em>, usa-se as funções names() e row.names().</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">names</span>(meus_dados)&lt;-<span class="kw">c</span>(<span class="st">&quot;novo_nome&quot;</span>,<span class="st">&quot;preco&quot;</span>,<span class="st">&quot;esta_disponivel&quot;</span>) <span class="co">#alterando o nome da 1a coluna</span></a>
+<a class="sourceLine" id="cb39-2" title="2">meus_dados</a></code></pre></div>
 <pre><code>##   novo_nome preco esta_disponivel
 ## 1      roda    30            TRUE
 ## 2      pneu    20            TRUE
@@ -492,7 +492,7 @@ Isso é muito útil para que você faça comentários no seu código. Isso vai f
           </div>
         </div>
       </div>
-<a href="oquefaz.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a-ciência-de-dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="instalar-pacotes-no-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

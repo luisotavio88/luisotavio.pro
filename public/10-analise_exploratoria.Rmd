@@ -10,7 +10,7 @@ Nesse capítulo irei mostrar os principais passos de uma Análise Exploratória.
 
 Primeiramente, você deve ler os seus dados no RStudio. Como esse passo já foi explicado no Capítulo 6, vamos pular essa parte.
 
-Vamos trabalhar com um Dataset bem conhecido na Ciência de Dados, seu nome é ```iris```.  O Dataset possui as medidas de 150 flores pertencentes a 3 diferentes espécies.
+Vamos trabalhar com um *dataset* bem conhecido na Ciência de Dados, seu nome é ```iris```.  O *dataset* possui as medidas de 150 flores pertencentes a 3 diferentes espécies.
 
 Para explicar um pouco sobre o Dataset, já vou usar uma função que pode ser utilizada na sua exploração: a função ```names()```.
 
@@ -22,7 +22,7 @@ Usamos essa função para conhecer os nomes das variáveis (colunas) do *dataset
 names(iris)
 ```
 
-A primeira coluna representa o comprimento da sépala da flor ("Sepal.Length"), já a segunda coluna é largura da sépala("Sepal.Width"). 
+A primeira coluna representa o comprimento da sépala da flor ("Sepal.Length"), já a segunda coluna é largura da sépala ("Sepal.Width"). 
 
 A terceira coluna mostra o valor do comprimento da pétala ("Petal.Length") e a quarta a largura da pétala ("Petal.Width").
 
@@ -31,7 +31,7 @@ A última coluna indica qual a espécie da flor.
 
 ## Estrutura do Dataset
 
-Possivelmente este será o primeiro comando que você irá executar ao receber um Dataset novo ```str()```. A função ```str()``` mostra qual a estrutura de um objeto.
+Possivelmente este será o primeiro comando que você irá executar ao receber um *dataset* novo ```str()```. A função ```str()``` mostra qual a estrutura de um objeto.
 
 ```{r}
 str(iris)
@@ -59,7 +59,7 @@ tail(iris)
 
 A frequência é utilizada para conhecer melhor as **variáveis categóricas**. Porém, também é muito importante para encontrar erros em nossos dados. 
 
-Para encontrar erros utilizando a frequência, pressupõe-se que você tenha algum conhecimento prévio dos dados e possa assim identificar frequencias discrepantes em alguma categoria. Também pode ser o caso de notar que uma das categorias deveria estar em seu conjunto de dados e não está.
+Para encontrar erros utilizando a frequência, pressupõe-se que você tenha algum conhecimento prévio dos dados e possa assim identificar frequências discrepantes em alguma categoria. Também pode ser o caso de notar que uma das categorias deveria estar em seu conjunto de dados e não está.
 
 Primeiramente, iremos utilizar a função ```table()``` para calcular a frequência de cada categoria da variável *Species*.
 

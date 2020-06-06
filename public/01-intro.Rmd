@@ -1,31 +1,39 @@
-# Introdução {#intro}
+# Quem sou eu 
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+<img src="https://www.luisotavio.pro/images/gallery/9.jpg" width="250" height="250" alt="Luis Otavio" align="right" style="margin: 0 1em 0 1em" />
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+Meu nome é Luís Otávio, sou Estatístico formado pela UFMG (2007-2010) e criador do blog **luisotavio.pro**.
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+O meu primeiro contato com a linguagem R foi justamente na faculdade de Estatística, no início de 2008. Comecei a aprender a linguagem para desenvolver um trabalho de Iniciação Científica.
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+Por isso, posso te falar que em pouco tempo você consegue sair do absoluto 0 (o que era o meu caso) e desenvolver um trabalho relevante. 
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+Fiz esse e-book pensando em tudo o que eu precisaria aprender nesse início, de forma bem prática e sem enrolação. Assim como eu gostaria de ter aprendido nessa época.
 
-```{r, echo=F}
-shiny::HTML('<tr><center>
-    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
-  <img src="imagens/insta.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
-  <img src="imagens/youtube.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
-  </center></tr>')
-```
+Ao longo dos anos segui meus estudos em Estatística e também da linguagem R.
+
+Depois de fazer alguns estágios e um pouco antes de formar, decidi que iria fazer concurso público. Na época, era a única forma de garantir uma boa renda para que eu pudesse me sustentar. 
+
+No mesmo mês que formei na faculdade veio a minha primeira aprovação: Oficial ESTATÍSTICO da Força Aérea Brasileira. Servi à Aeronáutica por 11 meses. Nese período, trabalhei no Centro de Inteligência da Aeronáutica coordenando os cursos de Inteligência.
+
+Em 2012, fui trabalhar no Tribunal Regional Eleitoral de São Paulo (TRE-SP) e em janeiro de 2014 passei em um concurso para a Agência Nacional de Transportes Terrestres (ANTT).
+
+Ao todo, foram 16 concursos prestados, muitas reprovações, muitas aprovações e 5 primeiros lugares.
+
+Mas agora preciso te falar uma outra coisa, tem uma coisa que gosto mais do que Ciência de dados, Estatística ou R: Futebol.
+
+Sempre tive muita vontade de unir todas essas paixões e nunca sabia como fazer.
+
+Finalmente, em 2017 criei um projeto chamado Guru do Cartola. É um site que usa *machine learning* para prever as atuações dos jogadores do Campeonato Brasileiro no *fantasy game* da Globo, chamado Cartola.
+
+O projeto foi um sucesso e hoje é acessado por milhões de brasileiros. 
+
+Então, em 2018 eu sai da ANTT e resolvi me dedicar integralmente ao projeto, aplicando Ciência de Dados ao futebol. 
+
+Hoje em dia uso uma quantidade absurda de automações no Guru do Cartola desenvolvidas exclusivamente usando o R.
+
+O trabalho do Cientista de Dados pode ser bem amplo, existem muitas possibilidades ou áreas de atuação.
+
+Então, agora vamos falar um pouco sobre essa profissão!
+
+

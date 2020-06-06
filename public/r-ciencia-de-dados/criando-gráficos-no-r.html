@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 11 Criando Gráficos no R | O primeiro passo como Cientista de Dados</title>
+  <title> 11 Criando Gráficos no R | O seu primeiro passo para ser um Cientista de Dados</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 11 Criando Gráficos no R | O primeiro passo como Cientista de Dados" />
+  <meta property="og:title" content=" 11 Criando Gráficos no R | O seu primeiro passo para ser um Cientista de Dados" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="imagens/cover.png" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 11 Criando Gráficos no R | O primeiro passo como Cientista de Dados" />
+  <meta name="twitter:title" content=" 11 Criando Gráficos no R | O seu primeiro passo para ser um Cientista de Dados" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="twitter:image" content="imagens/cover.png" />
@@ -158,8 +158,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bem-vindos</a></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introdução</a></li>
-<li class="chapter" data-level="2" data-path="oquefaz.html"><a href="oquefaz.html"><i class="fa fa-check"></i><b>2</b> O que faz um cientista de dados?</a></li>
+<li class="chapter" data-level="1" data-path="quem-sou-eu.html"><a href="quem-sou-eu.html"><i class="fa fa-check"></i><b>1</b> Quem sou eu</a></li>
+<li class="chapter" data-level="2" data-path="a-ciência-de-dados.html"><a href="a-ciência-de-dados.html"><i class="fa fa-check"></i><b>2</b> A Ciência de Dados</a></li>
 <li class="chapter" data-level="3" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html"><i class="fa fa-check"></i><b>3</b> Iniciando com o R</a><ul>
 <li class="chapter" data-level="3.1" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#instalação"><i class="fa fa-check"></i><b>3.1</b> Instalação</a></li>
 <li class="chapter" data-level="3.2" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#lógica-de-programação-no-r"><i class="fa fa-check"></i><b>3.2</b> Lógica de programação no R</a></li>
@@ -264,7 +264,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">O primeiro passo como Cientista de Dados</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">O seu primeiro passo para ser um Cientista de Dados</a>
           </h1>
         </div>
 
@@ -287,7 +287,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>rCharts</li>
 <li>leaflet</li>
 </ul>
-<p>Dentre as 5 possibilidades aqui citadas, destaco a primeira: <code>ggplot2</code>. Iremos aprofundar mais nessa biblioteca pela quantidade de possibilidades que ela nos trás.</p>
+<p>Dentre as 5 possibilidades aqui citadas, destaco a primeira: <code>ggplot2</code>. Iremos aprofundar mais nessa biblioteca pela quantidade de possibilidades que ela nos traz.</p>
 <p>Usando a biblioteca `<code>ggplot2</code> você irá conseguir fazer praticamente todos os tipos de gráficos disponíveis e com enorme capacidade de customização do seu gráfico.</p>
 <p>A medida que você for dominando a linguagem R, sugiro que também explore outras bibliotecas. Muitas vezes as bibliotecas <code>plot.ly</code>, <code>googleVis</code> e <code>rCharts</code> irão te possibilitar a criação de gráficos mais chamativos do que a biblioteca <code>ggplot2</code>.</p>
 <p>Eu costumo escolher a biblioteca que irei usar de acordo com o gráfico que desejo fazer.</p>
@@ -303,59 +303,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Na prática, veremos como podemos criar um gráfico simples e depois ir aperfeiçoando e personalizando de acordo com a nossa necessidade. Esse aperfeiçoamento acontece com novas linhas de código, que são acrescentadas ao gráfico que já foi criado.</p>
 <p>Instalando o pacote <code>ggplot2</code>:</p>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb240-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb237-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
 <div id="seu-primeiro-gráfico" class="section level3">
 <h3><span class="header-section-number">11.1.1</span> Seu primeiro gráfico</h3>
 <p>O código a seguir é dividido com os 3 elementos que citamos acima. O primeiro elemento é o <strong>conjunto de dados</strong> <code>mtcars</code>. <em>Dataset</em> que contém informações de diferentes modelos de carros.</p>
-<p>O segundo elemento está dentro da função <code>aes()</code>, que é usada para definir a estética do gráfico (abreviação para aesthetics - estética em inglês).</p>
+<p>O segundo elemento está dentro da função <code>aes()</code>, que é usada para definir a estética do gráfico (abreviação para <em>aesthetics</em> - estética em inglês).</p>
 <p>Nesse elemento, definimos os <strong>eixos do gráfico</strong>. O gráfico irá mostrar a relação entre duas variáveis. A variável <em>mpg</em> (miles per gallon - Milhas percorridas para 1 galão de combustível) e <em>wt</em> (Weight - peso do carro).</p>
 <p>A variável <em>mpg</em> será alocada no eixo x (horizontal) e a variável <em>wt</em> no eixo y (vertical).</p>
 <p>O terceiro elemento são as marcas de representação visual do gráfico e são definidos pela função <code>geom_point()</code>.</p>
 <p>Como nesse exemplo não há nenhuma customização, a função <code>geom_point()</code> será vazia.</p>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb241-2" title="2"></a>
-<a class="sourceLine" id="cb241-3" title="3"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb241-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
-<p><img src="livro_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb238-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb238-2" title="2"></a>
+<a class="sourceLine" id="cb238-3" title="3"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb238-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<p><img src="livro_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
 </div>
 <div id="incrementando-o-gráfico" class="section level3">
 <h3><span class="header-section-number">11.1.2</span> Incrementando o gráfico</h3>
 <p>Podemos incrementar um pouco o nosso gráfico adicionando uma terceira variável. Vamos adicionar a variável <em>cyl</em>, que representa o número de cilindros do carro.</p>
 <p>Agora, com 3 variáveis, o gráfico continuará sendo bi-dimensional. Porém, os pontos do gráfico serão coloridos de acordo com a variável <em>cyl</em>.</p>
 <p>Antes de criarmos o gráfico, segue uma consideração: a variável <em>cyl</em> está classificada como numérica.</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" title="1"><span class="kw">class</span>(mtcars<span class="op">$</span>cyl)</a></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb239-1" title="1"><span class="kw">class</span>(mtcars<span class="op">$</span>cyl)</a></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <p>Os carros desse <em>dataset</em> possuem 4, 6 ou 8 cilindros. Então, nesse caso será mais interessante tratar a variável <em>cyl</em> como categórica. Essa pequena alteração fará muita diferença na visualização dos dados, pois irá coloria cada uma das categorias com cores totalmente distintas.</p>
-<p>Caso se considerasse a variável <em>cyl</em> como numérica, as cores de cada quantidade de cilindros sofreria alterações apenas no tom da cor, dificultando a visualização de cada um dos grupos.</p>
+<p>Caso se considerasse a variável <em>cyl</em> como numérica, as cores de cada quantidade de cilindros sofreriam alterações apenas no tom da cor, dificultando a visualização de cada um dos grupos.</p>
 <p>Para tratar a variável <em>cyl</em> como categórica, vamos apenas adicionar a função <code>factor()</code> ao inserir a variável na criação do gráfico.</p>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb244-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb244-2" title="2"></a>
-<a class="sourceLine" id="cb244-3" title="3"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt,<span class="dt">color=</span><span class="kw">factor</span>(cyl))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb244-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
-<p><img src="livro_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb241-2" title="2"></a>
+<a class="sourceLine" id="cb241-3" title="3"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt,<span class="dt">color=</span><span class="kw">factor</span>(cyl))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb241-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<p><img src="livro_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
 <p>Então, nesse último colocamos duas variáveis nos tradicionais eixos x e y - <em>mpg</em> e <em>wt</em>, respectivamente. Além disso, colorimos os pontos do gráfico de acordo com a quantidade de cilindros de cada carro.</p>
 <p>E se precisássemos adicionar mais informações a esse gráfico?</p>
 </div>
 <div id="o-gráfico-de-bolhas---bubble-chart" class="section level3">
 <h3><span class="header-section-number">11.1.3</span> O Gráfico de Bolhas - Bubble Chart</h3>
 <p>Além dessas 3 variáveis, se usarmos o gráfico de bolhas, poderemos adicionar uma 4ª variável ao nosso gráfico sem comprometer a sua qualidade.</p>
-<p>Então, a variável <em>mpg</em> será representada pelo eixo x, a variável <em>wt</em> pelo eixo y, as quantidade de cilindros serão destacadas por cores diferentes de cada bolha.</p>
+<p>Então, a variável <em>mpg</em> será representada pelo eixo x, a variável <em>wt</em> pelo eixo y, a quantidade de cilindros será destacada por cores diferentes de cada bolha.</p>
 <p>A quarta variável escolhida é a <em>qsec</em>, que mede quantos segundos o carro precisa para alcançar 0,25 milhas.</p>
 <p>Em nosso gráfico, a variável <em>qsec</em> será representada pelo tamanho da bolha.</p>
 <p>Cada bolha é um ponto do gráfico e representa um carro do conjunto de dados.</p>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb245-1" title="1"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt))<span class="op">+</span><span class="st"> </span><span class="co">#definição de qual é o dataset e quais são as variáveis dos eixos x e y.</span></a>
-<a class="sourceLine" id="cb245-2" title="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> <span class="kw">factor</span>(cyl), <span class="dt">size =</span> qsec), <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definição de qual variável será representada pela cor e qual será representada pelo tamanho das bolhas.</span></a>
-<a class="sourceLine" id="cb245-3" title="3"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#00AFBB&quot;</span>, <span class="st">&quot;#E7B800&quot;</span>, <span class="st">&quot;#FC4E07&quot;</span>)) <span class="op">+</span><span class="st"> </span><span class="co">#definição das cores das bolhas.</span></a>
-<a class="sourceLine" id="cb245-4" title="4"><span class="st">  </span><span class="kw">scale_size</span>(<span class="dt">range =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="dv">12</span>))  <span class="co"># Amplitude do tamanho das bolhas</span></a></code></pre></div>
-<p><img src="livro_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" title="1"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt))<span class="op">+</span><span class="st"> </span><span class="co">#definição de qual é o dataset e quais são as variáveis dos eixos x e y.</span></a>
+<a class="sourceLine" id="cb242-2" title="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> <span class="kw">factor</span>(cyl), <span class="dt">size =</span> qsec), <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definição de qual variável será representada pela cor e qual será representada pelo tamanho das bolhas.</span></a>
+<a class="sourceLine" id="cb242-3" title="3"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#00AFBB&quot;</span>, <span class="st">&quot;#E7B800&quot;</span>, <span class="st">&quot;#FC4E07&quot;</span>)) <span class="op">+</span><span class="st"> </span><span class="co">#definição das cores das bolhas.</span></a>
+<a class="sourceLine" id="cb242-4" title="4"><span class="st">  </span><span class="kw">scale_size</span>(<span class="dt">range =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="dv">12</span>))  <span class="co"># Amplitude do tamanho das bolhas</span></a></code></pre></div>
+<p><img src="livro_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 <p>Pelos dois últimos gráficos, há fortes indícios que quanto maior o peso do carro (<em>wt</em>), menor é a quantidade de milhas que ele consegue percorrer com um galão de combustível.</p>
 <p>Além disso, parece haver uma relação entre a quantidade de cilindros e essas duas variáveis. Por exemplo, os carros com 4 cilindros parecem ser mais leves e rodar mais milhas com um galão de combustível.</p>
 </div>
 <div id="o-gráfico-de-correlação" class="section level3">
 <h3><span class="header-section-number">11.1.4</span> O gráfico de correlação</h3>
 <p>Para verificar a correlação entre as variáveis, podemos simplesmente uma tabela com a correlação entre elas:</p>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" title="1">corr &lt;-<span class="st"> </span><span class="kw">round</span>(stats<span class="op">::</span><span class="kw">cor</span>(mtcars), <span class="dv">1</span>) <span class="co">#a função round é usada para arredondar as casas decimais do resultado.</span></a>
-<a class="sourceLine" id="cb246-2" title="2">corr</a></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" title="1">corr &lt;-<span class="st"> </span><span class="kw">round</span>(stats<span class="op">::</span><span class="kw">cor</span>(mtcars), <span class="dv">1</span>) <span class="co">#a função round é usada para arredondar as casas decimais do resultado.</span></a>
+<a class="sourceLine" id="cb243-2" title="2">corr</a></code></pre></div>
 <pre><code>##       mpg  cyl disp   hp drat   wt qsec   vs   am gear carb
 ## mpg   1.0 -0.9 -0.8 -0.8  0.7 -0.9  0.4  0.7  0.6  0.5 -0.6
 ## cyl  -0.9  1.0  0.9  0.8 -0.7  0.8 -0.6 -0.8 -0.5 -0.5  0.5
@@ -372,32 +372,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Para criar um gráfico com a correlação entre as variáveis, precisaremos fazer uma pequena transformação na tabela acima.</p>
 <p>A matriz será transformada em uma nova tabela com 3 colunas: duas colunas com os nomes das variáveis e a terceira coluna com o valor correspondente da correlação entre elas.</p>
 <p>Para isso, usaremos a biblioteca <code>reshape2</code> e a função <code>melt</code>:</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" title="1"><span class="co"># install.packages(&quot;reshape2&quot;)  #caso vc não já tenha instalado a biblioteca reshape2, precisa executar essa linha.</span></a>
-<a class="sourceLine" id="cb248-2" title="2"><span class="kw">library</span>(reshape2)</a></code></pre></div>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb245-1" title="1"><span class="co"># install.packages(&quot;reshape2&quot;)  #caso vc não já tenha instalado a biblioteca reshape2, precisa executar essa linha.</span></a>
+<a class="sourceLine" id="cb245-2" title="2"><span class="kw">library</span>(reshape2)</a></code></pre></div>
 <pre><code>## Warning: package &#39;reshape2&#39; was built under R version 3.6.3</code></pre>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" title="1">melted_corr &lt;-<span class="st"> </span><span class="kw">melt</span>(corr)</a></code></pre></div>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb251-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> melted_corr, <span class="kw">aes</span>(<span class="dt">x=</span>Var1, <span class="dt">y=</span>Var2, <span class="dt">fill=</span>value)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb251-3" title="3"><span class="st">  </span><span class="kw">geom_tile</span>()</a></code></pre></div>
-<p><img src="livro_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb247-1" title="1">melted_corr &lt;-<span class="st"> </span><span class="kw">melt</span>(corr)</a></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb248-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> melted_corr, <span class="kw">aes</span>(<span class="dt">x=</span>Var1, <span class="dt">y=</span>Var2, <span class="dt">fill=</span>value)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb248-3" title="3"><span class="st">  </span><span class="kw">geom_tile</span>()</a></code></pre></div>
+<p><img src="livro_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
 </div>
 <div id="aperfeiçoando-o-gráfico" class="section level3">
 <h3><span class="header-section-number">11.1.5</span> Aperfeiçoando o gráfico</h3>
 <p>Os gráficos facilitam muito a visualização dos dados. Porém, com mais um pouco de esforço, podemos melhorar muito a visualização desses dados.</p>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" title="1">corr[<span class="kw">lower.tri</span>(corr,<span class="dt">diag =</span> T)]&lt;-<span class="st"> </span><span class="ot">NA</span> <span class="co">## selecionar apenas a parte superior da matriz (evitando informações repetidas)</span></a>
-<a class="sourceLine" id="cb252-2" title="2"></a>
-<a class="sourceLine" id="cb252-3" title="3"><span class="kw">library</span>(reshape2)</a>
-<a class="sourceLine" id="cb252-4" title="4">dados_correlacao &lt;-<span class="st"> </span><span class="kw">melt</span>(corr,<span class="dt">na.rm =</span> T) <span class="co">#transformando os dados para as 3 colunas como anteriormente.</span></a></code></pre></div>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb253-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> dados_correlacao, <span class="kw">aes</span>(Var2, Var1, <span class="dt">fill =</span> value))<span class="op">+</span><span class="st"> </span><span class="co">#seleciona os dados e as variáveis para cada eixo, assim como a variável que determina a cor (value).</span></a>
-<a class="sourceLine" id="cb253-3" title="3"><span class="st"> </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)<span class="op">+</span><span class="st">    </span><span class="co">#definindo a cor do contorno de cada quadrado.</span></a>
-<a class="sourceLine" id="cb253-4" title="4"><span class="st"> </span><span class="kw">scale_fill_gradient2</span>(<span class="dt">low =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">high =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">mid =</span> <span class="st">&quot;white&quot;</span>, <span class="co">#definindo a escala de cor das correlações</span></a>
-<a class="sourceLine" id="cb253-5" title="5">   <span class="dt">midpoint =</span> <span class="dv">0</span>, <span class="dt">limit =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">space =</span> <span class="st">&quot;Lab&quot;</span>, <span class="co">#definindo a escala das correlações</span></a>
-<a class="sourceLine" id="cb253-6" title="6">   <span class="dt">name=</span><span class="st">&quot;Coef. Correlação&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definindo o nome da legenda.</span></a>
-<a class="sourceLine" id="cb253-7" title="7"><span class="st">  </span><span class="kw">theme_minimal</span>()<span class="op">+</span><span class="st"> </span><span class="co">#tema de fundo do gráfico</span></a>
-<a class="sourceLine" id="cb253-8" title="8"><span class="st">   </span><span class="kw">coord_fixed</span>() <span class="op">+</span><span class="st"> </span><span class="co">#mantém as coordenadas e as mediadas dos quadrados fixos.</span></a>
-<a class="sourceLine" id="cb253-9" title="9"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;nome eixo x&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;nome eixo y&quot;</span>) <span class="co">#define o nome para o eixo x e para o eixo y</span></a></code></pre></div>
-<p><img src="livro_files/figure-html/unnamed-chunk-123-1.png" width="672" /></p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb249-1" title="1">corr[<span class="kw">lower.tri</span>(corr,<span class="dt">diag =</span> T)]&lt;-<span class="st"> </span><span class="ot">NA</span> <span class="co">## selecionar apenas a parte superior da matriz (evitando informações repetidas)</span></a>
+<a class="sourceLine" id="cb249-2" title="2"></a>
+<a class="sourceLine" id="cb249-3" title="3"><span class="kw">library</span>(reshape2)</a>
+<a class="sourceLine" id="cb249-4" title="4">dados_correlacao &lt;-<span class="st"> </span><span class="kw">melt</span>(corr,<span class="dt">na.rm =</span> T) <span class="co">#transformando os dados para as 3 colunas como anteriormente.</span></a></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb250-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> dados_correlacao, <span class="kw">aes</span>(Var2, Var1, <span class="dt">fill =</span> value))<span class="op">+</span><span class="st"> </span><span class="co">#seleciona os dados e as variáveis para cada eixo, assim como a variável que determina a cor (value).</span></a>
+<a class="sourceLine" id="cb250-3" title="3"><span class="st"> </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)<span class="op">+</span><span class="st">    </span><span class="co">#definindo a cor do contorno de cada quadrado.</span></a>
+<a class="sourceLine" id="cb250-4" title="4"><span class="st"> </span><span class="kw">scale_fill_gradient2</span>(<span class="dt">low =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">high =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">mid =</span> <span class="st">&quot;white&quot;</span>, <span class="co">#definindo a escala de cor das correlações</span></a>
+<a class="sourceLine" id="cb250-5" title="5">   <span class="dt">midpoint =</span> <span class="dv">0</span>, <span class="dt">limit =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">space =</span> <span class="st">&quot;Lab&quot;</span>, <span class="co">#definindo a escala das correlações</span></a>
+<a class="sourceLine" id="cb250-6" title="6">   <span class="dt">name=</span><span class="st">&quot;Coef. Correlação&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definindo o nome da legenda.</span></a>
+<a class="sourceLine" id="cb250-7" title="7"><span class="st">  </span><span class="kw">theme_minimal</span>()<span class="op">+</span><span class="st"> </span><span class="co">#tema de fundo do gráfico</span></a>
+<a class="sourceLine" id="cb250-8" title="8"><span class="st">   </span><span class="kw">coord_fixed</span>() <span class="op">+</span><span class="st"> </span><span class="co">#mantém as coordenadas e as mediadas dos quadrados fixos.</span></a>
+<a class="sourceLine" id="cb250-9" title="9"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;nome eixo x&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;nome eixo y&quot;</span>) <span class="co">#define o nome para o eixo x e para o eixo y</span></a></code></pre></div>
+<p><img src="livro_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
 <p>Fique tranquilo que você não precisa decorar as funções acima. É importante que você leia e entenda o que cada uma está fazendo, só isso. E isso vai acontecer aos poucos, com a prática.</p>
 <p>Digo que você não precisa decorar porque são infinitas possibilidades e não faz sentido nenhum gastar energia decorando isso. Basta que você pesquise no Google sobre o gráfico que deseja fazer e escolha o melhor para o seu caso.</p>
 <p>Após encontrar na internet um código do gráfico que você deseja criar, basta fazer algumas adaptações para o seu caso.</p>

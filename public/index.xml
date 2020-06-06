@@ -210,6 +210,25 @@
     </item>
     
     <item>
+      <title>O e-book está no seu e-mail!</title>
+      <link>/confirmacao-ebook/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/confirmacao-ebook/</guid>
+      <description>Pronto! :)
+Já enviei o e-book para o seu e-mail.</description>
+    </item>
+    
+    <item>
+      <title>Quer dar o seu primeiro passo para ser um Cientista de Dados?</title>
+      <link>/ebook/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ebook/</guid>
+      <description>Esse e-book é para quem deseja iniciar a carreira de Ciência de Dados a partir do ZERO.</description>
+    </item>
+    
+    <item>
       <title>Sua mensagem foi enviada!</title>
       <link>/confirmacao-formulario/</link>
       <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>

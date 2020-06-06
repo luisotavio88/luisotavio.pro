@@ -35,7 +35,7 @@ meu_vetor2<-c(2,5,9,10,11,1,4)
 meu_vetor2[meu_vetor2 > 7]  #os elementos que atenderem a condição lógica serão extraídos.
 meu_vetor2 > 7 #Note que a condição lógica irá retornar um vetor de TRUE ou FALSE.
                 #O resultado será TRUE quando o elemento do vetor for maior que 7 e FALSE no caso contrário.
-                #Então, o comando meu_vetor2[meu_vetor2 > 7]  irá retornar os elementos correspondentes
+                #Então, o comando meu_vetor2[meu_vetor2 > 7] irá retornar os elementos correspondentes
                 #quando a condição for igual a TRUE.
 ```
 
@@ -59,7 +59,7 @@ meu_vetor #resultado
 
 ## Manipulação de matrizes
 
-Os vetores só tem uma dimensão, representam apenas uma variável. Já as matrizes são bidimensionais. 
+Os vetores só têm uma dimensão, representam apenas uma variável. Já as matrizes são bidimensionais. 
 
 Isso quer dizer que a matriz é uma tabela com linhas e colunas. 
 
@@ -75,7 +75,7 @@ Sempre que for manipular uma matriz, você precisará levar em consideração se
 
 ### Como extrair elementos de uma matriz 
 
-Considere a matriz que criamo no item anterior:
+Considere a matriz que criamos no item anterior:
 
 ```{r}
 minha_matriz
@@ -188,7 +188,7 @@ minha_lista$matriz[[3,2]]
 
 ### Como atribuir valores a elementos de uma lista
 
-Tanto para os vetores, matrizes e listas, a atribuição de valores funciona da mesma maneira que fazemos para extrair os dados. Porém, a diferença é que não vamos simplesmente pedir para o R mostrar os dados ou atribuílos a algum objeto. Fazemos exatamente o contrário: atribuímos algum valor àquele elemento do vetor, matriz ou lista.
+Tanto para os vetores, matrizes e listas, a atribuição de valores funciona da mesma maneira que fazemos para extrair os dados. Porém, a diferença é que não vamos simplesmente pedir para o R mostrar os dados ou atribuí-los a algum objeto. Fazemos exatamente o contrário: atribuímos algum valor àquele elemento do vetor, matriz ou lista.
 
 No exemplo a seguir, a *matriz* recebe o valor 5 para a linha 4, coluna 3.
 ```{r}

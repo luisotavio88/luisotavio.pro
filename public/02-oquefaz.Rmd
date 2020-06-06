@@ -1,17 +1,36 @@
-# O que faz um cientista de dados? {#oquefaz}
+# A Ciência de Dados 
 
-e porque me tornar um? 
+Para mim, ciência de dados é:
 
-Here is a review of existing methods.
+- RESOLVER PROBLEMAS OU GERAR RESULTADOS PARA UMA EMPRESA <u>USANDO DADOS</u>.
 
-```{r, echo=F}
-shiny::HTML('<tr><center>
-    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
-  <img src="imagens/insta.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
-  <img src="imagens/youtube.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
-  </center></tr>')
-```
+Então, vejo a ciência de dados totalmente voltada a resolução de problemas. Ou seja, tem objetivos 100% práticos. 
+
+É uma área que surgiu nos últimos anos e que une algumas necessidades do mercado:
+
+- Cada vez mais as empresas preferem tomar **decisões baseadas em dados** e não em achismos.
+
+- A formação em Estatística muitas vezes é excessivamente teórica e, muitas vezes, não se aplica aos problemas reais.
+
+- O Estatístico, apesar de ter excelente conhecimento analítico, muitas vezes não possui domínio de linguagens de programação.
+
+- Os cientistas da computação possuem excelente capacidade de automatizar tarefas, porém pouco conhecimento para tratar e analisar dados.
+
+Junto com todos os problemas acima, ainda temos que considerar a quantidade de dados e informações que são geradas e armazenadas a cada segundo. Essa quantidade aumentou absurdamente nos últimos anos.
+
+Esse é um pequeno contexto do cenário que criou o profissional mais cobiçado dos próximos anos: **O CIENTISTA DE DADOS**.
+
+A profissão *Data Scientist* ou Cientista de Dados foi considerada pela ***Havard Business Review* como a profissão mais *sexy* do século.**
+
+O prestígio da profissão está muito ligado a forte tendência de se tomar decisões a partir de dados. 
+
+O que também favorece muito é a enorme quantidade de dados e informações que atualmente são coletadas quando mexemos em nosso celular, fazemos compras na internet, atualizamos nossas redes sociais ou por qualquer outro monitoramento. 
+
+Junto com isso tudo, ainda temos que considerar que é uma área com pouquíssimos profissionais. Isso porque até a pouco tempo não havia profissionais com habilidades estatísticas e computacionais ao mesmo tempo.
+
+São vários os motivos que mostram que você está diante de uma grande oportunidade.
+
+O Cientista de Dados já é e continuará sendo um dos profissionais mais valorizados do mercado.
+
+**Espero poder te ajudar e que esse seja o início da sua carreira como Cientista de Dados.**
+

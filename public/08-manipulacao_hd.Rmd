@@ -83,9 +83,9 @@ data_hora
 
 Em alguns casos, precisaremos desmembrar as informações de data e hora. Isso é necessário quando o nosso único interesse é trabalhar com o ano, por exemplo.
 
-Portanto, vamos aprender como extrair o ano, mês, dia, hora, minuto ou segundo da variável de datae hora.
+Portanto, vamos aprender como extrair o ano, mês, dia, hora, minuto ou segundo da variável de data e hora.
 
-Irei considerar que a nossa variável de data e hora já foi transformada para o padrão do R, como demonstado no item anterior.
+Irei considerar que a nossa variável de data e hora já foi transformada para o padrão do R, como demonstrado no item anterior.
 
 ```{r}
 data_hora #variável definida no exemplo anterior
@@ -133,9 +133,9 @@ format(data_hora,"%H:%M")
 
 Em alguns casos vamos precisar alterar o fuso horário da nossa variável de data. Casos mais comuns:
 
-- O R foi configurado no seu computador como se você não estivesse onde você realmente está. Por exemplo, por algum motivo as suas configurações de locale estão em Inglês e o fuso horário corresponde ao fuso horário de Londres. Isso será super comum caso você utilize o R na nuvem, uma vez que possivelmente o servidor de nuvem não estará no mesmo fuso horário que o seu.
+- O R foi configurado no seu computador como se você não estivesse onde você realmente está. Por exemplo, por algum motivo as suas configurações de *locale* estão em Inglês e o fuso horário corresponde ao fuso horário de Londres. Isso será super comum caso você utilize o R na nuvem, uma vez que possivelmente o servidor de nuvem não estará no mesmo fuso horário que o seu.
 
-- Caso os horários do seu banco de dados esteja em um fuso horário diferente do que você deseja trabalhar, seja porque você está trabalhando com dados mundiais ou qualquer outro motivo.
+- Caso os horários do seu banco de dados estejam em um fuso horário diferente do que você deseja trabalhar, seja porque você está trabalhando com dados mundiais ou qualquer outro motivo.
 
 Para resolver isso, é bem simples. Veja o exemplo:
 

@@ -2,30 +2,30 @@
 
 ## O que é um Data Frame?
 
-Provavelmente você já utilizou o Excel para construir ou analisar uma tabela com os seus dados de interesse. Geralmente, as tabelas já tem a mesma estrutura de um Data Frame, conceito que será muito útil em seus trabalhos e será apresentado aqui.
+Provavelmente você já utilizou o Excel para construir ou analisar uma tabela com os seus dados de interesse. Geralmente, as tabelas já têm a mesma estrutura de um *Data Frame*, conceito que será muito útil em seus trabalhos e será apresentado aqui.
 
-Em um Data Frame cada registro será inserido em uma linha, já as colunas representarão as suas variáveis.
+Em um *Data Frame* cada registro será inserido em uma linha, já as colunas representarão as suas variáveis.
 
-Por exemplo, em uma pesquisa de opinião, as informações de uma linha serão os dados de uma pessoa respondente específica. Enquanto cada coluna da tabela corresponderá as respostas para uma pergunta específca.
+Por exemplo, em uma pesquisa de opinião, as informações de uma linha serão os dados de uma pessoa respondente específica. Enquanto cada coluna da tabela corresponderá as respostas para uma pergunta específica.
 
 Diferentemente de uma matriz tradicional, as colunas podem misturar vários tipos de variáveis.
 
 No caso da pesquisa de opinião, pode-se ter uma coluna para Idade (variável numérica), outra para o Gênero (variável categórica) e outra pergunta aberta (variável de texto).
 
-Regras básicas de um Data Frame:
+Regras básicas de um *Data Frame*:
 
 - Cada coluna deve ter um nome
 - Todas as colunas devem ser do mesmo tamanho. Não é permitido que uma coluna tenha 40 registros e outra 39.
-- As colunas podem ser numéricas (numeric), categóricas (factor) ou texto (character)
+- As colunas podem ser numéricas (*numeric*), categóricas (*factor*) ou texto (*character*)
 - Sempre terão duas dimensões (linhas e colunas)
 
 ## Manipulação de um Data Frame
 
 Seja qual for a sua área dentro da Ciência de Dados, os conceitos a seguir serão muito úteis e irão facilitar muito a vida em suas análises. 
 
-Seja para econometria, bioestatística, demografia, machine learning ou qualquer outra.
+Seja para econometria, bioestatística, demografia, *machine learning* ou qualquer outra.
 
-O melhor pacote do R para manipular dados para manipular Data Frames se chama *dplyr*.
+O melhor pacote do R para manipular dados para manipular *Data Frames* se chama *dplyr*.
 
 Porque usar o *dplyr*:
 
@@ -45,8 +45,8 @@ O Dplyr é bastante conhecido e usado pelos 6 verbos que representam suas princi
 - Summarise -> Calcula valores para uma coluna. Ex: mínimo, máximo, média, desvio padrão, etc.
 - Mutate -> Cria uma nova variável que seja uma função entre variáveis que já existem
 - Select -> Seleciona colunas que já existem pelo nome delas.
-- Filter -> Selectiona registros (linhas) de acordo com uma condição estabelecida.
-- Arrange -> Ordena as linhas do data frame.
+- Filter -> Seleciona registros (linhas) de acordo com uma condição estabelecida.
+- Arrange -> Ordena as linhas do *data frame*.
 - Rename -> Renomear o nome das variáveis.
 
 Essas são as principais funções que você irá utilizar em uma manipulação de dados. Apesar de serem simples, são muito poderosas.
@@ -59,28 +59,28 @@ Características comuns as funções citadas do pacote:
 
 - O primeiro argumento da função é sempre o seu conjunto de dados que será manipulado.
 - Os argumentos seguintes vão definir o que será feito com o seu conjunto de dados
-- O resultado também será um data frame.
+- O resultado também será um *data frame*.
 - Ao inserir os nomes de colunas (variáveis) não é necessário (e nem permitido) usar "" ou o operador $.
 
 Na prática será bem fácil identificar esse padrão. Então, vamos ver como funciona cada uma das funções.
 
 ## A função Summarise e a função group_by
 
-A função summarise é útil para calcular estatísticas das colunas de um data frame.
+A função ```summarise``` é útil para calcular estatísticas das colunas de um *data frame*.
 
-Muitas vezes é utilizada com uma função auxiliar também muito importante: a função *group_by*.
+Muitas vezes é utilizada com uma função auxiliar também muito importante: a função ```group_by```.
 
-Suponha que você tenho um conjunto de dados com vários carros (cada carro será uma linha) e várias características dos carros (colunas).
+Suponha que você tenha um conjunto de dados com vários carros (cada carro será uma linha) e várias características dos carros (colunas).
 
-Para calcular a média de uma dessas características, por exemplo a quantidade de cavalos dos carros, você usaria a função *summarise*. 
+Para calcular a média de uma dessas características, por exemplo a quantidade de cavalos dos carros, você usaria a função ```summarise```. 
 
 Mas imagine agora que você não precisa simplesmente calcular a quantidade de cavalos de todos os carros, você precisar calcular essa média de acordo com a quantidade de cilindros dos carros. 
 
-Nesse caso, a função __group_by__ irá separar seus dados de acordo com uma variável (quantidade de cilindros) e assim você poderá usar a função __summarise__ para calcular a média da quantidade de cavalos.
+Nesse caso, a função ```group_by``` irá separar seus dados de acordo com uma variável (quantidade de cilindros) e assim você poderá usar a função ```summarise``` para calcular a média da quantidade de cavalos.
 
-Vamos usar o mtcarts - dataset nativo no R.
+Vamos usar o mtcarts - *dataset* nativo no R.
 
-Para mais informações sobre as variáveis do dataset, execute o comando *?mtcarts*
+Para mais informações sobre as variáveis do dataset, execute o comando ```?mtcarts```.
 
 
 ```{r}
@@ -89,7 +89,7 @@ mtcars_grupo<-group_by(mtcars,cyl)  ##a variável cyl é a quantidade de cilindr
 summarise(mtcars_grupo,mean(hp))    ## a variável hp é a quantidade de cavalos do carro (horse power)
 ```
 
-Caso você deseje continuar trabalhando com o mesmo dataset (usando o mesmo objeto), é importante que você desfaça o agrupamento. Isso irá evitar futuros erros na execução do seu código.
+Caso você deseje continuar trabalhando com o mesmo *dataset* (usando o mesmo objeto), é importante que você desfaça o agrupamento. Isso irá evitar futuros erros na execução do seu código.
 
 ```{r}
 # desagrupando o data frame
@@ -99,11 +99,11 @@ mtcars_grupo<-ungroup(mtcars_grupo)
 
 ## Mutate
 
-A função __mutate__ serve para criar uma nova coluna que seja uma função entre as variáveis que já existem.
+A função ```mutate``` serve para criar uma nova coluna que seja uma função entre as variáveis que já existem.
 
-Então, usando o mesmo data frame __mtcars__, temos a variável __wt__ que representa o peso do carro (em libras) e a variável __qsec__ que representa o tempo (em segundos) que o carro precisa para percorrer a distância de 0,25 milhas. 
+Então, usando o mesmo *data frame* ```mtcars```, temos a variável __wt__ que representa o peso do carro (em libras) e a variável __qsec__ que representa o tempo (em segundos) que o carro precisa para percorrer a distância de 0,25 milhas. 
 
-Portanto, como exemplo, vamos criar uma nova coluna para relativizar o tempo que o carro gasta para percorrer 0,25 milhas (__qsec__) pelo seu peso (__wt__). A fómula para isso seria: __qsec__/__wt__.
+Portanto, como exemplo, vamos criar uma nova coluna para relativizar o tempo que o carro gasta para percorrer 0,25 milhas (__qsec__) pelo seu peso (__wt__). A fórmula para isso seria: __qsec__/__wt__.
 
 O nome da nova coluna será __tempo_peso__.
 
@@ -117,9 +117,9 @@ novo_dataframe<-mutate(mtcars,tempo_peso = qsec/wt) # a função irá adicionar 
 
 ## Select
 
-A função __select__ serve para selecionar colunas em um data frame.
+A função ```select``` serve para selecionar colunas em um *data frame*.
 
-Então, ainda usando o dataframe __mtcars__, suponha que somente as variáveis __mpg__ e __gear__ serão úteis em nossa análise.
+Então, ainda usando o dataframe ```mtcars```, suponha que somente as variáveis __mpg__ e __gear__ serão úteis em nossa análise.
 
 Para filtrar essas variáveis, precisamos executar o seguinte comando:
 
@@ -127,15 +127,15 @@ Para filtrar essas variáveis, precisamos executar o seguinte comando:
 select(mtcars,mpg,gear)
 ```
 
-Então, o primeiro argumento é o dataset (mtcars) e os argumentos restantes na função __select__ são as colunas que você deseja manter.
+Então, o primeiro argumento é o *dataset* (```mtcars```) e os argumentos restantes na função ```select``` são as colunas que você deseja manter.
 
 ## Filter
 
-Enquanto a função __select__ seleciona as colunas do dataframe, a função *filter* é utilizada para selecionar as *linhas* do dataframe.
+Enquanto a função ```select``` seleciona as colunas do dataframe, a função *filter* é utilizada para selecionar as *linhas* do dataframe.
 
-Então, quando precisamos selecionar registros de um data frame usando determinada condição, a função recomendada é a __filter__.
+Então, quando precisamos selecionar registros de um *data frame* usando determinada condição, a função recomendada é a ```filter```.
 
-Utilizando o mesmo data frame, suponha que precisamos filtrar todos os carros com 6 cilindros.
+Utilizando o mesmo *data frame*, suponha que precisamos filtrar todos os carros com 6 cilindros.
 
 Neste caso, a variável em questão é a __cyl__, então a nossa condição é que o registro atenda a condição cyl==6.
 
@@ -177,9 +177,9 @@ Para a condição "cyl==6 | wt<3" ser verdadeira, basta que pelo menos uma das c
 
 ## Arrange
 
-A função __arrange__ é responsável por ordenar as linhas do data frame seguindo uma nova ordem estabelecida.
+A função ```arrange``` é responsável por ordenar as linhas do *data frame* seguindo uma nova ordem estabelecida.
 
-Então, suponha que em nosso exemplo, queremos ordenar o data frame __mtcars__ do carro com menor número de marchas para o maior número de marchas. 
+Então, suponha que em nosso exemplo, queremos ordenar o *data frame* ```mtcars``` do carro com menor número de marchas para o maior número de marchas. 
 
 Porém, há vários carros que irão empatar para esse critério, já que a tabela tem 15 carros com 3 marchas, 12 carros com 4 marchas e 5 carros com 5 marchas.
 
@@ -193,13 +193,13 @@ Portanto, vou definir que os dados também sejam ordenados pelo peso (variável 
 arrange(mtcars,gear,wt)
 ```
 
-É possível usar a função __arrange__ para ordenar os dados usando muitas variáveis para ordenar os dados. Porém, a ordem que as colunas forem inseridas na função __arrange__ representam uma *ordem de prioridade*.
+É possível usar a função ```arrange``` para ordenar os dados usando muitas variáveis para ordenar os dados. Porém, a ordem que as colunas forem inseridas na função ```arrange``` representam uma *ordem de prioridade*.
 
 Portanto, a função só irá ordenar pela segunda coluna caso haja empates na primeira, por exemplo.
 
 ## Rename
 
-Alterar os nomes de uma variável de um data frame é algo conceitualmente simples. Mas, na prática pode ser bem trabalhoso de fazer sem a função __rename__.
+Alterar os nomes de uma variável de um *data frame* é algo conceitualmente simples. Mas, na prática pode ser bem trabalhoso de fazer sem a função ```rename```.
 
 Quais são os nomes das colunas da tabela mtcats?
 
@@ -214,7 +214,7 @@ mtcars_<-rename(mtcars,cilindros=cyl,cavalos=hp)
 head(mtcars_)
 ```
 
-Esse é o padrão. Após informar o data frame onde se aplicará as alterações, coloca-se o novo nome da coluna antes do sinal de igual e logo após o nome antigo da coluna.
+Esse é o padrão. Após informar o *data frame* onde se aplicará as alterações, coloca-se o novo nome da coluna antes do sinal de igual e logo após o nome antigo da coluna.
 
 
 ## O operador %>% (leia-se pipe)
@@ -226,13 +226,13 @@ O operador funciona da seguinte forma:
 # dataset %>% função()
 ```
 
-Isso significa que o objeto do lado esquerdo do operador (dataset) será inserido na função ao lado direito do operador no **primeiro argumento** da função.
+Isso significa que o objeto do lado esquerdo do operador (*dataset*) será inserido na função ao lado direito do operador no **primeiro argumento** da função.
 
 O operador ```%>%``` pode ser usado conjuntamente com inúmeras funções, incluindo todas que aprendemos nesse capítulo.
 
 Exemplos práticos:
 
-Algumas linhas atrás, ordenamos o dataset ```mtcars``` em ordem crescente pelas colunas *gear* e *wt*, usando o código:
+Algumas linhas atrás, ordenamos o *dataset* ```mtcars``` em ordem crescente pelas colunas *gear* e *wt*, usando o código:
 
 ```{r}
 dataset_ordenado <- arrange(mtcars,gear,wt)
@@ -245,7 +245,7 @@ dataset_ordenado <- mtcars %>%
                       arrange(gear,wt)
 ```
 
-Então, o dataset ```mtcars``` é inserido no primeiro argumento da função ```arrange```.
+Então, o *dataset* ```mtcars``` é inserido no primeiro argumento da função ```arrange```.
 
 **A diferença é pequena para casos simples como esse, porém em casos mais complexos a utilização do operador %>% (pipe) fará uma diferença enorme na organização do seu código.**
 

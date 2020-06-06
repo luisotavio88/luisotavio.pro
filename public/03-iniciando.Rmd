@@ -17,15 +17,15 @@ E, logo depois, instalar o RStudio. O RStudio é uma interface para facilitar a 
 
 Ele irá deixar a sua tela de programação muito mais amigável, organizada e você terá várias funções que irão facilitar o desenvolvimento do seu projeto.
 
-Usar o R sem o RStudio é inimaginável hoje em dia. Não tem nenhum motivo pra você fazer isso, então instale também o RStudio.
+Usar o R sem o RStudio é inimaginável hoje em dia. Não tem nenhum motivo para você fazer isso, então instale também o RStudio.
 
 Caso você precise de ajuda para instalar o R e o RStudio, veja o passo a passo:
 
-[Clique aqui para ver o passo a passo de instalação do R e do RStudio.](https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/)
+[Clique aqui para ver o passo a passo de instalação do R e do RStudio.](https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/){target="_blank"}
 
 ## Lógica de programação no R
 
-A linguagem R é orientada a objetos e, na prática,isso significa que tudo no R será um objeto.
+A linguagem R é orientada a objetos e, na prática, isso significa que tudo no R será um objeto.
 
 Imagine que esse "objeto" é uma variável capaz de armazenar um valor ou uma estrutura de dados. Por exemplo:
 
@@ -83,11 +83,11 @@ Cada objeto irá ter uma __Classe__. Ela é definida pela forma do objeto e ser�
 
 Existem 5 classes básicas (atômicas) para um objeto no R:
 
-- Caractere (character)
-- Números reais (numeric)
-- Inteiros (integer)
-- Números complexos (complex)
-- Verdadeiro/Falso (logical)
+- Caractere (*character*)
+- Números reais (*numeric*)
+- Inteiros (*integer*)
+- Números complexos (*complex*)
+- Verdadeiro/Falso (*logical*)
 
 Para descobrir qual é a __Classe__ do objeto, podemos usar a função class().
 
@@ -145,7 +145,7 @@ Uma matriz é um conjunto de vetores do mesmo tamanho. Ou uma tabela com linhas 
 
 ```{r}
 matrix(cbind(vetor1,vetor2,vetor3),ncol=3) #a função matrix é usada para criar uma matriz
-                                       #o primeiro argumento da padrão matrix são os dados da matriz
+                                       #o primeiro argumento da função matrix são os dados da matriz
                                        #além disso o argumento "ncol" irá informar que desejamos formar 3 colunas.
                                        #Assim, cada vetor definido anteriormente será uma coluna da matriz
 ```
@@ -179,7 +179,7 @@ lista
 
 ## Fatores
 
-Até agora usamos em nossos exemplos valores lógicos (TRUE/FALSE), valores númericos ou de texto (character). Porém, é essencial conhecer outra classe de valores: os fatores.
+Até agora usamos em nossos exemplos valores lógicos (TRUE/FALSE), valores numéricos ou de texto (*character*). Porém, é essencial conhecer outra classe de valores: os fatores.
 
 Fator é a classe das variáveis categóricas. 
 
@@ -189,13 +189,13 @@ Ou podemos ter categorias que não possuem nenhuma ordem, como cursos: Administr
 
 Nos dois exemplos, as variáveis *renda* e *cursos* poderiam assumir a classe "factor" em nossas análises.
 
-Também seria possível classificar renda e cursos (ou qualquer variável categórica) como uma variável de texto (character). Então pra que serve a classe dos fatores?
+Também seria possível classificar renda e cursos (ou qualquer variável categórica) como uma variável de texto (*character*). Então para o que serve a classe dos fatores?
 
-Sempre que você tiver poucos valores únicos para uma variável, prefira a classicação de fator à character. Essa opção irá otimizar o armazenamento dos dados e também será necessária para utilizar algumas funções do R com seus dados.
+Sempre que você tiver poucos valores únicos para uma variável, prefira a classificação de fator à *character*. Essa opção irá otimizar o armazenamento dos dados e também será necessária para utilizar algumas funções do R com seus dados.
 
 Exemplo: 
 
-Uma pergunta aberta em um questionário irá gerar várias respostas diferentes, então não há sentido nenhum em classificar as respostas em categorias. Portanto, a classificação adequada é character.
+Uma pergunta aberta em um questionário irá gerar várias respostas diferentes, então não há sentido nenhum em classificar as respostas em categorias. Portanto, a classificação adequada é *character*.
 
 Porém, caso o respondente tenha que escolher uma resposta entre algumas opções disponíveis para esse questionário, a melhor classificação da variável seria como fator.
 
@@ -221,7 +221,7 @@ Porém, pode ser que você precise desse vetor como _integer_ (números inteiros
 
 Para alterar a classe de um objeto por coerção, basta você usar uma função de coerção. As função são definidas por *as.* + *classe que o objeto vai assumir*.
 
-Ou seja: as.integer, as.logical, as.numeric, as.factor as.complex ou as.character.
+Ou seja: as.integer, as.logical, as.numeric, as.factor as.complex ou as.*character*.
 
 Para o exemplo acima, teríamos:
 
@@ -236,7 +236,7 @@ as.logical(x)
 
 Os valores faltantes, também chamados de __missing values__ são representados por *NA* ou *NaN*.
 
-Eles não irão influenciar a classe de  um objeto, por exemplo:
+Eles não irão influenciar a classe de um objeto, por exemplo:
 
 ```{r}
 x<-c(1,2,NA,1,0) #apesar de ser representado por duas letras, pelo padrão do R, ele saberá que não se trata de um texto e sim de valores faltantes.
@@ -248,13 +248,13 @@ class(x)
 
 Provavelmente esse é o objeto mais usado no R. É similar a uma matriz, porém com mais possibilidades.
 
-Os Data Frames são tabelas que aceitam colunas de todas as classes. Por exemplo, podemos ter uma coluna com classe __numeric__, outra __logical__ e outra __character__. Isso não é possível em uma matriz, onde todas as colunas devem ter a mesma classe.
+Os *Data Frames* são tabelas que aceitam colunas de todas as classes. Por exemplo, podemos ter uma coluna com classe __numeric__, outra __logical__ e outra __character__. Isso não é possível em uma matriz, onde todas as colunas devem ter a mesma classe.
 
-Cada coluna em um Data Frame terá um nome. É altamente recomendável que você atribua nomes que realmente representem a variável ali contida. Ou seja, evite nomes como X1, X2, X3, etc.
+Cada coluna em um *Data Frame* terá um nome. É altamente recomendável que você atribua nomes que realmente representem a variável ali contida. Ou seja, evite nomes como X1, X2, X3, etc.
 
 Também é possível atribuir nomes para as linhas de seu __data frame__.
 
-É muito comum que você importe seus dados/tabela para o R, porém veja como você pode criar um data frame de forma bem simples:
+É muito comum que você importe seus dados/tabela para o R, porém veja como você pode criar um *data frame* de forma bem simples:
 
 ```{r}
 meus_dados <- data.frame(produto=c("roda","pneu","suspensão"), preco = c(30,20,15), esta_disponivel = c(T, T, F))
@@ -265,9 +265,9 @@ O __data frame__ criado acima possui variáveis de texto, numérica e lógica.
 
 ## Names
 
-Os __names__ são muito úteis na manipulação dos dados contidos nas matrizes, listas ou data frames.
+Os __names__ são muito úteis na manipulação dos dados contidos nas matrizes, listas ou *data frames*.
 
-Por exemplo, no data frame __meus_dados__ criado no item anterior, foi definido que o nome das variáveis são: produto, preco e esta_disponivel.
+Por exemplo, no *data frame* __meus_dados__ criado no item anterior, foi definido que o nome das variáveis são: produto, preco e esta_disponivel.
 
 Isso pode ser identificado pela função names()
 
@@ -277,7 +277,7 @@ names(meus_dados)
 
 Então, para manipular a primeira coluna, podemos chamá-la de "roda" no comando que for utilizado. Isso será melhor explicado no capítulo de manipulação de dados.
 
-Para alterar os nomes das colunas ou linhas de um data frame, usa-se as funções names() e row.names().
+Para alterar os nomes das colunas ou linhas de um *data frame*, usa-se as funções names() e row.names().
 
 ```{r}
 names(meus_dados)<-c("novo_nome","preco","esta_disponivel") #alterando o nome da 1a coluna
