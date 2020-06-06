@@ -8,7 +8,7 @@ tags: []
 type: mylayout
 ---
 
-<img src="imagens/capa_livro.jpeg" height="280" alt="Capa o seu primeiro passo como cientista de dados" align="right" style="margin: 0 1em 0 1em" />
+<img src="r-ciencia-de-dados/imagens/capa_livro.jpeg" height="280" alt="Capa o seu primeiro passo como cientista de dados" align="right" style="margin: 0 1em 0 1em" />
 
 Esse e-book é para quem deseja iniciar a carreira de Ciência de Dados a partir do ZERO. 
 
