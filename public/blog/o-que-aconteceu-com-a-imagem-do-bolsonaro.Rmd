@@ -9,7 +9,7 @@ tags:
   - Webscraping
   - Text mining
   - Análise de sentimentos
-type: featured
+type: post
 image: images/post_principal/politicos.png
 ---
 

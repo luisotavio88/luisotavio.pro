@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Marketing Digital on Luis Otavio | Ciência de dados</title>
+    <title>Marketing digital on Luis Otavio | Ciência de dados</title>
     <link>/tags/marketing-digital/</link>
-    <description>Recent content in Marketing Digital on Luis Otavio | Ciência de dados</description>
+    <description>Recent content in Marketing digital on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/marketing-digital/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Assim que vou retweetar o que me interessa no Twitter!</title>
+      <link>/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</guid>
+      <description>Vários mercados precisam de notícias em tempo real, imagine só o mercado de finanças:</description>
+    </item>
     
     <item>
       <title>Acompanhamento dos perfis do Instagram</title>
