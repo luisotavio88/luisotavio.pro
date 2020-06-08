@@ -20,9 +20,9 @@ biblio-style: apalike
 
 Opa! Esse e-book foi feito para quem quer dar início a uma grande transformação profissional rumo à Ciência de Dados.
 
-Ele foi escrito com o objetivo de ensinar quem deseja sair do ponto 0, ou seja, você não precisa saber absolutamente nada de estatística ou programação.
+Ele foi escrito com o objetivo de ensinar quem deseja sair do ponto ZERO, ou seja, você não precisa saber absolutamente nada de estatística ou programação.
 
-O livro foi escrito pensando em pessoas de todas as áreas: seja da área de humanas, biológicas, gerencial ou exatas.
+O livro foi escrito pensando em pessoas de todas as áreas: seja da área de humanas, biológicas, gerenciais ou exatas.
 
 Depois que terminar esse livro, você terá uma excelente base de programação na linguagem R.
 

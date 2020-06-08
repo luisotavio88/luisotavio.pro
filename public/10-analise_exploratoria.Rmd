@@ -8,7 +8,7 @@ Existem dois grandes motivos para você explorar os seus dados antes de realment
 
 Nesse capítulo irei mostrar os principais passos de uma Análise Exploratória.
 
-Primeiramente, você deve ler os seus dados no RStudio. Como esse passo já foi explicado no Capítulo 6, vamos pular essa parte.
+Primeiramente, você deve ler os seus dados no RStudio. Como esse passo já foi explicado no Capítulo 5, vamos pular essa parte.
 
 Vamos trabalhar com um *dataset* bem conhecido na Ciência de Dados, seu nome é ```iris```.  O *dataset* possui as medidas de 150 flores pertencentes a 3 diferentes espécies.
 
@@ -75,7 +75,7 @@ iris %>%
   count(Species)
 ```
 
-Caso não se lembre do operador pipe (%>%), releia a última parte do Capítulo de Manipulação de Dados.
+Caso não se lembre do operador pipe (%>%), releia a última parte do Capítulo de Manipulação de Dados com o *dplyr* - Capítulo 7.
 
 ## Estatísticas descritivas básicas
 

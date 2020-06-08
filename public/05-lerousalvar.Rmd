@@ -1,10 +1,10 @@
 # Como ler ou salvar seus dados
 
-Nesse capítulo vou te apresentar as principais formas de importar os seus dados para o R.
+Nesse capítulo vou te apresentar as principais formas de **importar os seus dados para o R**.
 
 Em alguns casos específicos, a importação dos dados pode depender de pacotes desenvolvidos especialmente para o caso. Aqui vou abordar a importação de arquivos de texto, CSV ou Excel.
 
-Vou tratar sobre a importação de dados do Excel no final deste capítulo. Porém, caso você queira importar poucas abas de uma planilha do Excel, recomendo que você a salve como arquivo TXT e faça a importação usando o método a seguir. 
+Vou falar sobre a importação de dados do Excel no final deste capítulo. Porém, caso você queira importar poucas abas de uma planilha do Excel, recomendo que você a salve como arquivo TXT e faça a importação usando o método a seguir. 
 
 ## Como importar uma tabela em arquivo txt ou csv para o RStudio
 
@@ -18,15 +18,15 @@ Lembre-se que os seus dados devem estar salvos no formato txt ou csv.
 
 ![Importar dados no R-RStudio](imagens/5_importacao1.png)
 
-Para ler os dados vamos usar a biblioteca “readr”, então, caso você ainda não tenha ela instalada em seu computador, o RStudio irá solicitar a sua instalação.
+Para ler os dados vamos usar a biblioteca ```readr```, então, caso você ainda não tenha ela instalada em seu computador, o RStudio irá solicitar a sua instalação.
 
-*Passo 2 - Instale a biblioteca “readr”, caso ela já não esteja instalada*
+**Passo 2 - Instale a biblioteca ```readr```, caso ela já não esteja instalada**
 
 ![Importar dados no R-RStudio](imagens/5_importacao2.png)
 
 Clique em “Yes” e aguarde a instalação.
 
-*Passo 3 - Ajustes para importar a sua tabela*
+**Passo 3 - Ajustes para importar a sua tabela**
 
 ![Importar dados no R-RStudio](imagens/5_importacao3.png)
 
@@ -36,11 +36,11 @@ Uma pequena parte dos dados do arquivo que você selecionou irão aparecer na su
 
 Então, agora você precisa fazer alguns ajustes para o R ler o seu conjunto de dados (*dataset*).
 
-*O ajuste mais importante é como as suas colunas estão separadas/delimitadas.*
+**O ajuste mais importante é como as suas colunas estão separadas/delimitadas.**
 
 É muito comum usar tabulação (tab), vírgula, ponto e vírgula ou espaço para separar as colunas de arquivos de texto.
 
-Mas nessa parte da importação, *você deve escolher exatamente o mesmo delimitador que já foi utilizado em seu arquivo.*
+Mas nessa parte da importação, **você deve escolher exatamente o mesmo delimitador que já foi utilizado em seu arquivo.**
 
 Nessa seção, você também pode fazer vários outros ajustes, por exemplo:
 
@@ -52,7 +52,7 @@ Nessa seção, você também pode fazer vários outros ajustes, por exemplo:
 
 - definir se a primeira linha dos seus dados é cabeçalho ou não
 
-Note que nessa etapa, na parte de “*Code Preview*”, o RStudio está mostrando exatamente o código que será executado para fazer a leitura dos seus dados.
+Note que nessa etapa, na parte de “**Code Preview**”, o RStudio está mostrando exatamente o código que será executado para fazer a leitura dos seus dados.
 
 Esse código vai alterando a medida que você muda os ajustes! (ótima oportunidade para aprender e ir entendendo melhor o funcionamento da linguagem).
 
@@ -70,7 +70,7 @@ A função mais comum para importar dados no R é a ```read.table```. A função
 meus_dados<-read.table(file="nome_do_arquivo.txt",header = TRUE,sep = "\t")
 ```
 
-Portanto, esse comando irá ler o arquivo "nome_do_arquivo.txt". Além disso, foi informado que o arquivo possui cabeçalho (nome para cada coluna da tabela) e está separado por tabulação, representado pelo símbolo "\t".
+Portanto, esse comando irá ler o arquivo "nome_do_arquivo.txt". Além disso, foi informado que o arquivo possui cabeçalho (nome para cada coluna da tabela) e está separado por tabulação, representado pelo símbolo ```"\t"```.
 
 Você pode atribuir valores para outros argumentos, como: *dec* (para definir o separador de números decimais), *row.names* (para atribuir nomes para cada linha), *encoding* (definir a codificação dos seus dados) e vários outros.
 

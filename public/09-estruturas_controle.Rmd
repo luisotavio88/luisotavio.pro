@@ -1,6 +1,6 @@
 # Estruturas de Controle
 
-Duas das principais vantagens da maioria das linguagens computacionais são:
+As duas principais vantagens da maioria das linguagens computacionais são:
 
 - Executar tarefas repetitivas
 - Fazer decisões lógicas
@@ -9,7 +9,7 @@ Para executar tarefas repetitivas, vamos criar **loopings**. É como se o nosso 
 
 Os *loopings* irão usar as funções **for** e **while**.
 
-Para adicionar decisões lógicas ao nosso algoritmo, as principais funções são o *if-else* e o *ifelse*.
+Para adicionar decisões lógicas ao nosso algoritmo, as principais funções são o **if-else** e o **ifelse**.
 
 Existem outras estruturas de controle que não serão abordadas aqui. Porém essas são as mais importantes.
 
@@ -72,7 +72,7 @@ print(nosso_vetor[10])
 
 ## while
 
-Note que a função ```for``` segue uma sequência já definida antes do início do looping. A variável auxiliar percorre essa sequência e elas não sofrem nenhuma alteração pelo código dentro do ```for```.
+Note que na função ```for``` a variável auxiliar segue uma sequência já definida antes do início do looping.
 
 Porém, em alguns casos, vai ser mais interessante manter o looping rodando **enquanto** alguma condição ainda não foi atendida. **Para isso usaremos a função ```while```.**
 
@@ -92,11 +92,11 @@ A cada nova interação, o valor de ```i``` é atualizado por um novo valor.
 
 A função ```print(i)``` imprime o valor atribuído ao elemento ```i```.
 
-Então, o looping irá dar voltas **enquanto** o valor de ```i``` for menor do que 1. O último valor impresso é maior do que 1 e isso significa que a condição ```i < 1``` não é mais atendida e o looping irá se encerrar.
+Então, o looping irá dar voltas **enquanto** o valor de ```i``` for menor do que 1. O último valor impresso é maior do que 1 e isso significa que a condição ```i < 1``` não é mais atendida, portanto, o looping irá se encerrar.
 
 ## if - else
 
-As funções ```for``` e ```while``` são úteis para criarmos *loopings* e repetir determinada tarefa. Já as funções ```if``` ou ```ifelse``` são funções de decisões lógicas.
+As funções ```for``` e ```while``` são úteis para criarmos *loopings* e repetir determinada tarefa. Já as funções ```if``` ou ```ifelse``` são funções de **decisões lógicas**.
 
 Ou seja, você irá estabelecer uma condição e, caso ela seja atendida, o código será executado.
 
@@ -153,7 +153,9 @@ A função será utilizada da seguinte forma:
 
 - ifelse(Condição,Ação se for a condição for verdadeira, Ação se a condição for falsa)
 
+
 Porém, a diferença é que a função ifelse é aplicada a um **vetor**. Isso a torna extremamente útil e facilitará a nossa vida em alguns casos.
+
 
 Exemplo:
 
@@ -176,7 +178,7 @@ if(vetor<10){
 vetor2  
 ```
 
-Portanto, caso precise usar uma função condicional para vetores, a função ```ifelse``` é uma das opções que você deve considerar.
+**Portanto, caso precise usar uma função condicional para vetores, a função ```ifelse``` é uma das opções que você deve considerar.**
 
 Lembre-se também que caso você esteja trabalhando com um *data frame*, cada coluna de seu *data frame* pode ser tratada como um vetor.
 

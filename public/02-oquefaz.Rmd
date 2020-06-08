@@ -10,13 +10,13 @@ Então, vejo a ciência de dados totalmente voltada a resolução de problemas. 
 
 - Cada vez mais as empresas preferem tomar **decisões baseadas em dados** e não em achismos.
 
-- A formação em Estatística muitas vezes é excessivamente teórica e, muitas vezes, não se aplica aos problemas reais.
+- A formação em Estatística muitas vezes é excessivamente teórica e não se aplica aos problemas reais.
 
 - O Estatístico, apesar de ter excelente conhecimento analítico, muitas vezes não possui domínio de linguagens de programação.
 
-- Os cientistas da computação possuem excelente capacidade de automatizar tarefas, porém pouco conhecimento para tratar e analisar dados.
+- Os cientistas da computação possuem excelente capacidade de automatizar tarefas, porém pouco conhecimento para tratar os dados, analisar e gerar soluções baseadas em dados.
 
-Junto com todos os problemas acima, ainda temos que considerar a quantidade de dados e informações que são geradas e armazenadas a cada segundo. Essa quantidade aumentou absurdamente nos últimos anos.
+Junto com todos os problemas acima, ainda temos que considerar a **quantidade de dados e informações que são geradas e armazenadas a cada segundo**. Essa quantidade aumentou absurdamente nos últimos anos.
 
 Esse é um pequeno contexto do cenário que criou o profissional mais cobiçado dos próximos anos: **O CIENTISTA DE DADOS**.
 

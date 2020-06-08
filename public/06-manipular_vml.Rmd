@@ -33,10 +33,11 @@ Nesse caso, estamos informando explicitamente quais elementos queremos extrair. 
 ```{r}
 meu_vetor2<-c(2,5,9,10,11,1,4)
 meu_vetor2[meu_vetor2 > 7]  #os elementos que atenderem a condição lógica serão extraídos.
-meu_vetor2 > 7 #Note que a condição lógica irá retornar um vetor de TRUE ou FALSE.
-                #O resultado será TRUE quando o elemento do vetor for maior que 7 e FALSE no caso contrário.
-                #Então, o comando meu_vetor2[meu_vetor2 > 7] irá retornar os elementos correspondentes
-                #quando a condição for igual a TRUE.
+#Note que a condição lógica irá retornar um vetor de TRUE ou FALSE.
+#O resultado será TRUE quando o elemento do vetor for maior que 7 e FALSE no caso contrário.
+#Então, o comando meu_vetor2[meu_vetor2 > 7] irá retornar os elementos correspondentes
+#quando a condição for igual a TRUE.
+meu_vetor2 > 7 
 ```
 
 ### Como atribuir valores a elementos de um vetor
@@ -65,7 +66,7 @@ Isso quer dizer que a matriz é uma tabela com linhas e colunas.
 
 ```{r}
 # CRIANDO UMA MATRIZ
-minha_matriz <- matrix(data = 1:15, nrow=5,ncol=3)
+minha_matriz <- matrix(data = 1:15, nrow=5,ncol=3) 
 minha_matriz
 ```
 
@@ -100,13 +101,13 @@ E se quisermos extrair uma linha ou coluna inteira?
 ```{r}
 # Extração da segunda linha da matriz
 
-minha_matriz[2,]  #defini a linha que quero extrair e deixei o campo das colunas em branco.
+minha_matriz[2,]  #defini a linha que quero extrair e deixei o campo das colunas vazio.
 ```
 
 O mesmo raciocínio se aplica para extrair uma coluna:
 ```{r}
 # Extração da terceira coluna da matriz
-minha_matriz[,3]  #defini a coluna que quero extrair e deixei o campo das linhas em branco.
+minha_matriz[,3]  #defini a coluna que quero extrair e deixei o campo das linhas vazio.
 ```
 
 Os exemplos acima extraíram apenas 1 linha ou 1 coluna. Porém, o mesmo funciona para várias linhas ou colunas.
@@ -169,8 +170,9 @@ E como extrair elementos que estão dentro dos objetos *vetor_numero*, *texto* o
 Suponha que você queira extrair o *terceiro* elemento dentro do *vetor_numero*:
 
 ```{r}
-minha_lista[[1]][[3]] #Primeiro acessamos o *vetor_numero* usando [[1]]
-                      #e depois acessamos o *terceiro elemento* usando [[3]]
+#Primeiro acessamos o *vetor_numero* usando [[1]]
+#e depois acessamos o *terceiro elemento* usando [[3]]
+minha_lista[[1]][[3]] 
 ```
 
 Ou, de forma equivalente:

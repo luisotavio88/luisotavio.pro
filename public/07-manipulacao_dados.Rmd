@@ -6,7 +6,7 @@ Provavelmente você já utilizou o Excel para construir ou analisar uma tabela c
 
 Em um *Data Frame* cada registro será inserido em uma linha, já as colunas representarão as suas variáveis.
 
-Por exemplo, em uma pesquisa de opinião, as informações de uma linha serão os dados de uma pessoa respondente específica. Enquanto cada coluna da tabela corresponderá as respostas para uma pergunta específica.
+Por exemplo, em uma pesquisa de opinião, as informações de uma linha serão os dados de uma pessoa específica que respondeu a pesquisa. Enquanto cada coluna da tabela corresponderá as respostas para uma pergunta específica.
 
 Diferentemente de uma matriz tradicional, as colunas podem misturar vários tipos de variáveis.
 
@@ -55,7 +55,7 @@ Essas são as principais funções que você irá utilizar em uma manipulação 
 
 Esses conceitos apresentados agora irão facilitar muito o seu entendimento para qualquer uma das funções usadas no pacote.
 
-Características comuns as funções citadas do pacote:
+Características comuns às funções citadas do pacote:
 
 - O primeiro argumento da função é sempre o seu conjunto de dados que será manipulado.
 - Os argumentos seguintes vão definir o que será feito com o seu conjunto de dados
@@ -68,7 +68,7 @@ Na prática será bem fácil identificar esse padrão. Então, vamos ver como fu
 
 A função ```summarise``` é útil para calcular estatísticas das colunas de um *data frame*.
 
-Muitas vezes é utilizada com uma função auxiliar também muito importante: a função ```group_by```.
+Muitas vezes é utilizada com uma função auxiliar também muito importante: a função **```group_by```**.
 
 Suponha que você tenha um conjunto de dados com vários carros (cada carro será uma linha) e várias características dos carros (colunas).
 
@@ -78,14 +78,14 @@ Mas imagine agora que você não precisa simplesmente calcular a quantidade de c
 
 Nesse caso, a função ```group_by``` irá separar seus dados de acordo com uma variável (quantidade de cilindros) e assim você poderá usar a função ```summarise``` para calcular a média da quantidade de cavalos.
 
-Vamos usar o mtcarts - *dataset* nativo no R.
+Vamos usar o ```mtcarts``` - *dataset* nativo no R.
 
 Para mais informações sobre as variáveis do dataset, execute o comando ```?mtcarts```.
 
 
-```{r}
+```{r,warning=FALSE}
 library(dplyr)
-mtcars_grupo<-group_by(mtcars,cyl)  ##a variável cyl é a quantidade de cilindros do carro
+mtcars_grupo <- group_by(mtcars,cyl)  ##a variável cyl é a quantidade de cilindros do carro
 summarise(mtcars_grupo,mean(hp))    ## a variável hp é a quantidade de cavalos do carro (horse power)
 ```
 
@@ -131,7 +131,7 @@ Então, o primeiro argumento é o *dataset* (```mtcars```) e os argumentos resta
 
 ## Filter
 
-Enquanto a função ```select``` seleciona as colunas do dataframe, a função *filter* é utilizada para selecionar as *linhas* do dataframe.
+Enquanto a função ```select``` seleciona as colunas do dataframe, a função **filter** é utilizada para selecionar as **linhas** do dataframe.
 
 Então, quando precisamos selecionar registros de um *data frame* usando determinada condição, a função recomendada é a ```filter```.
 
@@ -139,13 +139,13 @@ Utilizando o mesmo *data frame*, suponha que precisamos filtrar todos os carros 
 
 Neste caso, a variável em questão é a __cyl__, então a nossa condição é que o registro atenda a condição cyl==6.
 
-Repare que o sinal de igual é *duplo*, pois é uma condição lógica.
+Repare que o sinal de igual é **duplo**, pois é uma condição lógica.
 
 Quando usamos cyl=6 estamos atribuindo o valor 6 para o objeto cyl. Mas não é o que desejamos aqui.
 
 Desejamos filtrar os dados por uma condição lógica (verdadeira ou falsa). Para fazer testes lógicos no R, usamos == para retornar TRUE caso os valores sejam iguais e FALSE caso os valores sejam diferentes.
 
-Quando for necessário inverter a lógica e buscar pelos valores diferentes (ao invés de buscar os iguais) o teste lógico será feito por "!=" (testa se os valores são diferentes).
+Quando for necessário inverter a lógica e buscar pelos valores diferentes (ao invés de buscar os iguais) o teste lógico será feito por ```"!="``` (testa se os valores são diferentes).
 
 Então, em nosso exemplo, o código seria o seguinte:
 
@@ -155,7 +155,7 @@ filter(mtcars,cyl==6)  #filtra todos as observações (carros) que possuem 6 cil
 
 Também é possível combinar outros operadores lógicos quando vamos filtrar os dados, como E/OU.
 
-Então, suponha que não basta que o carro tenha 6 cilindros, além disso você deseja que ele tenha menos que 3 toneladas. Neste caso, o peso do carro é representado pela variável __wt__.
+Então, suponha que não baste que o carro tenha 6 cilindros, além disso você deseja que ele tenha menos que 3 toneladas. Neste caso, o peso do carro é representado pela variável __wt__.
 
 Para filtrar os carros que tenham 6 cilindros (cyl==6) e tenham menos que 3 toneladas (wt<3), vamos executar o seguinte código:
 
@@ -179,12 +179,12 @@ Para a condição "cyl==6 | wt<3" ser verdadeira, basta que pelo menos uma das c
 
 A função ```arrange``` é responsável por ordenar as linhas do *data frame* seguindo uma nova ordem estabelecida.
 
-Então, suponha que em nosso exemplo, queremos ordenar o *data frame* ```mtcars``` do carro com menor número de marchas para o maior número de marchas. 
+Então, suponha que em nosso exemplo, queremos ordenar o *data frame* ```mtcars``` do carro com menor número de marchas para o maior número de marchas (**variável *gear***). 
 
 Porém, há vários carros que irão empatar para esse critério, já que a tabela tem 15 carros com 3 marchas, 12 carros com 4 marchas e 5 carros com 5 marchas.
 
 ```{r}
-table(mtcars$gear)
+table(mtcars$gear) # a função table é útil para descobrir a frequencia dos valores.
 ```
 
 Portanto, vou definir que os dados também sejam ordenados pelo peso (variável __wt__).
@@ -193,7 +193,9 @@ Portanto, vou definir que os dados também sejam ordenados pelo peso (variável 
 arrange(mtcars,gear,wt)
 ```
 
-É possível usar a função ```arrange``` para ordenar os dados usando muitas variáveis para ordenar os dados. Porém, a ordem que as colunas forem inseridas na função ```arrange``` representam uma *ordem de prioridade*.
+É possível usar a função ```arrange``` para ordenar os dados usando muitas variáveis para ordenar os dados. Porém, a ordem que as colunas forem inseridas na função ```arrange``` representam uma **hierarquia de prioridade** para ordenar os dados. 
+
+Isso significa que os dados sempre serão ordenados pela primeira variável e, em caso de empates, se considera a variável seguinte.
 
 Portanto, a função só irá ordenar pela segunda coluna caso haja empates na primeira, por exemplo.
 
@@ -201,7 +203,7 @@ Portanto, a função só irá ordenar pela segunda coluna caso haja empates na p
 
 Alterar os nomes de uma variável de um *data frame* é algo conceitualmente simples. Mas, na prática pode ser bem trabalhoso de fazer sem a função ```rename```.
 
-Quais são os nomes das colunas da tabela mtcats?
+Quais são os nomes das colunas da tabela ```mtcats```?
 
 ```{r}
 names(mtcars)
@@ -214,10 +216,12 @@ mtcars_<-rename(mtcars,cilindros=cyl,cavalos=hp)
 head(mtcars_)
 ```
 
-Esse é o padrão. Após informar o *data frame* onde se aplicará as alterações, coloca-se o novo nome da coluna antes do sinal de igual e logo após o nome antigo da coluna.
+Esse é o padrão. Após informar o *data frame* onde se aplicará as alterações, coloca-se **o novo nome da coluna antes do sinal de igual e logo após o nome antigo da coluna**.
 
 
-## O operador %>% (leia-se pipe)
+## O operador %>% (em inglês se pronuncia *pipe*)
+
+Em português pode ser "paipe"! :)
 
 O operador ```%>%``` facilita muito a nossa vida, tornando o código mais limpo e fácil de ser compreendido.
 

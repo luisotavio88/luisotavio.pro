@@ -2,6 +2,7 @@
 
 O R é uma linguagem inicialmente dedicada a métodos estatísticos. Como a Estatística é uma ciência extremamente ampla, são os pacotes que permitem o R ser um software tão completo!
 
+
 Olha só:
 
 O R é utilizado por pessoas da área de economia, previsões do tempo, área de saúde, demografia, machine learning, deep learning e várias outras…
@@ -18,7 +19,7 @@ O que estou falando é que se um especialista da sua área de uma universidade r
 
 Agora que você já entendeu o contexto, vamos definir o que é um pacote do R:
 
-*Um Pacote é um conjunto de funções dentro do R, geralmente relacionados a um tema específico.*
+**Um Pacote é um conjunto de funções dentro do R, geralmente relacionados a um tema específico.**
 
 Além disso, os pacotes também têm uma documentação. Essa documentação explica para o que serve cada função do pacote. Te explica como usar cada função e ainda fornece exemplos práticos de uso.
 
@@ -42,14 +43,15 @@ As duas primeiras são as maneiras mais tradicionais. Já a terceira será utili
 
 Essa forma é muito intuitiva, clique na aba “Packages” (veja na imagem) e depois em “Install”. Irá abrir uma tela para você escolher o pacote que deseja instalar.
 
-![botao instalacao pacote](imagens/4_pacotes_botao_instalacao.png)
+![](imagens/4_pacotes_botao_instalacao.png)
 
 Escreva o nome o pacote e clique em “Install”. Simples assim! Mas ainda falta um detalhe.
 
-![botao install](imagens/4_pacotes_install.png)
+![](imagens/4_pacotes_install.png)
+
 Agora o pacote já está instalado no R, em sua biblioteca.
 
-*Mas falta um detalhe, precisamos ir lá na biblioteca e buscar esse pacote!*
+**Mas falta um detalhe, precisamos ir lá na biblioteca e buscar esse pacote!**
 
 Para carregar o pacote instalado, basta executar o seguinte código:
 
@@ -62,7 +64,7 @@ library(ggplot2) #Esse exemplo irá carregar o pacote ggplot2,
 
 O primeiro passo é escrever o comando ```install.packages("ggplot2")``` e executar o código!
 
-![botao install](imagens/4_pacotes_comando_install.png)
+![](imagens/4_pacotes_comando_install.png)
 
 Execute o código:
 ```{r eval=FALSE}
@@ -91,7 +93,7 @@ Há uma maneira muito simples de resolver isso. Vários desenvolvedores de pacot
 
 Imagine que você esteja procurando no Google como solucionar um problema e encontre um pacote que resolverá sua questão, mas não está disponível no CRAN.
 
-Provavelmente o pacote está disponível no Github e poderá ser instalado usando o pacote *Devtools*.
+Provavelmente o pacote está disponível no **Github** e poderá ser instalado usando o pacote **Devtools**.
 
 O primeiro passo é instalar o Devtools (que está disponível para ser instalada normalmente pela rede do R).
 
@@ -99,9 +101,9 @@ O primeiro passo é instalar o Devtools (que está disponível para ser instalad
 install.packages("devtools")
 ```
 
-*O script a seguir deve ser adaptado ao pacote que você quiser instalar.* Você o encontrará na página do Github do pacote que irá instalar. Provavelmente na seção __Readme__.
+**O script a seguir deve ser adaptado ao pacote que você quiser instalar.** Você o encontrará na página do Github do pacote que irá instalar. Provavelmente na seção __Readme__.
 
-Para exemplificar, vou instalar o pacote __rCharts__, que não está disponível para instalação usando os primeiros métodos falados aqui.
+Para exemplificar, vou instalar o pacote __rCharts__, que não está disponível para instalação no CRAN usando os primeiros métodos falados aqui.
 
 ```{r eval=FALSE}
 library(devtools)

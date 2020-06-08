@@ -20,7 +20,7 @@ Não é o objetivo desse e-book falar sobre todas essas bibliotecas, mas vou cit
 
 Dentre as 5 possibilidades aqui citadas, destaco a primeira: ```ggplot2```. Iremos aprofundar mais nessa biblioteca pela quantidade de possibilidades que ela nos traz. 
 
-Usando a biblioteca ```ggplot2`` você irá conseguir fazer praticamente todos os tipos de gráficos disponíveis e com enorme capacidade de customização do seu gráfico.
+Usando a biblioteca ```ggplot2``` você irá conseguir fazer praticamente todos os tipos de gráficos disponíveis e com enorme capacidade de customização do seu gráfico.
 
 A medida que você for dominando a linguagem R, sugiro que também explore outras bibliotecas. Muitas vezes as bibliotecas ```plot.ly```, ```googleVis``` e ```rCharts``` irão te possibilitar a criação de gráficos mais chamativos do que a biblioteca ```ggplot2```. 
 
@@ -56,7 +56,7 @@ Nesse elemento, definimos os **eixos do gráfico**. O gráfico irá mostrar a re
 
 A variável *mpg* será alocada no eixo x (horizontal) e a variável *wt* no eixo y (vertical).
 
-O terceiro elemento são as marcas de representação visual do gráfico e são definidos pela função ```geom_point()```.
+O terceiro elemento são as **marcas de representação visual do gráfico** e são definidos pela função ```geom_point()```.
 
 Como nesse exemplo não há nenhuma customização, a função ```geom_point()``` será vazia.
 
@@ -80,7 +80,7 @@ Antes de criarmos o gráfico, segue uma consideração: a variável *cyl* está 
 class(mtcars$cyl)
 ```
 
-Os carros desse *dataset* possuem 4, 6 ou 8 cilindros. Então, nesse caso será mais interessante tratar a variável *cyl* como categórica. Essa pequena alteração fará muita diferença na visualização dos dados, pois irá coloria cada uma das categorias com cores totalmente distintas. 
+Os carros desse *dataset* possuem 4, 6 ou 8 cilindros. Então, nesse caso será mais interessante tratar a variável *cyl* como categórica. Essa pequena alteração fará muita diferença na visualização dos dados, pois irá colorir cada uma das categorias com cores totalmente distintas. 
 
 Caso se considerasse a variável *cyl* como numérica, as cores de cada quantidade de cilindros sofreriam alterações apenas no tom da cor, dificultando a visualização de cada um dos grupos.
 
@@ -130,8 +130,8 @@ mtcars<-datasets::mtcars
 ```
 
 ```{r}
-corr <- round(stats::cor(mtcars), 1) #a função round é usada para arredondar as casas decimais do resultado.
-corr
+tabela_correlacao <- round(stats::cor(mtcars), 1) #a função round é usada para arredondar as casas decimais do resultado.
+tabela_correlacao
 ```
 
 A tabela acima é muito informativa, porém, caso seja visualizada como um gráfico será muito mais fácil de compreendê-la.
@@ -142,15 +142,16 @@ A matriz será transformada em uma nova tabela com 3 colunas: duas colunas com o
 
 Para isso, usaremos a biblioteca ```reshape2``` e a função ```melt```:
 
-```{r}
+```{r,warning=F}
 # install.packages("reshape2")  #caso vc não já tenha instalado a biblioteca reshape2, precisa executar essa linha.
 library(reshape2)
-melted_corr <- melt(corr)
+melted_tabela_correlacao <- melt(tabela_correlacao)
+head(melted_tabela_correlacao)
 ```
 
 ```{r}
 library(ggplot2)
-ggplot(data = melted_corr, aes(x=Var1, y=Var2, fill=value)) + 
+ggplot(data = melted_tabela_correlacao, aes(x=Var1, y=Var2, fill=value)) + 
   geom_tile()
 ```
 
@@ -159,10 +160,12 @@ ggplot(data = melted_corr, aes(x=Var1, y=Var2, fill=value)) +
 Os gráficos facilitam muito a visualização dos dados. Porém, com mais um pouco de esforço, podemos melhorar muito a visualização desses dados.
 
 ```{r}
-corr[lower.tri(corr,diag = T)]<- NA ## selecionar apenas a parte superior da matriz (evitando informações repetidas)
+tabela_correlacao[lower.tri(tabela_correlacao,diag = T)]<- NA ## selecionar apenas a parte superior da matriz (evitando informações repetidas)
+head(tabela_correlacao)
 
 library(reshape2)
-dados_correlacao <- melt(corr,na.rm = T) #transformando os dados para as 3 colunas como anteriormente.
+dados_correlacao <- melt(tabela_correlacao,na.rm = T) #transformando os dados para as 3 colunas como anteriormente.
+head(dados_correlacao)
 ```
 
 ```{r}
