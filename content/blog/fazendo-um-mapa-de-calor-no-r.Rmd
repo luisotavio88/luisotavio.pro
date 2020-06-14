@@ -91,7 +91,7 @@ Uma observação importante é a definição do valor do parâmetro *cellsize*: 
 plot(estrutura.mg)
 ```
 
-![Grade - Minas Gerais](/images/post_interno/grade_mg.png){ width=75% }
+![Estrutura - Minas Gerais](/images/post_interno/grade_mg.png){ width=75% }
 Na imagem acima podemos ver que existem vários pontos no nosso mapa. Porém, não sabemos a temperatura para todos eles.
 
 Então como fazemos para colorir o mapa se não sabemos as temperaturas para cada ponto?
@@ -349,6 +349,8 @@ estrutura_mapa <-st_make_grid(sfdf,cellsize = c(qualidade,qualidade)) %>%
   st_as_sf() 
 plot(estrutura_mapa)
 ```
+![Estrutura - Mapa de calor](/images/post_interno/grade_campo.png){ width=75% }
+
 
 #### Intensidade de cada área
 

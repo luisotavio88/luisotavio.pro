@@ -61,7 +61,7 @@ estrutura.mg &lt;-st_make_grid(mg,cellsize = c(.07,.07)) %&gt;%
   filter(st_contains(mg,.,sparse = FALSE))</code></pre>
 <p>Uma observação importante é a definição do valor do parâmetro <em>cellsize</em>: quanto menor o tamanho o seu valor, menor será o tamanho de cada célula e <strong>melhor</strong> será a qualidade do gráfico, porém irá demorar mais tempo para a geração da imagem.</p>
 <pre class="r"><code>plot(estrutura.mg)</code></pre>
-<p><img src="/images/post_interno/grade_mg.png" alt="Grade - Minas Gerais" style="width:75.0%" />
+<p><img src="/images/post_interno/grade_mg.png" alt="Estrutura - Minas Gerais" style="width:75.0%" />
 Na imagem acima podemos ver que existem vários pontos no nosso mapa. Porém, não sabemos a temperatura para todos eles.</p>
 <p>Então como fazemos para colorir o mapa se não sabemos as temperaturas para cada ponto?</p>
 <p>Existem métodos que estimam a temperatura de um ponto baseando-se nas temperaturas dos pontos mais próximos.</p>
@@ -234,6 +234,10 @@ sfdf &lt;- st_sf(id = dados_estrutura[, &#39;id&#39;], st_sfc(lista)) #transform
 <pre class="r"><code>estrutura_mapa &lt;-st_make_grid(sfdf,cellsize = c(qualidade,qualidade)) %&gt;%
   st_as_sf() 
 plot(estrutura_mapa)</code></pre>
+<div class="figure">
+<img src="/images/post_interno/grade_campo.png" alt="Estrutura - Mapa de calor" style="width:75.0%" />
+<p class="caption">Estrutura - Mapa de calor</p>
+</div>
 </div>
 <div id="intensidade-de-cada-área" class="section level4">
 <h4>Intensidade de cada área</h4>
