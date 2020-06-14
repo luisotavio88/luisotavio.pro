@@ -6,17 +6,26 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 08 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Fazendo um mapa de calor no R</title>
+      <link>/blog/fazendo-um-mapa-de-calor-no-r/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/fazendo-um-mapa-de-calor-no-r/</guid>
+      <description>A missão dessa semana foi construir um mapa de calor no R!</description>
+    </item>
+    
+    <item>
       <title>Assim que vou retweetar o que me interessa no Twitter!</title>
-      <link>/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</link>
+      <link>/blog/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</link>
       <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</guid>
+      <guid>/blog/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</guid>
       <description>Vários mercados precisam de notícias em tempo real, imagine só o mercado de finanças:</description>
     </item>
     

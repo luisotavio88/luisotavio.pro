@@ -1,13 +1,13 @@
 {
-    "path" : "~/ESTATISTICA NA PRATICA/luisotavio.pro/content/blog",
+    "path" : "~/ESTATISTICA NA PRATICA/luisotavio.pro/content",
     "sortOrder" : [
-        {
-            "ascending" : true,
-            "columnIndex" : 2
-        },
         {
             "ascending" : false,
             "columnIndex" : 4
+        },
+        {
+            "ascending" : true,
+            "columnIndex" : 2
         }
     ]
 }

@@ -7,7 +7,7 @@ categories:
   - Caso prático
 tags:
   - Marketing digital
-type: featured
+type: post
 image: images/post_principal/twitter.png
 ---
   

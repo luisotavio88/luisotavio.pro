@@ -1,0 +1,123 @@
+---
+title: Assim que vou retweetar o que me interessa no Twitter!
+author: Luis Otavio
+date: '2020-06-08'
+slug: assim-que-vou-retweetar-o-que-me-interessa-no-twitter
+categories:
+  - Caso prático
+tags:
+  - Marketing digital
+type: post
+image: images/post_principal/twitter.png
+---
+  
+Vários mercados precisam de notícias em tempo real, imagine só o mercado de finanças:
+  
+- Uma decisão política, um resultado de uma grande empresa ou um acidente são fatores que geram um impacto enorme no mercado financeiro.
+
+Isso faz que todos os envolvidos fiquem ligados o tempo inteiro em notícias.
+
+
+Hoje em dia, na grande parte das vezes ficamos sabendo de notícias pelas nossas redes sociais. Isso porque as notícias mais relevantes são postadas e compartilhadas com muita velocidade.
+
+O que também propicia essa velocidade é a informalidade e objetividade das redes sociais. É muito mais fácil escrever um tweet do que uma reportagem.
+
+
+Entre todas as redes sociais, considero que o **Twitter** seja a rede social mais voltada para notícias. É uma rede social que está sempre vivendo a polêmica do momento.
+
+E, no meu trabalho, não é diferente! Usamos muito o Twitter como meio de informação.
+
+Meu trabalho é diretamente relacionado ao campeonato brasileiro de futebol e uma das maiores dores dos nossos clientes é justamente não estar 100% informado.
+
+Eles precisam saber quem o técnico irá escalar na próxima partida. Essa informação nunca é divulgada de forma concreta com antecedência.
+
+Então, a nossa principal fonte de notícias é o repórter que trabalha dentro do clube, que vive o dia a dia dos atletas e acompanha os treinamentos.
+
+E todas as informações são divulgadas primeiramente no Twitter.
+
+Porém, existem vários repórteres para cada time e, além disso, são postadas várias informações em seus perfis que não nos interessam.
+
+
+Então, para resolver esse problema acima, o que eu fiz?
+  
+Criei uma lista com 90 repórteres que são destinados a acompanhar o dia a dia de clubes da Serie A do Campeonato Brasileiro.
+
+
+Além disso, criei uma plataforma para ler as postagens e decidir se ela é interessante ou não para o fim que desejo.
+
+
+Nessa plataforma, eu consigo ver o horário da postagem, quem postou, qual o time que ele acompanha, o texto da postagem, seu engajamento e também clicar para ir direto ao post.
+
+Poderia ter sido criado um gatilho para definir se o post deveria ser retuítado ou não, por exemplo:
+  
+- Compartilhar os tweets com maior número de curtidas
+
+- Compartilhar os tweets com determinadas palavras-chave
+
+- Compartilhar os tweets com mais compartilhamentos
+
+Porém, como é a primeira versão da ferramenta, optei por deixar a opção de retweet com um gatilho manual. Alguém precisará clicar em no botão "RETWEET" para compartilhar o post.
+
+Essa opção é até mais complexa para o nosso desenvolvimento aqui. Porém, acredito que será mais eficaz para evitar compartilhamentos indesejados.
+
+Para o desenvolvimento da ferramenta, utilizei a integração com a API do Twitter usando a biblioteca ```rtweet```.
+
+Vou mostrar aqui quais foram as partes chaves no desenvolvimento da ferramenta:
+
+
+### PASSO 1 - ACESSO A API DO TWITTER 
+
+O tem uma ferramenta para facilitar a busca das informações que fazemos na plataforma deles, o que torna a tarefa mais fácil e rápida.
+
+Caso você queira criar a sua própria busca, praticando no seu computador, terá que se cadastrar no Twitter como um desenvolvedor. É bem fácil e leva poucos minutos.
+
+Aqui nesse endereço você tem todas as instruções:
+https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html
+
+```{r eval=F}
+library(rtweet)
+#substitua os 4 valores seguintes pelos valores correspondentes ao seu login
+
+# api_key <- "XXXXXXXXX"
+# api_secret_key <- "XXXXXXXXX"
+# access_token <- "XXXXXXXXX"
+# access_token_secret <- "XXXXXXXXX"
+
+## authenticate via web browser
+token <- create_token(
+  app = "nome do seu app", #substituir
+  consumer_key = api_key,
+  consumer_secret = api_secret_key,
+  access_token = access_token,
+  access_secret = access_token_secret)
+```
+
+
+### PASSO 2 - BUSCAR OS TWEETS DE CADA REPÓRTER
+
+O **nome de usuário** de cada repórter está na tabela ```setorista``` na coluna ```screen_name```.
+
+Então eu executo a função ```get_timeline``` para cada repórter e busco os 15 primeiros tweets.
+
+Além disso, já escolho quais as variáveis eu desejo armazenar em cada busca, usando a função ```select```.
+
+```{r eval=F}
+todos_tweets<-data.frame()
+for(set in 1:nrow(setoristas)){
+  tweets_set <- get_timeline(setoristas$screen_name[set],n = 15) %>%
+    select(created_at,screen_name,text,favorite_count,status_id,followers_count,media_url)
+  todos_tweets<-rbind(todos_tweets,tweets_set)
+}
+```
+
+
+### PASSO 3 - VISUALIZAÇÃO DAS BUSCAS E O RETWEET
+
+Esse é o resultado da ferramenta para escolher as informações que são úteis e devem ser retuítadas. 
+
+![Ferramenta Retweet](/images/post_interno/twitter_guru.png){ width=100% }
+
+
+Houve uma exceção nesse post e a ferramenta construída não foi disponibilizada na íntegra, pois ela permite que se faça posts no MEU Twitter. 
+
+Espero que entenda e aproveito para falar que caso tenha alguma dúvida ou precise de ajuda, estou à disposição.
