@@ -349,6 +349,7 @@ estrutura_mapa <-st_make_grid(sfdf,cellsize = c(qualidade,qualidade)) %>%
   st_as_sf() 
 plot(estrutura_mapa)
 ```
+
 ![Estrutura - Mapa de calor](/images/post_interno/grade_campo.png){ width=75% }
 
 
