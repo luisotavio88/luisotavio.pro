@@ -1,9 +1,9 @@
 ---
-title: "Fazendo um mapa de calor no R"
+title: "Como fazer um mapa de calor no R"
 author: "Luis Otavio"
 date: '2020-06-14'
 image: images/post_principal/mg.png
-slug: fazendo-um-mapa-de-calor-no-r
+slug: como-fazer-um-mapa-de-calor-no-r
 categories:
   - Caso prático
 tags:
