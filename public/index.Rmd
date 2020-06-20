@@ -16,7 +16,7 @@ biblio-style: apalike
 
 # Bem-vindos {-}
 
-<img src="imagens/capa_livro.jpeg" height="375" alt="Capa o seu primeiro passo como cientista de dados" align="right" style="margin: 0 1em 0 1em" />
+<img src="imagens/capa_livro.png" height="375" alt="Capa o seu primeiro passo como cientista de dados" align="right" style="margin: 0 1em 0 1em" />
 
 Opa! Esse e-book foi feito para quem quer dar início a uma grande transformação profissional rumo à Ciência de Dados.
 

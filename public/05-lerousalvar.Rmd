@@ -123,13 +123,13 @@ Esse método é bem parecido com o último, porém aqui vamos usar linhas de có
 
 1 - Caso você ainda não tenha instalado o pacote ```readxl```, execute o seguinte comando:
 
-```{r eval=FALSE}
+```{r, eval=FALSE}
 install.packages("readxl")
 ```
 
 2 - Vamos carregar o pacote que iremos usar (```readxl```): Execute o comando:
 
-```{r}
+```{r, eval=FALSE}
 library("readxl")
 ```
 
@@ -142,7 +142,7 @@ Os argumentos que vamos usar na função são:
 
 Excute o código:
 
-```{r eval=FALSE}
+```{r, eval=FALSE}
 meus_dados <- read_excel("seu_arquivo.xlsx", sheet = "nome da aba")
 ```
 

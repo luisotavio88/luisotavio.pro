@@ -373,7 +373,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
 <p>2 - Vamos carregar o pacote que iremos usar (<code>readxl</code>): Execute o comando:</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
-<pre><code>## Warning: package &#39;readxl&#39; was built under R version 3.6.3</code></pre>
 <p>3 – Agora vamos buscar a planilha que você precisa usando a função <code>read_excel</code>.</p>
 <p>Os argumentos que vamos usar na função são:</p>
 <ul>
@@ -381,7 +380,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>a aba da planilha que você quer ler.</li>
 </ul>
 <p>Excute o código:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;seu_arquivo.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="st">&quot;nome da aba&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;seu_arquivo.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="st">&quot;nome da aba&quot;</span>)</a></code></pre></div>
 <ul>
 <li><p>caso o seu arquivo esteja na mesma pasta do seu projeto, você não precisa colocar todo o endereço do arquivo.</p></li>
 <li><p>em <em>sheet</em> você pode colocar o nome da aba do Excel que você quer ler ou seu número (1, 2, 3, etc). Caso você coloque o número, não use aspas.</p></li>

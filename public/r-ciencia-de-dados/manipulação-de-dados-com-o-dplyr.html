@@ -340,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Nesse caso, a função <code>group_by</code> irá separar seus dados de acordo com uma variável (quantidade de cilindros) e assim você poderá usar a função <code>summarise</code> para calcular a média da quantidade de cavalos.</p>
 <p>Vamos usar o <code>mtcarts</code> - <em>dataset</em> nativo no R.</p>
 <p>Para mais informações sobre as variáveis do dataset, execute o comando <code>?mtcarts</code>.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb100-1" title="1"><span class="kw">library</span>(dplyr)</a></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb99-1" title="1"><span class="kw">library</span>(dplyr)</a></code></pre></div>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -349,8 +349,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" title="1">mtcars_grupo &lt;-<span class="st"> </span><span class="kw">group_by</span>(mtcars,cyl)  <span class="co">##a variável cyl é a quantidade de cilindros do carro</span></a>
-<a class="sourceLine" id="cb104-2" title="2"><span class="kw">summarise</span>(mtcars_grupo,<span class="kw">mean</span>(hp))    <span class="co">## a variável hp é a quantidade de cavalos do carro (horse power)</span></a></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb103-1" title="1">mtcars_grupo &lt;-<span class="st"> </span><span class="kw">group_by</span>(mtcars,cyl)  <span class="co">##a variável cyl é a quantidade de cilindros do carro</span></a>
+<a class="sourceLine" id="cb103-2" title="2"><span class="kw">summarise</span>(mtcars_grupo,<span class="kw">mean</span>(hp))    <span class="co">## a variável hp é a quantidade de cavalos do carro (horse power)</span></a></code></pre></div>
 <pre><code>## # A tibble: 3 x 2
 ##     cyl `mean(hp)`
 ##   &lt;dbl&gt;      &lt;dbl&gt;
@@ -358,8 +358,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 2     6      122. 
 ## 3     8      209.</code></pre>
 <p>Caso você deseje continuar trabalhando com o mesmo <em>dataset</em> (usando o mesmo objeto), é importante que você desfaça o agrupamento. Isso irá evitar futuros erros na execução do seu código.</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" title="1"><span class="co"># desagrupando o data frame</span></a>
-<a class="sourceLine" id="cb106-2" title="2">mtcars_grupo&lt;-<span class="kw">ungroup</span>(mtcars_grupo)</a></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" title="1"><span class="co"># desagrupando o data frame</span></a>
+<a class="sourceLine" id="cb105-2" title="2">mtcars_grupo&lt;-<span class="kw">ungroup</span>(mtcars_grupo)</a></code></pre></div>
 </div>
 <div id="mutate" class="section level2">
 <h2><span class="header-section-number">7.6</span> Mutate</h2>
@@ -368,15 +368,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Portanto, como exemplo, vamos criar uma nova coluna para relativizar o tempo que o carro gasta para percorrer 0,25 milhas (<strong>qsec</strong>) pelo seu peso (<strong>wt</strong>). A fórmula para isso seria: <strong>qsec</strong>/<strong>wt</strong>.</p>
 <p>O nome da nova coluna será <strong>tempo_peso</strong>.</p>
 <p>Portanto:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb107-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb107-2" title="2">novo_dataframe&lt;-<span class="kw">mutate</span>(mtcars,<span class="dt">tempo_peso =</span> qsec<span class="op">/</span>wt) <span class="co"># a função irá adicionar a nova coluna e atribuir ao seu data frame</span></a></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" title="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb106-2" title="2">novo_dataframe&lt;-<span class="kw">mutate</span>(mtcars,<span class="dt">tempo_peso =</span> qsec<span class="op">/</span>wt) <span class="co"># a função irá adicionar a nova coluna e atribuir ao seu data frame</span></a></code></pre></div>
 </div>
 <div id="select" class="section level2">
 <h2><span class="header-section-number">7.7</span> Select</h2>
 <p>A função <code>select</code> serve para selecionar colunas em um <em>data frame</em>.</p>
 <p>Então, ainda usando o dataframe <code>mtcars</code>, suponha que somente as variáveis <strong>mpg</strong> e <strong>gear</strong> serão úteis em nossa análise.</p>
 <p>Para filtrar essas variáveis, precisamos executar o seguinte comando:</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" title="1"><span class="kw">select</span>(mtcars,mpg,gear)</a></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb107-1" title="1"><span class="kw">select</span>(mtcars,mpg,gear)</a></code></pre></div>
 <pre><code>##                      mpg gear
 ## Mazda RX4           21.0    4
 ## Mazda RX4 Wag       21.0    4
@@ -423,7 +423,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Desejamos filtrar os dados por uma condição lógica (verdadeira ou falsa). Para fazer testes lógicos no R, usamos == para retornar TRUE caso os valores sejam iguais e FALSE caso os valores sejam diferentes.</p>
 <p>Quando for necessário inverter a lógica e buscar pelos valores diferentes (ao invés de buscar os iguais) o teste lógico será feito por <code>"!="</code> (testa se os valores são diferentes).</p>
 <p>Então, em nosso exemplo, o código seria o seguinte:</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb110-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span>)  <span class="co">#filtra todos as observações (carros) que possuem 6 cilindros. </span></a></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb109-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span>)  <span class="co">#filtra todos as observações (carros) que possuem 6 cilindros. </span></a></code></pre></div>
 <pre><code>##    mpg cyl  disp  hp drat    wt  qsec vs am gear carb
 ## 1 21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
 ## 2 21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
@@ -435,7 +435,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Também é possível combinar outros operadores lógicos quando vamos filtrar os dados, como E/OU.</p>
 <p>Então, suponha que não baste que o carro tenha 6 cilindros, além disso você deseja que ele tenha menos que 3 toneladas. Neste caso, o peso do carro é representado pela variável <strong>wt</strong>.</p>
 <p>Para filtrar os carros que tenham 6 cilindros (cyl==6) e tenham menos que 3 toneladas (wt&lt;3), vamos executar o seguinte código:</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span> <span class="op">&amp;</span><span class="st"> </span>wt<span class="op">&lt;</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb111-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span> <span class="op">&amp;</span><span class="st"> </span>wt<span class="op">&lt;</span><span class="dv">3</span>)</a></code></pre></div>
 <pre><code>##    mpg cyl disp  hp drat    wt  qsec vs am gear carb
 ## 1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
 ## 2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
@@ -443,7 +443,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>O operador lógico <strong>E</strong> é representado pelo símbolo <strong>&amp;</strong>.</p>
 <p>Já o operador lógico <strong>OU</strong> é representado pelo símbolo <strong>|</strong>.</p>
 <p>Caso o objetivo fosse filtrar carros com 6 cilindros OU peso menor que 3 toneladas, o código seria o seguinte:</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span> <span class="op">|</span><span class="st"> </span>wt<span class="op">&lt;</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb113-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span> <span class="op">|</span><span class="st"> </span>wt<span class="op">&lt;</span><span class="dv">3</span>)</a></code></pre></div>
 <pre><code>##     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
 ## 1  21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
 ## 2  21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
@@ -468,12 +468,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A função <code>arrange</code> é responsável por ordenar as linhas do <em>data frame</em> seguindo uma nova ordem estabelecida.</p>
 <p>Então, suponha que em nosso exemplo, queremos ordenar o <em>data frame</em> <code>mtcars</code> do carro com menor número de marchas para o maior número de marchas (<strong>variável <em>gear</em></strong>).</p>
 <p>Porém, há vários carros que irão empatar para esse critério, já que a tabela tem 15 carros com 3 marchas, 12 carros com 4 marchas e 5 carros com 5 marchas.</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" title="1"><span class="kw">table</span>(mtcars<span class="op">$</span>gear) <span class="co"># a função table é útil para descobrir a frequencia dos valores.</span></a></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb115-1" title="1"><span class="kw">table</span>(mtcars<span class="op">$</span>gear) <span class="co"># a função table é útil para descobrir a frequencia dos valores.</span></a></code></pre></div>
 <pre><code>## 
 ##  3  4  5 
 ## 15 12  5</code></pre>
 <p>Portanto, vou definir que os dados também sejam ordenados pelo peso (variável <strong>wt</strong>).</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" title="1"><span class="kw">arrange</span>(mtcars,gear,wt)</a></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb117-1" title="1"><span class="kw">arrange</span>(mtcars,gear,wt)</a></code></pre></div>
 <pre><code>##     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
 ## 1  21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
 ## 2  21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
@@ -515,12 +515,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.10</span> Rename</h2>
 <p>Alterar os nomes de uma variável de um <em>data frame</em> é algo conceitualmente simples. Mas, na prática pode ser bem trabalhoso de fazer sem a função <code>rename</code>.</p>
 <p>Quais são os nomes das colunas da tabela <code>mtcats</code>?</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" title="1"><span class="kw">names</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb119-1" title="1"><span class="kw">names</span>(mtcars)</a></code></pre></div>
 <pre><code>##  [1] &quot;mpg&quot;  &quot;cyl&quot;  &quot;disp&quot; &quot;hp&quot;   &quot;drat&quot; &quot;wt&quot;   &quot;qsec&quot; &quot;vs&quot;   &quot;am&quot;   &quot;gear&quot;
 ## [11] &quot;carb&quot;</code></pre>
 <p>Agora suponha que você deseje alterar o nome da coluna <strong>cyl</strong> para <em>cilindros</em> e <strong>hp</strong> para <em>cavalos</em>.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" title="1">mtcars_&lt;-<span class="kw">rename</span>(mtcars,<span class="dt">cilindros=</span>cyl,<span class="dt">cavalos=</span>hp)</a>
-<a class="sourceLine" id="cb122-2" title="2"><span class="kw">head</span>(mtcars_)</a></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb121-1" title="1">mtcars_&lt;-<span class="kw">rename</span>(mtcars,<span class="dt">cilindros=</span>cyl,<span class="dt">cavalos=</span>hp)</a>
+<a class="sourceLine" id="cb121-2" title="2"><span class="kw">head</span>(mtcars_)</a></code></pre></div>
 <pre><code>##                    mpg cilindros disp cavalos drat    wt  qsec vs am gear carb
 ## Mazda RX4         21.0         6  160     110 3.90 2.620 16.46  0  1    4    4
 ## Mazda RX4 Wag     21.0         6  160     110 3.90 2.875 17.02  0  1    4    4
@@ -535,15 +535,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Em português pode ser “paipe”! :)</p>
 <p>O operador <code>%&gt;%</code> facilita muito a nossa vida, tornando o código mais limpo e fácil de ser compreendido.</p>
 <p>O operador funciona da seguinte forma:</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" title="1"><span class="co"># dataset %&gt;% função()</span></a></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb123-1" title="1"><span class="co"># dataset %&gt;% função()</span></a></code></pre></div>
 <p>Isso significa que o objeto do lado esquerdo do operador (<em>dataset</em>) será inserido na função ao lado direito do operador no <strong>primeiro argumento</strong> da função.</p>
 <p>O operador <code>%&gt;%</code> pode ser usado conjuntamente com inúmeras funções, incluindo todas que aprendemos nesse capítulo.</p>
 <p>Exemplos práticos:</p>
 <p>Algumas linhas atrás, ordenamos o <em>dataset</em> <code>mtcars</code> em ordem crescente pelas colunas <em>gear</em> e <em>wt</em>, usando o código:</p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb125-1" title="1">dataset_ordenado &lt;-<span class="st"> </span><span class="kw">arrange</span>(mtcars,gear,wt)</a></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" title="1">dataset_ordenado &lt;-<span class="st"> </span><span class="kw">arrange</span>(mtcars,gear,wt)</a></code></pre></div>
 <p>Utilizando o operador %&gt;%, o código ficaria da seguinte maneira:</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" title="1">dataset_ordenado &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb126-2" title="2"><span class="st">                      </span><span class="kw">arrange</span>(gear,wt)</a></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb125-1" title="1">dataset_ordenado &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb125-2" title="2"><span class="st">                      </span><span class="kw">arrange</span>(gear,wt)</a></code></pre></div>
 <p>Então, o <em>dataset</em> <code>mtcars</code> é inserido no primeiro argumento da função <code>arrange</code>.</p>
 <p><strong>A diferença é pequena para casos simples como esse, porém em casos mais complexos a utilização do operador %&gt;% (pipe) fará uma diferença enorme na organização do seu código.</strong></p>
 <tr><center>
