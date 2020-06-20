@@ -7,7 +7,7 @@
         {{ if .Params.Image }}
         <img src="{{ .Params.Image | absURL }}" alt="" class="img-fluid d-block mx-auto rounded-circle mb-4">
         {{ end }}
-        <h4 class="widget-title">{{ .Title | markdownify }}</h4>
+        <h5 class="widget-title">{{ .Title | markdownify }}</h5>
         <div class="content">
           {{ .Content }}
         </div>
