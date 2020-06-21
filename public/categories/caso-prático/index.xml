@@ -6,10 +6,19 @@
     <description>Recent content in Caso prático on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/caso-pr%C3%A1tico/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Regressão Linear na prática - usando o R</title>
+      <link>/blog/regressao-linear-na-pratica-usando-o-r/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/regressao-linear-na-pratica-usando-o-r/</guid>
+      <description>É possível prever a pontuação de um time de futebol usando indicadores financeiros do ano anterior?</description>
+    </item>
     
     <item>
       <title>Como fazer um mapa de calor no R</title>
@@ -17,15 +26,6 @@
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/como-fazer-um-mapa-de-calor-no-r/</guid>
-      <description>A missão dessa semana foi construir um mapa de calor no R!</description>
-    </item>
-    
-    <item>
-      <title>Fazendo um mapa de calor no R</title>
-      <link>/blog/fazendo-um-mapa-de-calor-no-r/</link>
-      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/fazendo-um-mapa-de-calor-no-r/</guid>
       <description>A missão dessa semana foi construir um mapa de calor no R!</description>
     </item>
     

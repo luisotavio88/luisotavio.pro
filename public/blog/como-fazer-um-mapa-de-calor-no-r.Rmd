@@ -8,7 +8,7 @@ categories:
   - Caso prático
 tags:
   - Maps
-type: featured
+type: post
 ---
 
 A missão dessa semana foi construir um **mapa de calor no R**!
