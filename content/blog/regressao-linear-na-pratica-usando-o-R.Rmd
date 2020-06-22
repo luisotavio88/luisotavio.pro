@@ -77,6 +77,10 @@ Portanto, iremos usar as variáveis financeiras do ano anterior para prever as c
 
 #### Importando os dados
 
+[Os dados estão disponíveis aqui.](https://www.luisotavio.pro/blog/dados_futebol.txt){target="_blank"}
+
+Foram utilizados os dados referentes aos anos entre 2014 e 2018.
+
 ```{r,warning=FALSE}
 library(readr)
 library(knitr)
