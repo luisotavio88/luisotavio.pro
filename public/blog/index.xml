@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>O R também serve para editar imagens!</title>
+      <link>/blog/o-r-tambem-serve-para-editar-imagens/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/o-r-tambem-serve-para-editar-imagens/</guid>
+      <description>Photoshop é para quem não usa o R! :)Tenho um projeto que aplica Ciência de Dados no Futebol e,como em várias outras empresas pequenas, precisamos fazer muito com pouco.</description>
+    </item>
     
     <item>
       <title>Regressão Linear na prática - usando o R</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Imagens on Luis Otavio | Ciência de dados</title>
+    <link>/tags/imagens/</link>
+    <description>Recent content in Imagens on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 27 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/imagens/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>O R também serve para editar imagens!</title>
+      <link>/blog/o-r-tambem-serve-para-editar-imagens/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/o-r-tambem-serve-para-editar-imagens/</guid>
+      <description>Photoshop é para quem não usa o R! :)Tenho um projeto que aplica Ciência de Dados no Futebol e,como em várias outras empresas pequenas, precisamos fazer muito com pouco.</description>
+    </item>
+    
+  </channel>
+</rss>
