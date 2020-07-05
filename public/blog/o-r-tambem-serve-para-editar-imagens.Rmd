@@ -8,7 +8,7 @@ categories:
   - Caso prático
 tags:
   - Imagens
-type: featured
+type: post
 ---
   
 ##### Photoshop é para quem não usa o R! :)
