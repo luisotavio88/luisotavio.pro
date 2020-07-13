@@ -1,0 +1,229 @@
+---
+title: "O que uso para manipular meus dados no R"
+author: "Luis Otavio"
+date: '2020-07-13'
+image: images/post_principal/manipulacao.png
+slug: o-que-uso-para-manipular-meus-dados-no-R
+categories:
+  - Caso prático
+tags:
+  - Manipulação de dados
+type: featured
+---
+
+Um dos meus desafios essa semana foi analisar todas as **265 campanhas de e-mail** enviadas pelo meu projeto de futebol (Guru do Cartola) em 2018 e 2019.
+
+Os meus principais objetivos com essa análise eram:
+
+- Saber quais e-mails geraram mais vendas.
+
+- Quais são os assuntos dos e-mails com as maiores taxas de abertura?
+
+Além de responder essas duas perguntas, fiz outras análises também. 
+
+Porém, o foco desse post será na **manipulação dos dados**.
+
+A tarefa de manipular os dados e deixá-los no formato adequado para a análise é uma das atividades que mais toma o tempo de um Cientista de Dados em um projeto.
+
+Saber as principais funções de manipulação de dados irá te dar muita liberdade para trabalhar. 
+
+Então, vou detalhar sobre cada função que utilizei nesse desafio.
+
+## As funções que usei para manipular meus dados
+
+```{r,echo=FALSE,results='hide',warning=FALSE,message=FALSE}
+library(readr)
+library(data.table)
+library(reshape2)
+
+links <- read_delim("links.txt", 
+                    "\t", escape_double = FALSE, trim_ws = TRUE)
+lists <- read_delim("lists.txt", 
+                    "\t", escape_double = FALSE, trim_ws = TRUE)
+campaigns <- read_delim("campaigns.txt", 
+                        "\t", escape_double = FALSE, trim_ws = TRUE)
+to_send_lists <- read_delim("to_send_lists.txt", 
+                                 "\t", escape_double = FALSE, trim_ws = TRUE)
+hotmart <- read_delim("hotmart.txt", 
+                      "\t", escape_double = FALSE, col_types = cols(data = col_datetime(format = "%d/%m/%Y %H:%M:%S")), 
+                      trim_ws = TRUE)
+links$categoria<-links$link
+links$clicks<-NULL
+```
+
+### A função ```grepl``` para buscar palavras 
+
+Um dos meus objetivos era categorizar os e-mails de forma bem simples. 
+
+Foram enviados vários tipos de e-mails:
+
+- Ofertas
+- Conteúdo gratuito
+- Conteúdo exclusivo
+- Pesquisa
+- Explicações gerais
+
+A forma mais fácil que encontrei de categorizar as campanhas de e-mail foi analisando o link contido em cada mensagem.
+
+Por exemplo, se o link direcionava o usuário para o Youtube, eu sei que o e-mail tinha um **Conteúdo Gratuito**. 
+
+Caso o link direcionasse o usuário para a página de vendas ou para o site da operadora de pagamentos, então era um e-mail que continha uma **oferta** de venda.
+
+Como transformei cada link de **vendas** utilizado nos e-mails em uma categoria:
+
+```{r, eval=FALSE}
+head(links)
+
+# A plataforma de vendas chama Hotmart e os links diretos para ela
+# contém as expressões "hotmart" ou "hotm.art".
+# As expressões "timeguru" e "time-guru" são exclusivas das
+# páginas de vendas do meu site.
+
+links$categoria<-ifelse(grepl(paste(c("hotmart","hotm.art","timeguru","time-guru"),collapse="|"),links$categoria),"venda","")
+
+```
+
+A função ```grepl``` busca por um termo dentro de um vetor de dados. Caso o termo seja encontrado em determinado elemento, o resultado será ```TRUE```, caso contrário será ```FALSE```.
+
+Na função apresentada, foi necessário expandir os critérios da busca, pois a busca seria atendida para qualquer uma das 4 expressões.
+
+Para isso, o padrão definido para a busca usou o operador **OU**.
+
+```{r}
+paste(c("hotmart","hotm.art","timeguru","time-guru"),collapse="|")
+```
+
+Além disso, a função ```grepl``` foi abrangida pela função ```ifelse```. Então, quando a função ```grepl``` retornar ```TRUE```, será atribuída a categoria **venda** para ```links$categoria```.
+
+Caso a função ```grepl``` retorne ```FALSE```, **nada** será atribuído para ```links$categoria```.
+
+```{r,echo=FALSE,results='hide',warning=FALSE,message=FALSE}
+links$categoria<-links$link
+links$categoria<-ifelse(grepl(paste(c("instagram","facebook"),collapse="|"),links$categoria),"redes_sociais",links$categoria)
+links$categoria<-ifelse(grepl(paste(c("youtu.be","youtube","rod","guruzada","whats"),collapse="|"),links$categoria),"dicas_gratuitas",links$categoria)
+links$categoria<-ifelse(grepl(paste(c("hotmart","hotm.art","timeguru","time-guru"),collapse="|"),links$categoria),"venda",links$categoria)
+links$categoria<-ifelse(grepl(paste(c("chrome","gmail"),collapse="|"),links$categoria),"outros",links$categoria)
+links$categoria<-ifelse(grepl("forms",links$categoria , fixed = TRUE),"pesquisa",links$categoria)
+links$categoria<-ifelse(grepl("selecao",links$categoria , fixed = TRUE),"dicas_assinantes",links$categoria)
+links$categoria<-ifelse(grepl(paste(c("login","liga"),collapse="|"),links$categoria),"adm_usuario",links$categoria)
+links$categoria<-ifelse(grepl(paste(c("escale","scouts","gurudocartola.com","premios"),collapse="|"),links$categoria),"site_guru",links$categoria)
+categoria<-unique(links$categoria)
+```
+
+### A função ```gsub``` para substituir textos
+
+Foi necessário retirar uma expressão dos meus dados. 
+
+Para isso, busquei pelo trecho do texto que deveria ser retirado e substituí esse trecho por nada/vazio.
+
+A função ```gsub``` está estruturada da seguinte forma:
+
+- O primeiro argumento é a expressão que será substituída.
+
+- O segundo argumento é a expressão que irá substituir.
+
+- O terceiro argumento é o vetor onde ocorrerá a substituição.
+
+
+```{r,echo=FALSE,results='hide',warning=FALSE,message=FALSE}
+lists$custom_fields <- gsub("%s%",",",lists$custom_fields)
+```
+
+```{r}
+head(lists)
+
+# Irei substituir o texto ":Text" por "".
+
+lists$custom_fields <- gsub(":Text","",lists$custom_fields)
+head(lists)
+
+```
+
+### Atribuindo o formato de **data** para uma coluna
+
+Originalmente, os meus dados estão no formato de DATA E HORA. Porém, desejo trabalhar somente com a data.
+
+```{r}
+head(hotmart$data)
+```
+
+Portanto, irei usar a função ```as.Date``` e informar no parâmetro "format" qual o formato de data que desejo visualizar meus dados.
+
+A data já está no padrão do R, que é Ano (com 4 algarismos), depois mês e depois o dia.
+
+```{r}
+hotmart$sent<-as.Date(hotmart$data,format="%Y/%m/%d")
+head(hotmart$sent)
+```
+
+A data no novo formato foi atribuída para a coluna *sent*.
+
+### Agrupando os dados
+
+Cada linha da tabela *hotmart* representa uma transação feita pelo cliente. Porém, para essa análise precisamos saber o faturamento **por dia**.
+
+Para isso, iremos somar todas as vendas considerando **cada dia como um grupo**.
+
+Ou seja, vamos somar o total vendido para cada dia.
+
+O primeiro passo é agrupar os dados por dia (variável *sent*). E depois vamos criar a coluna ```total_dia```, que será a soma da variável ```preco``` para cada dia.
+
+```{r,warning=FALSE,message=FALSE}
+library(dplyr)
+head(hotmart[,c("sent","preco")])
+hotmart %<>% 
+  group_by(sent) %>%
+summarise(total_dia = sum(preco)) %>%
+ungroup()
+```
+
+
+### Juntando duas tabelas
+
+Tenho uma tabela com todas as informações sobre as minhas campanhas de e-mail marketing e outra tabela com os valores faturados em cada dia.
+
+Então, quero adicionar o valor faturado em cada dia na tabela que contém informações sobre as campanhas.
+
+**Para juntar duas tabelas é necessário que se tenha pelo menos uma variável chave, essa variável é responsável por fazer uma ligação entre os dados das duas tabelas.**
+
+No caso, a variável que será utilizada para juntar as duas tabelas é a variável que representa a **DATA**, seja do envio da campanha ou das vendas.
+
+A função ```join``` irá juntar as tabelas:
+
+```{r}
+campaigns<-plyr::join(campaigns,hotmart,by="sent") #sent é a variável de data
+```
+
+Repare que a variável chave deve ter o mesmo nome nas duas tabelas.
+
+### Quantos e-mails foram enviados nos últimos 7 dias?
+
+Achei importante analisar o impacto da quantidade recente de e-mails enviados tem nas vendas e na abertura de e-mails.
+
+Para isso, calculei o número de e-mails enviados nos 7 dias anteriores.
+
+Para fazer o cálculo, usei a biblioteca ```library(data.table)``` e o primeiro passo foi transformar o meu data frame para o formato adequado.
+
+Depois, para cada linha da minha tabela, eu filtro os dados que estão no intervalo dos 7 dias anteriores e conto quantos registros são.
+
+```{r}
+library(data.table)
+campaigns <- as.data.table(campaigns)
+campaigns<-campaigns[, qnt_campanhas7D := campaigns[campaigns[, .(sent, dm7 = sent - 7)], on = .(sent >= dm7, sent < sent), 
+                 .N, by = .EACHI]$N][]
+head(campaigns[,c("campaign_id","sent","qnt_campanhas7D")])
+```
+
+______
+
+Essas foram algumas funções que utilizei em minha manipulação de dados. 
+
+É claro que existem várias outras funções que atenderão necessidades diferentes.
+
+De qualquer forma, esse tema é extremamente importante na carreira do Cientista de Dados e, justamente por isso, dediquei um capítulo inteiro do livro **O seu primeiro passo para ser um Cientista de Dados** para a manipulação de dados. 
+
+Nesse capítulo eu falo sobre a manipulação de dados usando a biblioteca ```dplyr```.
+
+O capítulo seguinte do e-book trata sobre manipulação de Hora e Data.
+
+Para acessar o e-book gratuitamente, basta [**clicar aqui**](https://www.luisotavio.pro/ebook)
