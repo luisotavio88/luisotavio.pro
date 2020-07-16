@@ -7,10 +7,10 @@ categories:
   - Caso prático
 tags:
   - Marketing digital
-type: post
 image: images/post_principal/twitter.png
+type: post
 ---
-  
+
 Vários mercados precisam de notícias em tempo real, imagine só o mercado de finanças:
   
 - Uma decisão política, um resultado de uma grande empresa ou um acidente são fatores que geram um impacto enorme no mercado financeiro.
@@ -115,7 +115,7 @@ for(set in 1:nrow(setoristas)){
 
 Esse é o resultado da ferramenta para escolher as informações que são úteis e devem ser retuítadas. 
 
-![Ferramenta Retweet](/images/post_interno/twitter_guru.png){ width=100% }
+![Ferramenta Retweet](/images/post_interno/twitterguru.jpg){ width=80% }
 
 
 Houve uma exceção nesse post e a ferramenta construída não foi disponibilizada na íntegra, pois ela permite que se faça posts no MEU Twitter. 

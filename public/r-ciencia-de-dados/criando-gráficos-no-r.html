@@ -316,7 +316,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Na prática, veremos como podemos criar um gráfico simples e depois ir aperfeiçoando e personalizando de acordo com a nossa necessidade. Esse aperfeiçoamento acontece com novas linhas de código, que são acrescentadas ao gráfico que já foi criado.</p>
 <p>Instalando o pacote <code>ggplot2</code>:</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
 <div id="seu-primeiro-gráfico" class="section level3">
 <h3><span class="header-section-number">11.1.1</span> Seu primeiro gráfico</h3>
 <p>O código a seguir é dividido com os 3 elementos que citamos acima. O primeiro elemento é o <strong>conjunto de dados</strong> <code>mtcars</code>. <em>Dataset</em> que contém informações de diferentes modelos de carros.</p>
@@ -325,10 +325,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A variável <em>mpg</em> será alocada no eixo x (horizontal) e a variável <em>wt</em> no eixo y (vertical).</p>
 <p>O terceiro elemento são as <strong>marcas de representação visual do gráfico</strong> e são definidos pela função <code>geom_point()</code>.</p>
 <p>Como nesse exemplo não há nenhuma customização, a função <code>geom_point()</code> será vazia.</p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb243-2" title="2"></a>
-<a class="sourceLine" id="cb243-3" title="3"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb243-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb244-1" title="1"><span class="kw">library</span>(ggplot2)</a></code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.6.3</code></pre>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" title="1"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb246-2" title="2"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
 <p><img src="livro_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
 </div>
 <div id="incrementando-o-gráfico" class="section level3">
@@ -336,15 +336,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Podemos incrementar um pouco o nosso gráfico adicionando uma terceira variável. Vamos adicionar a variável <em>cyl</em>, que representa o número de cilindros do carro.</p>
 <p>Agora, com 3 variáveis, o gráfico continuará sendo bi-dimensional. Porém, os pontos do gráfico serão coloridos de acordo com a variável <em>cyl</em>.</p>
 <p>Antes de criarmos o gráfico, segue uma consideração: a variável <em>cyl</em> está classificada como numérica.</p>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb244-1" title="1"><span class="kw">class</span>(mtcars<span class="op">$</span>cyl)</a></code></pre></div>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb247-1" title="1"><span class="kw">class</span>(mtcars<span class="op">$</span>cyl)</a></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <p>Os carros desse <em>dataset</em> possuem 4, 6 ou 8 cilindros. Então, nesse caso será mais interessante tratar a variável <em>cyl</em> como categórica. Essa pequena alteração fará muita diferença na visualização dos dados, pois irá colorir cada uma das categorias com cores totalmente distintas.</p>
 <p>Caso se considerasse a variável <em>cyl</em> como numérica, as cores de cada quantidade de cilindros sofreriam alterações apenas no tom da cor, dificultando a visualização de cada um dos grupos.</p>
 <p>Para tratar a variável <em>cyl</em> como categórica, vamos apenas adicionar a função <code>factor()</code> ao inserir a variável na criação do gráfico.</p>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb246-2" title="2"></a>
-<a class="sourceLine" id="cb246-3" title="3"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt,<span class="dt">color=</span><span class="kw">factor</span>(cyl))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb246-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb249-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb249-2" title="2"></a>
+<a class="sourceLine" id="cb249-3" title="3"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt,<span class="dt">color=</span><span class="kw">factor</span>(cyl))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb249-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>()</a></code></pre></div>
 <p><img src="livro_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
 <p>Então, nesse último colocamos duas variáveis nos tradicionais eixos x e y - <em>mpg</em> e <em>wt</em>, respectivamente. Além disso, colorimos os pontos do gráfico de acordo com a quantidade de cilindros de cada carro.</p>
 <p>E se precisássemos adicionar mais informações a esse gráfico?</p>
@@ -356,10 +356,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A quarta variável escolhida é a <em>qsec</em>, que mede quantos segundos o carro precisa para alcançar 0,25 milhas.</p>
 <p>Em nosso gráfico, a variável <em>qsec</em> será representada pelo tamanho da bolha.</p>
 <p>Cada bolha é um ponto do gráfico e representa um carro do conjunto de dados.</p>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb247-1" title="1"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt))<span class="op">+</span><span class="st"> </span><span class="co">#definição de qual é o dataset e quais são as variáveis dos eixos x e y.</span></a>
-<a class="sourceLine" id="cb247-2" title="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> <span class="kw">factor</span>(cyl), <span class="dt">size =</span> qsec), <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definição de qual variável será representada pela cor e qual será representada pelo tamanho das bolhas.</span></a>
-<a class="sourceLine" id="cb247-3" title="3"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#00AFBB&quot;</span>, <span class="st">&quot;#E7B800&quot;</span>, <span class="st">&quot;#FC4E07&quot;</span>)) <span class="op">+</span><span class="st"> </span><span class="co">#definição das cores das bolhas.</span></a>
-<a class="sourceLine" id="cb247-4" title="4"><span class="st">  </span><span class="kw">scale_size</span>(<span class="dt">range =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="dv">12</span>))  <span class="co"># Amplitude do tamanho das bolhas</span></a></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" title="1"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(mpg, wt))<span class="op">+</span><span class="st"> </span><span class="co">#definição de qual é o dataset e quais são as variáveis dos eixos x e y.</span></a>
+<a class="sourceLine" id="cb250-2" title="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> <span class="kw">factor</span>(cyl), <span class="dt">size =</span> qsec), <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definição de qual variável será representada pela cor e qual será representada pelo tamanho das bolhas.</span></a>
+<a class="sourceLine" id="cb250-3" title="3"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#00AFBB&quot;</span>, <span class="st">&quot;#E7B800&quot;</span>, <span class="st">&quot;#FC4E07&quot;</span>)) <span class="op">+</span><span class="st"> </span><span class="co">#definição das cores das bolhas.</span></a>
+<a class="sourceLine" id="cb250-4" title="4"><span class="st">  </span><span class="kw">scale_size</span>(<span class="dt">range =</span> <span class="kw">c</span>(<span class="fl">0.5</span>, <span class="dv">12</span>))  <span class="co"># Amplitude do tamanho das bolhas</span></a></code></pre></div>
 <p><img src="livro_files/figure-html/unnamed-chunk-122-1.png" width="672" /></p>
 <p>Pelos dois últimos gráficos, há fortes indícios que quanto maior o peso do carro (<em>wt</em>), menor é a quantidade de milhas que ele consegue percorrer com um galão de combustível.</p>
 <p>Além disso, parece haver uma relação entre a quantidade de cilindros e essas duas variáveis. Por exemplo, os carros com 4 cilindros parecem ser mais leves e rodar mais milhas com um galão de combustível.</p>
@@ -367,8 +367,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="o-gráfico-de-correlação" class="section level3">
 <h3><span class="header-section-number">11.1.4</span> O gráfico de correlação</h3>
 <p>Para verificar a correlação entre as variáveis, podemos simplesmente uma tabela com a correlação entre elas:</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" title="1">tabela_correlacao &lt;-<span class="st"> </span><span class="kw">round</span>(stats<span class="op">::</span><span class="kw">cor</span>(mtcars), <span class="dv">1</span>) <span class="co">#a função round é usada para arredondar as casas decimais do resultado.</span></a>
-<a class="sourceLine" id="cb248-2" title="2">tabela_correlacao</a></code></pre></div>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" title="1">tabela_correlacao &lt;-<span class="st"> </span><span class="kw">round</span>(stats<span class="op">::</span><span class="kw">cor</span>(mtcars), <span class="dv">1</span>) <span class="co">#a função round é usada para arredondar as casas decimais do resultado.</span></a>
+<a class="sourceLine" id="cb251-2" title="2">tabela_correlacao</a></code></pre></div>
 <pre><code>##       mpg  cyl disp   hp drat   wt qsec   vs   am gear carb
 ## mpg   1.0 -0.9 -0.8 -0.8  0.7 -0.9  0.4  0.7  0.6  0.5 -0.6
 ## cyl  -0.9  1.0  0.9  0.8 -0.7  0.8 -0.6 -0.8 -0.5 -0.5  0.5
@@ -385,10 +385,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Para criar um gráfico com a correlação entre as variáveis, precisaremos fazer uma pequena transformação na tabela acima.</p>
 <p>A matriz será transformada em uma nova tabela com 3 colunas: duas colunas com os nomes das variáveis e a terceira coluna com o valor correspondente da correlação entre elas.</p>
 <p>Para isso, usaremos a biblioteca <code>reshape2</code> e a função <code>melt</code>:</p>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" title="1"><span class="co"># install.packages(&quot;reshape2&quot;)  #caso vc não já tenha instalado a biblioteca reshape2, precisa executar essa linha.</span></a>
-<a class="sourceLine" id="cb250-2" title="2"><span class="kw">library</span>(reshape2)</a>
-<a class="sourceLine" id="cb250-3" title="3">melted_tabela_correlacao &lt;-<span class="st"> </span><span class="kw">melt</span>(tabela_correlacao)</a>
-<a class="sourceLine" id="cb250-4" title="4"><span class="kw">head</span>(melted_tabela_correlacao)</a></code></pre></div>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" title="1"><span class="co"># install.packages(&quot;reshape2&quot;)  #caso vc não já tenha instalado a biblioteca reshape2, precisa executar essa linha.</span></a>
+<a class="sourceLine" id="cb253-2" title="2"><span class="kw">library</span>(reshape2)</a>
+<a class="sourceLine" id="cb253-3" title="3">melted_tabela_correlacao &lt;-<span class="st"> </span><span class="kw">melt</span>(tabela_correlacao)</a>
+<a class="sourceLine" id="cb253-4" title="4"><span class="kw">head</span>(melted_tabela_correlacao)</a></code></pre></div>
 <pre><code>##   Var1 Var2 value
 ## 1  mpg  mpg   1.0
 ## 2  cyl  mpg  -0.9
@@ -396,16 +396,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4   hp  mpg  -0.8
 ## 5 drat  mpg   0.7
 ## 6   wt  mpg  -0.9</code></pre>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb252-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> melted_tabela_correlacao, <span class="kw">aes</span>(<span class="dt">x=</span>Var1, <span class="dt">y=</span>Var2, <span class="dt">fill=</span>value)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb252-3" title="3"><span class="st">  </span><span class="kw">geom_tile</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb255-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> melted_tabela_correlacao, <span class="kw">aes</span>(<span class="dt">x=</span>Var1, <span class="dt">y=</span>Var2, <span class="dt">fill=</span>value)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb255-3" title="3"><span class="st">  </span><span class="kw">geom_tile</span>()</a></code></pre></div>
 <p><img src="livro_files/figure-html/unnamed-chunk-126-1.png" width="672" /></p>
 </div>
 <div id="aperfeiçoando-o-gráfico" class="section level3">
 <h3><span class="header-section-number">11.1.5</span> Aperfeiçoando o gráfico</h3>
 <p>Os gráficos facilitam muito a visualização dos dados. Porém, com mais um pouco de esforço, podemos melhorar muito a visualização desses dados.</p>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" title="1">tabela_correlacao[<span class="kw">lower.tri</span>(tabela_correlacao,<span class="dt">diag =</span> T)]&lt;-<span class="st"> </span><span class="ot">NA</span> <span class="co">## selecionar apenas a parte superior da matriz (evitando informações repetidas)</span></a>
-<a class="sourceLine" id="cb253-2" title="2"><span class="kw">head</span>(tabela_correlacao)</a></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb256-1" title="1">tabela_correlacao[<span class="kw">lower.tri</span>(tabela_correlacao,<span class="dt">diag =</span> T)]&lt;-<span class="st"> </span><span class="ot">NA</span> <span class="co">## selecionar apenas a parte superior da matriz (evitando informações repetidas)</span></a>
+<a class="sourceLine" id="cb256-2" title="2"><span class="kw">head</span>(tabela_correlacao)</a></code></pre></div>
 <pre><code>##      mpg  cyl disp   hp drat   wt qsec   vs   am gear carb
 ## mpg   NA -0.9 -0.8 -0.8  0.7 -0.9  0.4  0.7  0.6  0.5 -0.6
 ## cyl   NA   NA  0.9  0.8 -0.7  0.8 -0.6 -0.8 -0.5 -0.5  0.5
@@ -413,9 +413,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## hp    NA   NA   NA   NA -0.4  0.7 -0.7 -0.7 -0.2 -0.1  0.7
 ## drat  NA   NA   NA   NA   NA -0.7  0.1  0.4  0.7  0.7 -0.1
 ## wt    NA   NA   NA   NA   NA   NA -0.2 -0.6 -0.7 -0.6  0.4</code></pre>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" title="1"><span class="kw">library</span>(reshape2)</a>
-<a class="sourceLine" id="cb255-2" title="2">dados_correlacao &lt;-<span class="st"> </span><span class="kw">melt</span>(tabela_correlacao,<span class="dt">na.rm =</span> T) <span class="co">#transformando os dados para as 3 colunas como anteriormente.</span></a>
-<a class="sourceLine" id="cb255-3" title="3"><span class="kw">head</span>(dados_correlacao)</a></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" title="1"><span class="kw">library</span>(reshape2)</a>
+<a class="sourceLine" id="cb258-2" title="2">dados_correlacao &lt;-<span class="st"> </span><span class="kw">melt</span>(tabela_correlacao,<span class="dt">na.rm =</span> T) <span class="co">#transformando os dados para as 3 colunas como anteriormente.</span></a>
+<a class="sourceLine" id="cb258-3" title="3"><span class="kw">head</span>(dados_correlacao)</a></code></pre></div>
 <pre><code>##    Var1 Var2 value
 ## 12  mpg  cyl  -0.9
 ## 23  mpg disp  -0.8
@@ -423,15 +423,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 34  mpg   hp  -0.8
 ## 35  cyl   hp   0.8
 ## 36 disp   hp   0.8</code></pre>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb257-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb257-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> dados_correlacao, <span class="kw">aes</span>(Var2, Var1, <span class="dt">fill =</span> value))<span class="op">+</span><span class="st"> </span><span class="co">#seleciona os dados e as variáveis para cada eixo, assim como a variável que determina a cor (value).</span></a>
-<a class="sourceLine" id="cb257-3" title="3"><span class="st"> </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)<span class="op">+</span><span class="st">    </span><span class="co">#definindo a cor do contorno de cada quadrado.</span></a>
-<a class="sourceLine" id="cb257-4" title="4"><span class="st"> </span><span class="kw">scale_fill_gradient2</span>(<span class="dt">low =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">high =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">mid =</span> <span class="st">&quot;white&quot;</span>, <span class="co">#definindo a escala de cor das correlações</span></a>
-<a class="sourceLine" id="cb257-5" title="5">   <span class="dt">midpoint =</span> <span class="dv">0</span>, <span class="dt">limit =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">space =</span> <span class="st">&quot;Lab&quot;</span>, <span class="co">#definindo a escala das correlações</span></a>
-<a class="sourceLine" id="cb257-6" title="6">   <span class="dt">name=</span><span class="st">&quot;Coef. Correlação&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definindo o nome da legenda.</span></a>
-<a class="sourceLine" id="cb257-7" title="7"><span class="st">  </span><span class="kw">theme_minimal</span>()<span class="op">+</span><span class="st"> </span><span class="co">#tema de fundo do gráfico</span></a>
-<a class="sourceLine" id="cb257-8" title="8"><span class="st">   </span><span class="kw">coord_fixed</span>() <span class="op">+</span><span class="st"> </span><span class="co">#mantém as coordenadas e as mediadas dos quadrados fixos.</span></a>
-<a class="sourceLine" id="cb257-9" title="9"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;nome eixo x&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;nome eixo y&quot;</span>) <span class="co">#define o nome para o eixo x e para o eixo y</span></a></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb260-2" title="2"><span class="kw">ggplot</span>(<span class="dt">data =</span> dados_correlacao, <span class="kw">aes</span>(Var2, Var1, <span class="dt">fill =</span> value))<span class="op">+</span><span class="st"> </span><span class="co">#seleciona os dados e as variáveis para cada eixo, assim como a variável que determina a cor (value).</span></a>
+<a class="sourceLine" id="cb260-3" title="3"><span class="st"> </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)<span class="op">+</span><span class="st">    </span><span class="co">#definindo a cor do contorno de cada quadrado.</span></a>
+<a class="sourceLine" id="cb260-4" title="4"><span class="st"> </span><span class="kw">scale_fill_gradient2</span>(<span class="dt">low =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">high =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">mid =</span> <span class="st">&quot;white&quot;</span>, <span class="co">#definindo a escala de cor das correlações</span></a>
+<a class="sourceLine" id="cb260-5" title="5">   <span class="dt">midpoint =</span> <span class="dv">0</span>, <span class="dt">limit =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">space =</span> <span class="st">&quot;Lab&quot;</span>, <span class="co">#definindo a escala das correlações</span></a>
+<a class="sourceLine" id="cb260-6" title="6">   <span class="dt">name=</span><span class="st">&quot;Coef. Correlação&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="co">#definindo o nome da legenda.</span></a>
+<a class="sourceLine" id="cb260-7" title="7"><span class="st">  </span><span class="kw">theme_minimal</span>()<span class="op">+</span><span class="st"> </span><span class="co">#tema de fundo do gráfico</span></a>
+<a class="sourceLine" id="cb260-8" title="8"><span class="st">   </span><span class="kw">coord_fixed</span>() <span class="op">+</span><span class="st"> </span><span class="co">#mantém as coordenadas e as mediadas dos quadrados fixos.</span></a>
+<a class="sourceLine" id="cb260-9" title="9"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;nome eixo x&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;nome eixo y&quot;</span>) <span class="co">#define o nome para o eixo x e para o eixo y</span></a></code></pre></div>
 <p><img src="livro_files/figure-html/unnamed-chunk-128-1.png" width="672" /></p>
 <p>Fique tranquilo que você não precisa decorar as funções acima. É importante que você leia e entenda o que cada uma está fazendo, só isso. E isso vai acontecer aos poucos, com a prática.</p>
 <p>Digo que você não precisa decorar porque são infinitas possibilidades e não faz sentido nenhum gastar energia decorando isso. Basta que você pesquise no Google sobre o gráfico que deseja fazer e escolha o melhor para o seu caso.</p>
@@ -483,33 +483,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Caso você queira criar a sua própria busca, praticando no seu computador, terá que se cadastrar no Twitter como um desenvolvedor. É bem fácil e leva poucos minutos.</p>
 <p>Aqui nesse endereço você tem todas as instruções:
 <a href="https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html" class="uri">https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html</a></p>
-<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" title="1"><span class="kw">library</span>(rtweet)</a>
-<a class="sourceLine" id="cb258-2" title="2"><span class="co">#substitua os 4 valores seguintes pelos valores correspondentes ao seu login</span></a>
-<a class="sourceLine" id="cb258-3" title="3"></a>
-<a class="sourceLine" id="cb258-4" title="4"><span class="co"># api_key &lt;- &quot;XXXXXXXXX&quot;</span></a>
-<a class="sourceLine" id="cb258-5" title="5"><span class="co"># api_secret_key &lt;- &quot;XXXXXXXXX&quot;</span></a>
-<a class="sourceLine" id="cb258-6" title="6"><span class="co"># access_token &lt;- &quot;XXXXXXXXX&quot;</span></a>
-<a class="sourceLine" id="cb258-7" title="7"><span class="co"># access_token_secret &lt;- &quot;XXXXXXXXX&quot;</span></a>
-<a class="sourceLine" id="cb258-8" title="8"></a>
-<a class="sourceLine" id="cb258-9" title="9"><span class="co">## authenticate via web browser</span></a>
-<a class="sourceLine" id="cb258-10" title="10">token &lt;-<span class="st"> </span><span class="kw">create_token</span>(</a>
-<a class="sourceLine" id="cb258-11" title="11">  <span class="dt">app =</span> <span class="st">&quot;nome do seu app&quot;</span>, <span class="co">#substituir</span></a>
-<a class="sourceLine" id="cb258-12" title="12">  <span class="dt">consumer_key =</span> api_key,</a>
-<a class="sourceLine" id="cb258-13" title="13">  <span class="dt">consumer_secret =</span> api_secret_key,</a>
-<a class="sourceLine" id="cb258-14" title="14">  <span class="dt">access_token =</span> access_token,</a>
-<a class="sourceLine" id="cb258-15" title="15">  <span class="dt">access_secret =</span> access_token_secret)</a></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb261-1" title="1"><span class="kw">library</span>(rtweet)</a>
+<a class="sourceLine" id="cb261-2" title="2"><span class="co">#substitua os 4 valores seguintes pelos valores correspondentes ao seu login</span></a>
+<a class="sourceLine" id="cb261-3" title="3"></a>
+<a class="sourceLine" id="cb261-4" title="4"><span class="co"># api_key &lt;- &quot;XXXXXXXXX&quot;</span></a>
+<a class="sourceLine" id="cb261-5" title="5"><span class="co"># api_secret_key &lt;- &quot;XXXXXXXXX&quot;</span></a>
+<a class="sourceLine" id="cb261-6" title="6"><span class="co"># access_token &lt;- &quot;XXXXXXXXX&quot;</span></a>
+<a class="sourceLine" id="cb261-7" title="7"><span class="co"># access_token_secret &lt;- &quot;XXXXXXXXX&quot;</span></a>
+<a class="sourceLine" id="cb261-8" title="8"></a>
+<a class="sourceLine" id="cb261-9" title="9"><span class="co">## authenticate via web browser</span></a>
+<a class="sourceLine" id="cb261-10" title="10">token &lt;-<span class="st"> </span><span class="kw">create_token</span>(</a>
+<a class="sourceLine" id="cb261-11" title="11">  <span class="dt">app =</span> <span class="st">&quot;nome do seu app&quot;</span>, <span class="co">#substituir</span></a>
+<a class="sourceLine" id="cb261-12" title="12">  <span class="dt">consumer_key =</span> api_key,</a>
+<a class="sourceLine" id="cb261-13" title="13">  <span class="dt">consumer_secret =</span> api_secret_key,</a>
+<a class="sourceLine" id="cb261-14" title="14">  <span class="dt">access_token =</span> access_token,</a>
+<a class="sourceLine" id="cb261-15" title="15">  <span class="dt">access_secret =</span> access_token_secret)</a></code></pre></div>
 </div>
 <div id="passo-2---buscar-os-tweets-de-cada-repórter" class="section level3">
 <h3><span class="header-section-number">11.1.7</span> PASSO 2 - BUSCAR OS TWEETS DE CADA REPÓRTER</h3>
 <p>O <strong>nome de usuário</strong> de cada repórter está na tabela <code>setorista</code> na coluna <code>screen_name</code>.</p>
 <p>Então eu executo a função <code>get_timeline</code> para cada repórter e busco os 15 primeiros tweets.</p>
 <p>Além disso, já escolho quais as variáveis eu desejo armazenar em cada busca, usando a função <code>select</code>.</p>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb259-1" title="1">todos_tweets&lt;-<span class="kw">data.frame</span>()</a>
-<a class="sourceLine" id="cb259-2" title="2"><span class="cf">for</span>(set <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(setoristas)){</a>
-<a class="sourceLine" id="cb259-3" title="3">  tweets_set &lt;-<span class="st"> </span><span class="kw">get_timeline</span>(setoristas<span class="op">$</span>screen_name[set],<span class="dt">n =</span> <span class="dv">15</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb259-4" title="4"><span class="st">    </span><span class="kw">select</span>(created_at,screen_name,text,favorite_count,status_id,followers_count,media_url)</a>
-<a class="sourceLine" id="cb259-5" title="5">  todos_tweets&lt;-<span class="kw">rbind</span>(todos_tweets,tweets_set)</a>
-<a class="sourceLine" id="cb259-6" title="6">}</a></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" title="1">todos_tweets&lt;-<span class="kw">data.frame</span>()</a>
+<a class="sourceLine" id="cb262-2" title="2"><span class="cf">for</span>(set <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(setoristas)){</a>
+<a class="sourceLine" id="cb262-3" title="3">  tweets_set &lt;-<span class="st"> </span><span class="kw">get_timeline</span>(setoristas<span class="op">$</span>screen_name[set],<span class="dt">n =</span> <span class="dv">15</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb262-4" title="4"><span class="st">    </span><span class="kw">select</span>(created_at,screen_name,text,favorite_count,status_id,followers_count,media_url)</a>
+<a class="sourceLine" id="cb262-5" title="5">  todos_tweets&lt;-<span class="kw">rbind</span>(todos_tweets,tweets_set)</a>
+<a class="sourceLine" id="cb262-6" title="6">}</a></code></pre></div>
 </div>
 <div id="passo-3---visualização-das-buscas-e-o-retweet" class="section level3">
 <h3><span class="header-section-number">11.1.8</span> PASSO 3 - VISUALIZAÇÃO DAS BUSCAS E O RETWEET</h3>
@@ -537,16 +537,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">11.1.9</span> Filtro de dados pelas linhas e colunas</h3>
 <p>Essa a é a forma mais simples de selecionar dados do seu dataset. E, na minha opinião, deve ser usada com muita cautela.</p>
 <p>O nosso dataset se chama <strong>iris</strong>, então quando escrevemos o comando</p>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" title="1">subset_iris1&lt;-iris[<span class="dv">1</span><span class="op">:</span><span class="dv">30</span>,]</a></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb263-1" title="1">subset_iris1&lt;-iris[<span class="dv">1</span><span class="op">:</span><span class="dv">30</span>,]</a></code></pre></div>
 <p>estamos selecionando as linhas de 1 a 30 do dataset <strong>iris</strong>.</p>
 <p>Quando abrimos os colchetes depois do dataset, temos dois campos separados pela vírgula. Informamos quais as linhas que queremos selecionar antes da vírgula.</p>
 <p>Depois da vírgula informamos quais as colunas queremos selecionar. Como deixei em branco, o R irá retornar todas as colunas do dataset.</p>
 <p>Agora, se eu colocar o comando</p>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb261-1" title="1">subset_iris1&lt;-iris[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>)]</a></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb264-1" title="1">subset_iris1&lt;-iris[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>)]</a></code></pre></div>
 <p>O R irá retornar todas as linhas do dataset <strong>iris</strong> (pois o campo antes da vírgula está vazio) e irá selecionar as colunas 1, 3 e 5, pois essas foram as colunas que eu coloquei no vetor das colunas.</p>
 <p>Você também pode combinar os critérios das linhas e colunas ao mesmo tempo. Desta forma, é possível até escolher até um único elemento contido na tabela. Por exemplo:</p>
 <p>Caso você deseje saber qual o valor da 90ª linha para a coluna 5, o comando será o seguinte:</p>
-<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" title="1">subset_iris1&lt;-iris[<span class="dv">90</span>,<span class="dv">5</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb265-1" title="1">subset_iris1&lt;-iris[<span class="dv">90</span>,<span class="dv">5</span>]</a></code></pre></div>
 <p>Mas porque eu disse que o método deve ser usado com cautela?</p>
 <p>Porque, como você viu, ele é extremamente manual. Então, será útil caso você precise pesquisas ou explorações isoladas.</p>
 <p>Mas, de forma alguma, recomendo que você use esse método para fazer alterações no seu banco de dados que precisem ser generalizadas para todos os dados.</p>
@@ -557,9 +557,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Vamos colocar o nome do dataset e os colchetes. Dentro dos colchetes iremos colocar na mesma ordem: primeiro as linhas e depois da vírgula colocamos as colunas.</p>
 <p>Porém, como queremos excluir as linhas/colunas, iremos colocar um sinal de “-” antes dos números.</p>
 <p>Por exemplo, se queremos excluir as linhas 10, 11 e 12 do dataset e excluir a coluna 4, o comando será:</p>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb263-1" title="1">subset_iris2&lt;-iris[<span class="op">-</span>(<span class="dv">10</span><span class="op">:</span><span class="dv">12</span>),<span class="op">-</span><span class="dv">4</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb266-1" title="1">subset_iris2&lt;-iris[<span class="op">-</span>(<span class="dv">10</span><span class="op">:</span><span class="dv">12</span>),<span class="op">-</span><span class="dv">4</span>]</a></code></pre></div>
 <p>E, da mesma forma, se queremos excluir linhas e colunas salteadas, colocamos os números dentro da função de vetor c().</p>
-<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb264-1" title="1">subset_iris2&lt;-iris[<span class="op">-</span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">50</span>,<span class="dv">90</span>),<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</a></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb267-1" title="1">subset_iris2&lt;-iris[<span class="op">-</span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">50</span>,<span class="dv">90</span>),<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</a></code></pre></div>
 <p>Então, o comando acima retornou o dataset <strong>iris</strong> sem as linhas 10, 50 e 90 e também excluiu as colunas 1 e 3.</p>
 </div>
 <div id="filtro-de-dados-combinando-a-função-which" class="section level3">
@@ -569,7 +569,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Antes de aplicar o filtro, vou explicar rapidamente como funciona a lógica da função <em>which()</em>.</p>
 <p>A função <em>which()</em> irá retornar um vetor com o número das linhas que atendem a condição que você estabeleceu.</p>
 <p>Por exemplo:</p>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb265-1" title="1"><span class="kw">which</span>(iris<span class="op">$</span>Sepal.Length<span class="op">&gt;</span><span class="dv">6</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb268-1" title="1"><span class="kw">which</span>(iris<span class="op">$</span>Sepal.Length<span class="op">&gt;</span><span class="dv">6</span>)</a></code></pre></div>
 <pre><code>##  [1]  51  52  53  55  57  59  64  66  69  72  73  74  75  76  77  78  87  88  92
 ## [20]  98 101 103 104 105 106 108 109 110 111 112 113 116 117 118 119 121 123 124
 ## [39] 125 126 127 128 129 130 131 132 133 134 135 136 137 138 140 141 142 144 145
@@ -577,7 +577,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>O comando acima irá retornar todas as linhas do dataset <em>iris</em> que possuem um valor maior que 6 para a coluna Sepal.Length.</p>
 <p>Se o comando irá retornar um vetor com todas as linhas que queremos escolher, podemos adaptar a função _which() no 1º método falado aqui e selecionar as linhas que precisamos.</p>
 <p>Ou seja:</p>
-<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb267-1" title="1">subset_iris3&lt;-iris[<span class="kw">which</span>(iris<span class="op">$</span>Sepal.Length<span class="op">&gt;</span><span class="dv">6</span>),]</a></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb270-1" title="1">subset_iris3&lt;-iris[<span class="kw">which</span>(iris<span class="op">$</span>Sepal.Length<span class="op">&gt;</span><span class="dv">6</span>),]</a></code></pre></div>
 </div>
 <div id="filtro-de-dados-usando-a-função-subset" class="section level3">
 <h3><span class="header-section-number">11.1.12</span> Filtro de dados usando a função subset()</h3>
@@ -590,17 +590,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Vamos supor que a gente deseje montar um novo dataset chamado “setosa”.</p>
 <p>Nele, vamos filtrar apenas os registros do dataset <strong>iris</strong> que tenham a variável “Species” igual a “setosa”.</p>
 <p>Vou escolher também só as 3 primeiras colunas para o meu novo dataset.</p>
-<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb268-1" title="1">setosa_dataset&lt;-<span class="kw">subset</span>(iris,Species<span class="op">==</span><span class="st">&quot;setosa&quot;</span>,<span class="dt">select =</span> <span class="kw">c</span>(<span class="st">&quot;Sepal.Length&quot;</span>,<span class="st">&quot;Sepal.Width&quot;</span>,<span class="st">&quot;Petal.Length&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb271-1" title="1">setosa_dataset&lt;-<span class="kw">subset</span>(iris,Species<span class="op">==</span><span class="st">&quot;setosa&quot;</span>,<span class="dt">select =</span> <span class="kw">c</span>(<span class="st">&quot;Sepal.Length&quot;</span>,<span class="st">&quot;Sepal.Width&quot;</span>,<span class="st">&quot;Petal.Length&quot;</span>))</a></code></pre></div>
 <p>OU</p>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb269-1" title="1">setosa_dataset&lt;-<span class="kw">subset</span>(iris,Species<span class="op">==</span><span class="st">&quot;setosa&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb272-1" title="1">setosa_dataset&lt;-<span class="kw">subset</span>(iris,Species<span class="op">==</span><span class="st">&quot;setosa&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</a></code></pre></div>
 <p>Caso você não queira excluir nenhuma coluna, não coloque o último argumento:</p>
-<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb270-1" title="1">setosa_dataset&lt;-<span class="kw">subset</span>(iris,Species<span class="op">==</span><span class="st">&quot;setosa&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb273-1" title="1">setosa_dataset&lt;-<span class="kw">subset</span>(iris,Species<span class="op">==</span><span class="st">&quot;setosa&quot;</span>)</a></code></pre></div>
 </div>
 <div id="filtrar-usando-a-função-filter-e-select" class="section level3">
 <h3><span class="header-section-number">11.1.13</span> Filtrar usando a função filter() e select()</h3>
 <p>As funções <em>filter</em> e <em>select</em> fazem parte da biblioteca <strong>dplyr</strong>.</p>
 <p>Esse pacote é essencial para manipulação de dados. Então, se você ainda tem ele no R, baixe agora mesmo usando o comando:</p>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb271-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb274-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</a></code></pre></div>
 <p>Para carregar o pacote, você precisar rodar o comando <code>library(dplyr)</code></p>
 <p><strong>É importante saber que você irá usar o comando “filter” para filtrar as LINHAS e o comando “select” para selecionar as COLUNAS.</strong></p>
 <ul>
@@ -611,15 +611,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 -&gt; Quais as condições para filtrar os dados</p>
 <p>Vamos filtrar aqui novamente de acordo com a variável “Species” do dataset iris.</p>
 <p>Agora vou filtrar todos os registros da espécie “virginica”.</p>
-<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb272-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb272-2" title="2">virginica_dataset&lt;-<span class="kw">filter</span>(iris,Species<span class="op">==</span><span class="st">&quot;virginica&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb275-1" title="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb275-2" title="2">virginica_dataset&lt;-<span class="kw">filter</span>(iris,Species<span class="op">==</span><span class="st">&quot;virginica&quot;</span>)</a></code></pre></div>
 <p>Bem simples! Mas e se a gente quiser combinar mais de uma condição?</p>
 <p>Nesse caso, podemos usar dois <strong>operadores lógicos</strong> para combinar as condições: E e OU.</p>
 <p>Caso a gente precise que as duas condições aconteçam ao mesmo tempo, usaremos a condição E (representada pelo &amp;)</p>
 <p>Caso a gente precise que aconteça uma condição OU a outra, usaremos a condição OU (representada pelo |) - nesse caso, só excluiremos caso não aconteça nenhuma das duas condições.</p>
 <p>Vamos supor que precisamos filtrar os registros da espécie “versicolor” <strong>e</strong> que tenham a variável “Sepal.Length” maior que 6.</p>
-<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb273-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb273-2" title="2">versicolor_dataset&lt;-<span class="kw">filter</span>(iris,Species<span class="op">==</span><span class="st">&quot;versicolor&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Sepal.Length<span class="op">&gt;</span><span class="dv">6</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb276-1" title="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb276-2" title="2">versicolor_dataset&lt;-<span class="kw">filter</span>(iris,Species<span class="op">==</span><span class="st">&quot;versicolor&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Sepal.Length<span class="op">&gt;</span><span class="dv">6</span>)</a></code></pre></div>
 <ul>
 <li>Função select()</li>
 </ul>
@@ -628,8 +628,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>O primeiro argumento também será o dataset que você irá selecionar as colunas.</p>
 <p>O segundo argumento é a coluna que deseja selecionar. Claro que você pode querer selecionar várias colunas, não tem problema. Veja só:</p>
 <p>Vamos selecionar as colunas Sepal.Length e Species do dataset iris.</p>
-<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb274-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb274-2" title="2">select_dataset&lt;-<span class="kw">select</span>(iris,Sepal.Length,Species)</a></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb277-1" title="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb277-2" title="2">select_dataset&lt;-<span class="kw">select</span>(iris,Sepal.Length,Species)</a></code></pre></div>
 <p>Então esse comando irá salvar no “select_dataset” todas as linhas do dataset iris, mas apenas as colunas que você selecionou.</p>
 <p>Espero que essas 5 formas de filtrar as linhas e colunas de seus datasets sejam bem úteis na sua manipulação dos dados e até a próxima! :)</p>
 

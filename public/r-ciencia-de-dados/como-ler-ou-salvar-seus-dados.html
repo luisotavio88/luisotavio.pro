@@ -350,6 +350,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>1 – Abra o seu arquivo de Excel, selecione os dados que deseja copiar e copie os dados (Ctrl + C).</p>
 <p>2 – Execute o código abaixo para importar os dados copiados no Excel.</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="dt">file =</span> <span class="st">&quot;clipboard&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## Warning in read.table(file = &quot;clipboard&quot;, sep = &quot;\t&quot;, header = TRUE): incomplete
+## final line found by readTableHeader on &#39;clipboard&#39;</code></pre>
 <p>Quando copiamos os dados no Excel, eles ficam armazenados no clipboard do nosso computador, então o que estamos fazendo é falando para o R ler a tabela (função read.table) que estão no clipboard e atribuir essa tabela aos “meus_dados”.</p>
 <p>3 – Pronto!</p>
 </div>
@@ -378,9 +380,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">5.2.3</span> Abrir os dados do Excel no R usando o pacote readxl</h3>
 <p>Esse método é bem parecido com o último, porém aqui vamos usar linhas de código.</p>
 <p>1 - Caso você ainda não tenha instalado o pacote <code>readxl</code>, execute o seguinte comando:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
 <p>2 - Vamos carregar o pacote que iremos usar (<code>readxl</code>): Execute o comando:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
 <p>3 – Agora vamos buscar a planilha que você precisa usando a função <code>read_excel</code>.</p>
 <p>Os argumentos que vamos usar na função são:</p>
 <ul>
@@ -388,7 +390,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>a aba da planilha que você quer ler.</li>
 </ul>
 <p>Excute o código:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;seu_arquivo.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="st">&quot;nome da aba&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;seu_arquivo.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="st">&quot;nome da aba&quot;</span>)</a></code></pre></div>
 <ul>
 <li><p>caso o seu arquivo esteja na mesma pasta do seu projeto, você não precisa colocar todo o endereço do arquivo.</p></li>
 <li><p>em <em>sheet</em> você pode colocar o nome da aba do Excel que você quer ler ou seu número (1, 2, 3, etc). Caso você coloque o número, não use aspas.</p></li>

@@ -170,7 +170,7 @@ boa renda para que eu pudesse me sustentar.
 
 No mesmo mês que formei na faculdade veio a minha primeira aprovação:
 Oficial ESTATÍSTICO da Força Aérea Brasileira. Servi à Aeronáutica por
-11 meses. Nese período, trabalhei no Centro de Inteligência da
+11 meses. Nesse período, trabalhei no Centro de Inteligência da
 Aeronáutica coordenando os cursos de Inteligência.
 
 Em 2012, fui trabalhar no Tribunal Regional Eleitoral de São Paulo
@@ -1184,6 +1184,11 @@ copie os dados (Ctrl + C).
 \NormalTok{meus_dados <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\DataTypeTok{file =} \StringTok{"clipboard"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+## Warning in read.table(file = "clipboard", sep = "\t", header = TRUE): incomplete
+## final line found by readTableHeader on 'clipboard'
+\end{verbatim}
 
 Quando copiamos os dados no Excel, eles ficam armazenados no clipboard
 do nosso computador, então o que estamos fazendo é falando para o R ler
@@ -3215,9 +3220,16 @@ for menor do que determinado valor.
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.2426597
-## [1] 0.0854197
-## [1] 1.600015
+## [1] 0.4668909
+## [1] 0.2536649
+## [1] 0.1146128
+## [1] 0.6129281
+## [1] -1.756469
+## [1] 0.762088
+## [1] -1.196979
+## [1] -0.5231492
+## [1] -1.376183
+## [1] 1.988365
 \end{verbatim}
 
 A condição para o looping acontecer é que o valor de \texttt{i} seja

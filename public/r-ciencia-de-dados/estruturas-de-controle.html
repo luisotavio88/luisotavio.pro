@@ -305,18 +305,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Além disso, essa variável irá percorrer uma sequência, definida por você.</p>
 <p>Veja na prática:</p>
 <p>Vamos criar um vetor que irá receber o valor do dobro de sua posição. Esse vetor irá ter tamanho igual a 10.</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb183-1" title="1">nosso_vetor&lt;-<span class="kw">c</span>()     <span class="co">#criei o &#39;nosso_vetor&#39;</span></a>
-<a class="sourceLine" id="cb183-2" title="2"><span class="cf">for</span>(posicao <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){ <span class="co">#a nossa variável auxiliar é a &#39;posicao&#39;. Ela irá percorrer o vetor 1:10.</span></a>
-<a class="sourceLine" id="cb183-3" title="3">                      <span class="co">#O vetor 1:10 é a mesma coisa que criar um vetor com todos os números de 1 a 10.</span></a>
-<a class="sourceLine" id="cb183-4" title="4">                      <span class="co">#O primeiro valor para a variável &#39;posicao&#39; será 1, depois 2 até o último valor que é 10.</span></a>
-<a class="sourceLine" id="cb183-5" title="5">  nosso_vetor[posicao]&lt;-<span class="dv">2</span><span class="op">*</span>posicao  <span class="co">#O vetor &#39;nosso_vetor&#39; irá receber o dobro de sua posição.</span></a>
-<a class="sourceLine" id="cb183-6" title="6">}</a></code></pre></div>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb184-1" title="1">nosso_vetor</a></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb184-1" title="1">nosso_vetor&lt;-<span class="kw">c</span>()     <span class="co">#criei o &#39;nosso_vetor&#39;</span></a>
+<a class="sourceLine" id="cb184-2" title="2"><span class="cf">for</span>(posicao <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){ <span class="co">#a nossa variável auxiliar é a &#39;posicao&#39;. Ela irá percorrer o vetor 1:10.</span></a>
+<a class="sourceLine" id="cb184-3" title="3">                      <span class="co">#O vetor 1:10 é a mesma coisa que criar um vetor com todos os números de 1 a 10.</span></a>
+<a class="sourceLine" id="cb184-4" title="4">                      <span class="co">#O primeiro valor para a variável &#39;posicao&#39; será 1, depois 2 até o último valor que é 10.</span></a>
+<a class="sourceLine" id="cb184-5" title="5">  nosso_vetor[posicao]&lt;-<span class="dv">2</span><span class="op">*</span>posicao  <span class="co">#O vetor &#39;nosso_vetor&#39; irá receber o dobro de sua posição.</span></a>
+<a class="sourceLine" id="cb184-6" title="6">}</a></code></pre></div>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb185-1" title="1">nosso_vetor</a></code></pre></div>
 <pre><code>##  [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
 <p>Outro exemplo:</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb186-1" title="1"><span class="cf">for</span>(auxiliar <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</a>
-<a class="sourceLine" id="cb186-2" title="2">  <span class="kw">print</span>(nosso_vetor[auxiliar])</a>
-<a class="sourceLine" id="cb186-3" title="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb187-1" title="1"><span class="cf">for</span>(auxiliar <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</a>
+<a class="sourceLine" id="cb187-2" title="2">  <span class="kw">print</span>(nosso_vetor[auxiliar])</a>
+<a class="sourceLine" id="cb187-3" title="3">}</a></code></pre></div>
 <pre><code>## [1] 2
 ## [1] 4
 ## [1] 6
@@ -330,25 +330,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>No exemplo acima, a nossa variável <strong>auxiliar</strong> também irá percorrer a sequência 1, 2, 3, 4, 5, 6, 7, 8, 9 e 10.</p>
 <p>A tarefa a ser repetida é imprimir o elemento dentro do ‘nosso_vetor’ que está posicionado no valor da variável ‘auxiliar’. A variável irá percorrer o looping começando com valor igual a 1 e irá até o valor 10.</p>
 <p>Ou seja, o que o looping faz é exatamente equivalente ao código:</p>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb188-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb189-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">1</span>])</a></code></pre></div>
 <pre><code>## [1] 2</code></pre>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb190-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">2</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb191-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">2</span>])</a></code></pre></div>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb192-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">3</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb193-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">3</span>])</a></code></pre></div>
 <pre><code>## [1] 6</code></pre>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb194-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">4</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb195-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">4</span>])</a></code></pre></div>
 <pre><code>## [1] 8</code></pre>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb196-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">5</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb197-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">5</span>])</a></code></pre></div>
 <pre><code>## [1] 10</code></pre>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb198-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">6</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb199-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">6</span>])</a></code></pre></div>
 <pre><code>## [1] 12</code></pre>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb200-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">7</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb201-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">7</span>])</a></code></pre></div>
 <pre><code>## [1] 14</code></pre>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb202-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">8</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb203-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">8</span>])</a></code></pre></div>
 <pre><code>## [1] 16</code></pre>
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb204-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">9</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb205-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">9</span>])</a></code></pre></div>
 <pre><code>## [1] 18</code></pre>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb206-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">10</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb207-1" title="1"><span class="kw">print</span>(nosso_vetor[<span class="dv">10</span>])</a></code></pre></div>
 <pre><code>## [1] 20</code></pre>
 </div>
 <div id="while" class="section level2">
@@ -356,24 +356,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Note que na função <code>for</code> a variável auxiliar segue uma sequência já definida antes do início do looping.</p>
 <p>Porém, em alguns casos, vai ser mais interessante manter o looping rodando <strong>enquanto</strong> alguma condição ainda não foi atendida. <strong>Para isso usaremos a função <code>while</code>.</strong></p>
 <p>Esse é o caso, por exemplo, de um modelo de previsões que irá sofrer um número indefinido de iterações e só irá encerrar o looping quando o erro for menor do que determinado valor.</p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb208-1" title="1">i&lt;-<span class="dv">0</span></a>
-<a class="sourceLine" id="cb208-2" title="2"><span class="cf">while</span>(i <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>){</a>
-<a class="sourceLine" id="cb208-3" title="3">  i&lt;-<span class="kw">rnorm</span>(<span class="dv">1</span>) <span class="co">#a função rnorm(1) irá gerar 1 número aleatório com a distribuição normal padrão.</span></a>
-<a class="sourceLine" id="cb208-4" title="4">  <span class="kw">print</span>(i)    <span class="co">#a função print(i) irá imprimir o valor atribuído a i na linha anterior.</span></a>
-<a class="sourceLine" id="cb208-5" title="5">}</a></code></pre></div>
-<pre><code>## [1] -1.671866
-## [1] -0.3904452
-## [1] -1.713887
-## [1] 0.7734496
-## [1] 0.14275
-## [1] 0.1809883
-## [1] 0.5129908
-## [1] 0.01566023
-## [1] 0.7922378
-## [1] -0.3022847
-## [1] -1.320834
-## [1] 0.4710306
-## [1] 1.546175</code></pre>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" title="1">i&lt;-<span class="dv">0</span></a>
+<a class="sourceLine" id="cb209-2" title="2"><span class="cf">while</span>(i <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>){</a>
+<a class="sourceLine" id="cb209-3" title="3">  i&lt;-<span class="kw">rnorm</span>(<span class="dv">1</span>) <span class="co">#a função rnorm(1) irá gerar 1 número aleatório com a distribuição normal padrão.</span></a>
+<a class="sourceLine" id="cb209-4" title="4">  <span class="kw">print</span>(i)    <span class="co">#a função print(i) irá imprimir o valor atribuído a i na linha anterior.</span></a>
+<a class="sourceLine" id="cb209-5" title="5">}</a></code></pre></div>
+<pre><code>## [1] -0.9480166
+## [1] -0.9415281
+## [1] -1.72045
+## [1] 0.2731488
+## [1] 0.5847589
+## [1] 0.7584737
+## [1] 0.5932508
+## [1] -1.172379
+## [1] -1.397412
+## [1] -1.028685
+## [1] -0.001924863
+## [1] -0.5478453
+## [1] -0.9065234
+## [1] -0.08814073
+## [1] -0.3088206
+## [1] -0.07925841
+## [1] 0.1243463
+## [1] 2.967134</code></pre>
 <p>A condição para o looping acontecer é que o valor de <code>i</code> seja menor do que 1.</p>
 <p>A cada nova interação, o valor de <code>i</code> é atualizado por um novo valor.</p>
 <p>A função <code>print(i)</code> imprime o valor atribuído ao elemento <code>i</code>.</p>
@@ -386,31 +391,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Caso a condição estabelecida seja atendida (TRUE), será seguido o roteiro estabelecido quando a condição for verdadeira. Caso a condição não seja atendida (FALSE), será seguido outro roteiro.</p>
 <p>Nesse item, vamos utilizar as funções <code>if</code> e <code>else</code> separadas, primeiro uma e depois a outra.</p>
 <p>O exemplo abaixo, vamos criar a condição lógica <code>a &lt; b</code>. Portanto, se <strong>a</strong> for menor que <strong>b</strong>, a condição lógica será verdadeira e a parte seguinte do código será executada:</p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb210-1" title="1">a&lt;-<span class="dv">2</span></a>
-<a class="sourceLine" id="cb210-2" title="2">b&lt;-<span class="dv">5</span></a>
-<a class="sourceLine" id="cb210-3" title="3"><span class="cf">if</span>(a <span class="op">&lt;</span><span class="st"> </span>b){</a>
-<a class="sourceLine" id="cb210-4" title="4">  <span class="kw">print</span>(<span class="st">&quot;Condição verdadeira. &#39;a&#39; é menor que &#39;b&#39;&quot;</span>)</a>
-<a class="sourceLine" id="cb210-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb211-1" title="1">a&lt;-<span class="dv">2</span></a>
+<a class="sourceLine" id="cb211-2" title="2">b&lt;-<span class="dv">5</span></a>
+<a class="sourceLine" id="cb211-3" title="3"><span class="cf">if</span>(a <span class="op">&lt;</span><span class="st"> </span>b){</a>
+<a class="sourceLine" id="cb211-4" title="4">  <span class="kw">print</span>(<span class="st">&quot;Condição verdadeira. &#39;a&#39; é menor que &#39;b&#39;&quot;</span>)</a>
+<a class="sourceLine" id="cb211-5" title="5">}</a></code></pre></div>
 <pre><code>## [1] &quot;Condição verdadeira. &#39;a&#39; é menor que &#39;b&#39;&quot;</code></pre>
 <p>Agora, vamos adicionar a função <code>else</code> que é simplesmente o SENÃO. Caso a condição lógica seja FALSA, o <em>script</em> contido dentro da função <code>else</code> é executado.</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb212-1" title="1"><span class="cf">if</span>(a <span class="op">&gt;</span><span class="st"> </span>b){ <span class="co">#a condição lógica foi invertida e será FALSA</span></a>
-<a class="sourceLine" id="cb212-2" title="2">    <span class="kw">print</span>(<span class="st">&quot;Condição verdadeira. &#39;a&#39; é maior que &#39;b&#39;&quot;</span>)</a>
-<a class="sourceLine" id="cb212-3" title="3">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb212-4" title="4">      <span class="kw">print</span>(<span class="st">&quot;Condição falsa. &#39;a&#39; não é maior que &#39;b&#39;&quot;</span>)</a>
-<a class="sourceLine" id="cb212-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb213-1" title="1"><span class="cf">if</span>(a <span class="op">&gt;</span><span class="st"> </span>b){ <span class="co">#a condição lógica foi invertida e será FALSA</span></a>
+<a class="sourceLine" id="cb213-2" title="2">    <span class="kw">print</span>(<span class="st">&quot;Condição verdadeira. &#39;a&#39; é maior que &#39;b&#39;&quot;</span>)</a>
+<a class="sourceLine" id="cb213-3" title="3">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb213-4" title="4">      <span class="kw">print</span>(<span class="st">&quot;Condição falsa. &#39;a&#39; não é maior que &#39;b&#39;&quot;</span>)</a>
+<a class="sourceLine" id="cb213-5" title="5">}</a></code></pre></div>
 <pre><code>## [1] &quot;Condição falsa. &#39;a&#39; não é maior que &#39;b&#39;&quot;</code></pre>
 <p>O uso da função <code>else</code> é opicional. Caso ela não esteja presente, nada irá acontecer quando a condição lógica não for atendida.</p>
 <p>Repare que as duas formas apresentadas seguem os padrões:</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb214-1" title="1"><span class="co">## if</span></a>
-<a class="sourceLine" id="cb214-2" title="2"><span class="cf">if</span>(condicao_logica){ <span class="co">#a condição lógica deve ser sempre TRUE ou FALSE</span></a>
-<a class="sourceLine" id="cb214-3" title="3">  <span class="co">#SCRIPT CASO A CONDIÇÃO FOR ATENTIDA</span></a>
-<a class="sourceLine" id="cb214-4" title="4">}</a></code></pre></div>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb215-1" title="1"><span class="co">## if - else</span></a>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb215-1" title="1"><span class="co">## if</span></a>
 <a class="sourceLine" id="cb215-2" title="2"><span class="cf">if</span>(condicao_logica){ <span class="co">#a condição lógica deve ser sempre TRUE ou FALSE</span></a>
-<a class="sourceLine" id="cb215-3" title="3">  <span class="co">#SCRIPT CASO A CONDIÇÃO FOR ATENTIDA (TRUE)</span></a>
-<a class="sourceLine" id="cb215-4" title="4">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb215-5" title="5">    <span class="co">#SCRIPT CASO A CONDIÇÃO NÃO FOR ATENTIDA (FALSE)</span></a>
-<a class="sourceLine" id="cb215-6" title="6">}</a></code></pre></div>
+<a class="sourceLine" id="cb215-3" title="3">  <span class="co">#SCRIPT CASO A CONDIÇÃO FOR ATENTIDA</span></a>
+<a class="sourceLine" id="cb215-4" title="4">}</a></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb216-1" title="1"><span class="co">## if - else</span></a>
+<a class="sourceLine" id="cb216-2" title="2"><span class="cf">if</span>(condicao_logica){ <span class="co">#a condição lógica deve ser sempre TRUE ou FALSE</span></a>
+<a class="sourceLine" id="cb216-3" title="3">  <span class="co">#SCRIPT CASO A CONDIÇÃO FOR ATENTIDA (TRUE)</span></a>
+<a class="sourceLine" id="cb216-4" title="4">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb216-5" title="5">    <span class="co">#SCRIPT CASO A CONDIÇÃO NÃO FOR ATENTIDA (FALSE)</span></a>
+<a class="sourceLine" id="cb216-6" title="6">}</a></code></pre></div>
 </div>
 <div id="ifelse" class="section level2">
 <h2><span class="header-section-number">9.4</span> ifelse</h2>
@@ -421,26 +426,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Porém, a diferença é que a função ifelse é aplicada a um <strong>vetor</strong>. Isso a torna extremamente útil e facilitará a nossa vida em alguns casos.</p>
 <p>Exemplo:</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb216-1" title="1">vetor&lt;-<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">50</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">25</span>)</a>
-<a class="sourceLine" id="cb216-2" title="2"></a>
-<a class="sourceLine" id="cb216-3" title="3">vetor2 &lt;-<span class="st"> </span><span class="kw">ifelse</span>(vetor<span class="op">&lt;</span><span class="dv">10</span>,<span class="st">&quot;menor&quot;</span>,<span class="st">&quot;MAIOR&quot;</span>)</a>
-<a class="sourceLine" id="cb216-4" title="4"></a>
-<a class="sourceLine" id="cb216-5" title="5">vetor2</a></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb217-1" title="1">vetor&lt;-<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">50</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">25</span>)</a>
+<a class="sourceLine" id="cb217-2" title="2"></a>
+<a class="sourceLine" id="cb217-3" title="3">vetor2 &lt;-<span class="st"> </span><span class="kw">ifelse</span>(vetor<span class="op">&lt;</span><span class="dv">10</span>,<span class="st">&quot;menor&quot;</span>,<span class="st">&quot;MAIOR&quot;</span>)</a>
+<a class="sourceLine" id="cb217-4" title="4"></a>
+<a class="sourceLine" id="cb217-5" title="5">vetor2</a></code></pre></div>
 <pre><code>## [1] &quot;menor&quot; &quot;MAIOR&quot; &quot;menor&quot; &quot;MAIOR&quot; &quot;menor&quot; &quot;MAIOR&quot; &quot;menor&quot; &quot;menor&quot; &quot;MAIOR&quot;</code></pre>
 <p>A solução acima não pode ser aplicada ao método if-else ensinado no item anterior.</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb218-1" title="1"><span class="cf">if</span>(vetor<span class="op">&lt;</span><span class="dv">10</span>){</a>
-<a class="sourceLine" id="cb218-2" title="2">  vetor2&lt;-<span class="st">&quot;menor&quot;</span></a>
-<a class="sourceLine" id="cb218-3" title="3">}<span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb218-4" title="4">  vetor2&lt;-<span class="st">&quot;MAIOR&quot;</span></a>
-<a class="sourceLine" id="cb218-5" title="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb219-1" title="1"><span class="cf">if</span>(vetor<span class="op">&lt;</span><span class="dv">10</span>){</a>
+<a class="sourceLine" id="cb219-2" title="2">  vetor2&lt;-<span class="st">&quot;menor&quot;</span></a>
+<a class="sourceLine" id="cb219-3" title="3">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb219-4" title="4">  vetor2&lt;-<span class="st">&quot;MAIOR&quot;</span></a>
+<a class="sourceLine" id="cb219-5" title="5">}</a></code></pre></div>
 <pre><code>## Warning in if (vetor &lt; 10) {: a condição tem comprimento &gt; 1 e somente o
 ## primeiro elemento será usado</code></pre>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb220-1" title="1">vetor2  </a></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb221-1" title="1">vetor2  </a></code></pre></div>
 <pre><code>## [1] &quot;menor&quot;</code></pre>
 <p><strong>Portanto, caso precise usar uma função condicional para vetores, a função <code>ifelse</code> é uma das opções que você deve considerar.</strong></p>
 <p>Lembre-se também que caso você esteja trabalhando com um <em>data frame</em>, cada coluna de seu <em>data frame</em> pode ser tratada como um vetor.</p>
 <p>A seguir vamos criar uma nova coluna em um <em>data frame</em> baseada em uma condição lógica:</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb222-1" title="1"><span class="kw">head</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb223-1" title="1"><span class="kw">head</span>(mtcars)</a></code></pre></div>
 <pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
 ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
@@ -448,12 +453,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" title="1"><span class="co"># Suponha que o objetivo seja criar duas categorias de carros, os que gastam muito combustível e os que gastam pouco.</span></a>
-<a class="sourceLine" id="cb224-2" title="2"><span class="co"># para isso, vamos usar a variável mpg (milhas por galão).</span></a>
-<a class="sourceLine" id="cb224-3" title="3"></a>
-<a class="sourceLine" id="cb224-4" title="4">mtcars<span class="op">$</span>consumo_combustivel&lt;-<span class="kw">ifelse</span>(mtcars<span class="op">$</span>mpg<span class="op">&lt;</span><span class="dv">20</span>,<span class="st">&quot;Bebe muito&quot;</span>,<span class="st">&quot;Bebe pouco&quot;</span>)</a>
-<a class="sourceLine" id="cb224-5" title="5"></a>
-<a class="sourceLine" id="cb224-6" title="6"><span class="kw">head</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" title="1"><span class="co"># Suponha que o objetivo seja criar duas categorias de carros, os que gastam muito combustível e os que gastam pouco.</span></a>
+<a class="sourceLine" id="cb225-2" title="2"><span class="co"># para isso, vamos usar a variável mpg (milhas por galão).</span></a>
+<a class="sourceLine" id="cb225-3" title="3"></a>
+<a class="sourceLine" id="cb225-4" title="4">mtcars<span class="op">$</span>consumo_combustivel&lt;-<span class="kw">ifelse</span>(mtcars<span class="op">$</span>mpg<span class="op">&lt;</span><span class="dv">20</span>,<span class="st">&quot;Bebe muito&quot;</span>,<span class="st">&quot;Bebe pouco&quot;</span>)</a>
+<a class="sourceLine" id="cb225-5" title="5"></a>
+<a class="sourceLine" id="cb225-6" title="6"><span class="kw">head</span>(mtcars)</a></code></pre></div>
 <pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
 ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4

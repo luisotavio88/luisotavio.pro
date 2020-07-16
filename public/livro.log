@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.3)  3 JUL 2020 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.3)  16 JUL 2020 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -594,20 +594,25 @@ T1/lmr/m/n/10 25
  []
 
 [25 <./imagens/5_importacao3.png>] [26]
+Overfull \hbox (90.74873pt too wide) in paragraph at lines 1191--1191
+[]\T1/lmtt/m/n/10 ## Warning in read.table(file = "clipboard", sep = "\t", head
+er = TRUE): incomplete[] 
+ []
+
 <imagens/5_excel1.png, id=209, 418.56375pt x 213.79875pt>
 File: imagens/5_excel1.png Graphic file (type png)
 <use imagens/5_excel1.png>
-Package pdftex.def Info: imagens/5_excel1.png  used on input line 1207.
+Package pdftex.def Info: imagens/5_excel1.png  used on input line 1212.
 (pdftex.def)             Requested size: 345.0pt x 176.22302pt.
 <imagens/5_excel2.png, id=210, 356.83313pt x 122.70844pt>
 File: imagens/5_excel2.png Graphic file (type png)
 <use imagens/5_excel2.png>
-Package pdftex.def Info: imagens/5_excel2.png  used on input line 1217.
+Package pdftex.def Info: imagens/5_excel2.png  used on input line 1222.
 (pdftex.def)             Requested size: 345.01697pt x 118.64507pt.
 <imagens/5_excel3.png, id=211, 1025.0295pt x 513.71925pt>
 File: imagens/5_excel3.png Graphic file (type png)
 <use imagens/5_excel3.png>
-Package pdftex.def Info: imagens/5_excel3.png  used on input line 1231.
+Package pdftex.def Info: imagens/5_excel3.png  used on input line 1236.
 (pdftex.def)             Requested size: 345.0019pt x 172.90636pt.
 [27 <./imagens/5_excel1.png>] [28 <./imagens/5_excel2.png> <./imagens/5_excel3.
 png>] [29] [30
@@ -615,139 +620,139 @@ png>] [29] [30
 ] [31] [32] [33] [34] [35] [36] [37] [38] [39
 
 ] [40] [41] [42] [43] [44] [45] [46] [47]
-Overfull \hbox (59.24883pt too wide) in paragraph at lines 2316--2316
+Overfull \hbox (59.24883pt too wide) in paragraph at lines 2321--2321
 []\T1/lmtt/m/n/10 ##  [1] "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"
    "am"   "gear"[] 
  []
 
 
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 2341--2341
 []\T1/lmtt/m/n/10 ##                    mpg cilindros disp cavalos drat    wt  
 qsec vs am gear carb[] 
  []
 
 
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 2341--2341
 []\T1/lmtt/m/n/10 ## Mazda RX4         21.0         6  160     110 3.90 2.620 1
 6.46  0  1    4    4[] 
  []
 
 
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 2341--2341
 []\T1/lmtt/m/n/10 ## Mazda RX4 Wag     21.0         6  160     110 3.90 2.875 1
 7.02  0  1    4    4[] 
  []
 
 
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 2341--2341
 []\T1/lmtt/m/n/10 ## Datsun 710        22.8         4  108      93 3.85 2.320 1
 8.61  1  1    4    1[] 
  []
 
 
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 2341--2341
 []\T1/lmtt/m/n/10 ## Hornet 4 Drive    21.4         6  258     110 3.08 3.215 1
 9.44  1  0    3    1[] 
  []
 
 
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 2341--2341
 []\T1/lmtt/m/n/10 ## Hornet Sportabout 18.7         8  360     175 3.15 3.440 1
 7.02  0  0    3    2[] 
  []
 
 
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 2336--2336
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 2341--2341
 []\T1/lmtt/m/n/10 ## Valiant           18.1         6  225     105 2.76 3.460 2
 0.22  1  0    3    1[] 
  []
 
 [48] [49]
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 2452--2452
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 2457--2457
 []\T1/lmtt/m/n/10 ##   Sepal.Length Sepal.Width Petal.Length Petal.Width Specie
 s Preco[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 2452--2452
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 2457--2457
 []\T1/lmtt/m/n/10 ## 1          5.1         3.5          1.4         0.2  setos
 a     5[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 2452--2452
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 2457--2457
 []\T1/lmtt/m/n/10 ## 2          4.9         3.0          1.4         0.2  setos
 a     5[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 2452--2452
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 2457--2457
 []\T1/lmtt/m/n/10 ## 3          4.7         3.2          1.3         0.2  setos
 a     5[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 2452--2452
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 2457--2457
 []\T1/lmtt/m/n/10 ## 4          4.6         3.1          1.5         0.2  setos
 a     5[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 2452--2452
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 2457--2457
 []\T1/lmtt/m/n/10 ## 5          5.0         3.6          1.4         0.2  setos
 a     5[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 2452--2452
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 2457--2457
 []\T1/lmtt/m/n/10 ## 6          5.4         3.9          1.7         0.4  setos
 a     5[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2468--2468
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2473--2473
 []\T1/lmtt/m/n/10 ##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Sp
 ecies Preco[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2468--2468
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2473--2473
 []\T1/lmtt/m/n/10 ## 145          6.7         3.3          5.7         2.5 virg
 inica    15[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2468--2468
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2473--2473
 []\T1/lmtt/m/n/10 ## 146          6.7         3.0          5.2         2.3 virg
 inica    15[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2468--2468
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2473--2473
 []\T1/lmtt/m/n/10 ## 147          6.3         2.5          5.0         1.9 virg
 inica    15[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2468--2468
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2473--2473
 []\T1/lmtt/m/n/10 ## 148          6.5         3.0          5.2         2.0 virg
 inica    15[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2468--2468
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2473--2473
 []\T1/lmtt/m/n/10 ## 149          6.2         3.4          5.4         2.3 virg
 inica    15[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2468--2468
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2473--2473
 []\T1/lmtt/m/n/10 ## 150          5.9         3.0          5.1         1.8 virg
 inica    15[] 
  []
 
 
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 2484--2488
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 2489--2493
 \T1/lmtt/m/n/10 left_join(tabela1,tabela2,by = c("variavel_comum_1","variavel_c
 omum_2")) 
  []
@@ -757,97 +762,97 @@ omum_2"))
 ] [53] [54] [55] [56] [57] [58] [59] [60
 
 ] [61] [62] [63] [64] [65]
-Overfull \hbox (64.49881pt too wide) in paragraph at lines 3349--3349
+Overfull \hbox (64.49881pt too wide) in paragraph at lines 3361--3361
 []\T1/lmtt/m/n/10 ## [1] "menor" "MAIOR" "menor" "MAIOR" "menor" "MAIOR" "menor
 " "menor" "MAIOR"[] 
  []
 
 
-Overfull \hbox (48.74886pt too wide) in paragraph at lines 3367--3367
+Overfull \hbox (48.74886pt too wide) in paragraph at lines 3379--3379
 []\T1/lmtt/m/n/10 ## Warning in if (vetor < 10) {: a condição tem comprimento >
  1 e somente o[] 
  []
 
-
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3403--3403
+[66]
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3415--3415
 []\T1/lmtt/m/n/10 ##                    mpg cyl disp  hp drat    wt  qsec vs am
  gear carb[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3403--3403
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3415--3415
 []\T1/lmtt/m/n/10 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1
     4    4[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3403--3403
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3415--3415
 []\T1/lmtt/m/n/10 ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1
     4    4[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3403--3403
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3415--3415
 []\T1/lmtt/m/n/10 ## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1
     4    1[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3403--3403
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3415--3415
 []\T1/lmtt/m/n/10 ## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0
     3    1[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3403--3403
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3415--3415
 []\T1/lmtt/m/n/10 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0
     3    2[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3403--3403
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3415--3415
 []\T1/lmtt/m/n/10 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0
     3    1[] 
  []
 
-[66]
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
+
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3443--3443
 []\T1/lmtt/m/n/10 ##                    mpg cyl disp  hp drat    wt  qsec vs am
  gear carb[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3443--3443
 []\T1/lmtt/m/n/10 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1
     4    4[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3443--3443
 []\T1/lmtt/m/n/10 ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1
     4    4[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3443--3443
 []\T1/lmtt/m/n/10 ## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1
     4    1[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3443--3443
 []\T1/lmtt/m/n/10 ## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0
     3    1[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3443--3443
 []\T1/lmtt/m/n/10 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0
     3    2[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 3443--3443
 []\T1/lmtt/m/n/10 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0
     3    1[] 
  []
@@ -855,79 +860,79 @@ Overfull \hbox (27.74892pt too wide) in paragraph at lines 3431--3431
 [67] [68
 
 ]
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 3486--3486
+Overfull \hbox (53.99884pt too wide) in paragraph at lines 3498--3498
 []\T1/lmtt/m/n/10 ## [1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Wi
 dth"  "Species"[] 
  []
 
 [69]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3517--3517
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3529--3529
 []\T1/lmtt/m/n/10 ##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.
 1 ...[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 3517--3517
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 3529--3529
 []\T1/lmtt/m/n/10 ##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 
 1.5 ...[] 
  []
 
 
-Overfull \hbox (11.99896pt too wide) in paragraph at lines 3517--3517
+Overfull \hbox (11.99896pt too wide) in paragraph at lines 3529--3529
 []\T1/lmtt/m/n/10 ##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 
 0.1 ...[] 
  []
 
 
-Overfull \hbox (116.99866pt too wide) in paragraph at lines 3517--3517
+Overfull \hbox (116.99866pt too wide) in paragraph at lines 3529--3529
 []\T1/lmtt/m/n/10 ##  $ Species     : Factor w/ 3 levels "setosa","versicolor",
 ..: 1 1 1 1 1 1 1 1 1 1 ...[] 
  []
 
 [70]
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3567--3567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3579--3579
 []\T1/lmtt/m/n/10 ##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Sp
 ecies[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3567--3567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3579--3579
 []\T1/lmtt/m/n/10 ## 145          6.7         3.3          5.7         2.5 virg
 inica[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3567--3567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3579--3579
 []\T1/lmtt/m/n/10 ## 146          6.7         3.0          5.2         2.3 virg
 inica[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3567--3567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3579--3579
 []\T1/lmtt/m/n/10 ## 147          6.3         2.5          5.0         1.9 virg
 inica[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3567--3567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3579--3579
 []\T1/lmtt/m/n/10 ## 148          6.5         3.0          5.2         2.0 virg
 inica[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3567--3567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3579--3579
 []\T1/lmtt/m/n/10 ## 149          6.2         3.4          5.4         2.3 virg
 inica[] 
  []
 
 
-Overfull \hbox (1.499pt too wide) in paragraph at lines 3567--3567
+Overfull \hbox (1.499pt too wide) in paragraph at lines 3579--3579
 []\T1/lmtt/m/n/10 ## 150          5.9         3.0          5.1         1.8 virg
 inica[] 
  []
 
 [71]
-Underfull \hbox (badness 1024) in paragraph at lines 3633--3636
+Underfull \hbox (badness 1024) in paragraph at lines 3645--3648
 []\T1/lmr/m/n/10 As var-iáveis \T1/lmr/bx/n/10 numéri-cas \T1/lmr/m/n/10 do con
 -junto de da-dos \T1/lmtt/m/n/10 iris \T1/lmr/m/n/10 são: \T1/lmr/m/it/10 Sepal
 .Length\T1/lmr/m/n/10 ,
@@ -939,7 +944,7 @@ t>
 File: livro_files/figure-latex/unnamed-chunk-115-1.pdf Graphic file (type pdf)
 <use livro_files/figure-latex/unnamed-chunk-115-1.pdf>
 Package pdftex.def Info: livro_files/figure-latex/unnamed-chunk-115-1.pdf  used
- on input line 3717.
+ on input line 3729.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [73 <./livro_files/figure-latex/unnamed-chunk-115-1.pdf>]
 <livro_files/figure-latex/unnamed-chunk-116-1.pdf, id=511, 469.755pt x 325.215p
@@ -947,7 +952,7 @@ t>
 File: livro_files/figure-latex/unnamed-chunk-116-1.pdf Graphic file (type pdf)
 <use livro_files/figure-latex/unnamed-chunk-116-1.pdf>
 Package pdftex.def Info: livro_files/figure-latex/unnamed-chunk-116-1.pdf  used
- on input line 3733.
+ on input line 3745.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [74 <./livro_files/figure-latex/unnamed-chunk-116-1.pdf>] [75
 
@@ -957,7 +962,7 @@ t>
 File: livro_files/figure-latex/unnamed-chunk-119-1.pdf Graphic file (type pdf)
 <use livro_files/figure-latex/unnamed-chunk-119-1.pdf>
 Package pdftex.def Info: livro_files/figure-latex/unnamed-chunk-119-1.pdf  used
- on input line 3861.
+ on input line 3873.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [77 <./livro_files/figure-latex/unnamed-chunk-119-1.pdf>]
 <livro_files/figure-latex/unnamed-chunk-121-1.pdf, id=549, 469.755pt x 325.215p
@@ -965,7 +970,7 @@ t>
 File: livro_files/figure-latex/unnamed-chunk-121-1.pdf Graphic file (type pdf)
 <use livro_files/figure-latex/unnamed-chunk-121-1.pdf>
 Package pdftex.def Info: livro_files/figure-latex/unnamed-chunk-121-1.pdf  used
- on input line 3910.
+ on input line 3922.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [78 <./livro_files/figure-latex/unnamed-chunk-121-1.pdf>]
 <livro_files/figure-latex/unnamed-chunk-122-1.pdf, id=560, 469.755pt x 325.215p
@@ -973,7 +978,7 @@ t>
 File: livro_files/figure-latex/unnamed-chunk-122-1.pdf Graphic file (type pdf)
 <use livro_files/figure-latex/unnamed-chunk-122-1.pdf>
 Package pdftex.def Info: livro_files/figure-latex/unnamed-chunk-122-1.pdf  used
- on input line 3948.
+ on input line 3960.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [79 <./livro_files/figure-latex/unnamed-chunk-122-1.pdf>] [80]
 <livro_files/figure-latex/unnamed-chunk-126-1.pdf, id=581, 469.755pt x 325.215p
@@ -981,7 +986,7 @@ t>
 File: livro_files/figure-latex/unnamed-chunk-126-1.pdf Graphic file (type pdf)
 <use livro_files/figure-latex/unnamed-chunk-126-1.pdf>
 Package pdftex.def Info: livro_files/figure-latex/unnamed-chunk-126-1.pdf  used
- on input line 4027.
+ on input line 4039.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [81 <./livro_files/figure-latex/unnamed-chunk-126-1.pdf>]
 <livro_files/figure-latex/unnamed-chunk-128-1.pdf, id=594, 469.755pt x 325.215p
@@ -989,28 +994,28 @@ t>
 File: livro_files/figure-latex/unnamed-chunk-128-1.pdf Graphic file (type pdf)
 <use livro_files/figure-latex/unnamed-chunk-128-1.pdf>
 Package pdftex.def Info: livro_files/figure-latex/unnamed-chunk-128-1.pdf  used
- on input line 4085.
+ on input line 4097.
 (pdftex.def)             Requested size: 344.997pt x 238.84406pt.
 [82 <./livro_files/figure-latex/unnamed-chunk-128-1.pdf>] [83]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 4205.
+(Font)              <10> on input line 4217.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 4205.
+(Font)              <7> on input line 4217.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 4205.
+(Font)              <5> on input line 4217.
 [84]
-Overfull \hbox (1.6149pt too wide) in paragraph at lines 4229--4229
+Overfull \hbox (1.6149pt too wide) in paragraph at lines 4241--4241
 [][]\T1/lmr/bx/n/12 PASSO 2 - BUS-CAR OS TWEETS DE CADA REPÓRTER 
  []
 
 
-Underfull \hbox (badness 3815) in paragraph at lines 4253--4253
+Underfull \hbox (badness 3815) in paragraph at lines 4265--4265
 [][]\T1/lmr/bx/n/12 PASSO 3 - VI-SU-AL-IZA-ÇÃO DAS BUS-CAS E O
  []
 
 
 LaTeX Warning: File `/images/post_interno/twitter_guru.png' not found on input 
-line 4260.
+line 4272.
 
 
 ! Package pdftex.def Error: File `/images/post_interno/twitter_guru.png' not fo
@@ -1020,7 +1025,7 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4260 ...]{/images/post_interno/twitter_guru.png}
+l.4272 ...]{/images/post_interno/twitter_guru.png}
                                                    
 Here is how much of TeX's memory you used:
  10917 strings out of 482394
