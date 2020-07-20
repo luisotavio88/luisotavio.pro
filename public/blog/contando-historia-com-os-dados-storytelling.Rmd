@@ -58,7 +58,7 @@ Para criar o gráfico, usei as bandeiras de todos os estados brasileiros. Caso v
 
 ### Leitura dos dados
 
-Irei deixar os dados disponíveis em [nesse link](blog/dados_estados.txt){target="_blank"}
+Irei deixar os dados disponíveis em [nesse link](/blog/dados_estados.txt){target="_blank"}
 
 
 ```{r,warning=FALSE,message=FALSE}
