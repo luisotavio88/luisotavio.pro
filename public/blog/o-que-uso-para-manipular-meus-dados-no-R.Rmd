@@ -8,7 +8,7 @@ categories:
   - Caso prático
 tags:
   - Manipulação de dados
-type: featured
+type: post
 ---
 
 Um dos meus desafios essa semana foi analisar todas as **265 campanhas de e-mail** enviadas pelo meu projeto de futebol (Guru do Cartola) em 2018 e 2019.

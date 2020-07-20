@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+  <meta charset="utf-8">
+  <title>Luis Otavio | Ciência de dados</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Ciência de dados aplicada a problemas reais. Portal para profissionais que buscam impulsionar a empresa que trabalham ou o próprio empreendimento por meio da análise de dados, machine learning, visualização de dados ou webscraping. Linguagem R/RStudio do básico ao avançado.">
+  <meta name="author" content="Luís Otávio">
+  <meta name="generator" content="Hugo 0.62.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png " type="image/x-icon">
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '517351808978929');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=517351808978929&ev=PageView&noscript=1"
+/></noscript>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
+      <a class="navbar-brand mobile-view" href="/"><img class="img-fluid"
+          src="/images/logo.png" alt="Luis Otavio | Ciência de dados"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/user/luisotavio1988/"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://instagram.com/_u/luisotavio.pro"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/luisotaviopro/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="/"><img class="img-fluid"
+            src="/images/logo.png" alt="Luis Otavio | Ciência de dados"></a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"> Home </a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/about">Sobre mim</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/ebook">E-book</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contato</a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/tutorial"
+          class="text-primary">Tutorial</a>
+        
+        <h2>Contando história com os dados - Storytelling</h2>
+        <div class="mb-3 post-meta">
+          <span>Por Luís Otávio</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>20 February 2020</span>
+          
+        </div>
+        
+        <center>
+        <img src="/images/post_principal/covid_estados.gif" class="img-fluid w-50 mb-4" alt="Contando história com os dados - Storytelling">
+        </center>
+        
+        <div class="content mb-5">
+          
+
+
+<p>No começo da semana, recebi um pedido de ajuda de um seguidor que estava travado em um pequeno detalhe do seu projeto.</p>
+<p>Ele estava criando uma animação e tentando colocar as bandeiras dos estados brasileiros em seu gráfico.</p>
+<p>O projeto já estava adiantado e o que ele tinha feito chamou a minha atenção:</p>
+<ul>
+<li>Um acompanhamento das mortes por COVID por estado e animado para cada dia entre março e julho.</li>
+</ul>
+<p>Ou seja, o gráfico seguia uma lógica interessante. Ele mostrava as quantidades de mortes por cada 100 mil pessoas ao passar dos dias e para os 10 piores estados.</p>
+<p>Ele está nos contando a história do que aconteceu desde março até julho. E, ao mesmo tempo, comparando a evolução dos estados.</p>
+<div id="o-que-é-storytelling" class="section level2">
+<h2>O que é Storytelling?</h2>
+<p>Storytelling é a arte de contar histórias.</p>
+<p>É um artifício utilizado por todos nós há milhares de anos.</p>
+<p>Contamos histórias para criar um laço mais forte com pessoas próximas, com potenciais clientes ou até para facilitar a compreensão de uma explicação que seria difícil.</p>
+</div>
+<div id="é-possível-contar-história-com-dados" class="section level2">
+<h2>É possível contar história com dados?</h2>
+<p>Dentro da Ciência de Dados, um campo importante é o Data Storytelling.</p>
+<p>Ou seja, contamos história usando dados.</p>
+<p>O seu projeto terá mais valor quando mostrar os resultados de uma forma simples, limpa e seguindo uma lógica.</p>
+<p>Imagine que um professor sabe absolutamente tudo da matéria, porém, nenhum aluno consegue entender o que ele está falando.</p>
+<p>Ele será menos útil do que um outro professor que, talvez não saiba tanto, mas é eficiente ao passar a sua mensagem.</p>
+<p>E contar história tem tudo a ver com isso. Estamos acostumados a escutar histórias desde quando éramos crianças.</p>
+<p>Isso facilitará o entendimento da sua audiência e, além disso, torna o seu trabalho mais interessante.</p>
+</div>
+<div id="como-fazer-um-gráfico-animado-no-r---data-storytelling" class="section level2">
+<h2>Como fazer um gráfico animado no R - Data Storytelling</h2>
+<p>Agora, com a devida permissão, vou compartilhar com vocês o código desenvolvido pelo <a href="https://www.linkedin.com/in/francisco-tadeu-foz-25691196/" target="_blank">Francisco</a>, o seguidor que me enviou esse projeto pela Instagram.</p>
+<p>Para criar o gráfico, usei as bandeiras de todos os estados brasileiros. Caso você queira reproduzir o código em seu computador, faça o download das bandeiras clicando <a href="https://drive.google.com/uc?id=1m0_o7GM-WwAMJtQW8S9jm21Raks02J2l&amp;export=download" target="_blank">aqui.</a></p>
+<div id="leitura-dos-dados" class="section level3">
+<h3>Leitura dos dados</h3>
+<p>Irei deixar os dados disponíveis em <a href="blog/dados_estados.txt" target="_blank">nesse link</a></p>
+<pre class="r"><code>library(readr)
+dados_estados &lt;- read_delim(&quot;dados_estados.txt&quot;, 
+    &quot;\t&quot;, escape_double = FALSE, trim_ws = TRUE)
+head(dados_estados)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   estado data       populacaoTCU2019 casosAcumulado obitosAcumulado
+##   &lt;chr&gt;  &lt;date&gt;                &lt;dbl&gt;          &lt;dbl&gt;           &lt;dbl&gt;
+## 1 RO     2020-02-25          1777225              0               0
+## 2 RO     2020-02-26          1777225              0               0
+## 3 RO     2020-02-27          1777225              0               0
+## 4 RO     2020-02-28          1777225              0               0
+## 5 RO     2020-02-29          1777225              0               0
+## 6 RO     2020-03-01          1777225              0               0</code></pre>
+<p>Caso tenha alguma dúvida sobre como ler os seus dados no R, sugiro que consulte esse outro post: <a href="https://www.luisotavio.pro/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/" target="_blank">luisotavio.pro/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</a></p>
+<p>Também foi criada uma tabela que irá nos auxiliar na leitura da imagem da bandeira de cada estado:</p>
+<pre class="r"><code>bandeiras&lt;- data.frame(estado = c(&quot;AC&quot;,&quot;AL&quot;,&quot;AM&quot;,&quot;AP&quot;,&quot;BA&quot;,&quot;CE&quot;,&quot;DF&quot;,&quot;ES&quot;,
+                                    &quot;GO&quot;,&quot;MA&quot;,&quot;MG&quot;,&quot;MS&quot;,&quot;MT&quot;,&quot;PA&quot;,&quot;PB&quot;,&quot;PE&quot;,
+                                    &quot;PI&quot;,&quot;PR&quot;,&quot;RJ&quot;,&quot;RN&quot;,&quot;RO&quot;,&quot;RR&quot;,&quot;RS&quot;,&quot;SC&quot;, 
+                                    &quot;SE&quot;,&quot;SP&quot;,&quot;TO&quot;),
+                        imagem = c(&quot;AC.png&quot;,&quot;AL.png&quot;,&quot;AM.png&quot;,&quot;AP.png&quot;,&quot;BA.png&quot;,
+                                  &quot;CE.png&quot;,&quot;DF.png&quot;,&quot;ES.png&quot;,&quot;GO.png&quot;,&quot;MA.png&quot;,
+                                  &quot;MG.png&quot;,&quot;MS.png&quot;,&quot;MT.png&quot;,&quot;PA.png&quot;,&quot;PB.png&quot;,
+                                  &quot;PE.png&quot;,&quot;PI.png&quot;,&quot;PR.png&quot;,&quot;RJ.png&quot;,&quot;RN.png&quot;,
+                                  &quot;RO.png&quot;,&quot;RR.png&quot;,&quot;RS.png&quot;,&quot;SC.png&quot;,&quot;SE.png&quot;,
+                                  &quot;SP.png&quot;,&quot;TO.png&quot;),stringsAsFactors = F)
+head(bandeiras)</code></pre>
+<pre><code>##   estado imagem
+## 1     AC AC.png
+## 2     AL AL.png
+## 3     AM AM.png
+## 4     AP AP.png
+## 5     BA BA.png
+## 6     CE CE.png</code></pre>
+</div>
+<div id="manipulação-de-dados" class="section level3">
+<h3>Manipulação de dados</h3>
+<div id="cálculo-do-número-de-óbitos-por-100-mil-habitantes" class="section level4">
+<h4>Cálculo do número de óbitos por 100 mil habitantes</h4>
+<p>Iremos criar uma nova coluna <strong>mortalidade.100hab</strong> com a quantidade de óbitos por 100 mil habitantes.</p>
+<pre class="r"><code>library(dplyr)
+mortalidade&lt;-dados_estados %&gt;%
+#criar coluna com óbitos por 100 mil habitantes
+mutate(mortalidade.100hab=(obitosAcumulado/populacaoTCU2019)*100000) 
+#selecionar colunas que serão úteis
+mortalidade&lt;- select(mortalidade,estado,data,obitosAcumulado,mortalidade.100hab)</code></pre>
+</div>
+<div id="filtrando-os-dados" class="section level4">
+<h4>Filtrando os dados</h4>
+<p>Para uma melhor experiência na visualização dos dados, não iremos mostrar todos os estados em nosso gráfico.</p>
+<p>O gráfico irá mostrar os 10 estados com as maiores taxas de óbito para cada dia.</p>
+<p>Portanto, para filtrar essas informações, iremos executar o script a seguir:</p>
+<pre class="r"><code>mortalidade &lt;- mortalidade %&gt;%
+  # Aqui separamos as informações por dia.
+  group_by(data) %&gt;% 
+  # Criar um ranking decrescente de mortalidade entre os estados para cada dia
+  dplyr::mutate(rank = rank(-mortalidade.100hab)) %&gt;% 
+  # selecionando os 10 maiores registros por dia.
+  filter(rank &lt;=10) %&gt;%
+  ungroup()
+#arredondar o resultado para 2 casas decimais
+mortalidade$mortalidade.100hab &lt;- round(mortalidade$mortalidade.100hab , digits = 2)
+head(mortalidade)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   estado data       obitosAcumulado mortalidade.100hab  rank
+##   &lt;chr&gt;  &lt;date&gt;               &lt;dbl&gt;              &lt;dbl&gt; &lt;dbl&gt;
+## 1 RO     2020-03-31               1              0.06      8
+## 2 RO     2020-04-01               1              0.06      9
+## 3 RO     2020-04-02               1              0.06     10
+## 4 AC     2020-04-08               2              0.23      9
+## 5 AC     2020-04-09               2              0.23     10
+## 6 AC     2020-04-16               5              0.570    10</code></pre>
+</div>
+<div id="juntando-as-bandeiras-de-cada-estado" class="section level4">
+<h4>Juntando as bandeiras de cada estado</h4>
+<p>A nossa última manipulação de dados irá acrescentar as bandeiras aos nossos dados e criar rankings auxiliares.</p>
+<p>Esses rankings auxiliares irão nos ajudar para ordenarmos os nossos dados de forma que tudo se encaixe na criação do gráfico.</p>
+<pre class="r"><code>im_mort &lt;- mortalidade %&gt;%
+  # acrescentando as bandeiras na tabela de mortalidade
+  left_join(bandeiras, by = &quot;estado&quot;) %&gt;% 
+  group_by(estado) %&gt;%
+  dplyr::arrange(data) %&gt;%
+  dplyr::mutate(prev.rank = lag(rank)) %&gt;%
+  ungroup() %&gt;%      
+  group_by(data) %&gt;%
+  dplyr::arrange(rank, prev.rank) %&gt;%
+  dplyr::mutate(x = seq(1, n())) %&gt;%
+  ungroup()
+head(im_mort)</code></pre>
+<pre><code>## # A tibble: 6 x 8
+##   estado data       obitosAcumulado mortalidade.100…  rank imagem prev.rank
+##   &lt;chr&gt;  &lt;date&gt;               &lt;dbl&gt;            &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;
+## 1 SP     2020-03-18               4             0.01     1 SP.png         1
+## 2 SP     2020-03-21              15             0.03     1 SP.png         1
+## 3 SP     2020-03-22              22             0.05     1 SP.png         1
+## 4 SP     2020-03-23              30             0.07     1 SP.png         1
+## 5 SP     2020-03-24              40             0.09     1 SP.png         1
+## 6 SP     2020-03-25              48             0.1      1 SP.png         1
+## # … with 1 more variable: x &lt;int&gt;</code></pre>
+</div>
+</div>
+<div id="criando-gráficos-estáticos" class="section level3">
+<h3>Criando gráficos estáticos</h3>
+<p>Antes de criar a nossa animação, iremos criar gráficos estáticos</p>
+<pre class="r"><code>library(gganimate)
+library(hrbrthemes)
+library(png)
+library(ggimage)
+staticplot.m&lt;-ggplot(im_mort, aes(rank, group = estado)) +
+  geom_tile(aes(y = mortalidade.100hab/2,
+                height = mortalidade.100hab,
+                width = 0.7), alpha = 1, 
+            fill =&quot;#590000&quot;,color = &quot;#590000&quot;) +
+  geom_image(aes(x = x, image = imagem), y = 0,  # Adicionar a bandeira
+             size = 0.1, hjust = 0,
+             inherit.aes = FALSE) +
+  geom_text(aes(y=mortalidade.100hab,label = mortalidade.100hab, 
+                hjust=0),colour=&quot;#ffffff&quot;, size=6,fontface=&quot;bold&quot;)+
+  geom_text(aes(y = mortalidade.100hab, label = paste(estado, &quot;&quot;)),
+            colour=&quot;#ffffff&quot;,
+            hjust = 1, size=6, fontface=&quot;bold&quot;) +
+  geom_text(aes(y = mortalidade.100hab, label =&quot;&quot;,
+                hjust=2))+
+  coord_flip(clip = &quot;off&quot;, expand = FALSE) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_reverse() +
+  guides(color = FALSE, fill = FALSE) +
+  theme(axis.line=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks=element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        legend.position=&quot;none&quot;,
+        panel.background=element_rect(fill = &quot;grey8&quot;, colour = &quot;grey8&quot;),
+        panel.border=element_blank(),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        plot.title=element_text(size=25, hjust=0.5, face=&quot;bold&quot;, colour=&quot;White&quot;, vjust=-1),
+        plot.subtitle=element_text(size=20, hjust=0.5, face=&quot;italic&quot;, color=&quot;White&quot;),
+        plot.caption =element_text(size=20, hjust=0.5, face=&quot;italic&quot;, color=&quot;White&quot;),
+        plot.background=element_rect(fill = &quot;grey8&quot;, colour = &quot;grey8&quot;),
+        plot.margin = margin(1,4, 4, 4, &quot;cm&quot;))</code></pre>
+</div>
+<div id="criando-a-animação" class="section level3">
+<h3>Criando a animação</h3>
+<pre class="r"><code>anim.m&lt;- staticplot.m + transition_states(data, transition_length = 2, state_length = 1)+
+  view_follow(fixed_x = TRUE)  +
+  labs(title = &#39;Mortalidade COVID-19 no \n Brasil:{closest_state}&#39;,  
+       subtitle  =  &quot;Top 10 estados&quot;,
+       caption  = &quot;Óbitos por 100 mil hab.|Fonte: covid.saude.gov.br
+                  @FranciscoTadeuFoz&quot;)</code></pre>
+<p><img src="/images/post_principal/covid_estados.gif" /></p>
+</div>
+<div id="salvando-a-animação-como-gif" class="section level3">
+<h3>Salvando a animação como GIF</h3>
+<pre class="r"><code>library(gifski)
+animate(anim.m, 100, fps = 10,  width = 1200, height = 1000, 
+        renderer = gifski_renderer(&quot;covid_estados.gif&quot;)) </code></pre>
+</div>
+</div>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2>Receba nosso conteúdo exclusivo</h2>
+        <p class="text-light px-md-5 py-4 border-left border-right border-primary">
+          Faça parte do nosso grupo exclusivo e receba as novidades mais interessantes sobre Data Sciente e R em primeira mão.</p>
+        <form action="https://sendy.gurudocartola.com/subscribe" method="POST" class="row justify-content-center"  accept-charset="utf-8">
+          <div class="input-group col-md-8">
+            <input type="email" name="email" class="form-control" placeholder="Seu melhor e-mail" required>
+            <div class="input-group-append">
+              <button class="input-group-text btn btn-primary">Inscrever!</button>
+            </div>
+            	<input type="hidden" name="list" value="HWWQSkliMyDJJuQlnLKAXQ"/>
+    	        <input type="hidden" name="subform" value="yes"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Meu contato</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Belo Horizonte, Brasil</li>
+          <li class="mb-3"><a class="text-dark" href="mailto:contato@luisotavio.pro"><i
+                class="ti-email mr-3 text-primary"></i>contato@luisotavio.pro</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Redes Sociais</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.youtube.com/user/luisotavio1988/">youtube</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://instagram.com/_u/luisotavio.pro">instagram</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/luisotaviopro/">linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categorias</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/caso-pr%c3%a1tico">Caso prático</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/post">Post</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/tutorial">Tutorial</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Atalhos</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="/about/about">Sobre mim</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/blog">Blog</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/ebook">E-book</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/contact">Contato</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | ®2019 <a href="https://luisotavio.pro">Luís Otávio</a> Todos os direitos reservados |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="/plugins/jQuery/jquery.min.js"></script>
+
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="/plugins/slick/slick.min.js"></script>
+
+<script src="/plugins/venobox/venobox.min.js"></script>
+
+<script src="/plugins/search/fuse.min.js"></script>
+
+<script src="/plugins/search/mark.js"></script>
+
+<script src="/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-134709799-1', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>
