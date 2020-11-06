@@ -6,10 +6,19 @@
     <description>Recent content in Tutorial on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contando história com os dados - Storytelling</title>
+      <link>/blog/contando-historia-com-os-dados-storytelling/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/contando-historia-com-os-dados-storytelling/</guid>
+      <description>No começo da semana, recebi um pedido de ajuda de um seguidor que estava travado em um pequeno detalhe do seu projeto.</description>
+    </item>
     
     <item>
       <title>Como instalar um pacote no R</title>
@@ -36,15 +45,6 @@
       
       <guid>/blog/como-instalar-o-r-e-o-rstudio/</guid>
       <description>Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.</description>
-    </item>
-    
-    <item>
-      <title>Contando história com os dados - Storytelling</title>
-      <link>/blog/contando-historia-com-os-dados-storytelling/</link>
-      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/contando-historia-com-os-dados-storytelling/</guid>
-      <description>No começo da semana, recebi um pedido de ajuda de um seguidor que estava travado em um pequeno detalhe do seu projeto.</description>
     </item>
     
     <item>
