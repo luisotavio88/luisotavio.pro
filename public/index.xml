@@ -6,10 +6,29 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Seja avisado para as próximas lives que irei fazer sobre Ciência de Dados</title>
+      <link>/live/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/live/</guid>
+      <description>Live toda segunda-feira às 20hs sobre Ciência de Dados.</description>
+    </item>
+    
+    <item>
+      <title>Você não pode perder essa live!</title>
+      <link>/confirmacao-live/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/confirmacao-live/</guid>
+      <description>Sua participação está garantida na live!
+Mas para garantir que você não vai esquecer, recomendo fortemente que você defina o lembrete!</description>
+    </item>
     
     <item>
       <title>Contando história com os dados - Storytelling</title>

@@ -12,6 +12,7 @@ type: semheader
 **Ebook para quem deseja iniciar a carreira de Ciência de Dados a partir do ZERO.** 
 
 Ele irá te ensinar a programar em R - a melhor linguagem para você usar como Cientista de Dados.
+
 ```{r,echo=FALSE}
 library(shiny)
 HTML('<section class="section-sm pb-0">
