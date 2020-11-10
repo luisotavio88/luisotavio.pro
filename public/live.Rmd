@@ -7,9 +7,11 @@ categories: []
 tags: []
 type: semheader
 ---
-<img src="https://www.luisotavio.pro/images/gallery/6.jpg" height="250" alt="Foto Luís" align="right" style="margin: 0 1em 0 1em" />
+<img src="https://www.luisotavio.pro/images/gallery/6.jpg" height="150" alt="Foto Luís" align="right" style="margin: 0 1em 0 1em" />
 
-**Live toda segunda-feira às 20hs sobre Ciência de Dados.** 
+**Aula ao vivo toda segunda-feira às 20hs sobre Ciência de Dados.** 
+
+Aula para quem deseja iniciar em Ciência de Dados e transformar a sua carreira.
 
 ```{r,echo=FALSE}
 library(shiny)
