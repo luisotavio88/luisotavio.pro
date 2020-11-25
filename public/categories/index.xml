@@ -2,39 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Luis Otavio | Ciência de dados</title>
-    <link>/categories/</link>
+    <link>https://luisotavio.pro/categories/</link>
     <description>Recent content in Categories on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tutorial</title>
-      <link>/categories/tutorial/</link>
+      <link>https://luisotavio.pro/categories/tutorial/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/tutorial/</guid>
+      <guid>https://luisotavio.pro/categories/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Caso prático</title>
-      <link>/categories/caso-pr%C3%A1tico/</link>
+      <link>https://luisotavio.pro/categories/caso-pr%C3%A1tico/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/caso-pr%C3%A1tico/</guid>
+      <guid>https://luisotavio.pro/categories/caso-pr%C3%A1tico/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Post</title>
-      <link>/categories/post/</link>
+      <link>https://luisotavio.pro/categories/post/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/post/</guid>
+      <guid>https://luisotavio.pro/categories/post/</guid>
       <description></description>
     </item>
     

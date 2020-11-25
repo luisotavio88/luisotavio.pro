@@ -2,30 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Imagens on Luis Otavio | Ciência de dados</title>
-    <link>/tags/imagens/</link>
+    <link>https://luisotavio.pro/tags/imagens/</link>
     <description>Recent content in Imagens on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/imagens/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/imagens/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reconhecimento de imagens - Só para iniciantes</title>
-      <link>/blog/reconhecimento-de-imagens-s%C3%B3-para-iniciantes/</link>
+      <link>https://luisotavio.pro/blog/reconhecimento-de-imagens-s%C3%B3-para-iniciantes/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/reconhecimento-de-imagens-s%C3%B3-para-iniciantes/</guid>
+      <guid>https://luisotavio.pro/blog/reconhecimento-de-imagens-s%C3%B3-para-iniciantes/</guid>
       <description>Você já ouviu falar em algoritmos de reconhecimento de imagens?</description>
     </item>
     
     <item>
       <title>O R também serve para editar imagens!</title>
-      <link>/blog/o-r-tambem-serve-para-editar-imagens/</link>
+      <link>https://luisotavio.pro/blog/o-r-tambem-serve-para-editar-imagens/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/o-r-tambem-serve-para-editar-imagens/</guid>
+      <guid>https://luisotavio.pro/blog/o-r-tambem-serve-para-editar-imagens/</guid>
       <description>Photoshop é para quem não usa o R! :)Tenho um projeto que aplica Ciência de Dados no Futebol e,como em várias outras empresas pequenas, precisamos fazer muito com pouco.</description>
     </item>
     
