@@ -11,7 +11,7 @@ type: semheader
 
 **Aula ao vivo toda segunda-feira às 20hs sobre Ciência de Dados.** 
 
-Aula para quem deseja iniciar em Ciência de Dados e transformar a sua carreira.
+Aula para quem deseja iniciar em Ciência de Dados e transformar a sua carreira!
 
 ```{r,echo=FALSE}
 library(shiny)

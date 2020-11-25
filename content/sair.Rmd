@@ -10,4 +10,4 @@ type: mylayout
 
 Sua inscrição em nossa lista de e-mail foi cancelada. 
 
-Fique tranquilo(a) que você não irá mais receber nossos e-mails.
+Fique tranquilo(a) que você não irá mais receber nossos e-mails

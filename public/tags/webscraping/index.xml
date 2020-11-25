@@ -2,30 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webscraping on Luis Otavio | Ciência de dados</title>
-    <link>/tags/webscraping/</link>
+    <link>https://luisotavio.pro/tags/webscraping/</link>
     <description>Recent content in Webscraping on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>O que aconteceu com a imagem do Bolsonaro?</title>
-      <link>/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</link>
+      <link>https://luisotavio.pro/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</guid>
+      <guid>https://luisotavio.pro/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</guid>
       <description>Como um cientista de dados esforçado, eu estava fazendo uma reflexão logo após a divulgação do polêmico vídeo da reunião entre o Bolsonaro e seus ministros:</description>
     </item>
     
     <item>
       <title>Aplicação de Ciência de Dados nas vagas de emprego</title>
-      <link>/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</link>
+      <link>https://luisotavio.pro/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</link>
       <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</guid>
+      <guid>https://luisotavio.pro/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</guid>
       <description>É importante que eu já comece te avisando que esse post não é sobre vagas de emprego na área de Data Science.</description>
     </item>
     
