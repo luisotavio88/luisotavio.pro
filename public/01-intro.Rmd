@@ -1,0 +1,39 @@
+# Quem sou eu 
+
+<img src="https://www.luisotavio.pro/images/gallery/9.jpg" width="250" height="250" alt="Luis Otavio" align="right" style="margin: 0 1em 0 1em" />
+
+Meu nome é Luís Otávio, sou Estatístico formado pela UFMG (2007-2010) e criador do blog **luisotavio.pro**.
+
+O meu primeiro contato com a linguagem R foi justamente na faculdade de Estatística, no início de 2008. Comecei a aprender a linguagem para desenvolver um trabalho de Iniciação Científica.
+
+Por isso, posso te falar que em pouco tempo você consegue sair do absoluto ZERO (o que era o meu caso) e desenvolver um trabalho relevante. 
+
+Fiz esse e-book pensando em tudo o que eu precisaria aprender no início, de forma bem prática e sem enrolação. Assim como eu gostaria de ter aprendido naquela época.
+
+Ao longo dos anos segui meus estudos em Estatística e também da linguagem R.
+
+Depois de fazer alguns estágios e um pouco antes de formar, decidi que iria fazer concurso público. Na época, era a única forma de garantir uma boa renda para que eu pudesse me sustentar. 
+
+No mesmo mês que formei na faculdade veio a minha primeira aprovação: Oficial ESTATÍSTICO da Força Aérea Brasileira. Servi à Aeronáutica por 11 meses. Nesse período, trabalhei no Centro de Inteligência da Aeronáutica coordenando os cursos de Inteligência.
+
+Em 2012, fui trabalhar no Tribunal Regional Eleitoral de São Paulo (TRE-SP) e em janeiro de 2014 passei em um concurso para a Agência Nacional de Transportes Terrestres (ANTT).
+
+Ao todo, foram 16 concursos prestados, muitas reprovações, muitas aprovações e 5 primeiros lugares.
+
+Mas agora preciso te falar uma outra coisa, tem uma coisa que gosto mais do que Ciência de dados, Estatística ou R: Futebol.
+
+Sempre tive muita vontade de unir todas essas paixões e nunca sabia como fazer.
+
+Finalmente, em 2017 criei um projeto chamado Guru do Cartola. É um site que usa *machine learning* para prever as atuações dos jogadores do Campeonato Brasileiro no *fantasy game* da Globo, chamado Cartola.
+
+O projeto foi um sucesso e hoje é acessado por milhões de brasileiros. 
+
+Então, em 2018 eu saí da ANTT e resolvi me dedicar integralmente ao projeto, aplicando Ciência de Dados ao futebol. 
+
+Hoje em dia uso uma quantidade absurda de automações no Guru do Cartola, desenvolvidas exclusivamente usando o R.
+
+O trabalho do Cientista de Dados pode ser bem amplo, existem muitas possibilidades e áreas de atuação.
+
+Então, agora vamos falar um pouco sobre essa profissão!
+
+

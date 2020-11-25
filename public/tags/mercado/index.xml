@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mercado on Luis Otavio | Ciência de dados</title>
+    <link>/tags/mercado/</link>
+    <description>Recent content in mercado on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 22 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/mercado/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quem são os Cientistas de Dados do Brasil?</title>
+      <link>/blog/quem-sao-os-cientistas-de-dados-do-brasil/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/quem-sao-os-cientistas-de-dados-do-brasil/</guid>
+      <description>A maior comunidade de Cientistas de dados do Brasil realizou uma pesquisa com 1.</description>
+    </item>
+    
+  </channel>
+</rss>

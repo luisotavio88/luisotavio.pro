@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TXT on Luis Otavio | Ciência de dados</title>
+    <link>/tags/txt/</link>
+    <description>Recent content in TXT on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/txt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5 maneiras de filtrar os seus dados no R</title>
+      <link>/blog/como-filtrar-os-seus-dados-no-r/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/como-filtrar-os-seus-dados-no-r/</guid>
+      <description>Nesse post você vai aprender 5 formas diferentes de como filtrar os dados da sua tabela no R.</description>
+    </item>
+    
+    <item>
+      <title>Como ler um arquivo de texto (txt ou csv) no R ou RStudio</title>
+      <link>/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</guid>
+      <description>Quer importar os seus dados em arquivo de texto ou csv para o RStudio de uma forma bem simples e sem precisar de programação?</description>
+    </item>
+    
+  </channel>
+</rss>

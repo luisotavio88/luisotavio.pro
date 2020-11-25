@@ -2,9 +2,230 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Luis Otavio | Ciência de dados</title>
-    <link>https://luisotavio.pro/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language><atom:link href="https://luisotavio.pro/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Primeiros passos</title>
+      <link>/tags/primeiros-passos/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/primeiros-passos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RStudio</title>
+      <link>/tags/rstudio/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rstudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Manipulação de dados</title>
+      <link>/tags/manipula%C3%A7%C3%A3o-de-dados/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/manipula%C3%A7%C3%A3o-de-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>/tags/deep-learning/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Imagens</title>
+      <link>/tags/imagens/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/imagens/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/tags/machine-learning/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regressão Linear</title>
+      <link>/tags/regress%C3%A3o-linear/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/regress%C3%A3o-linear/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maps</title>
+      <link>/tags/maps/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Marketing Digital</title>
+      <link>/tags/marketing-digital/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/marketing-digital/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Análise de sentimentos</title>
+      <link>/tags/an%C3%A1lise-de-sentimentos/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/an%C3%A1lise-de-sentimentos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Mining</title>
+      <link>/tags/text-mining/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/text-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webscraping</title>
+      <link>/tags/webscraping/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/webscraping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mercado</title>
+      <link>/tags/mercado/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mercado/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cluster</title>
+      <link>/tags/cluster/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cluster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>/tags/shiny/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Música</title>
+      <link>/tags/m%C3%BAsica/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/m%C3%BAsica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arquivo de texto</title>
+      <link>/tags/arquivo-de-texto/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/arquivo-de-texto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSV</title>
+      <link>/tags/csv/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/csv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TXT</title>
+      <link>/tags/txt/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/txt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Excel</title>
+      <link>/tags/excel/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pacote</title>
+      <link>/tags/pacote/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pacote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ajuda</title>
+      <link>/tags/ajuda/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ajuda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Instalação</title>
+      <link>/tags/instala%C3%A7%C3%A3o/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/instala%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

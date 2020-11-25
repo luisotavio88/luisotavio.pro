@@ -64,14 +64,14 @@ https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html
 ```{r echo=F, warning = FALSE, message=FALSE}
 library(rtweet)
 ## store api keys (these are fake example values; replace with your own keys)
-api_key <- "jKGUXnteqb8U2jumEYt2xlZVB"
-api_secret_key <- "F6D844PYuCpQhtKySZ4JRtdYqL2R3KJHweIvtUSMskTJpKAEaE"
-access_token <- "898383109191852032-QZxwGXyNgIyaT7I5CvaswORcqIpgezx"
-access_token_secret <- "sk6hGHagtvbY3BDfEIHnpWWxNy6UJvvwZG6GWH8sDvjwV"
+api_key <- "JVL4OzU3mGkvewvKVWev7YByQ"
+api_secret_key <- "XT8FCxdHpTUBLF8UaFecfmwGoxdQlvvAbTHJGbd1VCzOAu2FrQ"
+access_token <- "933641605462011904-vdiABgLEv5UDxwyAPaU9BGbnlfQA9E9"
+access_token_secret <- "efzvLU3SKQI4GJ0AmC71kwNC24PBaTRL1n3zur2EpvvSs"
 
 ## authenticate via web browser
 # token <- create_token(
-#   app = "analise_sentimento_luisotaviopro",
+#   app = "rstatsjournalismresearch",
 #   consumer_key = api_key,
 #   consumer_secret = api_secret_key,
 #   access_token = access_token,
@@ -90,7 +90,7 @@ library(rtweet)
 
 ## authenticate via web browser
 token <- create_token(
-  app = "analise_sentimento_luisotaviopro", #substituir pelo nome do seu app
+  app = "nome do seu app", #substituir
   consumer_key = api_key,
   consumer_secret = api_secret_key,
   access_token = access_token,

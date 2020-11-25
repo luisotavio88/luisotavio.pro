@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+  <meta charset="utf-8">
+  <title>Luis Otavio | Ciência de dados</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Ciência de dados aplicada a problemas reais. Portal para profissionais que buscam impulsionar a empresa que trabalham ou o próprio empreendimento por meio da análise de dados, machine learning, visualização de dados ou webscraping. Linguagem R/RStudio do básico ao avançado.">
+  <meta name="author" content="Luís Otávio">
+  <meta name="generator" content="Hugo 0.62.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png " type="image/x-icon">
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '517351808978929');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=517351808978929&ev=PageView&noscript=1"
+/></noscript>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
+      <a class="navbar-brand mobile-view" href="/"><img class="img-fluid"
+          src="/images/logo.png" alt="Luis Otavio | Ciência de dados"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/user/luisotavio1988/"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://instagram.com/_u/luisotavio.pro"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/luisotaviopro/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="/"><img class="img-fluid"
+            src="/images/logo.png" alt="Luis Otavio | Ciência de dados"></a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"> Home </a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/about">Sobre mim</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/ebook">E-book</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contato</a>
+          </li>
+          
+          
+        </ul>
+
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/caso-pr%c3%a1tico"
+          class="text-primary">Caso prático</a>
+        
+        <h2>Análise de Sentimentos - Descubra o que estão falando da sua empresa</h2>
+        <div class="mb-3 post-meta">
+          <span>Por Luís Otávio</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>31 March 2020</span>
+          
+        </div>
+        
+        <center>
+        <img src="/images/post_principal/sentimento.jpg" class="img-fluid w-50 mb-4" alt="Análise de Sentimentos - Descubra o que estão falando da sua empresa">
+        </center>
+        
+        <div class="content mb-5">
+          
+
+
+<div id="você-sabe-o-que-é-análise-de-sentimentos-e-porque-ela-é-indispensável-para-uma-marca" class="section level3">
+<h3>Você sabe o que é <strong>análise de sentimentos</strong> e porque ela é INDISPENSÁVEL para uma <strong>marca</strong>?</h3>
+<p>Análise de sentimentos é uma técnica para identificar se as opiniões sobre determinado <strong>assunto</strong> estão sendo positivas ou negativas.</p>
+<p>Esse “assunto” pode ser o discurso de um político, um jogador de futebol, uma celebridade, a sua empresa ou o produto que ela acabou de lançar.</p>
+<p>Imagine que a sua empresa lançou um produto novo no mercado… Provavelmente vão querer saber o que as pessoas estão falando sobre ele e se a repercussão foi boa ou ruim.</p>
+<p>A análise de sentimentos ganhou muita importância por dois fatores:</p>
+<ul>
+<li>Crescimento gigantesco das redes sociais nos últimos anos.</li>
+<li>Necessidade das empresas em acompanharem de forma automatizada o que seus clientes falam sobre ela.</li>
+</ul>
+<p>No caso de uma empresa, todos os feedbacks serão de extrema importância para ajustar um produto que foi lançado. Nada será mais rápido e honesto do que o resultado nas redes sociais.</p>
+<p>Em questão de segundos, os usuários que já estarão com o celular na mão, irão voluntariamente expor suas opiniões nas redes sociais.</p>
+<p>Além disso, não há muito constrangimento. A internet nos permite sair de uma <em>live</em> sem pedir licença ou falar o que não gostamos sem ficar inibido porque a pessoa envolvida está em nossa frente.</p>
+<p>O que quero dizer é: o feedback das redes sociais será mais rápido e sincero do que em uma pesquisa presencial, por exemplo. Na pesquisa há uma grande tendência da pessoa amenizar o feedback simplesmente pelo fato de ter uma pessoa na frente e ninguém desejar parecer deselegante.</p>
+<p>Então, imagine a importancia para uma empresa saber o que estão falando de seus produtos e de seus posicionamentos. É uma consultoria gratuita que está disponível para as empresas nas redes sociais, com várias sugesões e feedbacks.</p>
+</div>
+<div id="o-que-estão-falando-da-sua-empresa-ou-do-seu-artista-favorito" class="section level3">
+<h3>O que estão falando da sua empresa ou do seu artista favorito?</h3>
+<p>O principal objetivo aqui do Blog é colocar a mão na massa e, principalmente, te mostrar como fazer isso.</p>
+<p>Escolhi analisar os dados do Twitter. Sabe porque?</p>
+<p>Nenhuma outra rede social tem tantas pessoas dando opinião sobre os acontecimentos como no próprio Twitter.</p>
+<p><strong>No final desse post coloquei o passo-a-passo que usei e qual foi o raciocínio usado na ferramenta de análise de sentimentos desenvolvida para esse post.</strong></p>
+<p><a href="#passoapasso">Clique aqui para ir direto ao raciocínio utilizado.</a></p>
+<div id="vamos-divertir-um-pouco-aqui-pesquisando-sobre-o-seu-tema-de-interesse." class="section level4">
+<h4>Vamos divertir um pouco aqui pesquisando sobre <strong>O SEU TEMA DE INTERESSE.</strong></h4>
+<iframe src="https://luisotavio.info/shiny/twitter/" width="600" height="1350" frameborder="0&quot;">
+</iframe>
+</div>
+</div>
+<div id="passoapasso" class="section level3">
+<h3>PASSO 1 - ACESSO A API DO TWITTER</h3>
+<p>O tem uma ferramenta para facilitar a busca das informações que fazemos na plataforma deles, o que torna a tarefa mais fácil e rápida.</p>
+<p>Caso você queira criar a sua própria busca, praticando no seu computador, terá que se cadastrar no Twitter como um desenvolvedor. É bem fácil e leva poucos minutos.</p>
+<p>Aqui nesse endereço você tem todas as instruções:
+<a href="https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html" class="uri">https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html</a></p>
+<pre class="r"><code>library(rtweet)
+#substitua os 4 valores seguintes pelos valores correspondentes ao seu login
+
+# api_key &lt;- &quot;XXXXXXXXX&quot;
+# api_secret_key &lt;- &quot;XXXXXXXXX&quot;
+# access_token &lt;- &quot;XXXXXXXXX&quot;
+# access_token_secret &lt;- &quot;XXXXXXXXX&quot;
+
+## authenticate via web browser
+token &lt;- create_token(
+  app = &quot;nome do seu app&quot;, #substituir
+  consumer_key = api_key,
+  consumer_secret = api_secret_key,
+  access_token = access_token,
+  access_secret = access_token_secret)</code></pre>
+</div>
+<div id="passo-2---fazer-a-busca-desejada-no-twitter" class="section level3">
+<h3>PASSO 2 - FAZER A BUSCA DESEJADA NO TWITTER</h3>
+<pre class="r"><code>#vamos buscar os últimos 1000 tweets com a palavra &quot;globo&quot; e sem incluir os retweets
+input&lt;-&quot;globo&quot;
+busca_twitter &lt;- search_tweets(input,n = 1000, include_rts = F)</code></pre>
+</div>
+<div id="passo-3---limpar-o-texto-encontrado" class="section level3">
+<h3>PASSO 3 - LIMPAR O TEXTO ENCONTRADO</h3>
+<pre class="r"><code>    library(magrittr)
+    library(dplyr)
+    busca_twitter %&lt;&gt;% select(screen_name,text,source) #Selecionar colunas
+    #remover links    
+    busca_twitter$texto_limpo&lt;-gsub(&quot;http\\S+&quot;,&quot;&quot;,busca_twitter$text)
+    busca_twitter$texto_limpo &lt;- gsub(&#39;@([a-z|A-Z|0-9|_])*&#39;, &#39;&#39;, busca_twitter$texto_limpo) # remove palavras com @ (menções)
+    busca_twitter$texto_limpo &lt;- gsub(&#39;_&#39;, &#39; &#39;, busca_twitter$texto_limpo) # troca underline por espaço
+    # remove pontuação
+    busca_twitter$texto_limpo = gsub(&#39;[[:punct:]]&#39;, &#39; &#39;, busca_twitter$texto_limpo)
+    # remove espaços desnecessários
+    busca_twitter$texto_limpo = gsub(&#39;[ \t]{2,}&#39;, &#39; &#39;, busca_twitter$texto_limpo)
+    busca_twitter$texto_limpo = gsub(&#39;^\\s+|\\s+$&#39;, &#39; &#39;, busca_twitter$texto_limpo)
+    # remove emojis e caracteres especiais
+    busca_twitter$texto_limpo = gsub(&#39;&lt;.*&gt;&#39;, &#39; &#39;, enc2native(busca_twitter$texto_limpo))
+    # remove quebra de linha
+    busca_twitter$texto_limpo = gsub(&#39;\\n&#39;, &#39; &#39;, busca_twitter$texto_limpo)
+    # coloca tudo em minúsculo
+    busca_twitter$texto_limpo = tolower(busca_twitter$texto_limpo)
+    # remove tweets duplicados
+    busca_twitter &lt;- busca_twitter[!duplicated(busca_twitter$texto_limpo),]</code></pre>
+</div>
+<div id="passo-4---carregar-as-bases-de-dados-que-definem-se-a-palavra-é-positiva-ou-negativa" class="section level3">
+<h3>PASSO 4 - CARREGAR AS BASES DE DADOS QUE DEFINEM SE A PALAVRA É POSITIVA OU NEGATIVA</h3>
+<pre class="r"><code>    library(lexiconPT)
+    data(&quot;oplexicon_v3.0&quot;)
+    data(&quot;sentiLex_lem_PT02&quot;)
+    op30 &lt;- oplexicon_v3.0
+    sent &lt;- sentiLex_lem_PT02
+    names(op30)[1]&lt;-&quot;word&quot;
+    names(sent)[1]&lt;-&quot;word&quot;</code></pre>
+</div>
+<div id="passo-5---manipulação-de-dados" class="section level3">
+<h3>PASSO 5 - MANIPULAÇÃO DE DADOS</h3>
+<pre class="r"><code>    library(tidytext)
+    library(tm)
+    busca_twitter %&lt;&gt;% mutate(tweet_id = row_number()) #Cria um id para cada Tweet
+    # Criar uma linha para cada palavra de um tweet
+    tweets.input_stem&lt;-busca_twitter %&gt;% select(texto_limpo,tweet_id) %&gt;% unnest_tokens(word,texto_limpo)
+    #remover stopwords
+    stop_words_pt&lt;-data.frame(word=(stopwords(kind = &quot;pt&quot;)))
+    stop_words_pt$word&lt;-as.character(stop_words_pt$word)
+    tweets.input_stem &lt;- tweets.input_stem %&gt;% anti_join(stop_words_pt)
+    #remover palavras com duas letras
+    tweets.input_stem %&lt;&gt;% filter(sapply(tweets.input_stem$word,nchar)&gt;2)</code></pre>
+</div>
+<div id="passo-6---correlação-entre-as-palavras---quais-são-as-palavras-que-geralmente-aparecem-juntas" class="section level3">
+<h3>PASSO 6 - CORRELAÇÃO ENTRE AS PALAVRAS - Quais são as palavras que geralmente aparecem juntas?</h3>
+<pre class="r"><code>library(widyr)
+library(igraph)
+library(ggraph)
+    correlacao &lt;- tweets.input_stem %&gt;%
+      group_by(word) %&gt;%
+      filter(n() &gt; 40) %&gt;%
+      pairwise_cor(word, tweet_id, sort = TRUE)
+    
+ correlacao %&gt;%
+      filter(correlation &gt; .10) %&gt;% #FILTRANDO APENAS QUANDO A CORRELAÇÃO É MAIOR QUE 0,10 - ESCOLHA SEU CRITÉRIO
+      graph_from_data_frame() %&gt;%
+      ggraph(layout = &#39;fr&#39;) + 
+      guides(edge_alpha = &quot;none&quot;, edge_width = &quot;none&quot;) +
+      scale_edge_colour_gradientn(limits = c(-1, 1), colors = c(&quot;firebrick2&quot;, &quot;dodgerblue2&quot;)) +
+      geom_edge_link(aes(edge_alpha = correlation), show.legend = FALSE) + 
+      geom_node_point(color = &#39;lightblue&#39;, size = 5) + 
+      geom_node_text(aes(label = name), repel = TRUE) + 
+      theme_graph() +
+      labs(title = &quot;Palavras que geralmente apareceram juntas&quot;)   </code></pre>
+<p><img src="/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="passo-7---top-5---palavras-relacionadas-que-mais-aparecem" class="section level3">
+<h3>PASSO 7 - TOP 5 - PALAVRAS RELACIONADAS QUE MAIS APARECEM</h3>
+<pre class="r"><code>      tweets.input_stem %&gt;% count(word, sort = T) %&gt;% top_n(5) %&gt;%
+      mutate(word = reorder(word,n)) %&gt;%
+      ggplot(aes(x = word, y=n)) + 
+      geom_col() +
+      xlab(NULL) +
+      coord_flip() +
+      theme_classic() +
+      labs(x = &quot;&quot;,
+           y = &quot;Qnt. aparições&quot;,
+           title = paste0(&quot;Palavras que aparecem nos tweets com a palavra &quot;,input,&quot;.&quot;))</code></pre>
+<p><img src="/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="passo-8---separando-as-palavras-em-sentimentos-positivos-e-negativos" class="section level3">
+<h3>PASSO 8 - SEPARANDO AS PALAVRAS EM SENTIMENTOS POSITIVOS E NEGATIVOS</h3>
+<pre class="r"><code>    sentimentos&lt;-tweets.input_stem %&gt;% 
+      inner_join(op30, by = &quot;word&quot;) %&gt;% 
+      inner_join(sent %&gt;% select(word, lex_polarity = polarity), by = &quot;word&quot;) %&gt;% 
+      group_by(word) %&gt;% 
+      summarise(
+        tweet_sentiment_op = sum(polarity),
+        tweet_sentiment_lex = sum(lex_polarity),
+        n_words = n()
+      ) 
+    
+    sentimentos%&lt;&gt;%filter(tweet_sentiment_op!=0)
+    sentimentos$sentimento&lt;-ifelse(sentimentos$tweet_sentiment_op&gt;0,&quot;positivo&quot;,&quot;negativo&quot;)
+    sentimentos %&lt;&gt;% select(word,sentimento,n_words)
+    
+    sentimentos %&gt;%  group_by(sentimento) %&gt;%
+      top_n(5) %&gt;%
+      ungroup() %&gt;%
+      mutate(word = reorder(word,n_words)) %&gt;%
+      ggplot(aes(word,n_words,fill=sentimento))+
+      geom_col(show.legend = FALSE) +
+      facet_wrap(~sentimento,scales =&quot;free_y&quot;) +
+      labs(title= paste0(&quot;Palavras relacionadas a busca: &quot;,input),
+           y = &quot;Qnt. vezes que usaram a palavra&quot;,
+           x = NULL) +
+      coord_flip() + theme_bw()</code></pre>
+<p><img src="/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2>Receba nosso conteúdo exclusivo</h2>
+        <p class="text-light px-md-5 py-4 border-left border-right border-primary">
+          Faça parte do nosso grupo exclusivo e receba as novidades mais interessantes sobre Data Sciente e R em primeira mão.</p>
+        <form action="https://sendy.gurudocartola.com/subscribe" method="POST" class="row justify-content-center"  accept-charset="utf-8">
+          <div class="input-group col-md-8">
+            <input type="email" name="email" class="form-control" placeholder="Seu melhor e-mail" required>
+            <div class="input-group-append">
+              <button class="input-group-text btn btn-primary">Inscrever!</button>
+            </div>
+            	<input type="hidden" name="list" value="HWWQSkliMyDJJuQlnLKAXQ"/>
+    	        <input type="hidden" name="subform" value="yes"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Meu contato</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Belo Horizonte, Brasil</li>
+          <li class="mb-3"><a class="text-dark" href="mailto:contato@luisotavio.pro"><i
+                class="ti-email mr-3 text-primary"></i>contato@luisotavio.pro</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Redes Sociais</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.youtube.com/user/luisotavio1988/">youtube</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://instagram.com/_u/luisotavio.pro">instagram</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/luisotaviopro/">linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categorias</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/caso-pr%c3%a1tico">Caso prático</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/post">Post</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/tutorial">Tutorial</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Atalhos</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="/about/about">Sobre mim</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/blog">Blog</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/ebook">E-book</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="/contact">Contato</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | ®2019 <a href="https://luisotavio.pro">Luís Otávio</a> Todos os direitos reservados |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="/plugins/jQuery/jquery.min.js"></script>
+
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="/plugins/slick/slick.min.js"></script>
+
+<script src="/plugins/venobox/venobox.min.js"></script>
+
+<script src="/plugins/search/fuse.min.js"></script>
+
+<script src="/plugins/search/mark.js"></script>
+
+<script src="/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-134709799-1', 'auto');
+  ga('send', 'pageview');
+</script></body>
+</html>

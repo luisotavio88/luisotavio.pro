@@ -1,0 +1,128 @@
+---
+title: 5 maneiras de filtrar os seus dados no R
+author: Luis Otavio
+date: '2020-03-15'
+slug: como-filtrar-os-seus-dados-no-r
+categories:
+  - Post
+tags:
+  - arquivo de texto
+  - CSV
+  - TXT
+image: images/post_principal/filtro.png
+type: post
+---
+
+
+
+<p><strong>Nesse post você vai aprender 5 formas diferentes de como filtrar os dados da sua tabela no R.</strong></p>
+<p>São várias as razões que você pode precisar filtrar os seus dados em uma análise de dados:</p>
+<ul>
+<li>Visualizar as 50 primeiras linhas da sua tabela</li>
+<li>Visualizar todos os registros que possuem um determinado valor para a variável X</li>
+<li>Excluir todos os registros que tenham a variável Y igual a 2, por exemplo…</li>
+<li>Ou até mesmo buscar uma amostra aleatória dos seus dados.</li>
+</ul>
+<p>Porém, alguns métodos são mais adequados que os outros, dependendo do seu objetivo.</p>
+<p>Então, vou falar aqui todas as 5 maneiras e quando usar cada uma delas.</p>
+<p>Em nossos exemplos, vou usar o dataset <em>iris</em> que já é carregado automaticamente no R.</p>
+<div id="filtro-de-dados-pelas-linhas-e-colunas" class="section level3">
+<h3>Filtro de dados pelas linhas e colunas</h3>
+<p>Essa a é a forma mais simples de selecionar dados do seu dataset. E, na minha opinião, deve ser usada com muita cautela.</p>
+<p>O nosso dataset se chama <strong>iris</strong>, então quando escrevemos o comando</p>
+<pre class="r"><code>subset_iris1&lt;-iris[1:30,]</code></pre>
+<p>estamos selecionando as linhas de 1 a 30 do dataset <strong>iris</strong>.</p>
+<p>Quando abrimos os colchetes depois do dataset, temos dois campos separados pela vírgula. Informamos quais as linhas que queremos selecionar antes da vírgula.</p>
+<p>Depois da vírgula informamos quais as colunas queremos selecionar. Como deixei em branco, o R irá retornar todas as colunas do dataset.</p>
+<p>Agora, se eu colocar o comando</p>
+<pre class="r"><code>subset_iris1&lt;-iris[,c(1,3,5)]</code></pre>
+<p>O R irá retornar todas as linhas do dataset <strong>iris</strong> (pois o campo antes da vírgula está vazio) e irá selecionar as colunas 1, 3 e 5, pois essas foram as colunas que eu coloquei no vetor das colunas.</p>
+<p>Você também pode combinar os critérios das linhas e colunas ao mesmo tempo. Desta forma, é possível até escolher até um único elemento contido na tabela. Por exemplo:</p>
+<p>Caso você deseje saber qual o valor da 90ª linha para a coluna 5, o comando será o seguinte:</p>
+<pre class="r"><code>subset_iris1&lt;-iris[90,5]</code></pre>
+<p>Mas porque eu disse que o método deve ser usado com cautela?</p>
+<p>Porque, como você viu, ele é extremamente manual. Então, será útil caso você precise pesquisas ou explorações isoladas.</p>
+<p>Mas, de forma alguma, recomendo que você use esse método para fazer alterações no seu banco de dados que precisem ser generalizadas para todos os dados.</p>
+</div>
+<div id="excluir-dados-pelas-linhas-e-colunas" class="section level3">
+<h3>Excluir dados pelas linhas e colunas</h3>
+<p>Para excluir determinadas linhas ou colunas, vamos usar o mesmo raciocínio do item anterior.</p>
+<p>Vamos colocar o nome do dataset e os colchetes. Dentro dos colchetes iremos colocar na mesma ordem: primeiro as linhas e depois da vírgula colocamos as colunas.</p>
+<p>Porém, como queremos excluir as linhas/colunas, iremos colocar um sinal de “-” antes dos números.</p>
+<p>Por exemplo, se queremos excluir as linhas 10, 11 e 12 do dataset e excluir a coluna 4, o comando será:</p>
+<pre class="r"><code>subset_iris2&lt;-iris[-(10:12),-4]</code></pre>
+<p>E, da mesma forma, se queremos excluir linhas e colunas salteadas, colocamos os números dentro da função de vetor c().</p>
+<pre class="r"><code>subset_iris2&lt;-iris[-c(10,50,90),-c(1,3)]</code></pre>
+<p>Então, o comando acima retornou o dataset <strong>iris</strong> sem as linhas 10, 50 e 90 e também excluiu as colunas 1 e 3.</p>
+</div>
+<div id="filtro-de-dados-combinando-a-função-which" class="section level3">
+<h3>Filtro de dados combinando a função which()</h3>
+<p>Esse método, assim como os seguintes, já podem ser usados em grandes bases de dados de forma segura. Mesmo que você não veja ou conheça todas as linhas da tabela.</p>
+<p>O filtro se aplicará por uma condição que vamos estabelecer.</p>
+<p>Antes de aplicar o filtro, vou explicar rapidamente como funciona a lógica da função <em>which()</em>.</p>
+<p>A função <em>which()</em> irá retornar um vetor com o número das linhas que atendem a condição que você estabeleceu.</p>
+<p>Por exemplo:</p>
+<pre class="r"><code>which(iris$Sepal.Length&gt;6)</code></pre>
+<pre><code>##  [1]  51  52  53  55  57  59  64  66  69  72  73  74  75  76  77  78  87  88  92
+## [20]  98 101 103 104 105 106 108 109 110 111 112 113 116 117 118 119 121 123 124
+## [39] 125 126 127 128 129 130 131 132 133 134 135 136 137 138 140 141 142 144 145
+## [58] 146 147 148 149</code></pre>
+<p>O comando acima irá retornar todas as linhas do dataset <em>iris</em> que possuem um valor maior que 6 para a coluna Sepal.Length.</p>
+<p>Se o comando irá retornar um vetor com todas as linhas que queremos escolher, podemos adaptar a função _which() no 1º método falado aqui e selecionar as linhas que precisamos.</p>
+<p>Ou seja:</p>
+<pre class="r"><code>subset_iris3&lt;-iris[which(iris$Sepal.Length&gt;6),]</code></pre>
+</div>
+<div id="filtro-de-dados-usando-a-função-subset" class="section level3">
+<h3>Filtro de dados usando a função subset()</h3>
+<p>Você vai perceber que a função subset() é bem intuitiva. Ela só precisa de 3 argumentos.</p>
+<ul>
+<li><p>O primeiro argumento que você irá colocar na função é o nome do dataset.</p></li>
+<li><p>Depois, você irá colocar a condição para cada <em>linha</em> que será filtrada.</p></li>
+<li><p>E, por último, quais as colunas que devem permanecer no dataset que você está criando.</p></li>
+</ul>
+<p>Vamos supor que a gente deseje montar um novo dataset chamado “setosa”.</p>
+<p>Nele, vamos filtrar apenas os registros do dataset <strong>iris</strong> que tenham a variável “Species” igual a “setosa”.</p>
+<p>Vou escolher também só as 3 primeiras colunas para o meu novo dataset.</p>
+<pre class="r"><code>setosa_dataset&lt;-subset(iris,Species==&quot;setosa&quot;,select = c(&quot;Sepal.Length&quot;,&quot;Sepal.Width&quot;,&quot;Petal.Length&quot;))</code></pre>
+<p>OU</p>
+<pre class="r"><code>setosa_dataset&lt;-subset(iris,Species==&quot;setosa&quot;,1:3)</code></pre>
+<p>Caso você não queira excluir nenhuma coluna, não coloque o último argumento:</p>
+<pre class="r"><code>setosa_dataset&lt;-subset(iris,Species==&quot;setosa&quot;)</code></pre>
+</div>
+<div id="filtrar-usando-a-função-filter-e-select" class="section level3">
+<h3>Filtrar usando a função filter() e select()</h3>
+<p>As funções <em>filter</em> e <em>select</em> fazem parte da biblioteca <strong>dplyr</strong>.</p>
+<p>Esse pacote é essencial para manipulação de dados. Então, se você ainda tem ele no R, baixe agora mesmo usando o comando:</p>
+<pre class="r"><code>install.packages(&quot;dplyr&quot;)</code></pre>
+<p>Para carregar o pacote, você precisar rodar o comando <code>library(dplyr)</code></p>
+<p><strong>É importante saber que você irá usar o comando “filter” para filtrar as LINHAS e o comando “select” para selecionar as COLUNAS.</strong></p>
+<ul>
+<li>Função filter()</li>
+</ul>
+<p>Você precisa informar duas coisas para a função:
+-&gt; Quais os dados você deseja usar (sua tabela)
+-&gt; Quais as condições para filtrar os dados</p>
+<p>Vamos filtrar aqui novamente de acordo com a variável “Species” do dataset iris.</p>
+<p>Agora vou filtrar todos os registros da espécie “virginica”.</p>
+<pre class="r"><code>library(dplyr)
+virginica_dataset&lt;-filter(iris,Species==&quot;virginica&quot;)</code></pre>
+<p>Bem simples! Mas e se a gente quiser combinar mais de uma condição?</p>
+<p>Nesse caso, podemos usar dois <strong>operadores lógicos</strong> para combinar as condições: E e OU.</p>
+<p>Caso a gente precise que as duas condições aconteçam ao mesmo tempo, usaremos a condição E (representada pelo &amp;)</p>
+<p>Caso a gente precise que aconteça uma condição OU a outra, usaremos a condição OU (representada pelo |) - nesse caso, só excluiremos caso não aconteça nenhuma das duas condições.</p>
+<p>Vamos supor que precisamos filtrar os registros da espécie “versicolor” <strong>e</strong> que tenham a variável “Sepal.Length” maior que 6.</p>
+<pre class="r"><code>library(dplyr)
+versicolor_dataset&lt;-filter(iris,Species==&quot;versicolor&quot; &amp; Sepal.Length&gt;6)</code></pre>
+<ul>
+<li>Função select()</li>
+</ul>
+<p>A função select é muito útil para escolher quais as colunas iremos manter em nosso dataset.</p>
+<p>Assim como a função filter(), ela só precisa de dois argumentos.</p>
+<p>O primeiro argumento também será o dataset que você irá selecionar as colunas.</p>
+<p>O segundo argumento é a coluna que deseja selecionar. Claro que você pode querer selecionar várias colunas, não tem problema. Veja só:</p>
+<p>Vamos selecionar as colunas Sepal.Length e Species do dataset iris.</p>
+<pre class="r"><code>library(dplyr)
+select_dataset&lt;-select(iris,Sepal.Length,Species)</code></pre>
+<p>Então esse comando irá salvar no “select_dataset” todas as linhas do dataset iris, mas apenas as colunas que você selecionou.</p>
+<p>Espero que essas 5 formas de filtrar as linhas e colunas de seus datasets sejam bem úteis na sua manipulação dos dados e até a próxima! :)</p>
+</div>
