@@ -5,7 +5,7 @@ date: '2020-11-25'
 slug: sair
 categories: []
 tags: []
-type: mylayout
+type: semheader
 ---
 
 Sua inscrição em nossa lista de e-mail foi cancelada. 
