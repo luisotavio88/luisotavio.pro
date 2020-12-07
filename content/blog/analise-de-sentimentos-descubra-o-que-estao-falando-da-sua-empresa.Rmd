@@ -66,8 +66,8 @@ library(rtweet)
 ## store api keys (these are fake example values; replace with your own keys)
 api_key <- "JVL4OzU3mGkvewvKVWev7YByQ"
 api_secret_key <- "XT8FCxdHpTUBLF8UaFecfmwGoxdQlvvAbTHJGbd1VCzOAu2FrQ"
-access_token <- "933641605462011904-vdiABgLEv5UDxwyAPaU9BGbnlfQA9E9"
-access_token_secret <- "efzvLU3SKQI4GJ0AmC71kwNC24PBaTRL1n3zur2EpvvSs"
+access_token <- "933641605462011904-zDmOK99MoiWax3Bfigja6gYm5u1CUbS"
+access_token_secret <- "x6gL7RKq3x2EmmmpbwiepF1k8manNObnSY7ImCZIc8Y6X"
 
 ## authenticate via web browser
 # token <- create_token(
@@ -90,7 +90,7 @@ library(rtweet)
 
 ## authenticate via web browser
 token <- create_token(
-  app = "nome do seu app", #substituir
+  app = "analisedesentimento_luisotavio",
   consumer_key = api_key,
   consumer_secret = api_secret_key,
   access_token = access_token,
@@ -173,7 +173,8 @@ library(ggraph)
       pairwise_cor(word, tweet_id, sort = TRUE)
     
  correlacao %>%
-      filter(correlation > .10) %>% #FILTRANDO APENAS QUANDO A CORRELAÇÃO É MAIOR QUE 0,10 - ESCOLHA SEU CRITÉRIO
+   arrange(-correlation) %>%
+      top_n(4) %>% #FILTRANDO APENAS QUANDO A CORRELAÇÃO É MAIOR QUE 0,10 - ESCOLHA SEU CRITÉRIO
       graph_from_data_frame() %>%
       ggraph(layout = 'fr') + 
       guides(edge_alpha = "none", edge_width = "none") +
