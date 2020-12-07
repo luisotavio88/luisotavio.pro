@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 3 Iniciando com o R | O seu primeiro passo para ser um Cientista de Dados</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 3 Iniciando com o R | O seu primeiro passo para ser um Cientista de Dados" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="imagens/cover.png" />
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 3 Iniciando com o R | O seu primeiro passo para ser um Cientista de Dados" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="twitter:image" content="imagens/cover.png" />
+
+<meta name="author" content="Luís Otávio" />
+
+
+<meta name="date" content="2020-06-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="a-ciência-de-dados.html"/>
+<link rel="next" href="instalar-pacotes-no-r.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134709799-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134709799-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '517351808978929');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=517351808978929&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://www.luisotavio.pro">luisotavio.pro</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bem-vindos</a></li>
+<li class="chapter" data-level="1" data-path="quem-sou-eu.html"><a href="quem-sou-eu.html"><i class="fa fa-check"></i><b>1</b> Quem sou eu</a></li>
+<li class="chapter" data-level="2" data-path="a-ciência-de-dados.html"><a href="a-ciência-de-dados.html"><i class="fa fa-check"></i><b>2</b> A Ciência de Dados</a></li>
+<li class="chapter" data-level="3" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html"><i class="fa fa-check"></i><b>3</b> Iniciando com o R</a><ul>
+<li class="chapter" data-level="3.1" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#instalação"><i class="fa fa-check"></i><b>3.1</b> Instalação</a></li>
+<li class="chapter" data-level="3.2" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#executar-ou-rodar-o-código-no-r"><i class="fa fa-check"></i><b>3.2</b> Executar (ou rodar) o código no R</a></li>
+<li class="chapter" data-level="3.3" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#lógica-de-programação-no-r"><i class="fa fa-check"></i><b>3.3</b> Lógica de programação no R</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#as-funções-no-r"><i class="fa fa-check"></i><b>3.3.1</b> As funções no R</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#objetos"><i class="fa fa-check"></i><b>3.4</b> Objetos</a></li>
+<li class="chapter" data-level="3.5" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#vetores"><i class="fa fa-check"></i><b>3.5</b> Vetores</a></li>
+<li class="chapter" data-level="3.6" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#matrizes"><i class="fa fa-check"></i><b>3.6</b> Matrizes</a></li>
+<li class="chapter" data-level="3.7" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#listas"><i class="fa fa-check"></i><b>3.7</b> Listas</a></li>
+<li class="chapter" data-level="3.8" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#fatores"><i class="fa fa-check"></i><b>3.8</b> Fatores</a></li>
+<li class="chapter" data-level="3.9" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#coerção-de-classes"><i class="fa fa-check"></i><b>3.9</b> Coerção de classes</a></li>
+<li class="chapter" data-level="3.10" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#valores-faltantes"><i class="fa fa-check"></i><b>3.10</b> Valores faltantes</a></li>
+<li class="chapter" data-level="3.11" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#data-frames"><i class="fa fa-check"></i><b>3.11</b> Data Frames</a></li>
+<li class="chapter" data-level="3.12" data-path="iniciando-com-o-r.html"><a href="iniciando-com-o-r.html#names"><i class="fa fa-check"></i><b>3.12</b> Names</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html"><i class="fa fa-check"></i><b>4</b> Instalar Pacotes no R</a><ul>
+<li class="chapter" data-level="4.1" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#como-instalar-um-pacote-no-r-ou-rstudio"><i class="fa fa-check"></i><b>4.1</b> Como instalar um pacote no R ou RStudio</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#usando-o-botão-de-instalação"><i class="fa fa-check"></i><b>4.1.1</b> Usando o botão de instalação</a></li>
+<li class="chapter" data-level="4.1.2" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#usando-o-comando-de-instalação"><i class="fa fa-check"></i><b>4.1.2</b> Usando o comando de instalação</a></li>
+<li class="chapter" data-level="4.1.3" data-path="instalar-pacotes-no-r.html"><a href="instalar-pacotes-no-r.html#usando-o-devtools"><i class="fa fa-check"></i><b>4.1.3</b> Usando o Devtools</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html"><i class="fa fa-check"></i><b>5</b> Como ler ou salvar seus dados</a><ul>
+<li class="chapter" data-level="5.1" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#como-importar-uma-tabela-em-arquivo-txt-ou-csv-para-o-rstudio"><i class="fa fa-check"></i><b>5.1</b> Como importar uma tabela em arquivo txt ou csv para o RStudio</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#método-sem-nenhuma-linha-de-código"><i class="fa fa-check"></i><b>5.1.1</b> Método sem nenhuma linha de código</a></li>
+<li class="chapter" data-level="5.1.2" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#importando-dados-com-a-função-read.table"><i class="fa fa-check"></i><b>5.1.2</b> Importando dados com a função read.table</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#como-importar-dados-do-excel-para-o-rstudio"><i class="fa fa-check"></i><b>5.2</b> Como importar dados do Excel para o RStudio</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#copiando-os-dados-do-excel-e-importando-para-o-r."><i class="fa fa-check"></i><b>5.2.1</b> Copiando os dados do Excel e importando para o R.</a></li>
+<li class="chapter" data-level="5.2.2" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#importando-arquivos-do-excel-sem-usar-programação"><i class="fa fa-check"></i><b>5.2.2</b> Importando arquivos do Excel sem usar programação</a></li>
+<li class="chapter" data-level="5.2.3" data-path="como-ler-ou-salvar-seus-dados.html"><a href="como-ler-ou-salvar-seus-dados.html#abrir-os-dados-do-excel-no-r-usando-o-pacote-readxl"><i class="fa fa-check"></i><b>5.2.3</b> Abrir os dados do Excel no R usando o pacote readxl</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html"><i class="fa fa-check"></i><b>6</b> Manipulação de objetos</a><ul>
+<li class="chapter" data-level="6.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#manipulação-de-vetores"><i class="fa fa-check"></i><b>6.1</b> Manipulação de vetores</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-extrair-elementos-de-um-vetor"><i class="fa fa-check"></i><b>6.1.1</b> Como extrair elementos de um vetor</a></li>
+<li class="chapter" data-level="6.1.2" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-atribuir-valores-a-elementos-de-um-vetor"><i class="fa fa-check"></i><b>6.1.2</b> Como atribuir valores a elementos de um vetor</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#manipulação-de-matrizes"><i class="fa fa-check"></i><b>6.2</b> Manipulação de matrizes</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-extrair-elementos-de-uma-matriz"><i class="fa fa-check"></i><b>6.2.1</b> Como extrair elementos de uma matriz</a></li>
+<li class="chapter" data-level="6.2.2" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-atribuir-valores-a-elementos-de-uma-matriz"><i class="fa fa-check"></i><b>6.2.2</b> Como atribuir valores a elementos de uma matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#manipulação-de-listas"><i class="fa fa-check"></i><b>6.3</b> Manipulação de Listas</a></li>
+<li class="chapter" data-level="6.4" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-extrair-elementos-ou-objetos-de-uma-lista"><i class="fa fa-check"></i><b>6.4</b> Como extrair elementos ou objetos de uma lista</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="manipulação-de-objetos.html"><a href="manipulação-de-objetos.html#como-atribuir-valores-a-elementos-de-uma-lista"><i class="fa fa-check"></i><b>6.4.1</b> Como atribuir valores a elementos de uma lista</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html"><i class="fa fa-check"></i><b>7</b> Manipulação de dados com o dplyr</a><ul>
+<li class="chapter" data-level="7.1" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#o-que-é-um-data-frame"><i class="fa fa-check"></i><b>7.1</b> O que é um Data Frame?</a></li>
+<li class="chapter" data-level="7.2" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#manipulação-de-um-data-frame"><i class="fa fa-check"></i><b>7.2</b> Manipulação de um Data Frame</a></li>
+<li class="chapter" data-level="7.3" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#as-funções-do-dplyr"><i class="fa fa-check"></i><b>7.3</b> As funções do Dplyr</a></li>
+<li class="chapter" data-level="7.4" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#as-propriedades-das-funções-do-pacote-dplyr"><i class="fa fa-check"></i><b>7.4</b> As propriedades das funções do pacote Dplyr</a></li>
+<li class="chapter" data-level="7.5" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#a-função-summarise-e-a-função-group_by"><i class="fa fa-check"></i><b>7.5</b> A função Summarise e a função group_by</a></li>
+<li class="chapter" data-level="7.6" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#mutate"><i class="fa fa-check"></i><b>7.6</b> Mutate</a></li>
+<li class="chapter" data-level="7.7" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#select"><i class="fa fa-check"></i><b>7.7</b> Select</a></li>
+<li class="chapter" data-level="7.8" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#filter"><i class="fa fa-check"></i><b>7.8</b> Filter</a></li>
+<li class="chapter" data-level="7.9" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#arrange"><i class="fa fa-check"></i><b>7.9</b> Arrange</a></li>
+<li class="chapter" data-level="7.10" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#rename"><i class="fa fa-check"></i><b>7.10</b> Rename</a></li>
+<li class="chapter" data-level="7.11" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#como-juntar-informações-de-data-frames-diferentes"><i class="fa fa-check"></i><b>7.11</b> Como juntar informações de <em>data frames</em> diferentes</a></li>
+<li class="chapter" data-level="7.12" data-path="manipulação-de-dados-com-o-dplyr.html"><a href="manipulação-de-dados-com-o-dplyr.html#o-operador-em-inglês-se-pronuncia-pipe"><i class="fa fa-check"></i><b>7.12</b> O operador %&gt;% (em inglês se pronuncia <em>pipe</em>)</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html"><i class="fa fa-check"></i><b>8</b> Manipulação de Hora e Data</a><ul>
+<li class="chapter" data-level="8.1" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#formato-de-data-no-r"><i class="fa fa-check"></i><b>8.1</b> Formato de data no R</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#como-transformar-o-formato-da-variável-de-data-e-hora"><i class="fa fa-check"></i><b>8.1.1</b> Como transformar o formato da variável de data e hora?</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#extrair-ano-mês-dia-horas-minutos-ou-segundos."><i class="fa fa-check"></i><b>8.2</b> Extrair ano, mês, dia, horas, minutos ou segundos.</a></li>
+<li class="chapter" data-level="8.3" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#fuso-horário"><i class="fa fa-check"></i><b>8.3</b> Fuso horário</a></li>
+<li class="chapter" data-level="8.4" data-path="manipulação-de-hora-e-data.html"><a href="manipulação-de-hora-e-data.html#operação-com-datas"><i class="fa fa-check"></i><b>8.4</b> Operação com datas</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html"><i class="fa fa-check"></i><b>9</b> Estruturas de Controle</a><ul>
+<li class="chapter" data-level="9.1" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#for"><i class="fa fa-check"></i><b>9.1</b> for</a></li>
+<li class="chapter" data-level="9.2" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#while"><i class="fa fa-check"></i><b>9.2</b> while</a></li>
+<li class="chapter" data-level="9.3" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#if---else"><i class="fa fa-check"></i><b>9.3</b> if - else</a></li>
+<li class="chapter" data-level="9.4" data-path="estruturas-de-controle.html"><a href="estruturas-de-controle.html#ifelse"><i class="fa fa-check"></i><b>9.4</b> ifelse</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html"><i class="fa fa-check"></i><b>10</b> Explore os seus dados</a><ul>
+<li class="chapter" data-level="10.1" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#nome-das-colunas"><i class="fa fa-check"></i><b>10.1</b> Nome das colunas</a></li>
+<li class="chapter" data-level="10.2" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#estrutura-do-dataset"><i class="fa fa-check"></i><b>10.2</b> Estrutura do Dataset</a></li>
+<li class="chapter" data-level="10.3" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#o-começo-e-o-final-do-seu-conjunto-de-dados"><i class="fa fa-check"></i><b>10.3</b> O começo e o final do seu conjunto de dados</a></li>
+<li class="chapter" data-level="10.4" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#frequência"><i class="fa fa-check"></i><b>10.4</b> Frequência</a></li>
+<li class="chapter" data-level="10.5" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#estatísticas-descritivas-básicas"><i class="fa fa-check"></i><b>10.5</b> Estatísticas descritivas básicas</a></li>
+<li class="chapter" data-level="10.6" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#gráficos-usados-na-análise-exploratória"><i class="fa fa-check"></i><b>10.6</b> Gráficos usados na Análise Exploratória</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#histograma"><i class="fa fa-check"></i><b>10.6.1</b> Histograma</a></li>
+<li class="chapter" data-level="10.6.2" data-path="explore-os-seus-dados.html"><a href="explore-os-seus-dados.html#boxplot"><i class="fa fa-check"></i><b>10.6.2</b> Boxplot</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html"><i class="fa fa-check"></i><b>11</b> Criando Gráficos no R</a><ul>
+<li class="chapter" data-level="11.1" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#criando-gráficos-com-a-biblioteca-ggplot2"><i class="fa fa-check"></i><b>11.1</b> Criando gráficos com a biblioteca <em>ggplot2</em></a><ul>
+<li class="chapter" data-level="11.1.1" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#seu-primeiro-gráfico"><i class="fa fa-check"></i><b>11.1.1</b> Seu primeiro gráfico</a></li>
+<li class="chapter" data-level="11.1.2" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#incrementando-o-gráfico"><i class="fa fa-check"></i><b>11.1.2</b> Incrementando o gráfico</a></li>
+<li class="chapter" data-level="11.1.3" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-bolhas---bubble-chart"><i class="fa fa-check"></i><b>11.1.3</b> O Gráfico de Bolhas - Bubble Chart</a></li>
+<li class="chapter" data-level="11.1.4" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-correlação"><i class="fa fa-check"></i><b>11.1.4</b> O gráfico de correlação</a></li>
+<li class="chapter" data-level="11.1.5" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#aperfeiçoando-o-gráfico"><i class="fa fa-check"></i><b>11.1.5</b> Aperfeiçoando o gráfico</a></li>
+<li class="chapter" data-level="11.1.6" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-1---acesso-a-api-do-twitter"><i class="fa fa-check"></i><b>11.1.6</b> PASSO 1 - ACESSO A API DO TWITTER</a></li>
+<li class="chapter" data-level="11.1.7" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-2---buscar-os-tweets-de-cada-repórter"><i class="fa fa-check"></i><b>11.1.7</b> PASSO 2 - BUSCAR OS TWEETS DE CADA REPÓRTER</a></li>
+<li class="chapter" data-level="11.1.8" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-3---visualização-das-buscas-e-o-retweet"><i class="fa fa-check"></i><b>11.1.8</b> PASSO 3 - VISUALIZAÇÃO DAS BUSCAS E O RETWEET</a></li>
+<li class="chapter" data-level="11.1.9" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.9</b> Filtro de dados pelas linhas e colunas</a></li>
+<li class="chapter" data-level="11.1.10" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#excluir-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.10</b> Excluir dados pelas linhas e colunas</a></li>
+<li class="chapter" data-level="11.1.11" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-combinando-a-função-which"><i class="fa fa-check"></i><b>11.1.11</b> Filtro de dados combinando a função which()</a></li>
+<li class="chapter" data-level="11.1.12" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-usando-a-função-subset"><i class="fa fa-check"></i><b>11.1.12</b> Filtro de dados usando a função subset()</a></li>
+<li class="chapter" data-level="11.1.13" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtrar-usando-a-função-filter-e-select"><i class="fa fa-check"></i><b>11.1.13</b> Filtrar usando a função filter() e select()</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://www.luisotavio.pro" target="blank">100% feito usando o R</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">O seu primeiro passo para ser um Cientista de Dados</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="iniciando-com-o-r" class="section level1">
+<h1><span class="header-section-number"> 3</span> Iniciando com o R</h1>
+<div id="instalação" class="section level2">
+<h2><span class="header-section-number">3.1</span> Instalação</h2>
+<p>Todos os passos que sugiro nesse e-book são <strong>100% gratuitos</strong>.</p>
+<p>Você irá instalar o <strong>R</strong>, o <strong>RStudio</strong> e várias bibliotecas que vão facilitar a nossa vida, porém não há nenhum custo financeiro nisso!</p>
+<p>Então, primeiramente, você precisa ter o software R instalado no seu computador.</p>
+<p>E, logo depois, instalar o RStudio. <strong>O RStudio é uma interface para facilitar a sua vida</strong>.</p>
+<p>Ele irá deixar a sua tela de programação muito mais amigável, organizada e você terá várias funções que irão facilitar o desenvolvimento do seu projeto.</p>
+<p>Usar o R sem o RStudio é inimaginável hoje em dia. Não tem nenhum motivo para você fazer isso, então instale também o RStudio.</p>
+<p>Caso você precise de ajuda para instalar o R e o RStudio, veja o passo a passo:</p>
+<p><a href="https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/" target="_blank">Clique aqui para ver o passo a passo de instalação do R e do RStudio.</a></p>
+</div>
+<div id="executar-ou-rodar-o-código-no-r" class="section level2">
+<h2><span class="header-section-number">3.2</span> Executar (ou rodar) o código no R</h2>
+<p>Quando colocamos a nossa linha de código ou até mesmo todo o nosso <em>script</em> no editor de texto do R, ele não irá fazer NADA.</p>
+<p>A menos que você dê uma ordem para o R executar (rodar) o seu código.</p>
+<p>Para executar o seu código, existem duas formas!</p>
+<ul>
+<li><p>Usando o teclado: ctrl + Enter</p></li>
+<li><p>Usando o mouse: clique no botão <em>Run</em></p></li>
+</ul>
+<p><img src="imagens/3_run.PNG" /></p>
+<p>Essa ordem pode ser para executar apenas uma linha de código, um conjunto de linhas ou até mesmo todo o seu <em>script</em>.</p>
+<p>Você escolhe!</p>
+<p>O que vai definir a parte do código que será executada?</p>
+<ul>
+<li>Depende do que está selecionado pelo seu <em>mouse</em>!</li>
+</ul>
+<p>Por exemplo, se você selecionar todas as linhas do script e pedir para executar, todo o script será executado.</p>
+<p>Se você selecionar só uma parte, só essa parte irá rodar.</p>
+<p>E se você não selecionar nada?</p>
+<p>Aí o R irá executar apenas a linha onde está o cursor do <em>mouse</em> (como na imagem acima).</p>
+</div>
+<div id="lógica-de-programação-no-r" class="section level2">
+<h2><span class="header-section-number">3.3</span> Lógica de programação no R</h2>
+<p>A linguagem R é orientada a objetos e, na prática, isso significa que tudo no R será um objeto.</p>
+<p>Imagine que esse “objeto” é uma variável capaz de armazenar um valor ou uma estrutura de dados. Por exemplo:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">variavel1&lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb1-2" title="2">dataset1 &lt;-<span class="st"> </span>cars</a></code></pre></div>
+<p>Na primeira linha do código eu estou atribuindo o valor 5 para o <strong>objeto</strong> “variavel1”, criado por mim.</p>
+<p>O <strong>operador de atribuição</strong> é representado pelo <code>&lt;-</code>.</p>
+<p>Você vai escolher o nome que mais fizer mais sentido para o seu objeto, de forma que fique fácil de saber do que se trata.</p>
+<p>Seguindo o mesmo raciocínio, eu paguei um conjunto de dados do R, que se chama <code>cars</code> e atribui esse conjunto para o <strong>objeto</strong> <code>dataset1</code>.</p>
+<p>Então, agora o <code>dataset1</code> recebeu a estrutura de dados que estava no dataset <code>cars</code> e os dois objetos terão o mesmo valor.</p>
+<div id="as-funções-no-r" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> As funções no R</h3>
+<p>No R existem várias funções já pré-definidas. Elas servem para facilitar trabalhos que são feitos repetidamente por muitas pessoas.</p>
+<p>Imagine que existe um trabalho repetitivo que várias pessoas precisem fazer.</p>
+<p>Agora imagine que alguém já escreveu todo o passo a passo desse trabalho repetitivo e você só precisará usar a função que essa pessoa escreveu.</p>
+<p>Por exemplo, calcular a média aritmética é um trabalho que muitos usuários do R vão usar, então já existe uma função para isso.</p>
+<p>Essa função é a <code>mean()</code>.</p>
+<p>Para usar uma função, você vai inserir dentro da função os <strong>argumentos</strong> necessários.</p>
+<p>Para calcular a média, o único argumento necessário são os números dos quais você quer saber a média.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">numeros &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:</span><span class="dv">15</span>  <span class="co"># estou atribuindo os números 10, 11, 12, 13, 14 e 15 para o objeto &quot;numeros&quot;</span></a>
+<a class="sourceLine" id="cb2-2" title="2">numeros           <span class="co"># pedi para o R imprimir no Console o objeto &quot;numeros&quot; </span></a></code></pre></div>
+<pre><code>## [1] 10 11 12 13 14 15</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">mean</span>(numeros)     <span class="co"># pedi para o R imprimir a média do objeto &quot;numeros&quot;</span></a></code></pre></div>
+<pre><code>## [1] 12.5</code></pre>
+<p>obs.: Sempre que você usar uma # (hashtag) em seu código, o R irá ignorar o que está à direita da Hashtag.
+Isso é muito útil para que você faça <strong>comentários</strong> no seu código. Isso vai facilitar muito quando você for ler o código depois de alguns dias que escreveu. E também será extremamente útil se outra pessoa precisar ler o seu código.</p>
+<p><strong>O R possui milhares e milhares de funções já prontas que irão nos ajudar muito no desenvolvimento de nossos projetos.</strong></p>
+<p>Para você saber qual a função que irá fazer o que você está precisando, sugiro que procure no Google. Por exemplo:</p>
+<p>Caso você queira calcular a mediana dos seus dados, coloque no Google: <em>R como calcular a mediana</em>.</p>
+<p>E com dois cliques você irá descobrir que deve usar a função <strong>median()</strong></p>
+</div>
+</div>
+<div id="objetos" class="section level2">
+<h2><span class="header-section-number">3.4</span> Objetos</h2>
+<p>Cada objeto irá ter uma <strong>Classe</strong>. Ela é definida pela forma do objeto e será muito importante na maneira que o objeto será manipulado pelas funções.</p>
+<p>Existem 5 classes básicas (atômicas) para um objeto no R:</p>
+<ul>
+<li>Caractere (<em>character</em>)</li>
+<li>Números reais (<em>numeric</em>)</li>
+<li>Inteiros (<em>integer</em>)</li>
+<li>Números complexos (<em>complex</em>)</li>
+<li>Verdadeiro/Falso (<em>logical</em>)</li>
+</ul>
+<p>Para descobrir qual é a <strong>Classe</strong> do objeto, podemos usar a função class().</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">class</span>(<span class="st">&quot;Essa é uma frase.&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">class</span>(<span class="fl">5.6761</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">class</span>(<span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><strong>O texto deve sempre estar entre aspas. Assim o R irá entender que é um texto e não um objeto.</strong></p>
+<p>Por exemplo:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">texto &lt;-<span class="st"> &quot;palavra&quot;</span> <span class="co">#aqui estou atribuindo &quot;palavra&quot; para o objeto texto. </span></a>
+<a class="sourceLine" id="cb12-2" title="2">                <span class="co">#Como eu coloquei o texto entre aspas, o R saberá que é um texto e não um objeto</span></a>
+<a class="sourceLine" id="cb12-3" title="3">texto</a></code></pre></div>
+<pre><code>## [1] &quot;palavra&quot;</code></pre>
+<p>Porém, quando escrevo <em>palavra</em> sem as aspas, o R entenderá que eu estou me referindo ao objeto <code>palavra</code>, porém ele não foi criado e não existe.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">palavra        <span class="co"># o R irá acusar erro, porque não existe um objeto chamado palavra.</span></a></code></pre></div>
+<pre><code>## Error in eval(expr, envir, enclos): objeto &#39;palavra&#39; não encontrado</code></pre>
+</div>
+<div id="vetores" class="section level2">
+<h2><span class="header-section-number">3.5</span> Vetores</h2>
+<p><strong>Vetor</strong> é um conjunto de valores da mesma classe. Por exemplo:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">inteiros &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>) <span class="co">#A função &quot;c&quot; irá organizar os valores em vetor. </span></a>
+<a class="sourceLine" id="cb16-2" title="2">                       <span class="co"># Os elementos do vetor são separados por vírgula.</span></a>
+<a class="sourceLine" id="cb16-3" title="3">                      <span class="co"># veja que todos os valores tem a mesma classe - a classe </span></a>
+<a class="sourceLine" id="cb16-4" title="4">                      <span class="co"># de números inteiros.</span></a>
+<a class="sourceLine" id="cb16-5" title="5"></a>
+<a class="sourceLine" id="cb16-6" title="6"></a>
+<a class="sourceLine" id="cb16-7" title="7">logicos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>) <span class="co">#Vetor com valores lógicos verdadeiro/falso</span></a>
+<a class="sourceLine" id="cb16-8" title="8">logicos &lt;-<span class="st"> </span><span class="kw">c</span>(T,F,T) <span class="co">#Você pode escrever TRUE ou somente T,  </span></a>
+<a class="sourceLine" id="cb16-9" title="9">                    <span class="co"># FALSE ou somente F e o R irá entender </span></a>
+<a class="sourceLine" id="cb16-10" title="10">                    <span class="co"># que se trata de valores lógicos</span></a></code></pre></div>
+<p>Quando escrevemos os valores lógicos TRUE ou T e FALSE ou F, o R já sabe que são valores lógicos. Portanto, não precisamos colocá-los entre aspas.</p>
+</div>
+<div id="matrizes" class="section level2">
+<h2><span class="header-section-number">3.6</span> Matrizes</h2>
+<p>Imagine alguns vetores do mesmo tamanho:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb17-2" title="2">vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb17-3" title="3">vetor3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a></code></pre></div>
+<p>Uma matriz é um conjunto de vetores do mesmo tamanho. Ou uma tabela com linhas e colunas. Como você preferir!</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="co">#a função matrix é usada para criar uma matriz</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="co">#o primeiro argumento da função matrix são os dados da matriz</span></a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="co">#além disso o argumento &quot;ncol&quot; irá informar que desejamos formar 3 colunas.</span></a>
+<a class="sourceLine" id="cb18-4" title="4"><span class="co">#Assim, cada vetor definido anteriormente será uma coluna da matriz</span></a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="kw">matrix</span>(<span class="kw">cbind</span>(vetor1,vetor2,vetor3),<span class="dt">ncol=</span><span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    0    3    1
+## [2,]    1    2    1
+## [3,]    2    1    1
+## [4,]    3    0    1</code></pre>
+<p>Outro exemplo:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="co">#Foram definidos os valores de 1 a 6 no argumento de dados da função.</span></a>
+<a class="sourceLine" id="cb20-2" title="2"><span class="co">#e também foi definido que número de linhas (nrow) igual a 2</span></a>
+<a class="sourceLine" id="cb20-3" title="3"><span class="co">#e o número de colunas igual a 3.</span></a>
+<a class="sourceLine" id="cb20-4" title="4"><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6</code></pre>
+<p>Importante: todas as colunas de uma <strong>matriz</strong> possuem a <strong>mesma classe</strong>. Ou seja, são todas numéricas ou são todas lógicas ou são todas caracteres, etc.</p>
+</div>
+<div id="listas" class="section level2">
+<h2><span class="header-section-number">3.7</span> Listas</h2>
+<p>Você vai usar bastante as <strong>listas</strong> em seus trabalhos. A principal característica delas é aceitar elementos de diferentes classes. Além disso, podem armazenar vetores e matrizes em um único objeto.</p>
+<p>Exemplo:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>)        <span class="co">#Vetor com valores lógicos</span></a>
+<a class="sourceLine" id="cb22-2" title="2">vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)        <span class="co">#Vetor com valores inteiros</span></a>
+<a class="sourceLine" id="cb22-3" title="3">valor_texto &lt;-<span class="st"> &quot;Esse é um texto.&quot;</span>   <span class="co">#Elemento da classe character</span></a>
+<a class="sourceLine" id="cb22-4" title="4">lista &lt;-<span class="st"> </span><span class="kw">list</span>(vetor1,vetor2,valor_texto)</a>
+<a class="sourceLine" id="cb22-5" title="5">lista</a></code></pre></div>
+<pre><code>## [[1]]
+## [1]  TRUE FALSE  TRUE
+## 
+## [[2]]
+## [1] 2 3 4 5 6 7 8 9
+## 
+## [[3]]
+## [1] &quot;Esse é um texto.&quot;</code></pre>
+</div>
+<div id="fatores" class="section level2">
+<h2><span class="header-section-number">3.8</span> Fatores</h2>
+<p>Até agora usamos em nossos exemplos valores lógicos (TRUE/FALSE), valores numéricos ou de texto (<em>character</em>). Porém, é essencial conhecer outra classe de valores: <strong>os fatores</strong>.</p>
+<p><strong>Fator é a classe das variáveis categóricas.</strong></p>
+<p>Uma variável categórica pode ser ordenada, como a renda: salários até R$ 5.000, entre R$ 5.001 e 10.000 e acima de R$ 10.000.</p>
+<p>Ou podemos ter categorias que não possuem nenhuma ordem, como cursos: Administração, Economia, Ciência Contábeis.</p>
+<p>Nos dois exemplos, as variáveis <em>renda</em> e <em>cursos</em> poderiam assumir a classe “factor” em nossas análises.</p>
+<p>Também seria possível classificar renda e cursos (ou qualquer variável categórica) como uma variável de texto (<em>character</em>).</p>
+<p><strong>Então para o que serve a classe dos fatores?</strong></p>
+<p>Sempre que você tiver poucos valores únicos para uma variável, prefira a classificação de fator à <em>character</em>. Essa opção irá otimizar o armazenamento dos dados e também será necessária para utilizar algumas funções do R com seus dados.</p>
+<p>Exemplo:</p>
+<p>Uma pergunta aberta em um questionário irá gerar várias respostas diferentes, então não há sentido nenhum em classificar as respostas em categorias. Portanto, a classificação adequada é <em>character</em>.</p>
+<p>Porém, caso o respondente tenha que escolher uma resposta entre algumas opções disponíveis para esse questionário, a melhor classificação da variável seria como fator.</p>
+<p><strong>O R sempre irá assumir uma classificação para a sua variável e, a priori, você não precisará fazer essa classificação. Ela só é necessária quando a classificação automática feita pelo R for indevida para o seu caso.</strong></p>
+</div>
+<div id="coerção-de-classes" class="section level2">
+<h2><span class="header-section-number">3.9</span> Coerção de classes</h2>
+<p>Em alguns casos, você pode precisar alterar a classe de objetos.</p>
+<p>Suponha, por exemplo, que você criou o seguinte vetor x.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1">x&lt;-<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a></code></pre></div>
+<p>O R irá automaticamente entender que o vetor <em>x</em> é <em>numeric</em></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1"><span class="kw">class</span>(x)</a></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>Porém, pode ser que você precise desse vetor como <em>integer</em> (números inteiros) ou <em>logical</em> (verdadeiro/falso). Por definição 0 seria FALSO e 1 seria VERDADEIRO.</p>
+<p>Para alterar a classe de um objeto por coerção, basta você usar uma função de coerção. As função são definidas por <strong>as.</strong> + <em>classe que o objeto vai assumir</em>.</p>
+<p>Ou seja: as.integer, as.logical, as.numeric, as.factor as.complex ou as.<em>character</em>.</p>
+<p>Para o exemplo acima, teríamos:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1"><span class="kw">as.integer</span>(x)</a></code></pre></div>
+<pre><code>## [1] 0 1 0 1 1</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1"><span class="kw">as.logical</span>(x)</a></code></pre></div>
+<pre><code>## [1] FALSE  TRUE FALSE  TRUE  TRUE</code></pre>
+<p><strong>Dica importante</strong>: Muito cuidado ao converter objetos classificados como FATORES para NUMÉRICOS. Para fazer isso sem perder informação, você precisa converter primeiramente para <em>character</em> e, posteriormente, para <em>numeric</em>.</p>
+</div>
+<div id="valores-faltantes" class="section level2">
+<h2><span class="header-section-number">3.10</span> Valores faltantes</h2>
+<p>Os valores faltantes, também chamados de <strong>missing values</strong> são representados por <em>NA</em> ou <em>NaN</em>.</p>
+<p>Eles não irão influenciar a classe de um objeto, por exemplo:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1">x&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="co">#apesar de ser representado por duas letras, pelo padrão do R, ele saberá que não se trata de um texto e sim de valores faltantes.</span></a>
+<a class="sourceLine" id="cb31-2" title="2"><span class="kw">class</span>(x)</a></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+</div>
+<div id="data-frames" class="section level2">
+<h2><span class="header-section-number">3.11</span> Data Frames</h2>
+<p>Provavelmente esse é o objeto mais usado no R. É similar a uma matriz, porém com mais possibilidades.</p>
+<p>Os <strong>Data Frames</strong> são tabelas que aceitam colunas de todas as classes. Por exemplo, podemos ter uma coluna com classe <em>numeric</em>, outra <em>logical</em> e outra <em>character</em>. Isso não é possível em uma matriz, onde todas as colunas devem ter a mesma classe.</p>
+<p>Cada coluna em um <em>Data Frame</em> terá um nome. É altamente recomendável que você atribua nomes que realmente representem a variável ali contida. Ou seja, <strong>evite</strong> nomes como X1, X2, X3, etc.</p>
+<p>Também é possível atribuir nomes para as linhas de seu <strong>data frame</strong>.</p>
+<p>É muito comum que você importe seus dados/tabela para o R, porém veja como você pode criar um <em>data frame</em> de forma bem simples:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">produto=</span><span class="kw">c</span>(<span class="st">&quot;roda&quot;</span>,<span class="st">&quot;pneu&quot;</span>,<span class="st">&quot;suspensão&quot;</span>), <span class="dt">preco =</span> <span class="kw">c</span>(<span class="dv">30</span>,<span class="dv">20</span>,<span class="dv">15</span>), <span class="dt">esta_disponivel =</span> <span class="kw">c</span>(T, T, F))</a>
+<a class="sourceLine" id="cb33-2" title="2">meus_dados</a></code></pre></div>
+<pre><code>##     produto preco esta_disponivel
+## 1      roda    30            TRUE
+## 2      pneu    20            TRUE
+## 3 suspensão    15           FALSE</code></pre>
+<p>O <strong>data frame</strong> criado acima possui variáveis de texto, numérica e lógica.</p>
+</div>
+<div id="names" class="section level2">
+<h2><span class="header-section-number">3.12</span> Names</h2>
+<p>Os <strong>names</strong> são muito úteis na manipulação dos dados contidos nas matrizes, listas ou <em>data frames</em>.</p>
+<p>Por exemplo, no <em>data frame</em> <strong>meus_dados</strong> criado no item anterior, foi definido que o nome das variáveis são: produto, preco e esta_disponivel.</p>
+<p>Isso pode ser identificado pela função <code>names()</code></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1"><span class="kw">names</span>(meus_dados)</a></code></pre></div>
+<pre><code>## [1] &quot;produto&quot;         &quot;preco&quot;           &quot;esta_disponivel&quot;</code></pre>
+<p>Veremos como podemos usar os nomes das colunas no capítulo de manipulação de dados.</p>
+<p>Para alterar os nomes das colunas ou linhas de um <em>data frame</em>, usa-se as funções <code>names()</code> e <code>row.names()</code>.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw">names</span>(meus_dados)&lt;-<span class="kw">c</span>(<span class="st">&quot;novo_nome&quot;</span>,<span class="st">&quot;preco&quot;</span>,<span class="st">&quot;esta_disponivel&quot;</span>) <span class="co">#alterando o nome da 1a coluna</span></a>
+<a class="sourceLine" id="cb37-2" title="2">meus_dados</a></code></pre></div>
+<pre><code>##   novo_nome preco esta_disponivel
+## 1      roda    30            TRUE
+## 2      pneu    20            TRUE
+## 3 suspensão    15           FALSE</code></pre>
+<tr><center>
+    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
+  <img src="imagens/insta.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
+  <img src="imagens/youtube.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
+  </center></tr>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="a-ciência-de-dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="instalar-pacotes-no-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+},
+"search": false,
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>

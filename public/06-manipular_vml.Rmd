@@ -1,0 +1,219 @@
+# Manipulação de objetos
+
+No Capítulo 3 apresentei o conceito dos vetores, matrizes e listas. Eles são usados a todo momento no R.
+
+Agora vou mostrar como manipulá-los, extrair ou adicionar valores.
+
+## Manipulação de vetores
+
+Para criar um vetor, usamos o comando ```c()```.
+
+```{r}
+meu_vetor <- c(2,4,6,8,10) 
+```
+
+O comando acima irá atribuir ao objeto ```meu_vetor``` 5 elementos: números pares entre 2 e 10.
+
+### Como extrair elementos de um vetor
+
+Para extrair um elemento(s) de um vetor você precisará apenas escrever o nome do vetor e escolher qual(is) elemento(s) deseja extrair.
+
+Coloque os elementos dentro de colchetes, por exemplo:
+
+```{r}
+meu_vetor[2]  #Extrai o SEGUNDO elemento do vetor
+meu_vetor[3:5] #Extrai o TERCEIRO, QUARTO e QUINTO elemento do vetor
+meu_vetor[c(1,5)] #Extrai o PRIMEIRO e o QUINTO elemento do vetor
+```
+
+Então, para extrair elementos de um vetor, você precisa colocar dentro dos colchetes quais os elementos devem ser extraídos. Note que você pode colocar um novo vetor dentro dos colchetes, indicando quais serão os elementos.
+
+Nesse caso, estamos informando explicitamente quais elementos queremos extrair. Porém, também podemos usar uma condição lógica para fazer a extração:
+
+```{r}
+meu_vetor2<-c(2,5,9,10,11,1,4)
+meu_vetor2[meu_vetor2 > 7]  #os elementos que atenderem a condição lógica serão extraídos.
+#Note que a condição lógica irá retornar um vetor de TRUE ou FALSE.
+#O resultado será TRUE quando o elemento do vetor for maior que 7 e FALSE no caso contrário.
+#Então, o comando meu_vetor2[meu_vetor2 > 7] irá retornar os elementos correspondentes
+#quando a condição for igual a TRUE.
+meu_vetor2 > 7 
+```
+
+### Como atribuir valores a elementos de um vetor
+
+Para atribuir um valor a um elemento de um vetor, vamos utilizar o mesmo raciocínio desenvolvido até aqui.
+
+Considere o vetor 
+
+```{r}
+meu_vetor
+```
+
+e suponha que você deseje atribuir o valor 1 para o quinto elemento deste vetor
+
+```{r}
+meu_vetor[5] <- 1
+meu_vetor #resultado
+```
+
+
+## Manipulação de matrizes
+
+Os vetores só têm uma dimensão, representam apenas uma variável. Já as matrizes são bidimensionais. 
+
+Isso quer dizer que a matriz é uma tabela com linhas e colunas. 
+
+```{r}
+# CRIANDO UMA MATRIZ
+minha_matriz <- matrix(data = 1:15, nrow=5,ncol=3) 
+minha_matriz
+```
+
+Na criação da matriz acima, informei que os dados da matriz são os números de 1 até 15, que a matriz possui 5 linhas e 3 colunas.
+
+Sempre que for manipular uma matriz, você precisará levar em consideração seus dois índices. O primeiro índice representa a *linha* e o segundo representa a *coluna*.
+
+### Como extrair elementos de uma matriz 
+
+Considere a matriz que criamos no item anterior:
+
+```{r}
+minha_matriz
+```
+
+Agora, suponha que você deseja extrair o elemento localizado na última linha e na última coluna. 
+
+Ou seja, você deseja extrair o elemento que está na linha=5, coluna=3.
+
+Para extrair esse elemento, basta chamar a ```minha_matriz``` e restringir pelos índices linha=5 e coluna=3.
+
+Na prática, basta executar o seguinte comando:
+
+```{r}
+minha_matriz[5,3]   #O primeiro índice sempre se refere a LINHA e o segundo sempre se refere a COLUNA.
+```
+
+E se quisermos extrair uma linha ou coluna inteira?
+
+É muito simples extrair uma linha ou uma coluna inteira. Por exemplo, para extrair uma linha basta que você informe qual é a linha e não faça nenhuma restrição nas colunas.
+
+```{r}
+# Extração da segunda linha da matriz
+
+minha_matriz[2,]  #defini a linha que quero extrair e deixei o campo das colunas vazio.
+```
+
+O mesmo raciocínio se aplica para extrair uma coluna:
+```{r}
+# Extração da terceira coluna da matriz
+minha_matriz[,3]  #defini a coluna que quero extrair e deixei o campo das linhas vazio.
+```
+
+Os exemplos acima extraíram apenas 1 linha ou 1 coluna. Porém, o mesmo funciona para várias linhas ou colunas.
+
+Por exemplo, agora vamos extrair a 1ª e a 3ª coluna.
+```{r}
+minha_matriz[,c(1,3)] #O índice das linhas está vazio, pois quero extrair todas as linhas.
+                      #O vetor c(1,3) irá definir a extração das colunas 1 e 3. 
+```
+
+### Como atribuir valores a elementos de uma matriz
+
+Suponha que deseja atribuir o valor 1 para o elemento localizado na 2ª linha e 3ª coluna de uma matriz:
+
+```{r}
+minha_matriz[2,3] <-1
+minha_matriz
+```
+
+Também é possível atribuir valores para toda a linha ou toda a coluna:
+
+```{r}
+minha_matriz[,3] <-21:25   #Irá atribuir os valores 21,22,23,24 e 25 para a terceira coluna da matriz
+minha_matriz
+```
+
+## Manipulação de Listas
+
+Listas são objetos onde podemos armazenar elementos, vetores ou matrizes de diferentes classes.
+
+```{r}
+minha_lista<- list(vetor_numerico= 1:10,texto="esse é um elemento de texto",matriz=minha_matriz)
+minha_lista
+```
+
+Então, o comando acima gerou uma lista de tamanho igual a 3. O primeiro elemento da lista é um vetor numérico, o segundo é um texto e o terceiro a matriz que criamos anteriormente.
+
+## Como extrair elementos ou objetos de uma lista
+
+Note que ao criar a lista, foram atribuídos nomes para cada elemento da lista, o primeiro foi chamado de *vetor_numero*, o segundo de *texto* e o terceiro de *matriz*.
+
+Então, esses nomes podem ser utilizados na extração dos elementos de uma lista.
+
+Para isso, usamos o símbolo *$*. 
+
+```{r}
+minha_lista$vetor_numerico
+```
+
+O comando acima representa a extração do *vetor_numerico* que está dentro da lista *minha_lista*.
+
+Como o *vetor_numerico* é o primeiro elemento da lista, ele também pode ser extraído da seguinte forma:
+
+```{r}
+minha_lista[[1]]  #na extração em listas, usa-se colchetes duplos.
+```
+
+E como extrair elementos que estão dentro dos objetos *vetor_numero*, *texto* ou *matriz*?
+
+Suponha que você queira extrair o *terceiro* elemento dentro do *vetor_numero*:
+
+```{r}
+#Primeiro acessamos o *vetor_numero* usando [[1]]
+#e depois acessamos o *terceiro elemento* usando [[3]]
+minha_lista[[1]][[3]] 
+```
+
+Ou, de forma equivalente:
+```{r}
+minha_lista$vetor_numerico[[3]]
+```
+
+A extração dos elementos da matriz, que está dentro da lista ```minha_lista```, é bem similar.
+
+Suponha que precise extrair o elemento que está na *terceira linha* e *segunda coluna* da matriz:
+
+```{r}
+minha_lista$matriz[[3,2]]
+```
+
+### Como atribuir valores a elementos de uma lista
+
+Tanto para os vetores, matrizes e listas, a atribuição de valores funciona da mesma maneira que fazemos para extrair os dados. Porém, a diferença é que não vamos simplesmente pedir para o R mostrar os dados ou atribuí-los a algum objeto. Fazemos exatamente o contrário: atribuímos algum valor àquele elemento do vetor, matriz ou lista.
+
+No exemplo a seguir, a *matriz* recebe o valor 5 para a linha 4, coluna 3.
+```{r}
+minha_lista$matriz[4,3] <- 5
+minha_lista$matriz
+```
+
+Também podemos adicionar um objeto completamente novo para a nossa lista:
+
+```{r}
+novo_vetor<-c(50:60)
+minha_lista$novo_vetor<-novo_vetor
+minha_lista
+```
+
+```{r, echo=F}
+shiny::HTML('<tr><center>
+    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
+  <img src="imagens/insta.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
+  <img src="imagens/youtube.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
+  </center></tr>')
+```
