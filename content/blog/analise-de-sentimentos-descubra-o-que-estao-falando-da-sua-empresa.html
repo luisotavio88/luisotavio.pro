@@ -12,8 +12,6 @@ type: post
 image: images/post_principal/sentimento.jpg
 ---
 
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <div id="você-sabe-o-que-é-análise-de-sentimentos-e-porque-ela-é-indispensável-para-uma-marca" class="section level3">
@@ -61,7 +59,7 @@ image: images/post_principal/sentimento.jpg
 
 ## authenticate via web browser
 token &lt;- create_token(
-  app = &quot;analisedesentimento_luisotavio&quot;,
+  app = &quot;nome do seu app&quot;, #substituir
   consumer_key = api_key,
   consumer_secret = api_secret_key,
   access_token = access_token,
@@ -131,8 +129,7 @@ library(ggraph)
       pairwise_cor(word, tweet_id, sort = TRUE)
     
  correlacao %&gt;%
-   arrange(-correlation) %&gt;%
-      top_n(4) %&gt;% #FILTRANDO APENAS QUANDO A CORRELAÇÃO É MAIOR QUE 0,10 - ESCOLHA SEU CRITÉRIO
+      filter(correlation &gt; .10) %&gt;% #FILTRANDO APENAS QUANDO A CORRELAÇÃO É MAIOR QUE 0,10 - ESCOLHA SEU CRITÉRIO
       graph_from_data_frame() %&gt;%
       ggraph(layout = &#39;fr&#39;) + 
       guides(edge_alpha = &quot;none&quot;, edge_width = &quot;none&quot;) +
