@@ -1,0 +1,151 @@
+####################### default configuration ####################
+baseURL = "https://luisotavio.pro"
+languageCode = "pt-br"
+title = "Luis Otavio | Ciência de dados"
+theme = "liva-hugo"
+summaryLength = "10"
+paginate = 6
+disqusShortname = ""
+
+[outputs]
+home = ["HTML", "AMP", "RSS", "JSON"]
+############################# Plugins ##############################
+[params.plugins]
+
+# CSS Plugins
+[[params.plugins.css]]
+URL = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+URL = "plugins/slick/slick.css"
+[[params.plugins.css]]
+URL = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+URL = "plugins/venobox/venobox.css"
+
+# JS Plugins
+[[params.plugins.js]]
+URL = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+URL = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+URL = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+URL = "plugins/venobox/venobox.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/mark.js"
+[[params.plugins.js]]
+URL = "plugins/search/search.js"
+
+
+############################## navigation ###############################
+[menu]
+
+# main menu
+[[menu.main]]
+name = "Sobre mim"
+URL = "about/about"
+weight = 2
+
+[[menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 3
+
+[[menu.main]]
+name = "E-book"
+URL = "ebook"
+weight = 3
+
+[[menu.main]]
+name = "Contato"
+URL = "contact"
+weight = 4
+
+# footer menu
+[[menu.footer]]
+name = "Sobre mim"
+URL = "about/about"
+weight = 2
+
+[[menu.footer]]
+name = "Blog"
+URL = "blog"
+weight = 3
+
+[[menu.footer]]
+name = "E-book"
+URL = "ebook"
+weight = 3
+
+[[menu.footer]]
+name = "Contato"
+URL = "contact"
+weight = 4
+
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+home = "Home"
+# Meta data
+description = "Ciência de dados aplicada a problemas reais. Portal para profissionais que buscam impulsionar a empresa que trabalham ou o próprio empreendimento por meio da análise de dados, machine learning, visualização de dados ou webscraping. Linguagem R/RStudio do básico ao avançado."
+author = "Luís Otávio"
+# Google Analitycs
+googleAnalitycsID = "UA-134709799-1"
+# Contact Information
+email = "contato@luisotavio.pro"
+location = "Belo Horizonte, Brasil"
+# copyright
+copyright = "| ®2019 [Luís Otávio](https://luisotavio.pro) Todos os direitos reservados |"
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
+
+# search
+[params.search]
+enable = false
+
+############################ news letter ########################
+[params.newsletter]
+enable = true
+title = "Receba nosso conteúdo exclusivo"
+content = "Faça parte do nosso grupo exclusivo e receba as novidades mais interessantes sobre Data Sciente e R em primeira mão."
+
+############################# social site ########################
+#[[params.social]]
+#title = "facebook"
+#icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
+#link = "https://www.facebook.com/luisotavio.pro"
+
+[[params.social]]
+title = "youtube"
+icon = "ti-youtube" # themify icon : https://themify.me/themify-icons
+link = "https://www.youtube.com/user/luisotavio1988/"
+
+#[[params.social]]
+#title = "twitter"
+#icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
+#link = "https://twitter.com/luisotaviopro"
+
+[[params.social]]
+title = "instagram"
+icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
+link = "https://instagram.com/_u/luisotavio.pro"
+
+#[[params.social]]
+#title = "github"
+#icon = "ti-github" # themify icon : https://themify.me/themify-icons
+#link = "#"
+
+[[params.social]]
+title = "linkedin"
+icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
+link = "https://www.linkedin.com/in/luisotaviopro/"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
