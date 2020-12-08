@@ -1,0 +1,159 @@
+---
+title: Como ler um arquivo de texto (txt ou csv) no R ou RStudio
+author: Luis Otavio
+date: '2020-03-09'
+slug: como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio
+categories:
+  - Post
+tags:
+  - arquivo de texto
+  - CSV
+  - TXT
+image: images/post_principal/txt_to_R.png
+type: post
+---
+Quer importar os seus dados em arquivo de texto ou csv para o RStudio de uma forma bem simples e sem precisar de programação?
+
+Além disso, você vai aprender quatro formas específicas para importar os seus dados e **quando usar cada uma das formas.** 
+
+Esses 4 métodos serão muito úteis quando você quiser importar várias tabelas usando um __looping__, por exemplo.
+
+OBS.: Se os seus dados tiverem salvos no Excel, você pode salvar a aba da sua planilha em um dos formatos de texto (txt ou csv) e seguir os passos deste post. 
+
+Outra opção é ler os dados diretamente do Excel: temos outro post aqui explicando exatamente como fazer. [Clique aqui para ver.](https://luisotavio.pro/blog/como-ler-planilha-excel-no-r/){target="_blank"}
+
+## Método GERAL – Como importar uma tabela em arquivo txt ou csv para o RStudio
+
+Esse método é muito simples, você não precisará escrever nenhuma linha de programação. 
+
+Após aplicar esse método, você terá importado seus dados em segundos e, além disso, o R te mostrará qual o código ele executou para abrir a sua tabela! Ou seja, uma ótima oportunidade pra você entender melhor sobre a linguagem.
+
+#### Passo 1 - Na parte "Enviroment" clique em Import Dataset -> From Txt (readr)
+
+Lembre-se que os seus dados devem estar salvos no formato txt ou csv. 
+
+<center>
+![Importar dataset](/images/post_interno/leitura_geral_1.png){ width=85% }
+</center>
+
+Para ler os dados vamos usar a biblioteca "readr", então, caso você ainda não tenha ela instalada em seu computador, o RStudio irá solicitar a sua instalação.
+
+#### Passo 2 - Instale a biblioteca "readr", caso ela já não esteja instalada
+
+<center>
+![Importar dataset](/images/post_interno/leitura_geral_2.png){ width=85% }
+</center>
+
+Clique em "Yes" e aguarde a instalação.
+
+#### Passo 3 - Ajustes para importar a sua tabela
+
+<center>
+![Importar dataset](/images/post_interno/leitura_geral_3.png){ width=100% }
+</center>
+
+Primeiramente, clique em "Browse" e selecione o arquivo que você deseje importar.
+
+Uma pequena parte dos dados do arquivo que você selecionou irão aparecer na sua tela, para te auxiliar na importação.
+
+Então, agora você precisa fazer alguns ajustes para o R ler o seu dataset.
+
+**O ajuste mais importante é como as suas colunas estão separadas/delimitadas.**
+
+É muito comum usar tabulação (tab), vírgula, ponto e vírgula ou espaço para separar as colunas de arquivos de texto.
+
+Mas nessa parte da importação, **você deve escolher exatamente o mesmo delimitador que já foi utilizado em seu arquivo.**
+
+Nessa seção, você também pode fazer vários outros ajustes, por exemplo:
+
+- escolher o nome da tabela que será importada
+
+- definir qual se os números decimais da sua tabela estão separados por ponto ou vírgula. No R o separador decimal é por ponto, então caso o seu arquivo use vírgula, o R saberá que deve transformar pra ficar dentro do padrão. 
+
+- alterar qual a codificação dos seus dados (ASCII, utf8, etc...)
+
+- definir se a primeira linha dos seus dados é cabeçalho ou não
+
+Note que nessa etapa, na parte de "Code Preview", o RStudio está mostrando exatamente o código que será executado para fazer a leitura dos seus dados. 
+
+Esse código vai alterando a medida que você muda os ajustes! (ótima oportunidade para aprender e ir entendendo melhor o funcionamento da linguagem).
+
+Após realizar os ajustes necessários (que vão depender da sua própria tabela), clique em *Import*
+
+**Pronto, agora os seus dados foram importados.**
+
+Você pode conferir que a sua tabela irá aparecer em "Enviroment". É só clicar nela para visualizar os dados! 
+
+## Métodos específicos - Como importar uma tabela em arquivo txt ou csv para o RStudio
+
+<center>
+![Excel para R](/images/post_interno/leitura_esquema.png){ width=85% }
+</center>
+
+### Método 1 – Ler aquivos txt no R quando usamos ponto para separar números decimais
+
+Nesse método, vamos usar a função read.delim() para ler os dados delimitados por tabulação.
+Por padrão, a função considera que as suas colunas estão delimitados por tabulação (\t).
+
+```{r, eval=FALSE}
+meus_dados <- read.delim("nome_do_arquivo.txt")
+```
+
+### Método 2 -Ler arquivos txt no R quando usamos vírgula para separar números decimais
+
+Quando a vírgula já está sendo usada para separar os números decimais, por exemplo: "10,3", **não** podemos usar a vírgula também para separar as colunas.
+
+Senão não seria possível para o programa distinguir quando a vírgula está separando o decimal ou se trata de outra coluna.
+
+As formas de separação das colunas mais usadas quando a vírgula é usada como separador decimal (muito comum no Brasil) são a tabulação ("\t") e o espaço.
+
+Para ler arquivos txt separados por tabulação ou espaço, vamos usar a função __read.delim2()__.
+
+Teste com o nosso exemplo para ler dados delimitados por tabulação (\t):
+
+```{r,eval=FALSE}
+my_data <-read.delim2("http://www.sthda.com/upload/boxplot_format.txt", sep="\t")
+```
+
+No seu computador, você poderá ler o seu arquivo local com o seguinte código:
+
+```{r,eval=FALSE}
+meus_dados <- read.delim2("nome_do_seu_arquivo.txt")
+```
+
+(nesse último caso, como não especificamos o separador, o R irá considerar que o delimitador dos seus dados é espaço, que é o padrão da função read.delim2)
+
+### Método 3 – Como ler um arquivo CSV
+
+Para ler os dados de um arquivo CSV, é muito simples.
+
+Nesse método consideramos que os números decimais estão separados por ponto ou que seus dados não têm dados decimais.
+
+Faça um teste usando o nosso exemplo, execute a seguinte linha:
+
+```{r,eval=FALSE}
+meus_dados <-read.csv("http://www.sthda.com/upload/boxplot_format.csv")
+```
+
+No seu computador, você poderá ler o seu arquivo local com o seguinte código:
+
+```{r,eval=FALSE}
+meus_dados <- read.csv("nome_do_seu_arquivo.csv")
+```
+
+### Método 4 – Como ler um arquivo CSV
+
+Agora consideramos que os números decimais estão separados por vírgula. 
+
+Faça um teste usando o nosso exemplo, execute a seguinte linha:
+
+```{r,eval=FALSE}
+meus_dados <-read.csv2("http://www.sthda.com/upload/boxplot_format.txt")
+```
+
+No seu computador, você poderá ler o seu arquivo local com o seguinte código:
+
+```{r,eval=FALSE}
+meus_dados <- read.csv2("nome_do_seu_arquivo.csv")
+```
+

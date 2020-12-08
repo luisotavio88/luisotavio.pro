@@ -1,0 +1,80 @@
+---
+title: Como instalar o R e o Rstudio
+author: Luis Otavio
+date: '2020-02-24'
+slug: como-instalar-o-r-e-o-rstudio
+categories:
+  - Tutorial
+tags:
+  - Primeiros passos
+  - Instalação
+  - R
+  - RStudio
+image: images/post_principal/r_RStudio.png
+type: post
+---
+
+
+Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.
+
+O Rstudio é o ambiente que vamos usar R. 
+
+Isso significa que ele vai deixar o R mil vezes mais fácil de mexer, organizado e funcional. 
+
+Pode ter certeza que você precisa dele!
+
+## Parte 1 – Instalar o R no Windows
+
+1. Vamos fazer o download do R diretamente do seu próprio site. [CLIQUE AQUI.](https://cran.r-project.org/bin/windows/base/){target="_blank"}
+
+2. Após entrar no site do R, clique em Download R X.X.X for Windows. 
+
+(No lugar dos Xs, vai aparecer o número da última versão.)
+
+<center>
+![download R](/images/post_interno/post1_1.2.png){ width=75% }
+</center>
+
+3. Escolha a pasta que deseja salvar o programa. O padrão é que seja salvo na pasta de Downloads.
+
+4. Abra a pasta em que o programa foi salvo e __clique duas vezes no ícone do programa R.__
+
+5. Escolha o seu idioma de preferência.
+
+<center>
+![Idioma de preferência R](/images/post_interno/post1_1.5.png)
+</center>
+
+6. Clique em próximo nas opções seguintes até iniciar a instalação e, quando finalizar, clique em concluir.
+
+<center>
+![instalando o R](/images/post_interno/post1_1.6.png){ width=85% }
+</center>
+
+7. Parabéns, o R já está instalado. Mas agora ainda falta o RStudio, nosso melhor amigo!
+
+## Parte 2 – Instalação do RStudio
+
+1. [Clique aqui para entrar no site do RStudio e fazer o download.](https://www.rstudio.com/products/rstudio/download/#download){target="_blank"}
+
+2. Clique na versão para Windows.
+
+<center>
+![versões do RStudio para windows](/images/post_interno/post1_2.2.png){ width=65% }
+</center>
+
+3. Escolha a pasta que deseja salvar o programa. O padrão é que seja salvo na pasta de Downloads.
+
+4. Abra a pasta em que o programa foi salvo e dê dois cliques no ícone do programa.
+
+5. Clique em **“Próximo”** e siga o fluxo da instalação. Quando finalizar, clique em **Terminar**.
+
+<center>
+![Assistente de instalação RStudio](/images/post_interno/post1_2.5.png){ width=75% }
+</center>
+
+6. Ponto. Parabéns! Agora é só procurar pelo RStudio na barra iniciar, abrir o programa e apreciar essa belezura. Veja os primeiros passos no RStudio [clicando aqui.](https://www.luisotavio.pro/blog/primeiros-passos-com-o-r-usando-o-rstudio/){target="_blank"}
+
+<center>
+![RStudio IDE](/images/post_interno/post1_2.6.png){ width=70% }
+</center>

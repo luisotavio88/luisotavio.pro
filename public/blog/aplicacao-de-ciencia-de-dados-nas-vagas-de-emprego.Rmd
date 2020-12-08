@@ -1,0 +1,389 @@
+---
+title: Aplicação de Ciência de Dados nas vagas de emprego
+author: Luis Otavio
+date: '2020-05-03'
+slug: aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego
+categories:
+  - Caso prático
+tags:
+  - Cluster
+  - Text Mining
+  - Webscraping
+type: post
+image: images/post_principal/emprego.jpg
+---
+
+É importante que eu já comece te avisando que esse post não é sobre vagas de emprego na área de Data Science. Embora tenha um conteúdo que será muito útil na sua carreira.
+
+Vou te mostrar como eu busquei todas as vagas que estão sendo ofertadas no site de empregos *indeed.com.br* e apliquei Ciência de Dados. 
+
+Qual foi a aplicação de Ciência de Dados nesse trabalho?
+
+- Busquei todas as vagas que são ofertadas no site Indeed (webscraping).
+
+- Limpeza e organização desses dados.
+
+- Criação de grupos para as vagas mais similares.
+
+- Cálculo do salário médio para cada grupo.
+
+- Quais os principais requisitos de cada grupo.
+
+### O que é webscraping?
+
+Webscraping é a captura de informações ou dados de um site. 
+
+Então, ferramentas de webscraping são robôs que vão acessar um site previamente definido, buscar as informações que foram designados e armazenar essas informações.
+
+Trazendo para o caso prático dessa semana, fiz um robô que entrou no site indeed.com.br e varreu todos os links relativos a vagas de emprego. Esse foi o primeiro passo.
+
+O segundo passo foi entrar em cada um desses links e realizar a busca de três informações: nome da vaga, salário oferecido e descrição da vaga.
+
+O processo de webscraping pode ser bastante demorado, considerando que o script irá acessar inúmeras páginas da internet.
+
+
+### Criando grupos (clusters) a partir de texto
+
+Usei 4 métodos de agrupamento para separar as vagas de emprego em grupos. Portanto, podemos comparar como cada método separou as vagas e qual faz mais sentido.
+
+Os métodos utilizados para separar as vagas de emprego em grupos foram:
+
+- *K- means Clustering* - Cada vaga de emprego pertencerá ao grupo com média mais próxima
+- *Hierarquical Clustering* - Inicialmente, cada vaga de emprego compõe um grupo. No último passo todas as vagas compõem o mesmo grupo. Portanto, o desafio é encontrar o ponto de corte ótimo entre o primeiro e último passo.
+- *Density-based Clustering* - Método não paramétrico de clusterização baseado na densidade.
+- *Stacked Clustering* - Método que utiliza os resultados dos 3 métodos acima.
+
+*Logo na sequência disponibilizei todo o código utilizado.*
+
+### Aplicação com os resultados
+
+<iframe src="https://luisotavio.info/shiny/indeed/" width=1200 height=600 frameborder=0"></iframe>
+
+
+### Webscraping
+
+
+##### Parte 1 - Buscar os links das páginas de cada vaga de emprego
+
+```{r eval=FALSE}
+##### busca de links das vagas de emprego
+library(readr)         #chamar pacotes que serão utilizados
+library(stringr)
+library(plyr)
+library(dplyr)
+library(httr)
+
+
+todos_links<-c()
+
+for(pagina in c("",seq(1,50000,10))){         #Looping para buscar todas as páginas que tem links
+con=url(paste0("https://www.indeed.com.br/empregos?l=Brasil&start=",pagina))   #cria a conexão com as páginas
+# player = readLines(con,encoding = "UTF-8")
+
+links<-readLines(con,encoding = "UTF-8",warn = F)        #leitura do código fonte de cada página
+close(con) #encerra a conexão com a página
+
+
+linhas1<-grep("href=\"/page",links)#buscar por um padrão que me mostra a linha do código que possui links
+linhas2<-grep("href=\"/comp",links)#buscar por um padrão que me mostra a linha do código que possui links
+linhas3<-grep("href=\"/rc",links)#buscar por um padrão que me mostra a linha do código que possui links
+linhas<-c(linhas1,linhas2,linhas3)
+
+links_<-links[linhas] #filtro das linhas que possuem links
+
+todos_links<-c(todos_links,links_)
+}
+
+todos_links<-unique(todos_links) ## tirar links repetidos
+
+todos_links$x<-gsub("\"href=\\\\\"","",todos_links$x) #limpar resultados
+todos_links$x<-gsub("\\\\\"\"","",todos_links$x) #limpar resultados
+
+
+write.table(todos_links,"todos_links.txt",sep="\t",fileEncoding = "utf8",row.names = F) #salvar resultado
+```
+
+##### Parte 2 - Buscar as informações de cada vaga de emprego
+
+```{r eval=FALSE}
+library(readr) #chamar pacotes que serão utilizados
+library(stringr)
+library(plyr)
+library(dplyr)
+library(httr)
+
+is.empty <- function(x)   # Função que criei para analisar se um objeto é vazio
+{
+  is.integer(x) && length(x) == 0L
+}
+
+cleanFun <- function(htmlString) { # Função que limpa comandos da linguagem HTML
+  return(gsub("<.*?>", "", htmlString))
+}
+
+base<-"https://www.indeed.com.br"     #parte do link comum a todas as buscas
+
+todos_links <- read_delim("todos_links.txt", 
+                          "\t", escape_double = FALSE, trim_ws = TRUE)
+
+
+jobs_dt<-data.frame()
+
+for(job in 1:nrow(todos_links)){             ######## looping para buscar as informações de cada vaga
+  con=url(paste0(base,todos_links$x[job]))  # Conexão com a página da vaga
+
+  job_data<-readLines(con,encoding = "UTF-8",warn = F) #leitura do código fonte
+  close(con) #encerrar conexão com a página
+  
+  
+  linha1<-grep("rl\"><meta   content=\"",job_data)   ### buscar linhas que me trarão as informações 
+  linha2<-grep("salaryText\"",job_data)               ## para cada informação eu achei um padrão de texto que 
+  linha3<-grep("jobsearch-jobDescriptionText",job_data)  ### sempre está junto no código fonte.
+  linha4<-grep("zone-belowFullJobDescription",job_data)
+  linhas<-c(linha1,linha2,linha3:linha4)
+  job_data<-job_data[linhas]
+
+  temp1<-str_match(job_data[1], "rl\"><meta   content=\"(.*?)\"")[,2]
+  temp2<-str_match(job_data[2], "salaryText\":\"(.*?)\"")[,2]
+  
+  inicio<-is.empty(linha1)+is.empty(linha2)+1                  ##evitar erro quando o valor do salário for ausente
+  temp3<-str_match(paste0(job_data[inicio:length(job_data)],collapse = ' '), "jobsearch-jobDescriptionText\"><p>(.*?)<div class=\"mosaic-zone\" id=\"mos")[,2]
+  temp3<-as.character(cleanFun(temp3))
+  
+  job_data[1]<-str_squish(temp1)      # remove espaços sobrando no texto
+  job_data[2]<-str_squish(temp2)
+  job_data[3]<-str_squish(temp3)
+  ##### juntar os resultados de título da vaga, salário e descrição da vaga.
+  jobs_dt<-rbind(jobs_dt,data.frame(X1=job_data[1],X2=job_data[2],X3=as.character(job_data[3]),stringsAsFactors = F))
+
+}
+
+jobs_dt_unicos<-unique(jobs_dt)   #remover vagas identicas anunciadas mais de uma vez.
+jobs_dt_unicos<-jobs_dt_unicos[!is.na(jobs_dt_unicos$X3),]
+
+#salvar o resultado
+write.table(jobs_dt_unicos,"descricao_parcial_unica.txt",sep="\t",fileEncoding = "utf8",row.names = F)
+```
+
+
+### Parte 3 - Limpeza e organização dos dados
+
+```{r eval=FALSE}
+library(readr) ### #chamar pacotes que serão utilizados
+library(plyr)
+library(dplyr)
+library(tidytext)
+library(tm)
+library(stringr)
+library(magrittr)
+library(wordcloud2)
+
+# ler dados que foram exatraídos na busca
+
+descricao_parcial_unica <- read_delim("ShinyApps/descricao_parcial_unica.txt", 
+                                      "\t", escape_double = FALSE, trim_ws = TRUE)
+
+### limpeza dos dados
+descricao_parcial_unica$salario2<-gsub(".* - ","",descricao_parcial_unica$salario)
+descricao_parcial_unica$salario2<-gsub(" por mês","",descricao_parcial_unica$salario2)
+descricao_parcial_unica$salario2<-gsub(".* ","",descricao_parcial_unica$salario2)
+descricao_parcial_unica$salario2<-ifelse(as.numeric(descricao_parcial_unica$salario2)>400,as.numeric(descricao_parcial_unica$salario2),as.numeric(descricao_parcial_unica$salario2)*1000)
+descricao_parcial_unica$descricao2 <- sub("http://([[:alnum:]|[:punct:]])+", '', descricao_parcial_unica$descricao)
+descricao_parcial_unica$descricao2 <- sub("R$", '', descricao_parcial_unica$descricao2)
+descricao_parcial_unica$descricao2 <- sub("r$", '', descricao_parcial_unica$descricao2)
+
+### Criação do Corpus que vamos analisar
+corpus = tm::Corpus(tm::VectorSource(descricao_parcial_unica$descricao2)) 
+
+### remover stopwords
+corpus.cleaned <- tm::tm_map(corpus, tm::removeWords, tm::stopwords('portuguese')) # Remover StopWords 
+corpus.cleaned <- tm::tm_map(corpus, tm::stemDocument, language = "portuguese") # Stemming
+corpus.cleaned <- tm::tm_map(corpus.cleaned, tm::stripWhitespace) # Remover excesso de espaços
+
+```
+
+### Parte 4 - Criação dos grupos para cada vaga de emprego
+
+```{r eval=FALSE}
+tdm <- tm::DocumentTermMatrix(corpus.cleaned) 
+tdm.tfidf <- tm::weightTfIdf(tdm)
+
+tdm.tfidf <- tm::removeSparseTerms(tdm.tfidf, 0.999) 
+tfidf.matrix <- as.matrix(tdm.tfidf) 
+
+# Matriz de Distância - Cosine
+dist.matrix = proxy::dist(tfidf.matrix, method = "cosine")
+
+### MÉTODOS DE AGRUPAMENTO
+clustering.kmeans <- kmeans(tfidf.matrix, 40)  #Criação dos grupos usando k-means | parâmetro de 40 grupos
+clustering.hierarchical <- hclust(dist.matrix, method = "ward.D2") #Clusterização hierárquica
+clustering.dbscan <- dbscan::hdbscan(dist.matrix, minPts = 10) #Clusterização DBSCAN
+
+master.cluster <- clustering.kmeans$cluster ### Cálculo do Stacking Clustering considerando o k-means como master.
+slave.hierarchical <- cutree(clustering.hierarchical, k = 40) 
+slave.dbscan <- clustering.dbscan$cluster 
+stacked.clustering <- rep(NA, length(master.cluster))  
+names(stacked.clustering) <- 1:length(master.cluster) 
+for (cluster in unique(master.cluster)) { 
+  indexes = which(master.cluster == cluster, arr.ind = TRUE) 
+  slave1.votes <- table(slave.hierarchical[indexes]) 
+  slave1.maxcount <- names(slave1.votes)[which.max(slave1.votes)]   
+  slave1.indexes = which(slave.hierarchical == slave1.maxcount, arr.ind = TRUE) 
+  slave2.votes <- table(slave.dbscan[indexes]) 
+  slave2.maxcount <- names(slave2.votes)[which.max(slave2.votes)]   
+  stacked.clustering[indexes] <- slave2.maxcount 
+}
+
+
+points <- cmdscale(dist.matrix, k = 2) 
+palette <- colorspace::diverge_hcl(40) # Creating a color palette 
+previous.par <- par(mfrow=c(2,2), mar = rep(1.5, 4)) 
+
+##### gráficos dos resultados de cada um dos 4 métodos
+plot(points, main = 'K-Means clustering', col = as.factor(master.cluster), 
+     mai = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), 
+     xaxt = 'n', yaxt = 'n', xlab = '', ylab = '') 
+plot(points, main = 'Hierarchical clustering', col = as.factor(slave.hierarchical), 
+     mai = c(0, 0, 0, 0), mar = c(0, 0, 0, 0),  
+     xaxt = 'n', yaxt = 'n', xlab = '', ylab = '') 
+plot(points, main = 'Density-based clustering', col = as.factor(slave.dbscan), 
+     mai = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), 
+     xaxt = 'n', yaxt = 'n', xlab = '', ylab = '') 
+plot(points, main = 'Stacked clustering', col = as.factor(stacked.clustering), 
+     mai = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), 
+     xaxt = 'n', yaxt = 'n', xlab = '', ylab = '') 
+par(previous.par) # recovering the original plot space parameters
+
+descricao_parcial_unica$master.cluster<-as.factor(master.cluster)
+descricao_parcial_unica$slave.hierarchical<-as.factor(slave.hierarchical)
+descricao_parcial_unica$slave.dbscan<-as.factor(slave.dbscan)
+descricao_parcial_unica$stacked.clustering<-as.factor(stacked.clustering)
+
+### salvar dados para usar na aplicação Shiny
+write.table(descricao_parcial_unica,"ShinyApps/dados_indeed.txt",row.names = F,sep="\t",fileEncoding = "utf8")
+```
+
+### Parte 5 - Visualização dos resultados
+
+```{r eval=FALSE}
+library(shiny)
+library(plotly)
+library(plyr)
+library(dplyr)
+library(magrittr)
+library(readr)
+library(wordcloud2)
+library(stringr)
+library(tm)
+library(tidytext)
+
+
+setwd("~/ShinyApps")
+dados_indeed <- read_delim("dados_indeed.txt", 
+                           "\t", escape_double = FALSE, trim_ws = TRUE)
+
+choices_metodo<-setNames(c("master.cluster","slave.hierarchical","slave.dbscan","stacked.clustering"),
+                         c("K-Means clustering","Hierarchical clustering",
+                           "Density-based clustering",
+                           "Stacked clustering"))
+
+
+
+ui <- fluidPage(
+  navbarPage("Vagas de Emprego - Indeed",
+             tabPanel("Analise dos requisitos das vagas",
+                      sidebarPanel(
+                        selectInput("metodo",
+                                    "Escolha um método de agrupamento de texto",
+                                    choices_metodo,selected = 2,width = "100%"),
+                        # place to hold dynamic inputs
+                        conditionalPanel(
+                          condition = "input.metodo == 'master.cluster'",
+                          selectInput("grupo1", "Grupo de vagas",
+                                      sort(unique(dados_indeed$master.cluster)),selected = 1
+                          )),
+                        conditionalPanel(
+                          condition = "input.metodo == 'slave.hierarchical'",
+                          selectInput("grupo2", "Grupo de vagas",
+                                      sort(unique(dados_indeed$slave.hierarchical)),selected = 1
+                          )),
+                        conditionalPanel(
+                          condition = "input.metodo == 'slave.dbscan'",
+                          selectInput("grupo3", "Grupo de vagas",
+                                      sort(unique(dados_indeed$slave.dbscan)),selected = 1
+                          )),
+                        conditionalPanel(
+                          condition = "input.metodo == 'stacked.clustering'",
+                          selectInput("grupo4", "Grupo de vagas",
+                                      sort(unique(dados_indeed$stacked.clustering)),selected = 1
+                          )),
+                        p(""),
+                        h3("Salário médio:"),
+                        htmlOutput("salario_"),
+                        
+                        h3("Vagas oferecidas:"),
+                        htmlOutput("nomesvagas")
+                        
+                      ),
+                      mainPanel(
+                        wordcloud2Output('wordcloud', width = "100%", height = "565px")
+                      )
+             )
+             
+             
+  )
+  
+)
+
+
+
+server <- function(input, output,session) {
+  
+ mydata<- reactive({
+    mydata<-dados_indeed
+    mydata %<>% select(descricao2,input$metodo)
+    vagas<- dados_indeed %>% select(cargo,salario2,input$metodo)
+
+    grupo<-if(input$metodo=='master.cluster'){input$grupo1}else
+      if(input$metodo=='slave.hierarchical'){input$grupo2}else
+        if(input$metodo=='slave.dbscan'){input$grupo3}else
+          if(input$metodo=='stacked.clustering'){input$grupo4}
+    
+    mydata<-mydata[mydata[,2]==grupo,]
+    vagas<-vagas[vagas[,3]==grupo,]
+
+    
+    mydata$descricao2<- str_replace_all(mydata$descricao2, "\\.|,|/|:"," ")
+    mydata$descricao2<- gsub('[[:digit:]]+', '', mydata$descricao2)
+    
+    mydata %<>% unnest_tokens(word, descricao2) 
+    stopwords<-data.frame(word=c(stopwords(kind = "pt"),stopwords(kind = "en"),"vaga","tempo","r","R"))
+    stopwords$word<-as.character(stopwords$word)
+    mydata %<>% 
+      anti_join(stopwords)%>%
+      count(word, sort = TRUE)
+    
+    salario<-round(mean(vagas$salario2,na.rm=T),2)
+    vagas<-vagas$cargo
+    list(mydata,vagas,salario)
+  })
+  
+  output$wordcloud <- renderWordcloud2({
+    wordcloud2(mydata()[[1]], size=0.5)
+  })
+  
+  
+  output$nomesvagas <- renderUI({ 
+    # mydata<-mydata[mydata[,2]==0,]
+    HTML(paste(mydata()[[2]],"</br>"))
+  })
+  
+  output$salario_ <- renderUI({
+    HTML(paste("R$",mydata()[[3]]))
+  })
+
+}
+
+shinyApp(ui = ui, server = server)
+```
+

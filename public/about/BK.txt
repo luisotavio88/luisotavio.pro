@@ -1,0 +1,88 @@
+---
+title: Marketing Digital | A importância da ciência de dados nas Campanhas do Facebook e Instagram
+author: Luis Otavio
+date: '2020-04-10'
+slug: marketing-digital-a-importancia-da-ciencia-de-dados-nas-campanhas-facebook-instagram
+categories:
+  - Caso prático
+tags:
+  - Shiny
+  - Marketing Digital
+type: featured
+image: images/post_principal/mkt_digital.jfif
+---
+
+Uma marca de roupas, uma rede de lanchonetes, uma marca de bebidas ou de itens de higiêne podem gastar centenas de milhares de reais para fazer UM anúncio na televisão. 
+
+Ou até gastar um pouco menos e colocar placas em lugares estratégicos, como placas em aeroportos ou outdoors.
+
+Isso sempre funcionou e ainda é uma estratégia muito utilizada. Mas qual o problema nisso?
+
+Eu mesmo, com exceção dos jogos de futebol, não vejo os tradicionais canais de televisão desde que a Grande Família acabou.
+
+Pode não ser o seu caso, mas o tempo dedicado a televisão da forma tradicional está sendo substituído pela Internet. Seja pelos aplicativos de relacionamento (Facebook/Instagram), comunicação (Whatsapp), Youtube ou Netflix.
+
+Antes quando a gente estava dentro de um carro, parávamos para olhar para fora e víamos Outdoors. Hoje, muitas vezes, até o próprio motorista está olhando o celular.
+
+O anúncio ou propaganda de uma marca precisa chamar a atenção das pessoas e hoje a atenção das pessoas está na palma da mão, no celular!
+
+### Como funciona um anúncio no Facebook?
+
+Para que a gente entenda exatamente como analisar cada resultado que eu vou te apresentar aqui, vou passar por 3 conceitos básicos de um anúncio para o Facebook ou Instagram.
+
+##### Campanha
+
+Imagine que você precise aumentar o **tráfego do seu site**, isto é, levar mais gente pra visitar o seu site. Então o primeiro passo vai ser criar uma **campanha** para esse OBJETIVO.
+
+A característica que melhor define uma campanha no Facebook é o seu OBJETIVO.
+
+O objetivo de uma campanha pode ser:
+
+- Tráfego para o site
+- Instalações de aplicativo
+- Visualização de vídeo
+- Engajar com o seu conteúdo
+- Conversões
+
+...entre outros
+
+##### Conjunto de anúncios
+
+Dentro de uma campanha, temos vários conjuntos de anúncio. De forma simplificada, é como se cada conjunto de anúncio fosse um público para quem você quer anunciar.
+
+A ferramenta permite que você crie vários públicos com características específicas, por exemplo:
+
+- pessoas que visitaram seu site no mês passado
+- pessoas que engajaram com a sua página do Instagram
+- pessoas que estão em sua lista de e-mail
+- pessoas com o perfil parecido dos seus clientes
+- pessoas que se interessam pelo tema da sua marca
+
+##### Os anúncios
+
+Os anúncios são as imagens ou vídeos que vemos o tempo todo no Instagram ou Facebook. Aqueles posts que ficam com o aviso de "Patrocinado".
+
+Na organização da campanha, os anúncios ficam dentro de um conjunto de anúncios. Mas você pode colocar o mesmo anúncio para vários conjuntos/públicos e ver como ele se comporta em cada um deles.
+
+### Como podemos aplicar Data Science nos anúncios do Facebook e Instagram?
+
+Com certeza o ponto inicial para a aplicação de Data Science no Face e Insta é pela visualização de dados.
+
+Primeiramente, precisamos explorar como cada anúncio e cada público estão desempenhando para atingir o objetivo definido pela campanha.
+
+Um anúncio pode performar muito bem para um público e pode não atrair as pessoas que formam um público diferente.
+
+Ou então, um público está com a conversão muito alta, mas outro público não está interagindo com os seus anúncios.
+
+Nesse caso o que precisamos fazer?
+
+O primeiro passo seria adaptar os orçamentos! Tirar boa parte do dinheiro que está sendo investido no público que está integindo pouco com os anúncios e transferir esse orçamento para o público que está performando acima do esperado.
+
+Essa simples alteração provavelmente vai evitar muito desperdício de dinheiro e otimizar muito as conversões.
+
+Agora vou te mostrar a ferramenta que desenvolvi para explorar todas as informações das Campanhas no Instagram de um projeto que tenho envolvendo Futebol e Data Scince.
+
+A ferramenta foi desenvolvida usando os dados da API do Facebook, a linguagem de Data Science R e a biblioteca Shiny.
+
+A partir dela eu consigo fazer várias comparações, saber o que está funcionando melhor e fazer minhas otimizações.
+

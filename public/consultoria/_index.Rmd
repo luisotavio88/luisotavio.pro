@@ -1,0 +1,30 @@
+---
+date: "2019-10-29T13:49:23+06:00"
+description: Consultoria grátis de Data Science. Alta qualidade e sem pegadinhas. Calma, eu te explico.
+draft: false
+title: Entre em contato
+type: consultoria
+---
+
+# Consultoria Grátis - Ciência de dados
+
+#### É pra você?
+Irei atender apenas casos práticos do mercado de trabalho. Então, se você tiver um problema no seu trabalho e entende que o problema pode ser resolvido por meio de Ciência de Dados, essa consultoria é sim para você!
+        
+As minhas principais áreas de interesse e conhecimento são: Visualização de dados, Machine Learning e Webscraping.
+
+**Irei atender todos que enviarem o formulário e estiverem nas condições acima. Assim que lotar os horários irei tirar essa página do ar.**
+
+Infelizmente, na videoconferência, não irei atender o pessoal que busca aplicações no meio acadêmico, como disserações de mestrado ou teses de doutorado.
+
+#### Como vai funcionar?
+Será uma videoconferência de, aproximadamente, 1 hora. Assim que eu receber a sua aplicação irei te enviar um e-mail com os horários disponíveis. Você irá escolher o horário e nos encontraremos na videoconferência.
+
+#### Quanto custa?
+Não terá custo nenhum. Em nossa 1 hora de conversa irei te passar todo o meu conhecimento e orientação para ajudar no seu caso.
+
+Estou começando esse blog e irei começar a gerar conteúdo nas redes sociais. Então, também gostaria de gravar a nossa conferência e, possivelmente, divulgar algumas partes. Mas fique tranquilo, caso tenha dados/informações sensíveis, não irei divulgá-las.
+
+Assim poderemos ajudar mais pessoas que tenham um problema similar ao seu ou que necessite das mesmas técnicas para ser resolvido.
+
+#### Preencha o formulário abaixo e garanta sua vaga:

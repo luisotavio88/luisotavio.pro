@@ -1,0 +1,218 @@
+---
+title: Contando história com os dados - Storytelling
+author: Luis Otavio
+date: '2020-07-19'
+slug: contando-historia-com-os-dados-storytelling
+categories:
+  - Tutorial
+tags:
+  - Primeiros passos
+  - R
+  - RStudio
+image: images/post_principal/covid_estados.gif
+type: featured
+---
+
+No começo da semana, recebi um pedido de ajuda de um seguidor que estava travado em um pequeno detalhe do seu projeto. 
+
+Ele estava criando uma animação e tentando colocar as bandeiras dos estados brasileiros em seu gráfico. 
+
+O projeto já estava adiantado e o que ele tinha feito chamou a minha atenção:
+
+- Um acompanhamento das mortes por COVID por estado e animado para cada dia entre março e julho.
+
+Ou seja, o gráfico seguia uma lógica interessante. Ele mostrava as quantidades de mortes por cada 100 mil pessoas ao passar dos dias e para os 10 piores estados.
+
+Ele está nos contando a história do que aconteceu desde março até julho. E, ao mesmo tempo, comparando a evolução dos estados.
+
+## O que é Storytelling?
+
+Storytelling é a arte de contar histórias.
+
+É um artifício utilizado por todos nós há milhares de anos. 
+
+Contamos histórias para criar um laço mais forte com pessoas próximas, com potenciais clientes ou até para facilitar a compreensão de uma explicação que seria difícil.
+
+## É possível contar história com dados?
+
+Dentro da Ciência de Dados, um campo importante é o Data Storytelling.
+
+Ou seja, contamos história usando dados.
+
+O seu projeto terá mais valor quando mostrar os resultados de uma forma simples, limpa e seguindo uma lógica.
+
+Imagine que um professor sabe absolutamente tudo da matéria, porém, nenhum aluno consegue entender o que ele está falando.
+
+Ele será menos útil do que um outro professor que, talvez não saiba tanto, mas é eficiente ao passar a sua mensagem.
+
+E contar história tem tudo a ver com isso. Estamos acostumados a escutar histórias desde quando éramos crianças. 
+
+Isso facilitará o entendimento da sua audiência e, além disso, torna o seu trabalho mais interessante.
+
+## Como fazer um gráfico animado no R - Data Storytelling
+
+Agora, com a devida permissão, vou compartilhar com vocês o código desenvolvido pelo [Francisco](https://www.linkedin.com/in/francisco-tadeu-foz-25691196/){target="_blank"}, o seguidor que me enviou esse projeto pela Instagram.
+
+Para criar o gráfico, usei as bandeiras de todos os estados brasileiros. Caso você queira reproduzir o código em seu computador, faça o download das bandeiras clicando [aqui.](https://drive.google.com/uc?id=1m0_o7GM-WwAMJtQW8S9jm21Raks02J2l&export=download){target="_blank"}
+
+
+### Leitura dos dados
+
+Irei deixar os dados disponíveis em [nesse link](/blog/dados_estados.txt){target="_blank"}
+
+
+```{r,warning=FALSE,message=FALSE}
+library(readr)
+dados_estados <- read_delim("dados_estados.txt", 
+    "\t", escape_double = FALSE, trim_ws = TRUE)
+head(dados_estados)
+```
+
+Caso tenha alguma dúvida sobre como ler os seus dados no R, sugiro que consulte esse outro post: [luisotavio.pro/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/](https://www.luisotavio.pro/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/){target="_blank"}
+
+Também foi criada uma tabela que irá nos auxiliar na leitura da imagem da bandeira de cada estado:
+
+```{r}
+bandeiras<- data.frame(estado = c("AC","AL","AM","AP","BA","CE","DF","ES",
+                                    "GO","MA","MG","MS","MT","PA","PB","PE",
+                                    "PI","PR","RJ","RN","RO","RR","RS","SC", 
+                                    "SE","SP","TO"),
+                        imagem = c("AC.png","AL.png","AM.png","AP.png","BA.png",
+                                  "CE.png","DF.png","ES.png","GO.png","MA.png",
+                                  "MG.png","MS.png","MT.png","PA.png","PB.png",
+                                  "PE.png","PI.png","PR.png","RJ.png","RN.png",
+                                  "RO.png","RR.png","RS.png","SC.png","SE.png",
+                                  "SP.png","TO.png"),stringsAsFactors = F)
+head(bandeiras)
+```
+
+
+### Manipulação de dados
+
+#### Cálculo do número de óbitos por 100 mil habitantes
+
+Iremos criar uma nova coluna **mortalidade.100hab** com a quantidade de óbitos por 100 mil habitantes.
+
+```{r,warning=FALSE,message=FALSE}
+library(dplyr)
+mortalidade<-dados_estados %>%
+#criar coluna com óbitos por 100 mil habitantes
+mutate(mortalidade.100hab=(obitosAcumulado/populacaoTCU2019)*100000) 
+#selecionar colunas que serão úteis
+mortalidade<- select(mortalidade,estado,data,obitosAcumulado,mortalidade.100hab)
+```
+
+#### Filtrando os dados
+
+Para uma melhor experiência na visualização dos dados, não iremos mostrar todos os estados em nosso gráfico. 
+
+O gráfico irá mostrar os 10 estados com as maiores taxas de óbito para cada dia.
+
+Portanto, para filtrar essas informações, iremos executar o script a seguir:
+
+```{r}
+mortalidade <- mortalidade %>%
+  # Aqui separamos as informações por dia.
+  group_by(data) %>% 
+  # Criar um ranking decrescente de mortalidade entre os estados para cada dia
+  dplyr::mutate(rank = rank(-mortalidade.100hab)) %>% 
+  # selecionando os 10 maiores registros por dia.
+  filter(rank <=10) %>%
+  ungroup()
+#arredondar o resultado para 2 casas decimais
+mortalidade$mortalidade.100hab <- round(mortalidade$mortalidade.100hab , digits = 2)
+head(mortalidade)
+```
+
+#### Juntando as bandeiras de cada estado
+
+A nossa última manipulação de dados irá acrescentar as bandeiras aos nossos dados e criar rankings auxiliares.
+
+Esses rankings auxiliares irão nos ajudar para ordenarmos os nossos dados de forma que tudo se encaixe na criação do gráfico.
+
+
+```{r}
+im_mort <- mortalidade %>%
+  # acrescentando as bandeiras na tabela de mortalidade
+  left_join(bandeiras, by = "estado") %>% 
+  group_by(estado) %>%
+  dplyr::arrange(data) %>%
+  dplyr::mutate(prev.rank = lag(rank)) %>%
+  ungroup() %>%      
+  group_by(data) %>%
+  dplyr::arrange(rank, prev.rank) %>%
+  dplyr::mutate(x = seq(1, n())) %>%
+  ungroup()
+head(im_mort)
+```
+
+### Criando gráficos estáticos
+
+Antes de criar a nossa animação, iremos criar gráficos estáticos
+
+```{r,eval=FALSE}
+library(gganimate)
+library(hrbrthemes)
+library(png)
+library(ggimage)
+staticplot.m<-ggplot(im_mort, aes(rank, group = estado)) +
+  geom_tile(aes(y = mortalidade.100hab/2,
+                height = mortalidade.100hab,
+                width = 0.7), alpha = 1, 
+            fill ="#590000",color = "#590000") +
+  geom_image(aes(x = x, image = imagem), y = 0,  # Adicionar a bandeira
+             size = 0.1, hjust = 0,
+             inherit.aes = FALSE) +
+  geom_text(aes(y=mortalidade.100hab,label = mortalidade.100hab, 
+                hjust=0),colour="#ffffff", size=6,fontface="bold")+
+  geom_text(aes(y = mortalidade.100hab, label = paste(estado, "")),
+            colour="#ffffff",
+            hjust = 1, size=6, fontface="bold") +
+  geom_text(aes(y = mortalidade.100hab, label ="",
+                hjust=2))+
+  coord_flip(clip = "off", expand = FALSE) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_reverse() +
+  guides(color = FALSE, fill = FALSE) +
+  theme(axis.line=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks=element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        legend.position="none",
+        panel.background=element_rect(fill = "grey8", colour = "grey8"),
+        panel.border=element_blank(),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        plot.title=element_text(size=25, hjust=0.5, face="bold", colour="White", vjust=-1),
+        plot.subtitle=element_text(size=20, hjust=0.5, face="italic", color="White"),
+        plot.caption =element_text(size=20, hjust=0.5, face="italic", color="White"),
+        plot.background=element_rect(fill = "grey8", colour = "grey8"),
+        plot.margin = margin(1,4, 4, 4, "cm"))
+```
+
+
+### Criando a animação
+
+```{r,eval=FALSE}
+anim.m<- staticplot.m + transition_states(data, transition_length = 2, state_length = 1)+
+  view_follow(fixed_x = TRUE)  +
+  labs(title = 'Mortalidade COVID-19 no \n Brasil:{closest_state}',  
+       subtitle  =  "Top 10 estados",
+       caption  = "Óbitos por 100 mil hab.|Fonte: covid.saude.gov.br
+                  @FranciscoTadeuFoz")
+```
+
+![](/images/post_principal/covid_estados.gif)
+
+### Salvando a animação como GIF
+
+```{r,eval=F}
+library(gifski)
+animate(anim.m, 100, fps = 10,  width = 1200, height = 1000, 
+        renderer = gifski_renderer("covid_estados.gif")) 
+```
+

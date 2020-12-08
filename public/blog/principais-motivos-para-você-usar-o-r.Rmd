@@ -1,0 +1,109 @@
+---
+title: 7 principais motivos para você usar o R
+author: Luis Otavio
+date: '2020-03-12'
+slug: principais-motivos-para-voce-usar-o-r
+categories:
+  - Post
+tags:
+  - R
+  - RStudio
+  - Primeiros passos
+image: images/post_principal/porqueR.jpg
+type: recente
+---
+
+O R é o queridinho dos estudantes e profissionais que buscam analisar dados, construir modelos ou Dashboards com autonomia e facilidade.
+
+Aliás, a autonomia  e personalização para cada caso, são as maiores vantagens de usar linguagens de programação.
+
+Mas e porque o R está tão em alta?
+
+Vou citar aqui os 7 principais motivos que eu vejo para você usar o R.
+
+## 1 - Facilidade
+
+O R é a linguagem ideal para quem não tem experiência em programação.
+
+Com poucas horas de estudo, o usuário já consegue escrever os seus primeiros comandos. Mesmo que não tenha nenhuma base prévia de outra linguagem de programação.
+
+É possível escrever modelos estatísticos com apenas UMA linha de programação.
+
+E, além da linguagem ser bem intuitiva, possui um excelente suporte da comunidade de usuários.
+
+
+## 2 - Voltado para Data Science e Estatística, porém abrange várias áreas.
+
+O que você precisa provavelmente já está desenvolvido no R e você precisará de muito pouco para chegar ao seu objetivo. 
+
+Digo isso porque o R é um software prioritariamente estatístico, mas é aplicado em uma infinidade de áreas.
+
+Exemplos de áreas que possuem ferramentas específicas dentro do R: econometria, __business intelligence__, saúde, __machine learning__, biologia, demografia, visualização de dados e muitas, muitas outras. 
+
+Isso só é possível porque o R é um software de Código Aberto (__Open Source__). Entre outras vantagens, ele tem esse rótulo por ser livre (não é necessário adquirir uma licença) e também por ser aberto para contribuições dos usuários.
+
+## 3 - Comunidade
+
+Você não estará sozinho, muito pelo contrário! Usando o R você terá apoio por todos os lados. 
+Existe uma comunidade gigantesca que usa o R, então é muito fácil conseguir ajuda quando precisamos. 
+
+Temos aqui um post específico sobre como pedir ajuda, quando você tiver alguma dúvida no R.
+
+[Como pedir ajuda no R?](https://luisotavio.pro/blog/como-conseguir-ajuda-no-r/){target="_blank"}
+
+Outra vantagem muito significante do tamanho da comunidade está relacionada ao 2º item deste artigo: 
+milhares de usuários desenvolvendo novas funcionalidades para o R é o que garante sua capilaridade em várias áreas.
+
+Afinal, é muito melhor milhares de especialistas contribuindo para a evolução do R do que apenas uma equipe restrita... Faz sentido? ;)
+
+## 4 - Facilmente adaptável
+
+Você poderá facilmente adaptar e personalizar o que já existe para o seu próprio caso. 
+
+Afinal, essa é uma das maiores vantagens dos programas que você precisa escrever o código e não são point and click (como o Excel, por exemplo).
+
+Então, por mais que existem milhares de funções já prontas para serem usadas, você poderá fazer adaptações para atender as suas peculiaridades. 
+
+Geralmente as funções já tem parâmetros que são facilmente ajustáveis para personalizar da sua maneira.
+
+Pense se por exemplo você precisa fazer um gráfico para uma apresentação. Pelo R você conseguirá fazer gráficos com facilidade e totalmente personalizados, para eles ficarem com a cara da sua empresa.
+
+Caso queira fazer algo totalmente inovador, também é possível porque você pode programar a alteração que deseja.
+
+## 5 - Integrações com outros programas
+
+É simples integrar o R com outros programas. 
+
+Se você quiser ler uma planilha de Excel, o R importará os dados com apenas uma linha de código. 
+
+O mesmo vale para outras fontes. Se os seus dados estiverem em arquivo de texto, SQL, SPSS, SAS, Stata, etc.
+
+Além disso, também é possível gerar vários relatórios customizáveis no R e salvar em “.docx” (Word) ou PDF, por exemplo.
+
+Para essas funcionalidades, você precisará de pacotes específicos. Para ver como instalar um pacote, dê uma olhada nesse outro artigo. 
+
+[Como instalar um pacote no R?](https://luisotavio.pro/blog/como-instalar-um-pacote-no-r/){target="_blank"}
+
+## 6 - Muito material (organizado) sobre o R
+
+Assim que precisar de uma ajuda no R, você terá muitas fontes para recorrer.
+
+Para começar, dentro do R existe uma documentação completa e padronizada sobre cada pacote ou função que você precisar.
+
+Com apenas um simples comando você pode ver exatamente o que faz uma determinada função, quais os parâmetros deve usar e exemplos práticos de aplicação.
+
+No melhor amigo do internauta, o Google, é possível achar praticamente tudo sobre R. 
+
+Também existem inúmeros cursos e livros para te ajudar especificamente na sua área de trabalho.
+
+Além disso, existem listas de e-mail só para usuários de R que você pode participar. 
+
+## 7 - Preço
+
+Você sempre usará o R de graça. O R é um software livre e você não precisa pagar nada para usar sua versão completa. 
+
+
+E aí, pronto para subir alguns degraus em sua carreira? Impressione o seu chefe com análises precisas e gráficos elegantes usando o R! :)
+
+
+
