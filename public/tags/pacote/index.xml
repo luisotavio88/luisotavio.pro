@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pacote on Luis Otavio | Ciência de dados</title>
+    <link>https://luisotavio.pro/tags/pacote/</link>
+    <description>Recent content in Pacote on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/pacote/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como instalar um pacote no R</title>
+      <link>https://luisotavio.pro/blog/como-instalar-um-pacote-no-r/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-instalar-um-pacote-no-r/</guid>
+      <description>Esse post vai te ensinar o que são os pacotes no R, como eles vão te ajudar e também como fazer para instalar.</description>
+    </item>
+    
+  </channel>
+</rss>

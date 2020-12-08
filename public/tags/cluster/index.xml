@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster on Luis Otavio | Ciência de dados</title>
+    <link>https://luisotavio.pro/tags/cluster/</link>
+    <description>Recent content in Cluster on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Segmentação de clientes no E-commerce</title>
+      <link>https://luisotavio.pro/blog/segmentacao-de-clientes-no-e-commerce/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/segmentacao-de-clientes-no-e-commerce/</guid>
+      <description>Todos os clientes de uma marca possuem um desejo em comum, afinal isso que faz todos tomarem a mesma decisão de compra.</description>
+    </item>
+    
+    <item>
+      <title>Aplicação de Ciência de Dados nas vagas de emprego</title>
+      <link>https://luisotavio.pro/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</guid>
+      <description>É importante que eu já comece te avisando que esse post não é sobre vagas de emprego na área de Data Science.</description>
+    </item>
+    
+  </channel>
+</rss>

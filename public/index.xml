@@ -6,6 +6,333 @@
     <description>Recent content on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://luisotavio.pro/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pronto! Você não vai mais receber os nossos e-mails</title>
+      <link>https://luisotavio.pro/sair/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/sair/</guid>
+      <description>Sua inscrição em nossa lista de e-mail foi cancelada.</description>
+    </item>
+    
+    <item>
+      <title>Não perca essa live!</title>
+      <link>https://luisotavio.pro/confirmacao-live/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/confirmacao-live/</guid>
+      <description>Sua participação está garantida na live!
+Mas para garantir que você não vai esquecer, recomendo fortemente que você defina o lembrete!</description>
+    </item>
+    
+    <item>
+      <title>Seja avisado para as próximas lives que irei fazer sobre Ciência de Dados</title>
+      <link>https://luisotavio.pro/live/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/live/</guid>
+      <description>Aula ao vivo toda segunda-feira às 20hs sobre Ciência de Dados.</description>
+    </item>
+    
+    <item>
+      <title>Contando história com os dados - Storytelling</title>
+      <link>https://luisotavio.pro/blog/contando-historia-com-os-dados-storytelling/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/contando-historia-com-os-dados-storytelling/</guid>
+      <description>No começo da semana, recebi um pedido de ajuda de um seguidor que estava travado em um pequeno detalhe do seu projeto.</description>
+    </item>
+    
+    <item>
+      <title>O que uso para manipular meus dados no R</title>
+      <link>https://luisotavio.pro/blog/o-que-uso-para-manipular-meus-dados-no-r/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/o-que-uso-para-manipular-meus-dados-no-r/</guid>
+      <description>Um dos meus desafios essa semana foi analisar todas as 265 campanhas de e-mail enviadas pelo meu projeto de futebol (Guru do Cartola) em 2018 e 2019.</description>
+    </item>
+    
+    <item>
+      <title>Reconhecimento de imagens - Só para iniciantes</title>
+      <link>https://luisotavio.pro/blog/reconhecimento-de-imagens-s%C3%B3-para-iniciantes/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/reconhecimento-de-imagens-s%C3%B3-para-iniciantes/</guid>
+      <description>Você já ouviu falar em algoritmos de reconhecimento de imagens?</description>
+    </item>
+    
+    <item>
+      <title>O R também serve para editar imagens!</title>
+      <link>https://luisotavio.pro/blog/o-r-tambem-serve-para-editar-imagens/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/o-r-tambem-serve-para-editar-imagens/</guid>
+      <description>Photoshop é para quem não usa o R! :)Tenho um projeto que aplica Ciência de Dados no Futebol e,como em várias outras empresas pequenas, precisamos fazer muito com pouco.</description>
+    </item>
+    
+    <item>
+      <title>Regressão Linear na prática - usando o R</title>
+      <link>https://luisotavio.pro/blog/regressao-linear-na-pratica-usando-o-r/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/regressao-linear-na-pratica-usando-o-r/</guid>
+      <description>É possível prever a pontuação de um time de futebol usando indicadores financeiros do ano anterior?</description>
+    </item>
+    
+    <item>
+      <title>Como fazer um mapa de calor no R</title>
+      <link>https://luisotavio.pro/blog/como-fazer-um-mapa-de-calor-no-r/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-fazer-um-mapa-de-calor-no-r/</guid>
+      <description>A missão dessa semana foi construir um mapa de calor no R!</description>
+    </item>
+    
+    <item>
+      <title>Assim que vou retweetar o que me interessa no Twitter!</title>
+      <link>https://luisotavio.pro/blog/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/assim-que-vou-retweetar-o-que-me-interessa-no-twitter/</guid>
+      <description>Vários mercados precisam de notícias em tempo real, imagine só o mercado de finanças:</description>
+    </item>
+    
+    <item>
+      <title>O que aconteceu com a imagem do Bolsonaro?</title>
+      <link>https://luisotavio.pro/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/o-que-aconteceu-com-a-imagem-do-bolsonaro/</guid>
+      <description>Como um cientista de dados esforçado, eu estava fazendo uma reflexão logo após a divulgação do polêmico vídeo da reunião entre o Bolsonaro e seus ministros:</description>
+    </item>
+    
+    <item>
+      <title>Quem são os Cientistas de Dados do Brasil?</title>
+      <link>https://luisotavio.pro/blog/quem-sao-os-cientistas-de-dados-do-brasil/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/quem-sao-os-cientistas-de-dados-do-brasil/</guid>
+      <description>A maior comunidade de Cientistas de dados do Brasil realizou uma pesquisa com 1.</description>
+    </item>
+    
+    <item>
+      <title>Segmentação de clientes no E-commerce</title>
+      <link>https://luisotavio.pro/blog/segmentacao-de-clientes-no-e-commerce/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/segmentacao-de-clientes-no-e-commerce/</guid>
+      <description>Todos os clientes de uma marca possuem um desejo em comum, afinal isso que faz todos tomarem a mesma decisão de compra.</description>
+    </item>
+    
+    <item>
+      <title>Acompanhamento dos perfis do Instagram</title>
+      <link>https://luisotavio.pro/blog/acompanhamento-dos-perfis-do-instagram/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/acompanhamento-dos-perfis-do-instagram/</guid>
+      <description>Se o seu negócio não está na internet, ele não existe!</description>
+    </item>
+    
+    <item>
+      <title>Aplicação de Ciência de Dados nas vagas de emprego</title>
+      <link>https://luisotavio.pro/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/</guid>
+      <description>É importante que eu já comece te avisando que esse post não é sobre vagas de emprego na área de Data Science.</description>
+    </item>
+    
+    <item>
+      <title>Música | É possível aplicar Ciência de Dados?</title>
+      <link>https://luisotavio.pro/blog/musica-e-possivel-aplicar-ciencia-de-dados/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/musica-e-possivel-aplicar-ciencia-de-dados/</guid>
+      <description>É um desafio encontrar uma área que não possa ser melhorada pela Ciência de Dados.</description>
+    </item>
+    
+    <item>
+      <title>É possível prever pandemias usando o Google Trends?</title>
+      <link>https://luisotavio.pro/blog/e-possivel-prever-pandemias-usando-o-google-trends/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/e-possivel-prever-pandemias-usando-o-google-trends/</guid>
+      <description>O que é Google Trends?Uma quantidade absurda de buscas são feitas diariamente no Google.</description>
+    </item>
+    
+    <item>
+      <title>Marketing Digital | A importância da ciência de dados nas Campanhas do Facebook e Instagram</title>
+      <link>https://luisotavio.pro/blog/marketing-digital-a-importancia-da-ciencia-de-dados-nas-campanhas-facebook-instagram/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/marketing-digital-a-importancia-da-ciencia-de-dados-nas-campanhas-facebook-instagram/</guid>
+      <description>Uma marca de roupas, uma rede de lanchonetes, uma marca de bebidas ou de itens de higiene podem gastar centenas de milhares de reais para fazer UM anúncio na televisão.</description>
+    </item>
+    
+    <item>
+      <title>O que é ciência de dados?</title>
+      <link>https://luisotavio.pro/blog/o-que-e-ciencia-de-dados/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/o-que-e-ciencia-de-dados/</guid>
+      <description>De acordo com o relatório do Fórum Econômico Mundial, a ciência de dados é a profissão mais promissora no Brasil entre 2020 e 2022.</description>
+    </item>
+    
+    <item>
+      <title>Análise de Sentimentos - Descubra o que estão falando da sua empresa</title>
+      <link>https://luisotavio.pro/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/analise-de-sentimentos-descubra-o-que-estao-falando-da-sua-empresa/</guid>
+      <description>Você sabe o que é análise de sentimentos e porque ela é INDISPENSÁVEL para uma marca?</description>
+    </item>
+    
+    <item>
+      <title>É assim que estão essas ações da Bolsa de Valores!</title>
+      <link>https://luisotavio.pro/blog/e-assim-que-estao-essas-acoes-da-bolsa-de-valores/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/e-assim-que-estao-essas-acoes-da-bolsa-de-valores/</guid>
+      <description>De forma bem simplificada, a bolsa de valores brasileira vai refletir os resultados da economia do país.</description>
+    </item>
+    
+    <item>
+      <title>5 maneiras de filtrar os seus dados no R</title>
+      <link>https://luisotavio.pro/blog/como-filtrar-os-seus-dados-no-r/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-filtrar-os-seus-dados-no-r/</guid>
+      <description>Nesse post você vai aprender 5 formas diferentes de como filtrar os dados da sua tabela no R.</description>
+    </item>
+    
+    <item>
+      <title>Monitorando o Corona Virus com o R</title>
+      <link>https://luisotavio.pro/blog/monitorando-o-corona-virus-com-o-r/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/monitorando-o-corona-virus-com-o-r/</guid>
+      <description>O Corona virus está se espalhando pelo mundo e isso é inevitável.</description>
+    </item>
+    
+    <item>
+      <title>7 principais motivos para você usar o R</title>
+      <link>https://luisotavio.pro/blog/principais-motivos-para-voce-usar-o-r/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/principais-motivos-para-voce-usar-o-r/</guid>
+      <description>O R é o queridinho dos estudantes e profissionais que buscam analisar dados, construir modelos ou Dashboards com autonomia e facilidade.</description>
+    </item>
+    
+    <item>
+      <title>Como ler um arquivo de texto (txt ou csv) no R ou RStudio</title>
+      <link>https://luisotavio.pro/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-ler-um-arquivo-de-texto-txt-ou-csv-no-r-ou-rstudio/</guid>
+      <description>Quer importar os seus dados em arquivo de texto ou csv para o RStudio de uma forma bem simples e sem precisar de programação?</description>
+    </item>
+    
+    <item>
+      <title>Como ler sua planilha de excel no R</title>
+      <link>https://luisotavio.pro/blog/como-ler-planilha-excel-no-r/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-ler-planilha-excel-no-r/</guid>
+      <description>Precisa importar seus dados de Excel usando o R ou o RStudio?</description>
+    </item>
+    
+    <item>
+      <title>Como instalar um pacote no R</title>
+      <link>https://luisotavio.pro/blog/como-instalar-um-pacote-no-r/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-instalar-um-pacote-no-r/</guid>
+      <description>Esse post vai te ensinar o que são os pacotes no R, como eles vão te ajudar e também como fazer para instalar.</description>
+    </item>
+    
+    <item>
+      <title>Como conseguir ajuda no R?</title>
+      <link>https://luisotavio.pro/blog/como-conseguir-ajuda-no-r/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-conseguir-ajuda-no-r/</guid>
+      <description>O que faz o R ser um dos mais conhecidos e potentes softwares de Estatística com certeza é a sua comunidade.</description>
+    </item>
+    
+    <item>
+      <title>Como instalar o R e o Rstudio</title>
+      <link>https://luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/</guid>
+      <description>Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.</description>
+    </item>
+    
+    <item>
+      <title>Os primeiros passos com o R - usando o Rstudio</title>
+      <link>https://luisotavio.pro/blog/primeiros-passos-com-o-r-usando-o-rstudio/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/primeiros-passos-com-o-r-usando-o-rstudio/</guid>
+      <description>Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa.</description>
+    </item>
+    
+    <item>
+      <title>A sua inscrição foi confirmada!</title>
+      <link>https://luisotavio.pro/confirmacao/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/confirmacao/</guid>
+      <description>Quer ter certeza que você vai receber o e-mail que vou te enviar?</description>
+    </item>
+    
+    <item>
+      <title>Meu Layout</title>
+      <link>https://luisotavio.pro/meulayout/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/meulayout/</guid>
+      <description>Aqui eu coloco o conteúdo!</description>
+    </item>
+    
+    <item>
+      <title>O seu e-book está quase chegando!</title>
+      <link>https://luisotavio.pro/confirmacao-ebook/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/confirmacao-ebook/</guid>
+      <description>Pronto! :)
+Já enviei o e-book para o seu e-mail.</description>
+    </item>
+    
+    <item>
+      <title>Quer dar o seu primeiro passo para ser um Cientista de Dados?</title>
+      <link>https://luisotavio.pro/ebook/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/ebook/</guid>
+      <description>Ebook para quem deseja iniciar a carreira de Ciência de Dados a partir do ZERO.</description>
+    </item>
+    
+    <item>
+      <title>Sua mensagem foi enviada!</title>
+      <link>https://luisotavio.pro/confirmacao-formulario/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/confirmacao-formulario/</guid>
+      <description>Opa! Muito obrigado pela sua mensagem!
+Assim que der já vou dar uma olhada e te responder.</description>
+    </item>
+    
+    <item>
+      <title>Sobre mim</title>
+      <link>https://luisotavio.pro/about/about/</link>
+      <pubDate>Tue, 29 Oct 2019 13:49:23 +0600</pubDate>
+      
+      <guid>https://luisotavio.pro/about/about/</guid>
+      <description>Antes de mais nada, eu preciso começar te contando que esse blog foi desenvolvido no R, a linguagem estatística que uso e falo em provavelmente todos os posts.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manipulação de dados on Luis Otavio | Ciência de dados</title>
+    <link>https://luisotavio.pro/tags/manipula%C3%A7%C3%A3o-de-dados/</link>
+    <description>Recent content in Manipulação de dados on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/manipula%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O que uso para manipular meus dados no R</title>
+      <link>https://luisotavio.pro/blog/o-que-uso-para-manipular-meus-dados-no-r/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/o-que-uso-para-manipular-meus-dados-no-r/</guid>
+      <description>Um dos meus desafios essa semana foi analisar todas as 265 campanhas de e-mail enviadas pelo meu projeto de futebol (Guru do Cartola) em 2018 e 2019.</description>
+    </item>
+    
+  </channel>
+</rss>

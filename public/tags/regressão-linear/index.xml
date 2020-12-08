@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regressão Linear on Luis Otavio | Ciência de dados</title>
+    <link>https://luisotavio.pro/tags/regress%C3%A3o-linear/</link>
+    <description>Recent content in Regressão Linear on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/regress%C3%A3o-linear/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Regressão Linear na prática - usando o R</title>
+      <link>https://luisotavio.pro/blog/regressao-linear-na-pratica-usando-o-r/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/regressao-linear-na-pratica-usando-o-r/</guid>
+      <description>É possível prever a pontuação de um time de futebol usando indicadores financeiros do ano anterior?</description>
+    </item>
+    
+  </channel>
+</rss>

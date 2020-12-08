@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shiny on Luis Otavio | Ciência de dados</title>
+    <link>https://luisotavio.pro/tags/shiny/</link>
+    <description>Recent content in Shiny on Luis Otavio | Ciência de dados</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acompanhamento dos perfis do Instagram</title>
+      <link>https://luisotavio.pro/blog/acompanhamento-dos-perfis-do-instagram/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/acompanhamento-dos-perfis-do-instagram/</guid>
+      <description>Se o seu negócio não está na internet, ele não existe!</description>
+    </item>
+    
+    <item>
+      <title>É possível prever pandemias usando o Google Trends?</title>
+      <link>https://luisotavio.pro/blog/e-possivel-prever-pandemias-usando-o-google-trends/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/e-possivel-prever-pandemias-usando-o-google-trends/</guid>
+      <description>O que é Google Trends?Uma quantidade absurda de buscas são feitas diariamente no Google.</description>
+    </item>
+    
+    <item>
+      <title>Marketing Digital | A importância da ciência de dados nas Campanhas do Facebook e Instagram</title>
+      <link>https://luisotavio.pro/blog/marketing-digital-a-importancia-da-ciencia-de-dados-nas-campanhas-facebook-instagram/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/marketing-digital-a-importancia-da-ciencia-de-dados-nas-campanhas-facebook-instagram/</guid>
+      <description>Uma marca de roupas, uma rede de lanchonetes, uma marca de bebidas ou de itens de higiene podem gastar centenas de milhares de reais para fazer UM anúncio na televisão.</description>
+    </item>
+    
+    <item>
+      <title>É assim que estão essas ações da Bolsa de Valores!</title>
+      <link>https://luisotavio.pro/blog/e-assim-que-estao-essas-acoes-da-bolsa-de-valores/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/e-assim-que-estao-essas-acoes-da-bolsa-de-valores/</guid>
+      <description>De forma bem simplificada, a bolsa de valores brasileira vai refletir os resultados da economia do país.</description>
+    </item>
+    
+    <item>
+      <title>Monitorando o Corona Virus com o R</title>
+      <link>https://luisotavio.pro/blog/monitorando-o-corona-virus-com-o-r/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisotavio.pro/blog/monitorando-o-corona-virus-com-o-r/</guid>
+      <description>O Corona virus está se espalhando pelo mundo e isso é inevitável.</description>
+    </item>
+    
+  </channel>
+</rss>
