@@ -84,7 +84,7 @@ ggplot(image_1, aes(x = x, y = y, fill = value)) +
   theme(aspect.ratio = 1) +
   xlab(&quot;&quot;) +
   ylab(&quot;&quot;)</code></pre>
-<p><img src="/blog/reconhecimento-de-imagens-só-para-iniciantes_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="public/blog/reconhecimento-de-imagens-só-para-iniciantes_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>Portanto, vemos que a blusa representada na imagem acima tem uma qualidade de 28 x 28 pixels.</p>
 <p>Então, podemos imaginar que é um gráfico, onde cada eixo (x ou y) tem 28 unidades. Cada combinação entre o eixo X e Y recebe um valor entre 0 e 255.</p>
 <p>Caso o valor seja 0, o ponto será branco.</p>
@@ -106,7 +106,7 @@ for (i in 1:25) {
   image(1:28, 1:28, img, col = gray((0:255)/255), xaxt = &#39;n&#39;, yaxt = &#39;n&#39;,
         main = paste(class_names[train_labels[i] + 1]))
 }</code></pre>
-<p><img src="/blog/reconhecimento-de-imagens-só-para-iniciantes_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="public/blog/reconhecimento-de-imagens-só-para-iniciantes_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="criando-o-nosso-modelo-de-previsão" class="section level4">
 <h4>Criando o nosso modelo de previsão</h4>
@@ -145,9 +145,9 @@ model %&gt;%
 <h4>Acurácia do modelo</h4>
 <pre class="r"><code>score &lt;- model %&gt;% evaluate(test_images, test_labels, verbose = 0)
 cat(&#39;Perda do conjunto de TESTE:&#39;, score[&quot;loss&quot;], &quot;\n&quot;)</code></pre>
-<pre><code>## Perda do conjunto de TESTE: 0.3324216</code></pre>
+<pre><code>## Perda do conjunto de TESTE: 0.3523404</code></pre>
 <pre class="r"><code>cat(&#39;Acurácia do conjunto de TESTE:&#39;, score[&quot;accuracy&quot;], &quot;\n&quot;)</code></pre>
-<pre><code>## Acurácia do conjunto de TESTE: 0.8786</code></pre>
+<pre><code>## Acurácia do conjunto de TESTE: 0.872</code></pre>
 </div>
 <div id="fazendo-as-nossas-predições" class="section level4">
 <h4>Fazendo as nossas predições</h4>
@@ -176,6 +176,6 @@ for (i in 1:25) {
                       class_names[true_label + 1], &quot;)&quot;),
         col.main = color)
 }</code></pre>
-<p><img src="/blog/reconhecimento-de-imagens-só-para-iniciantes_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="public/blog/reconhecimento-de-imagens-só-para-iniciantes_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 </div>

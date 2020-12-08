@@ -45,7 +45,7 @@ Dentro da biblioteca ```keras``` que acabamos de carregar, estão também todas 
 Carregando o nosso conjunto de dados para o objeto ```fashion_mnist```:
 
 ```{r,warning=FALSE,message=FALSE}
-fashion_mnist <- dataset_fashion_mnist()
+fashion_mnist <- keras::dataset_fashion_mnist()
 ```
 Para cada imagem do conjunto de dados, existe uma classificação. Essa classificação é um valor de 0 a 9 e representa um item de vestuário.
 
@@ -206,8 +206,8 @@ model %>% fit(train_images, train_labels, epochs = 5, verbose = 2)
 
 ```{r}
 score <- model %>% evaluate(test_images, test_labels, verbose = 0)
-cat('Perda do conjunto de TESTE:', score$loss, "\n")
-cat('Acurácia do conjunto de TESTE:', score$acc, "\n")
+cat('Perda do conjunto de TESTE:', score["loss"], "\n")
+cat('Acurácia do conjunto de TESTE:', score["accuracy"], "\n")
 ```
 
 #### Fazendo as nossas predições

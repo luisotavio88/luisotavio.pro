@@ -147,6 +147,8 @@
         
         <div class="content mb-5">
           
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <p>Você já ouviu falar em algoritmos de reconhecimento de imagens?</p>
@@ -165,7 +167,7 @@
 <div id="carregando-as-imagens-e-suas-classificações" class="section level4">
 <h4>Carregando as imagens e suas classificações</h4>
 <p>Carregando o nosso conjunto de dados para o objeto <code>fashion_mnist</code>:</p>
-<pre class="r"><code>fashion_mnist &lt;- dataset_fashion_mnist()</code></pre>
+<pre class="r"><code>fashion_mnist &lt;- keras::dataset_fashion_mnist()</code></pre>
 <p>Para cada imagem do conjunto de dados, existe uma classificação. Essa classificação é um valor de 0 a 9 e representa um item de vestuário.</p>
 <p>Para facilitar a nossa visualização, iremos adicionar os nomes de cada item!</p>
 <pre class="r"><code>class_names = c(&#39;Blusa&#39;,
@@ -276,10 +278,10 @@ model %&gt;%
 <div id="acurácia-do-modelo" class="section level4">
 <h4>Acurácia do modelo</h4>
 <pre class="r"><code>score &lt;- model %&gt;% evaluate(test_images, test_labels, verbose = 0)
-cat(&#39;Perda do conjunto de TESTE:&#39;, score$loss, &quot;\n&quot;)</code></pre>
-<pre><code>## Perda do conjunto de TESTE: 0.3796043</code></pre>
-<pre class="r"><code>cat(&#39;Acurácia do conjunto de TESTE:&#39;, score$acc, &quot;\n&quot;)</code></pre>
-<pre><code>## Acurácia do conjunto de TESTE: 0.862</code></pre>
+cat(&#39;Perda do conjunto de TESTE:&#39;, score[&quot;loss&quot;], &quot;\n&quot;)</code></pre>
+<pre><code>## Perda do conjunto de TESTE: 0.3324216</code></pre>
+<pre class="r"><code>cat(&#39;Acurácia do conjunto de TESTE:&#39;, score[&quot;accuracy&quot;], &quot;\n&quot;)</code></pre>
+<pre><code>## Acurácia do conjunto de TESTE: 0.8786</code></pre>
 </div>
 <div id="fazendo-as-nossas-predições" class="section level4">
 <h4>Fazendo as nossas predições</h4>
