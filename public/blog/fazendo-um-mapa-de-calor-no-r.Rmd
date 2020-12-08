@@ -1,0 +1,415 @@
+---
+title: "Fazendo um mapa de calor no R"
+author: "Luis Otavio"
+date: '2020-06-14'
+image: images/post_principal/mg.png
+slug: fazendo-um-mapa-de-calor-no-r
+categories:
+  - Caso prático
+tags:
+  - Maps
+type: featured
+---
+
+A missão dessa semana foi construir um **mapa de calor no R**!
+
+Os mapas de calor representam a intensidade de uma medida nas áreas do mapa. 
+
+- Se quisermos utilizar o mapa de calor para mostrar as **temperaturas de uma região**, a coloração do mapa irá variar de acordo com a **intensidade** da temperatura.
+
+Também é comum usarmos mapas de calor nos esportes. Aqui, vou trazer uma aplicação no futebol.
+
+- O mapa de calor de um jogador irá representar a **intensidade de sua atuação** em cada região do campo.
+
+**É fácil fazer um mapa de calor no R?**
+
+Será muito fácil se você quiser fazer o mapa para um estado, cidade ou país. Nesse caso, os contornos da área que você deseja colocar no mapa já estarão definidos.
+
+Porém, achei bem difícil fazer o mapa de calor para um atleta. A minha dificuldade foi delimitar por fórmulas os contornos de cada área do atleta.
+
+**A seguir vou mostrar todo o código e explicar o passo a passo que usei para construir os mapas de calor.**
+
+- Mapa de Calor do Estado de Minas Gerais: 
+
+![Mapa de Calor - Minas Gerais](/images/post_interno/minas_legenda.png){ width=75% }
+- Mapa de Calor do Lateral Direito Victor Ferraz, no jogo Santos x Chapecoense pela 36ª rodada do Brasileirão 2019
+![Mapa de Calor - Futebol](/images/post_interno/mapacalor_lat_direito.png){ width=75% }
+
+### Mapa de Calor do estado de Minas Gerais
+
+Para construir um mapa de calor, vamos precisar dos seguintes elementos:
+
+- Desenho da cidade, estado, país ou área para delimitar o gráfico
+
+- Valores da medida de intensidade 
+
+- Coordenadas do mapa correspondente a cada ponto medido
+
+- Estrutura de polígonos para colorir de acordo com a intensidade medida
+
+
+
+O mapa de Minas Gerais já está desenhado pela biblioteca ```geobr```, basta executar o seguinte script:
+
+```{r, eval=F}
+library(geobr)
+mg<-read_state(code_state ='MG')
+#caso queira visualizar, basta executar plot(mg)
+```
+
+O próximo passo é buscar os dados que possuem as coordenadas geográficas e a temperatura correspondente a cada ponto:
+
+```{r, eval=F}
+library(readr)
+temperatura_minasgerais <- read_delim("content/blog/temperatura_minasgerais.txt", 
+    "\t", escape_double = FALSE, trim_ws = TRUE)
+```
+
+[Dados disponíveis nesse link](https://luisotavio.pro/blog/temperatura_minasgerais.txt){target="_blank"}
+
+O próximo passo é transformar o objeto  ```temperatura_minasgerais``` para um formato adequado, já que vamos trabalhar com mapas.
+
+Vamos utilizar a biblioteca ```sf``` para nos ajudar nesse desafio. 
+
+```{r, eval=F}
+library(sf)
+temperatura_minasgerais.sf <- st_as_sf(temperatura_minasgerais,coords = c('Longitude','Latitude'),crs=4674) #o código 4674 é uma referência as coordenadas, esse é o código utilizado para o Brasil e outros países próximos.
+```
+
+O passo seguinte é criar a estrutura do mapa para o estado de Minas Gerais. Essa estrutura será a base para futuramente preenchermos o nosso mapa.
+
+```{r, eval=F}
+library(dplyr)
+estrutura.mg <-st_make_grid(mg,cellsize = c(.07,.07)) %>% 
+  st_as_sf() %>%
+  filter(st_contains(mg,.,sparse = FALSE))
+```
+
+Uma observação importante é a definição do valor do parâmetro *cellsize*: quanto menor o tamanho o seu valor, menor será o tamanho de cada célula e **melhor** será a qualidade do gráfico, porém irá demorar mais tempo para a geração da imagem.
+
+```{r, eval=F}
+plot(estrutura.mg)
+```
+
+![Estrutura - Minas Gerais](/images/post_interno/grade_mg.png){ width=75% }
+Na imagem acima podemos ver que existem vários pontos no nosso mapa. Porém, não sabemos a temperatura para todos eles.
+
+Então como fazemos para colorir o mapa se não sabemos as temperaturas para cada ponto?
+
+Existem métodos que estimam a temperatura de um ponto baseando-se nas temperaturas dos pontos mais próximos.
+
+Portanto, o nosso próximo passo é construir um modelo de previsão para os pontos que não temos o valor de temperatura.
+
+```{r, eval=F}
+library(gstat)
+modelo<-gstat(formula = temp~1,
+              data = as(temperatura_minasgerais.sf,'Spatial'),
+              set=list(idp=3))
+```
+
+Pronto. O modelo foi criado. Agora vamos gerar as previsões de temperatura baseadas neste modelo.
+
+```{r, eval=F}
+temp.interpolacao <- predict(modelo,as(estrutura.mg,'Spatial')) %>%
+  st_as_sf()
+```
+
+Pronto. Agora que já temos as temperaturas para todos os pontos do mapa, podemos criá-lo:
+
+```{r, eval=F}
+library(ggplot2)
+library(fields) #biblioteca para usar a paleta de cores tim.colors
+ggplot(temp.interpolacao) + 
+  geom_sf(aes(fill=var1.pred,col=var1.pred))+
+  geom_sf(data=mg,fill='transparent')+
+  scale_color_gradientn(colors = tim.colors(50),
+                        limits=c(19,28))+
+  scale_fill_gradientn(colors = tim.colors(50),
+                        limits=c(19,28))+
+  theme_bw()+
+  labs(title = "Dados Interpolados",
+       fill ='ºC',
+       color= 'ºC')
+  
+```
+
+![Mapa de Calor - Minas Gerais](/images/post_interno/minas_legenda.png){ width=75% }
+
+### Mapa de Calor no Futebol
+
+Já vou começar ressaltando a maior diferença para fazer esse mapa de calor.
+
+No caso anterior, para fazer um mapa de calor para o estado de Minas Gerais, já tínhamos o contorno do estado. Além disso, **a ideia é colorir todo o estado**.
+
+E é aí que está a grande dificuldade para aplicar o mapa de calor no Futebol. 
+
+No segundo exemplo, podemos delimitar a área do jogador sendo a área de todo o campo de futebol. Porém, não podemos colorir todo o campo de futebol. Não faz nenhum sentido.
+
+
+As informações que temos aqui nesse exemplo são as coordenadas (do eixo X e do eixo Y) de cada jogada do atleta. Ou seja, são pontos dentro do campo.
+
+Colocar esses pontos no campo, é fácil. Porém, como delimitar as curvas de cada área utilizada pelo jogador?
+
+Para resolver isso, usei a minha intuição e vou mostrar todo o raciocínio junto com o código.
+
+#### Introdução
+
+ - Para criar a estrutura onde vamos colorir a área utilizada pelo jogador, criei pontos falsos, que sejam próximos aos pontos REAIS.
+ 
+Inicialmente, esses pontos formam um quadrado em volta do ponto real. Porém, futuramente iremos arredondar a área coberta por esses pontos.
+
+
+Parâmetros que usei para criar o mapa de calor:
+
+- **qualidade** - Esse parâmetro define o tamanho da célula que iremos colorir no mapa. Ou seja, quanto **menor** a célula, **maior a qualidade** do gráfico. 
+
+- **dist_grupamento** - Criei essa medida para separar grupamento de pontos. Se os pontos tiverem uma distância maior que o parâmetro, entende-se que são blocos de pontos separados.
+
+- **corte_distancia** - Esse é o parâmetro para arredondar as áreas criadas. Os pontos falsos que possuírem uma distância maior que o percentil definido pelo *corte_distancia* serão excluídos.
+
+```{r, eval=F}
+#definindo os parâmetros
+qualidade<-0.002 #quanto menor, melhor será a qualidade e mais demorada será a execução do código
+dist_grupamento<-0.1
+corte_distancia<-0.75
+```
+
+Ler no R a imagem do campo de futebol.
+
+```{r, eval=F}
+library(png)
+library(grid)
+r <- readPNG('images/post_interno/campo.png') #Ler a imagem de fundo que vamos usar para o campo de futebol
+rg <- rasterGrob(r, width=unit(0.9,"npc"), height=unit(0.9,"npc")) #Ajustes para usar a imagem como fundo do mapa de calor
+```
+
+[Imagem disponível nesse link](https://luisotavio.pro/images/post_interno/campo.png){target="_blank"}
+
+Ler as informações do jogador Victor Ferraz. As informações são as coordenadas X e Y das jogadas do atleta. 
+```{r}
+library(readr)
+coordenadas <- read_delim("dados_victorferraz.txt", 
+    "\t", escape_double = FALSE, trim_ws = TRUE)
+head(coordenadas)
+```
+
+[Dados disponíveis nesse link](https://luisotavio.pro/blog/dados_victorferraz.txt){target="_blank"}
+
+
+#### Criando pontos falsos
+
+Agora, precisamos **criar os pontos falsos**.
+
+Para criar os pontos falsos, vou mostrar duas formas de fazer isso e elas serão muito importantes **PARA QUALQUER CASO** que você esteja usando o R.
+
+- A primeira maneira é muito fácil e **MUITO INTUITIVA**, porém **MUITO DEMORADA** para executar tudo.
+
+- A segunda maneira é a ideal. O código será executado praticamente instantaneamente.
+
+**Os dois códigos vão fazer exatamente a mesma tarefa: criar pontos falsos próximos de pontos reais.**
+
+As duas versões irão criar pontos próximos as coordenadas dos pontos reais. A quantidade de pontos nessa área será definida pelo parâmetro de **qualidade**. Os novos pontos terão as coordenadas com diferenças entre -0.05 e 0.05 dos pontos reais para os eixos X e Y.
+
+**VERSÃO 1**
+
+```{r, eval=F}
+########## criar pontos falsos ###########################
+coordenadas_fake<-data.frame()   # cria a tabela de coordenadas falsas
+for(ponto in 1:nrow(coordenadas)){ #cria um looping para cada ponto real
+  for(valor_y in seq(-0.05,0.05,qualidade)){ #cria um looping para ir alterando o valor de Y de cada coordenada
+    for(valor_x in seq(-0.05,0.05,qualidade)){ #cria um looping para ir alterando o valor de X de cada coordenada
+      coordenadas_fake<-rbind(coordenadas_fake, #cria UM ponto falso e adiciona na tabela
+                              data.frame(x=coordenadas[ponto,"x"]+valor_x,y=coordenadas[ponto,"y"]+valor_y))
+    }
+  }
+}
+```
+
+Essa é a versão intuitiva. Ela cria 3 FOR *loopings*, o que é bem custoso para o computador executar.
+
+**VERSÃO 2**
+
+Inicialmente iremos criar dois vetores para definir as variações das coordenadas X e Y. Até então, nenhuma novidade. Isso também foi feito quando definimos o *looping* FOR na versão 1.
+
+```{r, eval=F}
+valor_y<-seq(-0.05,0.05,qualidade)
+valor_x<-seq(-0.05,0.05,qualidade)
+```
+
+No segundo passo, iremos definir a função que cria um ponto falso. Também não é uma novidade em relação a 1ª versão.
+```{r, eval=F}
+criar_coordenadas<- function(valor_x,valor_y){
+  c(coordenadas[,"x"]+valor_x,coordenadas[,"y"]+valor_y)
+}
+```
+
+Agora sim, a diferença!
+
+Para substituir as funções ```for```, o R possui funções da família ```apply```, que são as funções ```lapply```, ```sapply```, ```apply```, entre outras.
+
+A função escolhida depende principalmente do formato dos dados. Podemos usar a função ```lapply``` para criar listas, o que é exatamente o nosso caso.
+
+As funções dessa família irão percorrer todo o vetor ou todas as linhas ou colunas de sua tabela de uma vez só. Quando utilizamos o *script* da versão 1, o código executa um elemento da tabela por vez. 
+
+Como desejamos que as coordenadas sejam criadas com todas as combinações dos vetores *valor_x* e *valor_y*, iremos usar duas funções ```lapply```, uma dentro da outra.
+
+
+```{r, eval=F}
+library(data.table)
+criando_coordenadas <-lapply(valor_x, function(valor_x) lapply(valor_y, function(valor_y) criar_coordenadas(valor_x,valor_y))) #Cria lista com as coordenadas
+coordenadas_fake<-rbindlist(unlist(criando_coordenadas, recursive = FALSE)) #transforma a lista em data frame
+```
+
+Pronto. Essa é a versão 2. Sempre que possível, substitua os seus *looping* FOR pelas funções da família apply. Com isso você irá melhorar muito a performance do código.
+
+#### Eliminar pontos falsos que não sejam tão próximos dos reais.
+
+Esse passo é muito útil para deixar as áreas do mapa de calor com a aparência menos quadrada.
+
+Adotei a estratégia de medir as distâncias entre pontos que tenham uma proximidade de até 0.1, isso é definido pelo parâmetro ```dist_grupamento```.
+
+Caso a distâcia seja maior que o parâmetro estabelecido, eu vou entender que os pontos estão em áreas distantes e que não há relação entre elas. Ou seja, não nos ajudaria para deixar uma área com formato menos quadrado.
+
+Distância entre as coordenadas reais e as coordenadas falsas:
+
+```{r, eval=F}
+library(proxy)
+distancias<-dist(coordenadas_fake,coordenadas,method = "euclidean")
+```
+
+Para cada ponto falso, vamos medir qual é o ponto real mais próximo. Criando um ranking do mais próximo até o mais distante.
+
+```{r, eval=F}
+library(dplyr)
+distancias_rank<-sapply(1:nrow(distancias), function(x){min_rank(distancias[x,])}) %>%
+  t()
+```
+
+Escolher quais os pontos falsos estão próximos de pelo 1 ou 2 pontos reais e, ao mesmo tempo, dentro do raio definido pela ```dist_grupamento```.
+
+```{r, eval=F}
+matriz_logica<-(distancias_rank<=2) & (distancias<dist_grupamento) #pra ser verdadeiro tem que ser uma das 
+                                    #duas distâncias mais próximas e menor que dist_grupamento
+
+```
+
+Para os pontos considerados acima, vamos medir a distância média entre o ponto falso e os pontos verdadeiros:
+
+```{r, eval=F}
+distancias_media<-sapply(1:nrow(distancias),function(x) mean(distancias[x,matriz_logica[x,]],na.rm = T))
+```
+
+Finalmente, já podemos arredondar as áreas do jogador. Então vamos escolher o critério de corte para os pontos mais distantes.
+
+Esse corte é definido pelo parâmetro ```corte_distancia```. O seu valor é 0.75, então significa que ordenando o valor de distância de todos os pontos falsos, vamos pegar os 75% que têm os menores valores de distância.
+
+```{r, eval=F}
+percentil<-quantile(distancias_media, corte_distancia,na.rm = T) 
+coordenadas_fake<-coordenadas_fake[distancias_media<percentil,]
+coordenadas_fake<-anti_join(coordenadas_fake,coordenadas) #evitar que pontos falsos repitam pontos reais
+coordenadas_fake<-unique(coordenadas_fake) #remover pontos duplicados
+```
+
+Agora, vamos adicionar os vértices do campo, apenas para definir limites de espaço e juntar os todos os pontos (falsos e reais)
+
+```{r, eval=F}
+vertices<-data.frame(x=c(0,0,1,1),y=c(0,1,0,1))
+dados_estrutura<-rbind(coordenadas,coordenadas_fake,vertices)
+dados_estrutura$id<-1:nrow(dados_estrutura)
+```
+
+
+#### Criando polígonos
+
+Cada jogada do jogador é definida em uma coordenada exata. Porém, para colorir o mapa, é necessário que esse ponto seja representado por um polígono. 
+
+Para cada ponto do objeto ```dados_estrutura``` criado, vamos fazer um quadrado para que ele possa ser colorido. 
+
+```{r, eval=F}
+library(sf)
+lista <- lapply(1:nrow(dados_estrutura), function(x){
+  ## create a matrix of coordinates that also 'close' the polygon
+  res <- matrix(as.numeric(c(dados_estrutura[x, 'x'], dados_estrutura[x, 'y'],
+                  dados_estrutura[x, 'x'], dados_estrutura[x, 'y']-qualidade/2,
+                  dados_estrutura[x, 'x']-qualidade/2, dados_estrutura[x, 'y']-qualidade/2,
+                  dados_estrutura[x, 'x']-qualidade/2, dados_estrutura[x, 'y'],
+                  dados_estrutura[x, 'x'], dados_estrutura[x, 'y']))  ## need to close the polygon
+                , ncol =2, byrow = T
+  )
+  ## create polygon objects
+  st_polygon(list(res))
+})
+sfdf <- st_sf(id = dados_estrutura[, 'id'], st_sfc(lista)) #transformando para o formato adequado
+```
+
+Agora, vamos criar a estrutura do mapa onde precisamos colorir:
+
+```{r, eval=F}
+estrutura_mapa <-st_make_grid(sfdf,cellsize = c(qualidade,qualidade)) %>%
+  st_as_sf() 
+plot(estrutura_mapa)
+```
+
+![Estrutura - Mapa de calor](/images/post_interno/grade_campo.png){ width=75% }
+
+
+#### Intensidade de cada área
+
+Caso o atleta tenho feito uma jogada no ponto A e uma jogada no ponto B, a princípio elas devem ter a mesma coloração. Certo?
+
+Caso o atleta tenha feito várias jogadas em volta de um ponto C, devemos destacar isso em nosso mapa.
+
+Então, agora é a hora de definir um valor para cada ponto do mapa. Todos os pontos (falsos ou reais) terão um valor que corresponderá a intensidade daquele ponto.
+
+Para definir a intensidade dos pontos reais, usei uma regra bem simples: quantos pontos reais estão próximos?
+
+Entenda-se por próximo os pontos que estão no mesmo conjunto, ou seja, possuem distâncias menores que o parâmetro ```dist_grupamento```.
+
+```{r, eval=F}
+distancias_reais<-proxy::dist(coordenadas,coordenadas,method = "euclidean") #distância entre os pontos reais
+distancias_reais<-distancias_reais<dist_grupamento    #variável lógica
+coordenadas$intensidade<-apply(distancias_reais, 1, FUN=sum) #soma a quantidade de TRUE para o comando anterior. Ou
+                                                              #seja, a quantidade de pontos no mesmo conjunto. 
+coordenadas.sf <- st_as_sf(coordenadas,coords = c('x','y')) # ajustar para o formato adequado
+```
+
+Criar um modelo para prever a intensidade dos pontos falsos
+
+```{r, eval=F}
+library(gstat)
+modelo<-gstat(formula = intensidade~1,
+              data = as(coordenadas.sf,'Spatial'),
+              set=list(idp=1))
+```
+
+Prever as intensidades para os pontos falsos
+
+```{r, eval=F}
+dados.mapa <- predict(modelo,as(estrutura_mapa,'Spatial')) %>%
+  st_as_sf()
+
+```
+
+#### O NOSSO MAPA DE CALOR! UFA...
+
+Vamos usar a biblioteca ```ggplot2``` para finalmente gerar o nosso mapa de calor. 
+
+Esse último passo busca os dados calculados até agora (```dados.mapa```) e junta com a imagem do campinho.
+
+Além disso, são definidas as escalas de cores e os limites mínimo e máximo para a intensidade.
+
+```{r, eval=F}
+library(ggplot2)
+library(fields) #biblioteca para usar a paleta de cores tim.colors
+
+ggplot(dados.mapa) +  #dados calculados até aqui para o mapa de calor.
+  annotation_custom(rg) + # Essa linha adiciona o campinho no atrás do mapa de calor.
+  geom_sf(aes(fill=var1.pred,col=var1.pred), show.legend = FALSE)+
+  scale_color_gradientn(colors = c(tim.colors(50,alpha =1)), ## cor da borda dos polígonos
+                        limits=c(min(dados.mapa$var1.pred),max((dados.mapa$var1.pred))))+
+  scale_fill_gradientn(colors =  c(tim.colors(50,alpha =1)), ## cor dentro dos polígonos
+                       limits=c(min(dados.mapa$var1.pred),max((dados.mapa$var1.pred))))+
+  theme_void()       
+```
+
+![Mapa de Calor - Futebol](/images/post_interno/mapacalor_lat_direito.png){ width=75% }

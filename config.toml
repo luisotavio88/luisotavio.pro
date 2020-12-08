@@ -1,5 +1,5 @@
 ####################### default configuration ####################
-baseURL = "https://luisotavio.pro"
+baseURL = "https://www.luisotavio.pro"
 languageCode = "pt-br"
 title = "Luis Otavio | Ciência de dados"
 theme = "liva-hugo"
