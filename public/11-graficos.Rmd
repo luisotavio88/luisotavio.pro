@@ -201,4 +201,3 @@ shiny::HTML('<tr><center>
     <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
   </center></tr>')
 ```
-

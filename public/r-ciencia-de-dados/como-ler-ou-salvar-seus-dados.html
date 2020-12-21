@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 5 Como ler ou salvar seus dados | O seu primeiro passo para ser um Cientista de Dados</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 5 Como ler ou salvar seus dados | O seu primeiro passo para ser um Cientista de Dados" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Luís Otávio" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,9 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134709799-1"></script>
 <script>
@@ -80,9 +83,9 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -91,14 +94,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -107,9 +112,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -287,124 +292,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="como-ler-ou-salvar-seus-dados" class="section level1">
 <h1><span class="header-section-number"> 5</span> Como ler ou salvar seus dados</h1>
-<p>Nesse capítulo vou te apresentar as principais formas de <strong>importar os seus dados para o R</strong>.</p>
-<p>Em alguns casos específicos, a importação dos dados pode depender de pacotes desenvolvidos especialmente para o caso. Aqui vou abordar a importação de arquivos de texto, CSV ou Excel.</p>
-<p>Vou falar sobre a importação de dados do Excel no final deste capítulo. Porém, caso você queira importar poucas abas de uma planilha do Excel, recomendo que você a salve como arquivo TXT e faça a importação usando o método a seguir.</p>
+<p>Placeholder</p>
 <div id="como-importar-uma-tabela-em-arquivo-txt-ou-csv-para-o-rstudio" class="section level2">
 <h2><span class="header-section-number">5.1</span> Como importar uma tabela em arquivo txt ou csv para o RStudio</h2>
 <div id="método-sem-nenhuma-linha-de-código" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Método sem nenhuma linha de código</h3>
-<p>Após aplicar esse método, você terá importado seus dados em segundos e, além disso, o R te mostrará qual o código ele executou para abrir a sua tabela! Ou seja, uma ótima oportunidade pra você entender melhor sobre a linguagem.</p>
-<p><strong>Passo 1 - Na parte “Enviroment” clique em Import Dataset -&gt; From Txt (readr)</strong></p>
-<p>Lembre-se que os seus dados devem estar salvos no formato txt ou csv.</p>
-<div class="figure">
-<img src="imagens/5_importacao1.png" alt="Importar dados no R-RStudio" />
-<p class="caption">Importar dados no R-RStudio</p>
-</div>
-<p>Para ler os dados vamos usar a biblioteca <code>readr</code>, então, caso você ainda não tenha ela instalada em seu computador, o RStudio irá solicitar a sua instalação.</p>
-<p><strong>Passo 2 - Instale a biblioteca <code>readr</code>, caso ela já não esteja instalada</strong></p>
-<div class="figure">
-<img src="imagens/5_importacao2.png" alt="Importar dados no R-RStudio" />
-<p class="caption">Importar dados no R-RStudio</p>
-</div>
-<p>Clique em “Yes” e aguarde a instalação.</p>
-<p><strong>Passo 3 - Ajustes para importar a sua tabela</strong></p>
-<div class="figure">
-<img src="imagens/5_importacao3.png" alt="Importar dados no R-RStudio" />
-<p class="caption">Importar dados no R-RStudio</p>
-</div>
-<p>Primeiramente, clique em “<em>Browse</em>” e selecione o arquivo que você deseje importar.</p>
-<p>Uma pequena parte dos dados do arquivo que você selecionou irão aparecer na sua tela, para te auxiliar na importação.</p>
-<p>Então, agora você precisa fazer alguns ajustes para o R ler o seu conjunto de dados (<em>dataset</em>).</p>
-<p><strong>O ajuste mais importante é como as suas colunas estão separadas/delimitadas.</strong></p>
-<p>É muito comum usar tabulação (tab), vírgula, ponto e vírgula ou espaço para separar as colunas de arquivos de texto.</p>
-<p>Mas nessa parte da importação, <strong>você deve escolher exatamente o mesmo delimitador que já foi utilizado em seu arquivo.</strong></p>
-<p>Nessa seção, você também pode fazer vários outros ajustes, por exemplo:</p>
-<ul>
-<li><p>escolher o nome da tabela que será importada</p></li>
-<li><p>definir qual se os números decimais da sua tabela estão separados por ponto ou vírgula. No R o separador decimal é por ponto, então caso o seu arquivo use vírgula, o R saberá que deve transformar pra ficar dentro do padrão.</p></li>
-<li><p>alterar qual a codificação dos seus dados (ASCII, utf8, etc…)</p></li>
-<li><p>definir se a primeira linha dos seus dados é cabeçalho ou não</p></li>
-</ul>
-<p>Note que nessa etapa, na parte de “<strong>Code Preview</strong>”, o RStudio está mostrando exatamente o código que será executado para fazer a leitura dos seus dados.</p>
-<p>Esse código vai alterando a medida que você muda os ajustes! (ótima oportunidade para aprender e ir entendendo melhor o funcionamento da linguagem).</p>
-<p>Após realizar os ajustes necessários (que vão depender da sua própria tabela), clique em Import</p>
-<p>Pronto, agora os seus dados foram importados.</p>
-<p>Você pode conferir que a sua tabela irá aparecer em “Enviroment”. É só clicar nela para visualizar os dados.</p>
 </div>
 <div id="importando-dados-com-a-função-read.table" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Importando dados com a função read.table</h3>
-<p>A função mais comum para importar dados no R é a <code>read.table</code>. A função é bem simples, vou mostrar a seguir:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1">meus_dados&lt;-<span class="kw">read.table</span>(<span class="dt">file=</span><span class="st">&quot;nome_do_arquivo.txt&quot;</span>,<span class="dt">header =</span> <span class="ot">TRUE</span>,<span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a></code></pre></div>
-<p>Portanto, esse comando irá ler o arquivo “nome_do_arquivo.txt”. Além disso, foi informado que o arquivo possui cabeçalho (nome para cada coluna da tabela) e está separado por tabulação, representado pelo símbolo <code>"\t"</code>.</p>
-<p>Você pode atribuir valores para outros argumentos, como: <em>dec</em> (para definir o separador de números decimais), <em>row.names</em> (para atribuir nomes para cada linha), <em>encoding</em> (definir a codificação dos seus dados) e vários outros.</p>
-<p>Essas opções só precisarão ser utilizadas em casos especiais, quando seus dados não estiverem no padrão definido pelo R.</p>
-<p>Como qualquer função no R, você terá acesso a documentação da função executanto o comando <code>?read.table</code>.</p>
 </div>
 </div>
 <div id="como-importar-dados-do-excel-para-o-rstudio" class="section level2">
 <h2><span class="header-section-number">5.2</span> Como importar dados do Excel para o RStudio</h2>
-<p>A seguir temos 3 métodos para ler dados do Excel no RStudio. Todos são bem simples e cada um será mais útil em um tipo de situação.</p>
 <div id="copiando-os-dados-do-excel-e-importando-para-o-r." class="section level3">
 <h3><span class="header-section-number">5.2.1</span> Copiando os dados do Excel e importando para o R.</h3>
-<p>1 – Abra o seu arquivo de Excel, selecione os dados que deseja copiar e copie os dados (Ctrl + C).</p>
-<p>2 – Execute o código abaixo para importar os dados copiados no Excel.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="dt">file =</span> <span class="st">&quot;clipboard&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</a></code></pre></div>
-<pre><code>## Warning in read.table(file = &quot;clipboard&quot;, sep = &quot;\t&quot;, header = TRUE): incomplete
-## final line found by readTableHeader on &#39;clipboard&#39;</code></pre>
-<p>Quando copiamos os dados no Excel, eles ficam armazenados no clipboard do nosso computador, então o que estamos fazendo é falando para o R ler a tabela (função read.table) que estão no clipboard e atribuir essa tabela aos “meus_dados”.</p>
-<p>3 – Pronto!</p>
 </div>
 <div id="importando-arquivos-do-excel-sem-usar-programação" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> Importando arquivos do Excel sem usar programação</h3>
-<p>Agora vamos ver como importar um arquivo do Excel para o R usando apenas o nosso mouse, é muito simples!</p>
-<p>1 - Na aba <strong>“Enviroment”</strong>, vamos clicar em <em>Import Dataset</em> e escolher <em>From Excel</em>.</p>
-<div class="figure">
-<img src="imagens/5_excel1.png" alt="Importar dados no R-RStudio" />
-<p class="caption">Importar dados no R-RStudio</p>
-</div>
-<p>2 – Você provavelmente ainda não instalou o pacote <code>readxl</code>, então o RStudio vai te perguntar se deseja instalar o pacote. Confirme a instalação.</p>
-<div class="figure">
-<img src="imagens/5_excel2.png" alt="Importar dados no R-RStudio" />
-<p class="caption">Importar dados no R-RStudio</p>
-</div>
-<p>3 - Aparecerá uma aba para você fazer a leitura dos dados desejados. Clique em <em>Browse</em> para escolher o arquivo de Excel que você irá importar. Depois em <em>Sheet</em> escolha a aba de seu arquivo onde está a tabela que você quer importar.</p>
-<p>(Caso queira importar várias abas é só repetir os passos, importando uma aba de cada vez)</p>
-<div class="figure">
-<img src="imagens/5_excel3.png" alt="Importar dados no R-RStudio" />
-<p class="caption">Importar dados no R-RStudio</p>
-</div>
-<p>4 – Clique em <em>Import</em>.</p>
 </div>
 <div id="abrir-os-dados-do-excel-no-r-usando-o-pacote-readxl" class="section level3">
 <h3><span class="header-section-number">5.2.3</span> Abrir os dados do Excel no R usando o pacote readxl</h3>
-<p>Esse método é bem parecido com o último, porém aqui vamos usar linhas de código.</p>
-<p>1 - Caso você ainda não tenha instalado o pacote <code>readxl</code>, execute o seguinte comando:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
-<p>2 - Vamos carregar o pacote que iremos usar (<code>readxl</code>): Execute o comando:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="kw">library</span>(<span class="st">&quot;readxl&quot;</span>)</a></code></pre></div>
-<p>3 – Agora vamos buscar a planilha que você precisa usando a função <code>read_excel</code>.</p>
-<p>Os argumentos que vamos usar na função são:</p>
-<ul>
-<li>o endereço e nome do seu arquivo;</li>
-<li>a aba da planilha que você quer ler.</li>
-</ul>
-<p>Excute o código:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1">meus_dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;seu_arquivo.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="st">&quot;nome da aba&quot;</span>)</a></code></pre></div>
-<ul>
-<li><p>caso o seu arquivo esteja na mesma pasta do seu projeto, você não precisa colocar todo o endereço do arquivo.</p></li>
-<li><p>em <em>sheet</em> você pode colocar o nome da aba do Excel que você quer ler ou seu número (1, 2, 3, etc). Caso você coloque o número, não use aspas.</p></li>
-<li><p>essa função serve tanto para arquivos xls como para xlsx.</p></li>
-</ul>
-<tr><center>
-    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
-  <img src="imagens/insta.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
-  <img src="imagens/youtube.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
-  </center></tr>
 
 </div>
 </div>

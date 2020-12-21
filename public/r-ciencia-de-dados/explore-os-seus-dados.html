@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 10 Explore os seus dados | O seu primeiro passo para ser um Cientista de Dados</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 10 Explore os seus dados | O seu primeiro passo para ser um Cientista de Dados" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Luís Otávio" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,9 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134709799-1"></script>
 <script>
@@ -80,9 +83,9 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -91,14 +94,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -107,9 +112,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -287,141 +292,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="explore-os-seus-dados" class="section level1">
 <h1><span class="header-section-number"> 10</span> Explore os seus dados</h1>
-<p>Existem dois grandes motivos para você explorar os seus dados antes de realmente começar uma análise mais profunda:</p>
-<ul>
-<li><p><strong>Conhecer um pouco mais dos dados que você irá trabalhar</strong>. Isso pode te ajudar a eliminar conceitos formados simplesmente pelo achismo e realmente começar a analisar os números. Ao explorar e conhecer melhor os dados, você também estará mais familiarizado com os dados e será mais fácil planejar ou, quando necessário, adaptar o seu projeto.</p></li>
-<li><p><strong>Verificar possíveis erros ou valores inconsistentes nos seus dados</strong>. É nessa fase de análise exploratória que você irá descobrir caso seus dados possuam valores ilógicos ou caso a sua variável numérica esteja classificada como texto, o que iria te impedir de realizar cálculos com ela.</p></li>
-</ul>
-<p>Nesse capítulo irei mostrar os principais passos de uma Análise Exploratória.</p>
-<p>Primeiramente, você deve ler os seus dados no RStudio. Como esse passo já foi explicado no Capítulo 5, vamos pular essa parte.</p>
-<p>Vamos trabalhar com um <em>dataset</em> bem conhecido na Ciência de Dados, seu nome é <code>iris</code>. O <em>dataset</em> possui as medidas de 150 flores pertencentes a 3 diferentes espécies.</p>
-<p>Para explicar um pouco sobre o Dataset, já vou usar uma função que pode ser utilizada na sua exploração: a função <code>names()</code>.</p>
-<p>Usamos essa função para conhecer os nomes das variáveis (colunas) do <em>dataset</em>.</p>
+<p>Placeholder</p>
 <div id="nome-das-colunas" class="section level2">
 <h2><span class="header-section-number">10.1</span> Nome das colunas</h2>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" title="1"><span class="kw">names</span>(iris)</a></code></pre></div>
-<pre><code>## [1] &quot;Sepal.Length&quot; &quot;Sepal.Width&quot;  &quot;Petal.Length&quot; &quot;Petal.Width&quot;  &quot;Species&quot;</code></pre>
-<p>A primeira coluna representa o comprimento da sépala da flor (“Sepal.Length”), já a segunda coluna é largura da sépala (“Sepal.Width”).</p>
-<p>A terceira coluna mostra o valor do comprimento da pétala (“Petal.Length”) e a quarta a largura da pétala (“Petal.Width”).</p>
-<p>A última coluna indica qual a espécie da flor.</p>
 </div>
 <div id="estrutura-do-dataset" class="section level2">
 <h2><span class="header-section-number">10.2</span> Estrutura do Dataset</h2>
-<p>Possivelmente este será o primeiro comando que você irá executar ao receber um <em>dataset</em> novo <code>str()</code>. A função <code>str()</code> mostra qual a estrutura de um objeto.</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb229-1" title="1"><span class="kw">str</span>(iris)</a></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    150 obs. of  5 variables:
-##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
-##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
-##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
-##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
-##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-<p>Então, de forma simples, podemos ver que temos um <strong>data frame</strong> com <strong>150 observações</strong> e <strong>5 variáveis</strong>.</p>
-<p>Além disso, já sabemos que as 4 primeiras variáveis são <strong>numéricas</strong> (num) e a variável <em>Species</em> é <strong>categórica</strong> (Factor) e possui <strong>3 diferentes categorias</strong> (Factor w/ 3 levels).</p>
 </div>
 <div id="o-começo-e-o-final-do-seu-conjunto-de-dados" class="section level2">
 <h2><span class="header-section-number">10.3</span> O começo e o final do seu conjunto de dados</h2>
-<p>Se tiver algum problema na importação dos seus dados para o R/Rstudio, é bem provável que você consiga notar isso avaliando as primeiras ou as últimas linhas de seu conjunto de dados.</p>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb231-1" title="1"><span class="co"># As primeiras linhas do seu conjunto de dados</span></a>
-<a class="sourceLine" id="cb231-2" title="2"><span class="kw">head</span>(iris)</a></code></pre></div>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb233-1" title="1"><span class="co"># As últimas linhas do seu conjunto de dados</span></a>
-<a class="sourceLine" id="cb233-2" title="2"><span class="kw">tail</span>(iris)</a></code></pre></div>
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 145          6.7         3.3          5.7         2.5 virginica
-## 146          6.7         3.0          5.2         2.3 virginica
-## 147          6.3         2.5          5.0         1.9 virginica
-## 148          6.5         3.0          5.2         2.0 virginica
-## 149          6.2         3.4          5.4         2.3 virginica
-## 150          5.9         3.0          5.1         1.8 virginica</code></pre>
 </div>
 <div id="frequência" class="section level2">
 <h2><span class="header-section-number">10.4</span> Frequência</h2>
-<p>A frequência é utilizada para conhecer melhor as <strong>variáveis categóricas</strong>. Porém, também é muito importante para encontrar erros em nossos dados.</p>
-<p>Para encontrar erros utilizando a frequência, pressupõe-se que você tenha algum conhecimento prévio dos dados e possa assim identificar frequências discrepantes em alguma categoria. Também pode ser o caso de notar que uma das categorias deveria estar em seu conjunto de dados e não está.</p>
-<p>Primeiramente, iremos utilizar a função <code>table()</code> para calcular a frequência de cada categoria da variável <em>Species</em>.</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb235-1" title="1"><span class="kw">table</span>(iris<span class="op">$</span>Species)</a></code></pre></div>
-<pre><code>## 
-##     setosa versicolor  virginica 
-##         50         50         50</code></pre>
-<p>A frequência também pode ser calculada utilizando o pacote <code>dplyr</code>:</p>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb237-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb237-2" title="2">iris <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb237-3" title="3"><span class="st">  </span><span class="kw">count</span>(Species)</a></code></pre></div>
-<pre><code>## # A tibble: 3 x 2
-##   Species        n
-##   &lt;fct&gt;      &lt;int&gt;
-## 1 setosa        50
-## 2 versicolor    50
-## 3 virginica     50</code></pre>
-<p>Caso não se lembre do operador pipe (%&gt;%), releia a última parte do Capítulo de Manipulação de Dados com o <em>dplyr</em> - Capítulo 7.</p>
 </div>
 <div id="estatísticas-descritivas-básicas" class="section level2">
 <h2><span class="header-section-number">10.5</span> Estatísticas descritivas básicas</h2>
-<p>A frequência mostrada no item anterior é útil para variáveis categóricas. Porém, para variáveis <strong>numéricas</strong>, faz muito mais sentido que se calcule algumas <strong>estatísticas básicas</strong>.</p>
-<p>Repito, essa exploração tem dois objetivos: conhecer melhor os seus dados e prevenir que o conjunto de dados tenha algum valor discrepante que seja totalmente ilógico (ou seja, um erro).</p>
-<p>As variáveis <strong>numéricas</strong> do conjunto de dados <code>iris</code> são: <em>Sepal.Length</em>, <em>Sepal.Width</em>, <em>Petal.Length</em> e <em>Petal.Width</em>.</p>
-<p>As estatísticas básicas podem ser simplesmente calculadas pela função <code>summary</code></p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb239-1" title="1"><span class="kw">summary</span>(iris)</a></code></pre></div>
-<pre><code>##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
-##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
-##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
-##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
-##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
-##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
-##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-##        Species  
-##  setosa    :50  
-##  versicolor:50  
-##  virginica :50  
-##                 
-##                 
-## </code></pre>
-<p>Portanto, a função retornou as seguintes estatísticas para as variáveis numéricas:</p>
-<ul>
-<li>Valor mínimo</li>
-<li>1º quartil (Valor que é maior do que 25% dos dados e menor do que os 75% restantes)</li>
-<li>Mediana (Valor que é maior que 50% dos dados e menor do que os 50% restantes)</li>
-<li>Média</li>
-<li>3º quartil (Valor que é maior do que 75% dos dados e menor do que os 25% restantes)</li>
-<li>Valor máximo</li>
-</ul>
-<p>Para a variável categórica <em>Species</em>, foram retornadas as frequências de cada categoria.</p>
 </div>
 <div id="gráficos-usados-na-análise-exploratória" class="section level2">
 <h2><span class="header-section-number">10.6</span> Gráficos usados na Análise Exploratória</h2>
-<p>Existem dois gráficos muito comuns para explorar uma variável e visualizar a distribuição de seus dados:</p>
-<ul>
-<li>Histograma</li>
-<li>BoxPlot</li>
-</ul>
 <div id="histograma" class="section level3">
 <h3><span class="header-section-number">10.6.1</span> Histograma</h3>
-<p>O Histograma é um gráfico de frequência e mostra onde há maior concentração de valores.</p>
-<p>Esse é o histograma para a variável <em>Sepal.Length</em>:</p>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" title="1"><span class="kw">hist</span>(iris<span class="op">$</span>Sepal.Length)</a></code></pre></div>
-<p><img src="livro_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 </div>
 <div id="boxplot" class="section level3">
 <h3><span class="header-section-number">10.6.2</span> Boxplot</h3>
-<p>O Boxplot (ou gráfico de caixa) representa graficamente o valor mínimo, o 1º quartil, a media, o 3º quartil e o valor máximo de uma variável.</p>
-<p>Esse é o Boxplot para a variável <em>Petal.Width</em>:</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" title="1"><span class="kw">boxplot</span>(iris<span class="op">$</span>Petal.Width)</a></code></pre></div>
-<p><img src="livro_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
-<tr><center>
-    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
-  <img src="imagens/insta.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
-  <img src="imagens/youtube.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
-  </center></tr>
 
 </div>
 </div>

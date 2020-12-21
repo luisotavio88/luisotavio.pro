@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RStudio on Luis Otavio | Ciência de dados</title>
-    <link>https://luisotavio.pro/tags/rstudio/</link>
+    <link>https://www.luisotavio.pro/tags/rstudio/</link>
     <description>Recent content in RStudio on Luis Otavio | Ciência de dados</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://luisotavio.pro/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.luisotavio.pro/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contando história com os dados - Storytelling</title>
-      <link>https://luisotavio.pro/blog/contando-historia-com-os-dados-storytelling/</link>
+      <link>https://www.luisotavio.pro/blog/contando-historia-com-os-dados-storytelling/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://luisotavio.pro/blog/contando-historia-com-os-dados-storytelling/</guid>
+      <guid>https://www.luisotavio.pro/blog/contando-historia-com-os-dados-storytelling/</guid>
       <description>No começo da semana, recebi um pedido de ajuda de um seguidor que estava travado em um pequeno detalhe do seu projeto.</description>
     </item>
     
     <item>
       <title>7 principais motivos para você usar o R</title>
-      <link>https://luisotavio.pro/blog/principais-motivos-para-voce-usar-o-r/</link>
+      <link>https://www.luisotavio.pro/blog/principais-motivos-para-voce-usar-o-r/</link>
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://luisotavio.pro/blog/principais-motivos-para-voce-usar-o-r/</guid>
+      <guid>https://www.luisotavio.pro/blog/principais-motivos-para-voce-usar-o-r/</guid>
       <description>O R é o queridinho dos estudantes e profissionais que buscam analisar dados, construir modelos ou Dashboards com autonomia e facilidade.</description>
     </item>
     
     <item>
       <title>Como ler sua planilha de excel no R</title>
-      <link>https://luisotavio.pro/blog/como-ler-planilha-excel-no-r/</link>
+      <link>https://www.luisotavio.pro/blog/como-ler-planilha-excel-no-r/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://luisotavio.pro/blog/como-ler-planilha-excel-no-r/</guid>
+      <guid>https://www.luisotavio.pro/blog/como-ler-planilha-excel-no-r/</guid>
       <description>Precisa importar seus dados de Excel usando o R ou o RStudio?</description>
     </item>
     
     <item>
       <title>Como instalar um pacote no R</title>
-      <link>https://luisotavio.pro/blog/como-instalar-um-pacote-no-r/</link>
+      <link>https://www.luisotavio.pro/blog/como-instalar-um-pacote-no-r/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://luisotavio.pro/blog/como-instalar-um-pacote-no-r/</guid>
+      <guid>https://www.luisotavio.pro/blog/como-instalar-um-pacote-no-r/</guid>
       <description>Esse post vai te ensinar o que são os pacotes no R, como eles vão te ajudar e também como fazer para instalar.</description>
     </item>
     
     <item>
       <title>Como conseguir ajuda no R?</title>
-      <link>https://luisotavio.pro/blog/como-conseguir-ajuda-no-r/</link>
+      <link>https://www.luisotavio.pro/blog/como-conseguir-ajuda-no-r/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://luisotavio.pro/blog/como-conseguir-ajuda-no-r/</guid>
+      <guid>https://www.luisotavio.pro/blog/como-conseguir-ajuda-no-r/</guid>
       <description>O que faz o R ser um dos mais conhecidos e potentes softwares de Estatística com certeza é a sua comunidade.</description>
     </item>
     
     <item>
       <title>Como instalar o R e o Rstudio</title>
-      <link>https://luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/</link>
+      <link>https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/</guid>
+      <guid>https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/</guid>
       <description>Nos passos a seguir você vai ver como é simples instalar o R e o Rstudio.</description>
     </item>
     
     <item>
       <title>Os primeiros passos com o R - usando o Rstudio</title>
-      <link>https://luisotavio.pro/blog/primeiros-passos-com-o-r-usando-o-rstudio/</link>
+      <link>https://www.luisotavio.pro/blog/primeiros-passos-com-o-r-usando-o-rstudio/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://luisotavio.pro/blog/primeiros-passos-com-o-r-usando-o-rstudio/</guid>
+      <guid>https://www.luisotavio.pro/blog/primeiros-passos-com-o-r-usando-o-rstudio/</guid>
       <description>Esse post vai te ensinar rapidinho como criar o seu primeiro projeto no RStudio e vai te explicar para o que serve cada parte do programa.</description>
     </item>
     

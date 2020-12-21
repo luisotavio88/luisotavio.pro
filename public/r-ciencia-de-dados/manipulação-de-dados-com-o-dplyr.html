@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 7 Manipulação de dados com o dplyr | O seu primeiro passo para ser um Cientista de Dados</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 7 Manipulação de dados com o dplyr | O seu primeiro passo para ser um Cientista de Dados" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Luís Otávio" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,9 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134709799-1"></script>
 <script>
@@ -80,9 +83,9 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -91,14 +94,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -107,9 +112,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -287,357 +292,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="manipulação-de-dados-com-o-dplyr" class="section level1">
 <h1><span class="header-section-number"> 7</span> Manipulação de dados com o dplyr</h1>
+<p>Placeholder</p>
 <div id="o-que-é-um-data-frame" class="section level2">
 <h2><span class="header-section-number">7.1</span> O que é um Data Frame?</h2>
-<p>Provavelmente você já utilizou o Excel para construir ou analisar uma tabela com os seus dados de interesse. Geralmente, as tabelas já têm a mesma estrutura de um <em>Data Frame</em>, conceito que será muito útil em seus trabalhos e será apresentado aqui.</p>
-<p>Em um <em>Data Frame</em> cada registro será inserido em uma linha, já as colunas representarão as suas variáveis.</p>
-<p>Por exemplo, em uma pesquisa de opinião, as informações de uma linha serão os dados de uma pessoa específica que respondeu a pesquisa. Enquanto cada coluna da tabela corresponderá as respostas para uma pergunta específica.</p>
-<p>Diferentemente de uma matriz tradicional, as colunas podem misturar vários tipos de variáveis.</p>
-<p>No caso da pesquisa de opinião, pode-se ter uma coluna para Idade (variável numérica), outra para o Gênero (variável categórica) e outra pergunta aberta (variável de texto).</p>
-<p>Regras básicas de um <em>Data Frame</em>:</p>
-<ul>
-<li>Cada coluna deve ter um nome</li>
-<li>Todas as colunas devem ser do mesmo tamanho. Não é permitido que uma coluna tenha 40 registros e outra 39.</li>
-<li>As colunas podem ser numéricas (<em>numeric</em>), categóricas (<em>factor</em>) ou texto (<em>character</em>)</li>
-<li>Sempre terão duas dimensões (linhas e colunas)</li>
-</ul>
 </div>
 <div id="manipulação-de-um-data-frame" class="section level2">
 <h2><span class="header-section-number">7.2</span> Manipulação de um Data Frame</h2>
-<p>Seja qual for a sua área dentro da Ciência de Dados, os conceitos a seguir serão muito úteis e irão facilitar muito a vida em suas análises.</p>
-<p>Seja para econometria, bioestatística, demografia, <em>machine learning</em> ou qualquer outra.</p>
-<p>O melhor pacote do R para manipular dados para manipular <em>Data Frames</em> se chama <em>dplyr</em>.</p>
-<p>Porque usar o <em>dplyr</em>:</p>
-<ul>
-<li><p>Facilidade de criação e leitura do código - Código limpo.</p></li>
-<li><p>Manipulação básica ou avançada em poucas linhas</p></li>
-<li><p>É muito mais veloz comparando com as funções correspondentes de outros pacotes.</p></li>
-<li><p>É simples. Baseado em apenas 6 funções principais.</p></li>
-</ul>
 </div>
 <div id="as-funções-do-dplyr" class="section level2">
 <h2><span class="header-section-number">7.3</span> As funções do Dplyr</h2>
-<p>O Dplyr é bastante conhecido e usado pelos 6 verbos que representam suas principais funções:</p>
-<ul>
-<li>Summarise -&gt; Calcula valores para uma coluna. Ex: soma total, mínimo, máximo, média, desvio padrão, etc.</li>
-<li>Mutate -&gt; Cria uma nova variável que seja uma função entre variáveis que já existem</li>
-<li>Select -&gt; Seleciona colunas que já existem pelo nome delas.</li>
-<li>Filter -&gt; Seleciona registros (linhas) de acordo com uma condição estabelecida.</li>
-<li>Arrange -&gt; Ordena as linhas do <em>data frame</em>.</li>
-<li>Rename -&gt; Renomear o nome das variáveis.</li>
-</ul>
-<p>Essas são as principais funções que você irá utilizar em uma manipulação de dados. Apesar de serem simples, são muito poderosas.</p>
-<p>Além das funções acima, que são marca registrada da biblioteca <code>dplyr</code>, irei apresentar aqui a função <code>left_join</code>.</p>
-<p>Essa função também é muito importante na manipulação de conjunto de dados e corresponde à função PROCV, muito utilizada no Excel.</p>
 </div>
 <div id="as-propriedades-das-funções-do-pacote-dplyr" class="section level2">
 <h2><span class="header-section-number">7.4</span> As propriedades das funções do pacote Dplyr</h2>
-<p>Esses conceitos apresentados agora irão facilitar muito o seu entendimento para qualquer uma das funções usadas no pacote.</p>
-<p>Características comuns às funções citadas do pacote:</p>
-<ul>
-<li>O primeiro argumento da função é sempre o seu conjunto de dados que será manipulado.</li>
-<li>Os argumentos seguintes vão definir o que será feito com o seu conjunto de dados</li>
-<li>O resultado também será um <em>data frame</em>.</li>
-<li>Ao inserir os nomes de colunas (variáveis) não é necessário (e nem permitido) usar "" ou o operador $.</li>
-</ul>
-<p>Na prática será bem fácil identificar esse padrão. Então, vamos ver como funciona cada uma das funções.</p>
 </div>
 <div id="a-função-summarise-e-a-função-group_by" class="section level2">
 <h2><span class="header-section-number">7.5</span> A função Summarise e a função group_by</h2>
-<p>A função <code>summarise</code> é útil para calcular estatísticas das colunas de um <em>data frame</em>.</p>
-<p>Muitas vezes é utilizada com uma função auxiliar também muito importante: a função <strong><code>group_by</code></strong>.</p>
-<p>Apesar da função <strong><code>group_by</code></strong> ser muito utilizada em conjunto com a função <strong><code>summarise</code></strong>, ela também pode ser combinada com as outras funções da biblioteca <code>dplyr</code>.</p>
-<p>A combinação entre as funções <code>summarise</code> e <code>group_by</code> nos permitem reproduzir as tradicionais funções <strong>SOMASES</strong> e <strong>MEDIASES</strong> do Excel, com muita facilidade.</p>
-<p>Olha só esse exemplo:</p>
-<p>Vamos usar o <code>mtcarts</code> - <em>dataset</em> nativo no R.</p>
-<p>Para mais informações sobre as variáveis do dataset, execute o comando <code>?mtcarts</code>.</p>
-<p>Suponha que você tenha um conjunto de dados com vários carros (cada carro será uma linha) e várias características dos carros (colunas).</p>
-<p>Para calcular a média de uma dessas características, por exemplo a quantidade de cavalos dos carros, você usaria a função <code>summarise</code>.</p>
-<p>Mas imagine agora que você não precisa simplesmente calcular a quantidade de cavalos de todos os carros, você precisar calcular essa média de acordo com a quantidade de cilindros dos carros.</p>
-<p>Ou seja, os carros serão separados em grupos de acordo com a sua quantidade de cilindros e você irá calcular a média da quantidade de cavalos para cada grupo.</p>
-<p>Nesse caso, a função <code>group_by</code> irá separar seus dados de acordo com uma variável (quantidade de cilindros) e assim você poderá usar a função <code>summarise</code> para calcular a média da quantidade de cavalos.</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb99-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb99-2" title="2">mtcars_grupo &lt;-<span class="st"> </span><span class="kw">group_by</span>(mtcars,cyl)  <span class="co">##a variável cyl é a quantidade de cilindros do carro</span></a>
-<a class="sourceLine" id="cb99-3" title="3"><span class="kw">summarise</span>(mtcars_grupo,<span class="kw">mean</span>(hp))    <span class="co">## a variável hp é a quantidade de cavalos do carro (horse power)</span></a></code></pre></div>
-<pre><code>## # A tibble: 3 x 2
-##     cyl `mean(hp)`
-##   &lt;dbl&gt;      &lt;dbl&gt;
-## 1     4       82.6
-## 2     6      122. 
-## 3     8      209.</code></pre>
-<p>Portanto, o código acima calculou a <strong>média da variável <em>hp</em></strong> (quantidade de cavalos do carro) <strong>de acordo com a quantidade de cilindros do carro</strong>.</p>
-<p>O código acima corresponde ao que seria feito pela função MEDIASES, do Excel. As duas funções calculam a média de grupos, segundo alguma condição.</p>
-<p>Caso você deseje continuar trabalhando com o mesmo <em>dataset</em> (usando o mesmo objeto), é importante que você desfaça o agrupamento. Isso irá evitar futuros erros na execução do seu código.</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb101-1" title="1"><span class="co"># desagrupando o data frame</span></a>
-<a class="sourceLine" id="cb101-2" title="2">mtcars_grupo&lt;-<span class="kw">ungroup</span>(mtcars_grupo)</a></code></pre></div>
-<p>O equivalente a função SOMASES, segue exatamente o mesmo raciocínio: calcular a soma de grupos para uma determinada variável. Veja o próximo exemplo.</p>
-<p>Agora, suponha que você deseja somar os pesos dos carros disponíveis para cada quantidade de cilindros.</p>
-<p>Ou seja, vamos somar os pesos de todos os carros com 4, 6 ou 8 cilindros, separados por grupo.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb102-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb102-2" title="2">mtcars_grupo &lt;-<span class="st"> </span><span class="kw">group_by</span>(mtcars,cyl)  <span class="co">##a variável cyl é a quantidade de cilindros do carro</span></a>
-<a class="sourceLine" id="cb102-3" title="3"><span class="kw">summarise</span>(mtcars_grupo,<span class="kw">sum</span>(wt))    <span class="co">## a variável wt é o peso do carro em libras (Weight)</span></a></code></pre></div>
-<pre><code>## # A tibble: 3 x 2
-##     cyl `sum(wt)`
-##   &lt;dbl&gt;     &lt;dbl&gt;
-## 1     4      25.1
-## 2     6      21.8
-## 3     8      56.0</code></pre>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" title="1"><span class="co"># desagrupando o data frame</span></a>
-<a class="sourceLine" id="cb104-2" title="2">mtcars_grupo&lt;-<span class="kw">ungroup</span>(mtcars_grupo)</a></code></pre></div>
 </div>
 <div id="mutate" class="section level2">
 <h2><span class="header-section-number">7.6</span> Mutate</h2>
-<p>A função <code>mutate</code> serve para criar uma nova coluna que seja uma função entre as variáveis que já existem.</p>
-<p>Então, usando o mesmo <em>data frame</em> <code>mtcars</code>, temos a variável <strong>wt</strong> que representa o peso do carro (em libras) e a variável <strong>qsec</strong> que representa o tempo (em segundos) que o carro precisa para percorrer a distância de 0,25 milhas.</p>
-<p>Portanto, como exemplo, vamos criar uma nova coluna para relativizar o tempo que o carro gasta para percorrer 0,25 milhas (<strong>qsec</strong>) pelo seu peso (<strong>wt</strong>). A fórmula para isso seria: <strong>qsec</strong>/<strong>wt</strong>.</p>
-<p>O nome da nova coluna será <strong>tempo_peso</strong>.</p>
-<p>Portanto:</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" title="1">novo_dataframe&lt;-<span class="kw">mutate</span>(mtcars,<span class="dt">tempo_peso =</span> qsec<span class="op">/</span>wt) <span class="co"># a função irá adicionar a nova coluna e atribuir ao seu data frame</span></a></code></pre></div>
 </div>
 <div id="select" class="section level2">
 <h2><span class="header-section-number">7.7</span> Select</h2>
-<p>A função <code>select</code> serve para selecionar colunas em um <em>data frame</em>.</p>
-<p>Então, ainda usando o dataframe <code>mtcars</code>, suponha que somente as variáveis <strong>mpg</strong> e <strong>gear</strong> serão úteis em nossa análise.</p>
-<p>Para filtrar essas variáveis, precisamos executar o seguinte comando:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" title="1"><span class="kw">select</span>(mtcars,mpg,gear)</a></code></pre></div>
-<pre><code>##                      mpg gear
-## Mazda RX4           21.0    4
-## Mazda RX4 Wag       21.0    4
-## Datsun 710          22.8    4
-## Hornet 4 Drive      21.4    3
-## Hornet Sportabout   18.7    3
-## Valiant             18.1    3
-## Duster 360          14.3    3
-## Merc 240D           24.4    4
-## Merc 230            22.8    4
-## Merc 280            19.2    4
-## Merc 280C           17.8    4
-## Merc 450SE          16.4    3
-## Merc 450SL          17.3    3
-## Merc 450SLC         15.2    3
-## Cadillac Fleetwood  10.4    3
-## Lincoln Continental 10.4    3
-## Chrysler Imperial   14.7    3
-## Fiat 128            32.4    4
-## Honda Civic         30.4    4
-## Toyota Corolla      33.9    4
-## Toyota Corona       21.5    3
-## Dodge Challenger    15.5    3
-## AMC Javelin         15.2    3
-## Camaro Z28          13.3    3
-## Pontiac Firebird    19.2    3
-## Fiat X1-9           27.3    4
-## Porsche 914-2       26.0    5
-## Lotus Europa        30.4    5
-## Ford Pantera L      15.8    5
-## Ferrari Dino        19.7    5
-## Maserati Bora       15.0    5
-## Volvo 142E          21.4    4</code></pre>
-<p>Então, o primeiro argumento é o <em>dataset</em> (<code>mtcars</code>) e os argumentos restantes na função <code>select</code> são as colunas que você deseja manter.</p>
 </div>
 <div id="filter" class="section level2">
 <h2><span class="header-section-number">7.8</span> Filter</h2>
-<p>Enquanto a função <code>select</code> seleciona as colunas do dataframe, a função <strong>filter</strong> é utilizada para selecionar as <strong>linhas</strong> do dataframe.</p>
-<p>Então, quando precisamos selecionar registros de um <em>data frame</em> usando determinada condição, a função recomendada é a <code>filter</code>.</p>
-<p>Utilizando o mesmo <em>data frame</em>, suponha que precisamos filtrar todos os carros com 6 cilindros.</p>
-<p>Neste caso, a variável em questão é a <strong>cyl</strong>, então a nossa condição é que o registro atenda a condição cyl==6.</p>
-<p>Repare que o sinal de igual é <strong>duplo</strong>, pois é uma condição lógica.</p>
-<p>Quando usamos cyl=6 estamos atribuindo o valor 6 para o objeto cyl. Mas não é o que desejamos aqui.</p>
-<p>Desejamos filtrar os dados por uma condição lógica (verdadeira ou falsa). Para fazer testes lógicos no R, usamos == para retornar TRUE caso os valores sejam iguais e FALSE caso os valores sejam diferentes.</p>
-<p>Quando for necessário inverter a lógica e buscar pelos valores diferentes (ao invés de buscar os iguais) o teste lógico será feito por <code>"!="</code> (testa se os valores são diferentes).</p>
-<p>Então, em nosso exemplo, o código seria o seguinte:</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span>)  <span class="co">#filtra todos as observações (carros) que possuem 6 cilindros. </span></a></code></pre></div>
-<pre><code>##    mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-## 1 21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-## 2 21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-## 3 21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
-## 4 18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-## 5 19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-## 6 17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-## 7 19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6</code></pre>
-<p>Também é possível combinar outros operadores lógicos quando vamos filtrar os dados, como E/OU.</p>
-<p>Então, suponha que não baste que o carro tenha 6 cilindros, além disso você deseja que ele tenha menos que 3 toneladas. Neste caso, o peso do carro é representado pela variável <strong>wt</strong>.</p>
-<p>Para filtrar os carros que tenham 6 cilindros (cyl==6) e tenham menos que 3 toneladas (wt&lt;3), vamos executar o seguinte código:</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb110-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span> <span class="op">&amp;</span><span class="st"> </span>wt<span class="op">&lt;</span><span class="dv">3</span>)</a></code></pre></div>
-<pre><code>##    mpg cyl disp  hp drat    wt  qsec vs am gear carb
-## 1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-## 2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-## 3 19.7   6  145 175 3.62 2.770 15.50  0  1    5    6</code></pre>
-<p>O operador lógico <strong>E</strong> é representado pelo símbolo <strong>&amp;</strong>.</p>
-<p>Já o operador lógico <strong>OU</strong> é representado pelo símbolo <strong>|</strong>.</p>
-<p>Caso o objetivo fosse filtrar carros com 6 cilindros OU peso menor que 3 toneladas, o código seria o seguinte:</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" title="1"><span class="kw">filter</span>(mtcars,cyl<span class="op">==</span><span class="dv">6</span> <span class="op">|</span><span class="st"> </span>wt<span class="op">&lt;</span><span class="dv">3</span>)</a></code></pre></div>
-<pre><code>##     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-## 1  21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-## 2  21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-## 3  22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-## 4  21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
-## 5  18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-## 6  19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-## 7  17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-## 8  32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
-## 9  30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
-## 10 33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
-## 11 21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
-## 12 27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
-## 13 26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
-## 14 30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
-## 15 19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
-## 16 21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</code></pre>
-<p>Para a condição “cyl==6 | wt&lt;3” ser verdadeira, basta que pelo menos uma das condições sejam atingidas. Ou seja, o carro tenha 6 cilindros ou menos de 3 toneladas. Caso as duas condições sejam atendidas simultaneamente o carro também estará na tabela filtrada.</p>
 </div>
 <div id="arrange" class="section level2">
 <h2><span class="header-section-number">7.9</span> Arrange</h2>
-<p>A função <code>arrange</code> é responsável por ordenar as linhas do <em>data frame</em> seguindo uma nova ordem estabelecida.</p>
-<p>Então, suponha que em nosso exemplo, queremos ordenar o <em>data frame</em> <code>mtcars</code> do carro com menor número de marchas para o maior número de marchas (<strong>variável <em>gear</em></strong>).</p>
-<p>Porém, há vários carros que irão empatar para esse critério, já que a tabela tem 15 carros com 3 marchas, 12 carros com 4 marchas e 5 carros com 5 marchas.</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" title="1"><span class="kw">table</span>(mtcars<span class="op">$</span>gear) <span class="co"># a função table é útil para descobrir a frequência dos valores.</span></a></code></pre></div>
-<pre><code>## 
-##  3  4  5 
-## 15 12  5</code></pre>
-<p>Portanto, vou definir que os dados também sejam ordenados pelo peso (variável <strong>wt</strong>).</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" title="1"><span class="kw">arrange</span>(mtcars,gear,wt)</a></code></pre></div>
-<pre><code>##     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-## 1  21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
-## 2  21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
-## 3  15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
-## 4  18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
-## 5  18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-## 6  15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
-## 7  14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-## 8  17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
-## 9  15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
-## 10 13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
-## 11 19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
-## 12 16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
-## 13 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
-## 14 14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
-## 15 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
-## 16 30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
-## 17 33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
-## 18 27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
-## 19 32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
-## 20 22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-## 21 21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-## 22 21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
-## 23 21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-## 24 22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
-## 25 24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
-## 26 19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-## 27 17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-## 28 30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
-## 29 26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
-## 30 19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
-## 31 15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
-## 32 15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8</code></pre>
-<p>É possível usar a função <code>arrange</code> para ordenar os dados usando muitas variáveis para ordenar os dados. Porém, a ordem que as colunas forem inseridas na função <code>arrange</code> representam uma <strong>hierarquia de prioridade</strong> para ordenar os dados.</p>
-<p>Isso significa que os dados sempre serão ordenados pela primeira variável e, em caso de empates, se considera a variável seguinte.</p>
-<p>Portanto, a função só irá ordenar pela segunda coluna caso haja empates na primeira, por exemplo.</p>
 </div>
 <div id="rename" class="section level2">
 <h2><span class="header-section-number">7.10</span> Rename</h2>
-<p>Alterar os nomes de uma variável de um <em>data frame</em> é algo conceitualmente simples. Mas, na prática pode ser bem trabalhoso de fazer sem a função <code>rename</code>.</p>
-<p>Quais são os nomes das colunas da tabela <code>mtcats</code>?</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" title="1"><span class="kw">names</span>(mtcars)</a></code></pre></div>
-<pre><code>##  [1] &quot;mpg&quot;  &quot;cyl&quot;  &quot;disp&quot; &quot;hp&quot;   &quot;drat&quot; &quot;wt&quot;   &quot;qsec&quot; &quot;vs&quot;   &quot;am&quot;   &quot;gear&quot;
-## [11] &quot;carb&quot;</code></pre>
-<p>Agora suponha que você deseje alterar o nome da coluna <strong>cyl</strong> para <em>cilindros</em> e <strong>hp</strong> para <em>cavalos</em>.</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" title="1">mtcars_&lt;-<span class="kw">rename</span>(mtcars,<span class="dt">cilindros=</span>cyl,<span class="dt">cavalos=</span>hp)</a>
-<a class="sourceLine" id="cb120-2" title="2"><span class="kw">head</span>(mtcars_)</a></code></pre></div>
-<pre><code>##                    mpg cilindros disp cavalos drat    wt  qsec vs am gear carb
-## Mazda RX4         21.0         6  160     110 3.90 2.620 16.46  0  1    4    4
-## Mazda RX4 Wag     21.0         6  160     110 3.90 2.875 17.02  0  1    4    4
-## Datsun 710        22.8         4  108      93 3.85 2.320 18.61  1  1    4    1
-## Hornet 4 Drive    21.4         6  258     110 3.08 3.215 19.44  1  0    3    1
-## Hornet Sportabout 18.7         8  360     175 3.15 3.440 17.02  0  0    3    2
-## Valiant           18.1         6  225     105 2.76 3.460 20.22  1  0    3    1</code></pre>
-<p>Esse é o padrão. Após informar o <em>data frame</em> onde se aplicará as alterações, coloca-se <strong>o novo nome da coluna antes do sinal de igual e logo após o nome antigo da coluna</strong>.</p>
 </div>
 <div id="como-juntar-informações-de-data-frames-diferentes" class="section level2">
 <h2><span class="header-section-number">7.11</span> Como juntar informações de <em>data frames</em> diferentes</h2>
-<p>Se você costumava usar o Excel, a função que vou falar agora é bem parecida com o <em>PROCV</em>.</p>
-<p>Existem algumas formas de fazer essa junção de tabelas no R, aqui vou te mostrar a solução usando a biblioteca <code>dplyr</code>.</p>
-<p>Por exemplo, suponha que você esteja trabalhando com o data frame <em>iris</em>. Esse conjunto de dados contém informações sobre os tamanhos de partes de uma flor e também de qual é a <strong>espécie</strong> da flor.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" title="1"><span class="kw">head</span>(iris)</a></code></pre></div>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
-<p>Agora, imagine que você tem uma outra tabela que te informa o preço cobrado para cada espécie das flores:</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" title="1">preco_iris&lt;-<span class="kw">data.frame</span>(<span class="dt">Species=</span><span class="kw">c</span>(<span class="st">&quot;setosa&quot;</span>,<span class="st">&quot;versicolor&quot;</span>,<span class="st">&quot;virginica&quot;</span>),</a>
-<a class="sourceLine" id="cb124-2" title="2">                       <span class="dt">Preco=</span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">15</span>))</a>
-<a class="sourceLine" id="cb124-3" title="3">preco_iris</a></code></pre></div>
-<pre><code>##      Species Preco
-## 1     setosa     5
-## 2 versicolor    10
-## 3  virginica    15</code></pre>
-<p><strong>Como fazer para juntar todas as informações em uma única tabela?</strong></p>
-<p>Note que os dois <em>data frames</em> possuem uma <strong>variável em comum</strong>: <em>Species</em>.</p>
-<p>Essa variável é extremamente importante para juntar as duas tabelas, pois cada registro na tabela <em>iris</em> buscará o <strong>preço</strong> na tabela <em>preco_iris</em> de acordo com o valor da variável <em>Species</em>.</p>
-<p>Por exemplo, essa é a primeira linha da tabela <em>iris</em>.</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" title="1">iris[<span class="dv">1</span>,]</a></code></pre></div>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa</code></pre>
-<p>Ou seja, o primeiro registro da tabela é da espécie <em>setosa</em>.</p>
-<p>Então, pela tabela <strong>preco_iris</strong>, sabemos que deve ser atribuído o Preço igual a 5 para esse registro, pois:</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb128-1" title="1">preco_iris</a></code></pre></div>
-<pre><code>##      Species Preco
-## 1     setosa     5
-## 2 versicolor    10
-## 3  virginica    15</code></pre>
-<p>Esse cálculo é feito para todos os registros de forma bem simples. A função que irá executar essa junção entre as duas tabelas é a: <code>left_join()</code>.</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb130-1" title="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb130-2" title="2">tabelas_juntas&lt;-<span class="kw">left_join</span>(iris,preco_iris,<span class="dt">by=</span><span class="st">&quot;Species&quot;</span>)</a>
-<a class="sourceLine" id="cb130-3" title="3"><span class="kw">head</span>(tabelas_juntas)</a></code></pre></div>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Preco
-## 1          5.1         3.5          1.4         0.2  setosa     5
-## 2          4.9         3.0          1.4         0.2  setosa     5
-## 3          4.7         3.2          1.3         0.2  setosa     5
-## 4          4.6         3.1          1.5         0.2  setosa     5
-## 5          5.0         3.6          1.4         0.2  setosa     5
-## 6          5.4         3.9          1.7         0.4  setosa     5</code></pre>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb132-1" title="1"><span class="kw">tail</span>(tabelas_juntas)</a></code></pre></div>
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species Preco
-## 145          6.7         3.3          5.7         2.5 virginica    15
-## 146          6.7         3.0          5.2         2.3 virginica    15
-## 147          6.3         2.5          5.0         1.9 virginica    15
-## 148          6.5         3.0          5.2         2.0 virginica    15
-## 149          6.2         3.4          5.4         2.3 virginica    15
-## 150          5.9         3.0          5.1         1.8 virginica    15</code></pre>
-<p>Note que primeiramente informamos a tabela <strong>iris</strong>. Quando você utilizar a função <code>left_join</code>, o primeiro parâmetro da função deve ser a tabela que você deseja usar como base.</p>
-<p>A função irá procurar na segunda tabela os valores correspondentes para a sua variável comum e adicionar na primeira tabela.</p>
-<p>É importante que você também informe qual a variável que irá ligar as informações das duas tabelas. Isso é informado pelo parâmetro <strong>by</strong>, em nosso caso <code>by="Species"</code>.</p>
-<p>Caso você não informe, a função irá procurar automaticamente por alguma variável em comum nos dois <em>data frames</em>.</p>
-<p>Também é possível e, muitas vezes será necessário, utilizar mais de uma variável para vincular as duas tabelas. Nesse caso, a função ficaria da seguinte forma: <code>left_join(tabela1,tabela2,by = c("variavel_comum_1","variavel_comum_2"))</code></p>
 </div>
 <div id="o-operador-em-inglês-se-pronuncia-pipe" class="section level2">
 <h2><span class="header-section-number">7.12</span> O operador %&gt;% (em inglês se pronuncia <em>pipe</em>)</h2>
-<p>Em português pode ser “paipe”! :)</p>
-<p>O operador <code>%&gt;%</code> facilita muito a nossa vida, tornando o código mais limpo e fácil de ser compreendido.</p>
-<p>O operador funciona da seguinte forma:</p>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb134-1" title="1"><span class="co"># dataset %&gt;% função()</span></a></code></pre></div>
-<p>Isso significa que o objeto do lado esquerdo do operador (<em>dataset</em>) será inserido na função ao lado direito do operador no <strong>primeiro argumento</strong> da função.</p>
-<p>O operador <code>%&gt;%</code> pode ser usado conjuntamente com inúmeras funções, incluindo todas que aprendemos nesse capítulo.</p>
-<p>Exemplos práticos:</p>
-<p>Algumas linhas atrás, ordenamos o <em>dataset</em> <code>mtcars</code> em ordem crescente pelas colunas <em>gear</em> e <em>wt</em>, usando o código:</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb135-1" title="1">dataset_ordenado &lt;-<span class="st"> </span><span class="kw">arrange</span>(mtcars,gear,wt)</a></code></pre></div>
-<p>Utilizando o operador %&gt;%, o código ficaria da seguinte maneira:</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb136-1" title="1">dataset_ordenado &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb136-2" title="2"><span class="st">                      </span><span class="kw">arrange</span>(gear,wt)</a></code></pre></div>
-<p>Então, o <em>dataset</em> <code>mtcars</code> é inserido no primeiro argumento da função <code>arrange</code>.</p>
-<p><strong>A diferença é pequena para casos simples como esse, porém em casos mais complexos a utilização do operador %&gt;% (pipe) fará uma diferença enorme na organização do seu código.</strong></p>
-<tr><center>
-    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
-  <img src="imagens/insta.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
-  <img src="imagens/youtube.png" alt="" style="height:42px;">
-</a></th>
-    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
-  </center></tr>
 
 </div>
 </div>
