@@ -24,7 +24,6 @@
 <meta name="author" content="Luís Otávio" />
 
 
-<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -260,14 +259,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.1.3" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-bolhas---bubble-chart"><i class="fa fa-check"></i><b>11.1.3</b> O Gráfico de Bolhas - Bubble Chart</a></li>
 <li class="chapter" data-level="11.1.4" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-correlação"><i class="fa fa-check"></i><b>11.1.4</b> O gráfico de correlação</a></li>
 <li class="chapter" data-level="11.1.5" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#aperfeiçoando-o-gráfico"><i class="fa fa-check"></i><b>11.1.5</b> Aperfeiçoando o gráfico</a></li>
-<li class="chapter" data-level="11.1.6" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-1---acesso-a-api-do-twitter"><i class="fa fa-check"></i><b>11.1.6</b> PASSO 1 - ACESSO A API DO TWITTER</a></li>
-<li class="chapter" data-level="11.1.7" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-2---buscar-os-tweets-de-cada-repórter"><i class="fa fa-check"></i><b>11.1.7</b> PASSO 2 - BUSCAR OS TWEETS DE CADA REPÓRTER</a></li>
-<li class="chapter" data-level="11.1.8" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-3---visualização-das-buscas-e-o-retweet"><i class="fa fa-check"></i><b>11.1.8</b> PASSO 3 - VISUALIZAÇÃO DAS BUSCAS E O RETWEET</a></li>
-<li class="chapter" data-level="11.1.9" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.9</b> Filtro de dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.10" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#excluir-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.10</b> Excluir dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.11" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-combinando-a-função-which"><i class="fa fa-check"></i><b>11.1.11</b> Filtro de dados combinando a função which()</a></li>
-<li class="chapter" data-level="11.1.12" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-usando-a-função-subset"><i class="fa fa-check"></i><b>11.1.12</b> Filtro de dados usando a função subset()</a></li>
-<li class="chapter" data-level="11.1.13" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtrar-usando-a-função-filter-e-select"><i class="fa fa-check"></i><b>11.1.13</b> Filtrar usando a função filter() e select()</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -292,18 +283,190 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="estruturas-de-controle" class="section level1">
 <h1><span class="header-section-number"> 9</span> Estruturas de Controle</h1>
-<p>Placeholder</p>
+<p>As duas principais vantagens da maioria das linguagens computacionais são:</p>
+<ul>
+<li>Executar tarefas repetitivas</li>
+<li>Fazer decisões lógicas</li>
+</ul>
+<p>Para executar tarefas repetitivas, vamos criar <strong>loopings</strong>. É como se o nosso código desse voltas e repetisse de acordo com a regra estabelecida.</p>
+<p>Os <em>loopings</em> irão usar as funções <strong>for</strong> e <strong>while</strong>.</p>
+<p>Para adicionar decisões lógicas ao nosso algoritmo, as principais funções são o <strong>if-else</strong> e o <strong>ifelse</strong>.</p>
+<p>Existem outras estruturas de controle que não serão abordadas aqui. Porém essas são as mais importantes.</p>
+<p>As estruturas de controle podem ser combinadas quando necessário. Ou seja, você pode utilizar a função <code>for</code> juntamente com outra função <code>for</code>. Ou então a função <code>while</code> juntamente com a função <code>if</code>.</p>
+<p>Essas combinações irão depender somente da demanda do algoritmo que você precisa desenvolver.</p>
 <div id="for" class="section level2">
 <h2><span class="header-section-number">9.1</span> for</h2>
+<p>A função <code>for</code> é usada para criar <em>loopings</em>, ou seja, para executar uma tarefa diversas vezes.</p>
+<p>Para usar a função <code>for</code>, você precisa criar uma variável para te auxiliar. Essa variável terá o seu valor alterado a cada ciclo de execução do <code>for</code>.</p>
+<p>Além disso, essa variável irá percorrer uma sequência, definida por você.</p>
+<p>Veja na prática:</p>
+<p>Vamos criar um vetor que irá receber o valor do dobro de sua posição. Esse vetor irá ter tamanho igual a 10.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="estruturas-de-controle.html#cb1-1"></a>nosso_vetor&lt;-<span class="kw">c</span>()     <span class="co">#criei o &#39;nosso_vetor&#39;</span></span>
+<span id="cb1-2"><a href="estruturas-de-controle.html#cb1-2"></a><span class="cf">for</span>(posicao <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){ <span class="co">#a nossa variável auxiliar é a &#39;posicao&#39;. Ela irá percorrer o vetor 1:10.</span></span>
+<span id="cb1-3"><a href="estruturas-de-controle.html#cb1-3"></a>                      <span class="co">#O vetor 1:10 é a mesma coisa que criar um vetor com todos os números de 1 a 10.</span></span>
+<span id="cb1-4"><a href="estruturas-de-controle.html#cb1-4"></a>                      <span class="co">#O primeiro valor para a variável &#39;posicao&#39; será 1, depois 2 até o último valor que é 10.</span></span>
+<span id="cb1-5"><a href="estruturas-de-controle.html#cb1-5"></a>  nosso_vetor[posicao]&lt;-<span class="dv">2</span><span class="op">*</span>posicao  <span class="co">#O vetor &#39;nosso_vetor&#39; irá receber o dobro de sua posição.</span></span>
+<span id="cb1-6"><a href="estruturas-de-controle.html#cb1-6"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="estruturas-de-controle.html#cb2-1"></a>nosso_vetor</span></code></pre></div>
+<pre><code>##  [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
+<p>Outro exemplo:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="estruturas-de-controle.html#cb4-1"></a><span class="cf">for</span>(auxiliar <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
+<span id="cb4-2"><a href="estruturas-de-controle.html#cb4-2"></a>  <span class="kw">print</span>(nosso_vetor[auxiliar])</span>
+<span id="cb4-3"><a href="estruturas-de-controle.html#cb4-3"></a>}</span></code></pre></div>
+<pre><code>## [1] 2
+## [1] 4
+## [1] 6
+## [1] 8
+## [1] 10
+## [1] 12
+## [1] 14
+## [1] 16
+## [1] 18
+## [1] 20</code></pre>
+<p>No exemplo acima, a nossa variável <strong>auxiliar</strong> também irá percorrer a sequência 1, 2, 3, 4, 5, 6, 7, 8, 9 e 10.</p>
+<p>A tarefa a ser repetida é imprimir o elemento dentro do ‘nosso_vetor’ que está posicionado no valor da variável ‘auxiliar’. A variável irá percorrer o looping começando com valor igual a 1 e irá até o valor 10.</p>
+<p>Ou seja, o que o looping faz é exatamente equivalente ao código:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="estruturas-de-controle.html#cb6-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">1</span>])</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="estruturas-de-controle.html#cb8-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="estruturas-de-controle.html#cb10-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">3</span>])</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="estruturas-de-controle.html#cb12-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">4</span>])</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="estruturas-de-controle.html#cb14-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">5</span>])</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="estruturas-de-controle.html#cb16-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">6</span>])</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="estruturas-de-controle.html#cb18-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">7</span>])</span></code></pre></div>
+<pre><code>## [1] 14</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="estruturas-de-controle.html#cb20-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">8</span>])</span></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="estruturas-de-controle.html#cb22-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">9</span>])</span></code></pre></div>
+<pre><code>## [1] 18</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="estruturas-de-controle.html#cb24-1"></a><span class="kw">print</span>(nosso_vetor[<span class="dv">10</span>])</span></code></pre></div>
+<pre><code>## [1] 20</code></pre>
 </div>
 <div id="while" class="section level2">
 <h2><span class="header-section-number">9.2</span> while</h2>
+<p>Note que na função <code>for</code> a variável auxiliar segue uma sequência já definida antes do início do looping.</p>
+<p>Porém, em alguns casos, vai ser mais interessante manter o looping rodando <strong>enquanto</strong> alguma condição ainda não foi atendida. <strong>Para isso usaremos a função <code>while</code>.</strong></p>
+<p>Esse é o caso, por exemplo, de um modelo de previsões que irá sofrer um número indefinido de iterações e só irá encerrar o looping quando o erro for menor do que determinado valor.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="estruturas-de-controle.html#cb26-1"></a>i&lt;-<span class="dv">0</span></span>
+<span id="cb26-2"><a href="estruturas-de-controle.html#cb26-2"></a><span class="cf">while</span>(i <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>){</span>
+<span id="cb26-3"><a href="estruturas-de-controle.html#cb26-3"></a>  i&lt;-<span class="kw">rnorm</span>(<span class="dv">1</span>) <span class="co">#a função rnorm(1) irá gerar 1 número aleatório com a distribuição normal padrão.</span></span>
+<span id="cb26-4"><a href="estruturas-de-controle.html#cb26-4"></a>  <span class="kw">print</span>(i)    <span class="co">#a função print(i) irá imprimir o valor atribuído a i na linha anterior.</span></span>
+<span id="cb26-5"><a href="estruturas-de-controle.html#cb26-5"></a>}</span></code></pre></div>
+<pre><code>## [1] -1.548758
+## [1] -2.004604
+## [1] 0.8997255
+## [1] -0.9243321
+## [1] 0.9940622
+## [1] 2.189697</code></pre>
+<p>A condição para o looping acontecer é que o valor de <code>i</code> seja menor do que 1.</p>
+<p>A cada nova interação, o valor de <code>i</code> é atualizado por um novo valor.</p>
+<p>A função <code>print(i)</code> imprime o valor atribuído ao elemento <code>i</code>.</p>
+<p>Então, o looping irá dar voltas <strong>enquanto</strong> o valor de <code>i</code> for menor do que 1. O último valor impresso é maior do que 1 e isso significa que a condição <code>i &lt; 1</code> não é mais atendida, portanto, o looping irá se encerrar.</p>
 </div>
 <div id="if---else" class="section level2">
 <h2><span class="header-section-number">9.3</span> if - else</h2>
+<p>As funções <code>for</code> e <code>while</code> são úteis para criarmos <em>loopings</em> e repetir determinada tarefa. Já as funções <code>if</code> ou <code>ifelse</code> são funções de <strong>decisões lógicas</strong>.</p>
+<p>Ou seja, você irá estabelecer uma condição e, caso ela seja atendida, o código será executado.</p>
+<p>Caso a condição estabelecida seja atendida (TRUE), será seguido o roteiro estabelecido quando a condição for verdadeira. Caso a condição não seja atendida (FALSE), será seguido outro roteiro.</p>
+<p>Nesse item, vamos utilizar as funções <code>if</code> e <code>else</code> separadas, primeiro uma e depois a outra.</p>
+<p>O exemplo abaixo, vamos criar a condição lógica <code>a &lt; b</code>. Portanto, se <strong>a</strong> for menor que <strong>b</strong>, a condição lógica será verdadeira e a parte seguinte do código será executada:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="estruturas-de-controle.html#cb28-1"></a>a&lt;-<span class="dv">2</span></span>
+<span id="cb28-2"><a href="estruturas-de-controle.html#cb28-2"></a>b&lt;-<span class="dv">5</span></span>
+<span id="cb28-3"><a href="estruturas-de-controle.html#cb28-3"></a><span class="cf">if</span>(a <span class="op">&lt;</span><span class="st"> </span>b){</span>
+<span id="cb28-4"><a href="estruturas-de-controle.html#cb28-4"></a>  <span class="kw">print</span>(<span class="st">&quot;Condição verdadeira. &#39;a&#39; é menor que &#39;b&#39;&quot;</span>)</span>
+<span id="cb28-5"><a href="estruturas-de-controle.html#cb28-5"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;Condição verdadeira. &#39;a&#39; é menor que &#39;b&#39;&quot;</code></pre>
+<p>Agora, vamos adicionar a função <code>else</code> que é simplesmente o SENÃO. Caso a condição lógica seja FALSA, o <em>script</em> contido dentro da função <code>else</code> é executado.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="estruturas-de-controle.html#cb30-1"></a><span class="cf">if</span>(a <span class="op">&gt;</span><span class="st"> </span>b){ <span class="co">#a condição lógica foi invertida e será FALSA</span></span>
+<span id="cb30-2"><a href="estruturas-de-controle.html#cb30-2"></a>    <span class="kw">print</span>(<span class="st">&quot;Condição verdadeira. &#39;a&#39; é maior que &#39;b&#39;&quot;</span>)</span>
+<span id="cb30-3"><a href="estruturas-de-controle.html#cb30-3"></a>}<span class="cf">else</span>{</span>
+<span id="cb30-4"><a href="estruturas-de-controle.html#cb30-4"></a>      <span class="kw">print</span>(<span class="st">&quot;Condição falsa. &#39;a&#39; não é maior que &#39;b&#39;&quot;</span>)</span>
+<span id="cb30-5"><a href="estruturas-de-controle.html#cb30-5"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;Condição falsa. &#39;a&#39; não é maior que &#39;b&#39;&quot;</code></pre>
+<p>O uso da função <code>else</code> é opicional. Caso ela não esteja presente, nada irá acontecer quando a condição lógica não for atendida.</p>
+<p>Repare que as duas formas apresentadas seguem os padrões:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="estruturas-de-controle.html#cb32-1"></a><span class="co">## if</span></span>
+<span id="cb32-2"><a href="estruturas-de-controle.html#cb32-2"></a><span class="cf">if</span>(condicao_logica){ <span class="co">#a condição lógica deve ser sempre TRUE ou FALSE</span></span>
+<span id="cb32-3"><a href="estruturas-de-controle.html#cb32-3"></a>  <span class="co">#SCRIPT CASO A CONDIÇÃO FOR ATENTIDA</span></span>
+<span id="cb32-4"><a href="estruturas-de-controle.html#cb32-4"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="estruturas-de-controle.html#cb33-1"></a><span class="co">## if - else</span></span>
+<span id="cb33-2"><a href="estruturas-de-controle.html#cb33-2"></a><span class="cf">if</span>(condicao_logica){ <span class="co">#a condição lógica deve ser sempre TRUE ou FALSE</span></span>
+<span id="cb33-3"><a href="estruturas-de-controle.html#cb33-3"></a>  <span class="co">#SCRIPT CASO A CONDIÇÃO FOR ATENTIDA (TRUE)</span></span>
+<span id="cb33-4"><a href="estruturas-de-controle.html#cb33-4"></a>}<span class="cf">else</span>{</span>
+<span id="cb33-5"><a href="estruturas-de-controle.html#cb33-5"></a>    <span class="co">#SCRIPT CASO A CONDIÇÃO NÃO FOR ATENTIDA (FALSE)</span></span>
+<span id="cb33-6"><a href="estruturas-de-controle.html#cb33-6"></a>}</span></code></pre></div>
 </div>
 <div id="ifelse" class="section level2">
 <h2><span class="header-section-number">9.4</span> ifelse</h2>
+<p>O raciocínio lógico utilizado na função <code>ifelse</code> é o mesmo que aprendemos com as funções <code>if</code> e <code>else</code>.</p>
+<p>A função será utilizada da seguinte forma:</p>
+<ul>
+<li>ifelse(Condição,Ação se for a condição for verdadeira, Ação se a condição for falsa)</li>
+</ul>
+<p>Porém, a diferença é que a função ifelse é aplicada a um <strong>vetor</strong>. Isso a torna extremamente útil e facilitará a nossa vida em alguns casos.</p>
+<p>Exemplo:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="estruturas-de-controle.html#cb34-1"></a>vetor&lt;-<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">50</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">25</span>)</span>
+<span id="cb34-2"><a href="estruturas-de-controle.html#cb34-2"></a></span>
+<span id="cb34-3"><a href="estruturas-de-controle.html#cb34-3"></a>vetor2 &lt;-<span class="st"> </span><span class="kw">ifelse</span>(vetor<span class="op">&lt;</span><span class="dv">10</span>,<span class="st">&quot;menor&quot;</span>,<span class="st">&quot;MAIOR&quot;</span>)</span>
+<span id="cb34-4"><a href="estruturas-de-controle.html#cb34-4"></a></span>
+<span id="cb34-5"><a href="estruturas-de-controle.html#cb34-5"></a>vetor2</span></code></pre></div>
+<pre><code>## [1] &quot;menor&quot; &quot;MAIOR&quot; &quot;menor&quot; &quot;MAIOR&quot; &quot;menor&quot; &quot;MAIOR&quot; &quot;menor&quot; &quot;menor&quot; &quot;MAIOR&quot;</code></pre>
+<p>A solução acima não pode ser aplicada ao método if-else ensinado no item anterior.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="estruturas-de-controle.html#cb36-1"></a><span class="cf">if</span>(vetor<span class="op">&lt;</span><span class="dv">10</span>){</span>
+<span id="cb36-2"><a href="estruturas-de-controle.html#cb36-2"></a>  vetor2&lt;-<span class="st">&quot;menor&quot;</span></span>
+<span id="cb36-3"><a href="estruturas-de-controle.html#cb36-3"></a>}<span class="cf">else</span>{</span>
+<span id="cb36-4"><a href="estruturas-de-controle.html#cb36-4"></a>  vetor2&lt;-<span class="st">&quot;MAIOR&quot;</span></span>
+<span id="cb36-5"><a href="estruturas-de-controle.html#cb36-5"></a>}</span></code></pre></div>
+<pre><code>## Warning in if (vetor &lt; 10) {: a condição tem comprimento &gt; 1 e somente o
+## primeiro elemento será usado</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="estruturas-de-controle.html#cb38-1"></a>vetor2  </span></code></pre></div>
+<pre><code>## [1] &quot;menor&quot;</code></pre>
+<p><strong>Portanto, caso precise usar uma função condicional para vetores, a função <code>ifelse</code> é uma das opções que você deve considerar.</strong></p>
+<p>Lembre-se também que caso você esteja trabalhando com um <em>data frame</em>, cada coluna de seu <em>data frame</em> pode ser tratada como um vetor.</p>
+<p>A seguir vamos criar uma nova coluna em um <em>data frame</em> baseada em uma condição lógica:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="estruturas-de-controle.html#cb40-1"></a><span class="kw">head</span>(mtcars)</span></code></pre></div>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="estruturas-de-controle.html#cb42-1"></a><span class="co"># Suponha que o objetivo seja criar duas categorias de carros, os que gastam muito combustível e os que gastam pouco.</span></span>
+<span id="cb42-2"><a href="estruturas-de-controle.html#cb42-2"></a><span class="co"># para isso, vamos usar a variável mpg (milhas por galão).</span></span>
+<span id="cb42-3"><a href="estruturas-de-controle.html#cb42-3"></a></span>
+<span id="cb42-4"><a href="estruturas-de-controle.html#cb42-4"></a>mtcars<span class="op">$</span>consumo_combustivel&lt;-<span class="kw">ifelse</span>(mtcars<span class="op">$</span>mpg<span class="op">&lt;</span><span class="dv">20</span>,<span class="st">&quot;Bebe muito&quot;</span>,<span class="st">&quot;Bebe pouco&quot;</span>)</span>
+<span id="cb42-5"><a href="estruturas-de-controle.html#cb42-5"></a></span>
+<span id="cb42-6"><a href="estruturas-de-controle.html#cb42-6"></a><span class="kw">head</span>(mtcars)</span></code></pre></div>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+##                   consumo_combustivel
+## Mazda RX4                  Bebe pouco
+## Mazda RX4 Wag              Bebe pouco
+## Datsun 710                 Bebe pouco
+## Hornet 4 Drive             Bebe pouco
+## Hornet Sportabout          Bebe muito
+## Valiant                    Bebe muito</code></pre>
+<p>Então, colocamos as colunas (que são vetores) do <em>data frame</em> <code>mtcars</code> como argumentos da função <code>ifelse</code>.</p>
+<tr><center>
+    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
+  <img src="imagens/insta.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
+  <img src="imagens/youtube.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
+  </center></tr>
 
 </div>
 </div>

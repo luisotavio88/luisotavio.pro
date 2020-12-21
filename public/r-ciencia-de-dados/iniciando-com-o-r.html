@@ -24,7 +24,6 @@
 <meta name="author" content="Luís Otávio" />
 
 
-<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -260,14 +259,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.1.3" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-bolhas---bubble-chart"><i class="fa fa-check"></i><b>11.1.3</b> O Gráfico de Bolhas - Bubble Chart</a></li>
 <li class="chapter" data-level="11.1.4" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-correlação"><i class="fa fa-check"></i><b>11.1.4</b> O gráfico de correlação</a></li>
 <li class="chapter" data-level="11.1.5" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#aperfeiçoando-o-gráfico"><i class="fa fa-check"></i><b>11.1.5</b> Aperfeiçoando o gráfico</a></li>
-<li class="chapter" data-level="11.1.6" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-1---acesso-a-api-do-twitter"><i class="fa fa-check"></i><b>11.1.6</b> PASSO 1 - ACESSO A API DO TWITTER</a></li>
-<li class="chapter" data-level="11.1.7" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-2---buscar-os-tweets-de-cada-repórter"><i class="fa fa-check"></i><b>11.1.7</b> PASSO 2 - BUSCAR OS TWEETS DE CADA REPÓRTER</a></li>
-<li class="chapter" data-level="11.1.8" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-3---visualização-das-buscas-e-o-retweet"><i class="fa fa-check"></i><b>11.1.8</b> PASSO 3 - VISUALIZAÇÃO DAS BUSCAS E O RETWEET</a></li>
-<li class="chapter" data-level="11.1.9" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.9</b> Filtro de dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.10" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#excluir-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.10</b> Excluir dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.11" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-combinando-a-função-which"><i class="fa fa-check"></i><b>11.1.11</b> Filtro de dados combinando a função which()</a></li>
-<li class="chapter" data-level="11.1.12" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-usando-a-função-subset"><i class="fa fa-check"></i><b>11.1.12</b> Filtro de dados usando a função subset()</a></li>
-<li class="chapter" data-level="11.1.13" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtrar-usando-a-função-filter-e-select"><i class="fa fa-check"></i><b>11.1.13</b> Filtrar usando a função filter() e select()</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -292,45 +283,239 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="iniciando-com-o-r" class="section level1">
 <h1><span class="header-section-number"> 3</span> Iniciando com o R</h1>
-<p>Placeholder</p>
 <div id="instalação" class="section level2">
 <h2><span class="header-section-number">3.1</span> Instalação</h2>
+<p>Todos os passos que sugiro nesse e-book são <strong>100% gratuitos</strong>.</p>
+<p>Você irá instalar o <strong>R</strong>, o <strong>RStudio</strong> e várias bibliotecas que vão facilitar a nossa vida, porém não há nenhum custo financeiro nisso!</p>
+<p>Então, primeiramente, você precisa ter o software R instalado no seu computador.</p>
+<p>E, logo depois, instalar o RStudio. <strong>O RStudio é uma interface para facilitar a sua vida</strong>.</p>
+<p>Ele irá deixar a sua tela de programação muito mais amigável, organizada e você terá várias funções que irão facilitar o desenvolvimento do seu projeto.</p>
+<p>Usar o R sem o RStudio é inimaginável hoje em dia. Não tem nenhum motivo para você fazer isso, então instale também o RStudio.</p>
+<p>Caso você precise de ajuda para instalar o R e o RStudio, veja o passo a passo:</p>
+<p><a href="https://www.luisotavio.pro/blog/como-instalar-o-r-e-o-rstudio/" target="_blank">Clique aqui para ver o passo a passo de instalação do R e do RStudio.</a></p>
 </div>
 <div id="executar-ou-rodar-o-código-no-r" class="section level2">
 <h2><span class="header-section-number">3.2</span> Executar (ou rodar) o código no R</h2>
+<p>Quando colocamos a nossa linha de código ou até mesmo todo o nosso <em>script</em> no editor de texto do R, ele não irá fazer NADA.</p>
+<p>A menos que você dê uma ordem para o R executar (rodar) o seu código.</p>
+<p>Para executar o seu código, existem duas formas!</p>
+<ul>
+<li><p>Usando o teclado: ctrl + Enter</p></li>
+<li><p>Usando o mouse: clique no botão <em>Run</em></p></li>
+</ul>
+<p><img src="imagens/3_run.PNG" /></p>
+<p>Essa ordem pode ser para executar apenas uma linha de código, um conjunto de linhas ou até mesmo todo o seu <em>script</em>.</p>
+<p>Você escolhe!</p>
+<p>O que vai definir a parte do código que será executada?</p>
+<ul>
+<li>Depende do que está selecionado pelo seu <em>mouse</em>!</li>
+</ul>
+<p>Por exemplo, se você selecionar todas as linhas do script e pedir para executar, todo o script será executado.</p>
+<p>Se você selecionar só uma parte, só essa parte irá rodar.</p>
+<p>E se você não selecionar nada?</p>
+<p>Aí o R irá executar apenas a linha onde está o cursor do <em>mouse</em> (como na imagem acima).</p>
 </div>
 <div id="lógica-de-programação-no-r" class="section level2">
 <h2><span class="header-section-number">3.3</span> Lógica de programação no R</h2>
+<p>A linguagem R é orientada a objetos e, na prática, isso significa que tudo no R será um objeto.</p>
+<p>Imagine que esse “objeto” é uma variável capaz de armazenar um valor ou uma estrutura de dados. Por exemplo:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="iniciando-com-o-r.html#cb1-1"></a>variavel1&lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb1-2"><a href="iniciando-com-o-r.html#cb1-2"></a>dataset1 &lt;-<span class="st"> </span>cars</span></code></pre></div>
+<p>Na primeira linha do código eu estou atribuindo o valor 5 para o <strong>objeto</strong> “variavel1”, criado por mim.</p>
+<p>O <strong>operador de atribuição</strong> é representado pelo <code>&lt;-</code>.</p>
+<p>Você vai escolher o nome que mais fizer mais sentido para o seu objeto, de forma que fique fácil de saber do que se trata.</p>
+<p>Seguindo o mesmo raciocínio, eu paguei um conjunto de dados do R, que se chama <code>cars</code> e atribui esse conjunto para o <strong>objeto</strong> <code>dataset1</code>.</p>
+<p>Então, agora o <code>dataset1</code> recebeu a estrutura de dados que estava no dataset <code>cars</code> e os dois objetos terão o mesmo valor.</p>
 <div id="as-funções-no-r" class="section level3">
 <h3><span class="header-section-number">3.3.1</span> As funções no R</h3>
+<p>No R existem várias funções já pré-definidas. Elas servem para facilitar trabalhos que são feitos repetidamente por muitas pessoas.</p>
+<p>Imagine que existe um trabalho repetitivo que várias pessoas precisem fazer.</p>
+<p>Agora imagine que alguém já escreveu todo o passo a passo desse trabalho repetitivo e você só precisará usar a função que essa pessoa escreveu.</p>
+<p>Por exemplo, calcular a média aritmética é um trabalho que muitos usuários do R vão usar, então já existe uma função para isso.</p>
+<p>Essa função é a <code>mean()</code>.</p>
+<p>Para usar uma função, você vai inserir dentro da função os <strong>argumentos</strong> necessários.</p>
+<p>Para calcular a média, o único argumento necessário são os números dos quais você quer saber a média.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="iniciando-com-o-r.html#cb2-1"></a>numeros &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:</span><span class="dv">15</span>  <span class="co"># estou atribuindo os números 10, 11, 12, 13, 14 e 15 para o objeto &quot;numeros&quot;</span></span>
+<span id="cb2-2"><a href="iniciando-com-o-r.html#cb2-2"></a>numeros           <span class="co"># pedi para o R imprimir no Console o objeto &quot;numeros&quot; </span></span></code></pre></div>
+<pre><code>## [1] 10 11 12 13 14 15</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="iniciando-com-o-r.html#cb4-1"></a><span class="kw">mean</span>(numeros)     <span class="co"># pedi para o R imprimir a média do objeto &quot;numeros&quot;</span></span></code></pre></div>
+<pre><code>## [1] 12.5</code></pre>
+<p>obs.: Sempre que você usar uma # (hashtag) em seu código, o R irá ignorar o que está à direita da Hashtag.
+Isso é muito útil para que você faça <strong>comentários</strong> no seu código. Isso vai facilitar muito quando você for ler o código depois de alguns dias que escreveu. E também será extremamente útil se outra pessoa precisar ler o seu código.</p>
+<p><strong>O R possui milhares e milhares de funções já prontas que irão nos ajudar muito no desenvolvimento de nossos projetos.</strong></p>
+<p>Para você saber qual a função que irá fazer o que você está precisando, sugiro que procure no Google. Por exemplo:</p>
+<p>Caso você queira calcular a mediana dos seus dados, coloque no Google: <em>R como calcular a mediana</em>.</p>
+<p>E com dois cliques você irá descobrir que deve usar a função <strong>median()</strong></p>
 </div>
 </div>
 <div id="objetos" class="section level2">
 <h2><span class="header-section-number">3.4</span> Objetos</h2>
+<p>Cada objeto irá ter uma <strong>Classe</strong>. Ela é definida pela forma do objeto e será muito importante na maneira que o objeto será manipulado pelas funções.</p>
+<p>Existem 5 classes básicas (atômicas) para um objeto no R:</p>
+<ul>
+<li>Caractere (<em>character</em>)</li>
+<li>Números reais (<em>numeric</em>)</li>
+<li>Inteiros (<em>integer</em>)</li>
+<li>Números complexos (<em>complex</em>)</li>
+<li>Verdadeiro/Falso (<em>logical</em>)</li>
+</ul>
+<p>Para descobrir qual é a <strong>Classe</strong> do objeto, podemos usar a função class().</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="iniciando-com-o-r.html#cb6-1"></a><span class="kw">class</span>(<span class="st">&quot;Essa é uma frase.&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="iniciando-com-o-r.html#cb8-1"></a><span class="kw">class</span>(<span class="fl">5.6761</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="iniciando-com-o-r.html#cb10-1"></a><span class="kw">class</span>(<span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><strong>O texto deve sempre estar entre aspas. Assim o R irá entender que é um texto e não um objeto.</strong></p>
+<p>Por exemplo:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="iniciando-com-o-r.html#cb12-1"></a>texto &lt;-<span class="st"> &quot;palavra&quot;</span> <span class="co">#aqui estou atribuindo &quot;palavra&quot; para o objeto texto. </span></span>
+<span id="cb12-2"><a href="iniciando-com-o-r.html#cb12-2"></a>                <span class="co">#Como eu coloquei o texto entre aspas, o R saberá que é um texto e não um objeto</span></span>
+<span id="cb12-3"><a href="iniciando-com-o-r.html#cb12-3"></a>texto</span></code></pre></div>
+<pre><code>## [1] &quot;palavra&quot;</code></pre>
+<p>Porém, quando escrevo <em>palavra</em> sem as aspas, o R entenderá que eu estou me referindo ao objeto <code>palavra</code>, porém ele não foi criado e não existe.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="iniciando-com-o-r.html#cb14-1"></a>palavra        <span class="co"># o R irá acusar erro, porque não existe um objeto chamado palavra.</span></span></code></pre></div>
+<pre><code>## Error in eval(expr, envir, enclos): objeto &#39;palavra&#39; não encontrado</code></pre>
 </div>
 <div id="vetores" class="section level2">
 <h2><span class="header-section-number">3.5</span> Vetores</h2>
+<p><strong>Vetor</strong> é um conjunto de valores da mesma classe. Por exemplo:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="iniciando-com-o-r.html#cb16-1"></a>inteiros &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>) <span class="co">#A função &quot;c&quot; irá organizar os valores em vetor. </span></span>
+<span id="cb16-2"><a href="iniciando-com-o-r.html#cb16-2"></a>                       <span class="co"># Os elementos do vetor são separados por vírgula.</span></span>
+<span id="cb16-3"><a href="iniciando-com-o-r.html#cb16-3"></a>                      <span class="co"># veja que todos os valores tem a mesma classe - a classe </span></span>
+<span id="cb16-4"><a href="iniciando-com-o-r.html#cb16-4"></a>                      <span class="co"># de números inteiros.</span></span>
+<span id="cb16-5"><a href="iniciando-com-o-r.html#cb16-5"></a></span>
+<span id="cb16-6"><a href="iniciando-com-o-r.html#cb16-6"></a></span>
+<span id="cb16-7"><a href="iniciando-com-o-r.html#cb16-7"></a>logicos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>) <span class="co">#Vetor com valores lógicos verdadeiro/falso</span></span>
+<span id="cb16-8"><a href="iniciando-com-o-r.html#cb16-8"></a>logicos &lt;-<span class="st"> </span><span class="kw">c</span>(T,F,T) <span class="co">#Você pode escrever TRUE ou somente T,  </span></span>
+<span id="cb16-9"><a href="iniciando-com-o-r.html#cb16-9"></a>                    <span class="co"># FALSE ou somente F e o R irá entender </span></span>
+<span id="cb16-10"><a href="iniciando-com-o-r.html#cb16-10"></a>                    <span class="co"># que se trata de valores lógicos</span></span></code></pre></div>
+<p>Quando escrevemos os valores lógicos TRUE ou T e FALSE ou F, o R já sabe que são valores lógicos. Portanto, não precisamos colocá-los entre aspas.</p>
 </div>
 <div id="matrizes" class="section level2">
 <h2><span class="header-section-number">3.6</span> Matrizes</h2>
+<p>Imagine alguns vetores do mesmo tamanho:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="iniciando-com-o-r.html#cb17-1"></a>vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
+<span id="cb17-2"><a href="iniciando-com-o-r.html#cb17-2"></a>vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span>
+<span id="cb17-3"><a href="iniciando-com-o-r.html#cb17-3"></a>vetor3 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span></code></pre></div>
+<p>Uma matriz é um conjunto de vetores do mesmo tamanho. Ou uma tabela com linhas e colunas. Como você preferir!</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="iniciando-com-o-r.html#cb18-1"></a><span class="co">#a função matrix é usada para criar uma matriz</span></span>
+<span id="cb18-2"><a href="iniciando-com-o-r.html#cb18-2"></a><span class="co">#o primeiro argumento da função matrix são os dados da matriz</span></span>
+<span id="cb18-3"><a href="iniciando-com-o-r.html#cb18-3"></a><span class="co">#além disso o argumento &quot;ncol&quot; irá informar que desejamos formar 3 colunas.</span></span>
+<span id="cb18-4"><a href="iniciando-com-o-r.html#cb18-4"></a><span class="co">#Assim, cada vetor definido anteriormente será uma coluna da matriz</span></span>
+<span id="cb18-5"><a href="iniciando-com-o-r.html#cb18-5"></a><span class="kw">matrix</span>(<span class="kw">cbind</span>(vetor1,vetor2,vetor3),<span class="dt">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    0    3    1
+## [2,]    1    2    1
+## [3,]    2    1    1
+## [4,]    3    0    1</code></pre>
+<p>Outro exemplo:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="iniciando-com-o-r.html#cb20-1"></a><span class="co">#Foram definidos os valores de 1 a 6 no argumento de dados da função.</span></span>
+<span id="cb20-2"><a href="iniciando-com-o-r.html#cb20-2"></a><span class="co">#e também foi definido que número de linhas (nrow) igual a 2</span></span>
+<span id="cb20-3"><a href="iniciando-com-o-r.html#cb20-3"></a><span class="co">#e o número de colunas igual a 3.</span></span>
+<span id="cb20-4"><a href="iniciando-com-o-r.html#cb20-4"></a><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6</code></pre>
+<p>Importante: todas as colunas de uma <strong>matriz</strong> possuem a <strong>mesma classe</strong>. Ou seja, são todas numéricas ou são todas lógicas ou são todas caracteres, etc.</p>
 </div>
 <div id="listas" class="section level2">
 <h2><span class="header-section-number">3.7</span> Listas</h2>
+<p>Você vai usar bastante as <strong>listas</strong> em seus trabalhos. A principal característica delas é aceitar elementos de diferentes classes. Além disso, podem armazenar vetores e matrizes em um único objeto.</p>
+<p>Exemplo:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="iniciando-com-o-r.html#cb22-1"></a>vetor1 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">TRUE</span>)        <span class="co">#Vetor com valores lógicos</span></span>
+<span id="cb22-2"><a href="iniciando-com-o-r.html#cb22-2"></a>vetor2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)        <span class="co">#Vetor com valores inteiros</span></span>
+<span id="cb22-3"><a href="iniciando-com-o-r.html#cb22-3"></a>valor_texto &lt;-<span class="st"> &quot;Esse é um texto.&quot;</span>   <span class="co">#Elemento da classe character</span></span>
+<span id="cb22-4"><a href="iniciando-com-o-r.html#cb22-4"></a>lista &lt;-<span class="st"> </span><span class="kw">list</span>(vetor1,vetor2,valor_texto)</span>
+<span id="cb22-5"><a href="iniciando-com-o-r.html#cb22-5"></a>lista</span></code></pre></div>
+<pre><code>## [[1]]
+## [1]  TRUE FALSE  TRUE
+## 
+## [[2]]
+## [1] 2 3 4 5 6 7 8 9
+## 
+## [[3]]
+## [1] &quot;Esse é um texto.&quot;</code></pre>
 </div>
 <div id="fatores" class="section level2">
 <h2><span class="header-section-number">3.8</span> Fatores</h2>
+<p>Até agora usamos em nossos exemplos valores lógicos (TRUE/FALSE), valores numéricos ou de texto (<em>character</em>). Porém, é essencial conhecer outra classe de valores: <strong>os fatores</strong>.</p>
+<p><strong>Fator é a classe das variáveis categóricas.</strong></p>
+<p>Uma variável categórica pode ser ordenada, como a renda: salários até R$ 5.000, entre R$ 5.001 e 10.000 e acima de R$ 10.000.</p>
+<p>Ou podemos ter categorias que não possuem nenhuma ordem, como cursos: Administração, Economia, Ciência Contábeis.</p>
+<p>Nos dois exemplos, as variáveis <em>renda</em> e <em>cursos</em> poderiam assumir a classe “factor” em nossas análises.</p>
+<p>Também seria possível classificar renda e cursos (ou qualquer variável categórica) como uma variável de texto (<em>character</em>).</p>
+<p><strong>Então para o que serve a classe dos fatores?</strong></p>
+<p>Sempre que você tiver poucos valores únicos para uma variável, prefira a classificação de fator à <em>character</em>. Essa opção irá otimizar o armazenamento dos dados e também será necessária para utilizar algumas funções do R com seus dados.</p>
+<p>Exemplo:</p>
+<p>Uma pergunta aberta em um questionário irá gerar várias respostas diferentes, então não há sentido nenhum em classificar as respostas em categorias. Portanto, a classificação adequada é <em>character</em>.</p>
+<p>Porém, caso o respondente tenha que escolher uma resposta entre algumas opções disponíveis para esse questionário, a melhor classificação da variável seria como fator.</p>
+<p><strong>O R sempre irá assumir uma classificação para a sua variável e, a priori, você não precisará fazer essa classificação. Ela só é necessária quando a classificação automática feita pelo R for indevida para o seu caso.</strong></p>
 </div>
 <div id="coerção-de-classes" class="section level2">
 <h2><span class="header-section-number">3.9</span> Coerção de classes</h2>
+<p>Em alguns casos, você pode precisar alterar a classe de objetos.</p>
+<p>Suponha, por exemplo, que você criou o seguinte vetor x.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="iniciando-com-o-r.html#cb24-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span></code></pre></div>
+<p>O R irá automaticamente entender que o vetor <em>x</em> é <em>numeric</em></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="iniciando-com-o-r.html#cb25-1"></a><span class="kw">class</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>Porém, pode ser que você precise desse vetor como <em>integer</em> (números inteiros) ou <em>logical</em> (verdadeiro/falso). Por definição 0 seria FALSO e 1 seria VERDADEIRO.</p>
+<p>Para alterar a classe de um objeto por coerção, basta você usar uma função de coerção. As função são definidas por <strong>as.</strong> + <em>classe que o objeto vai assumir</em>.</p>
+<p>Ou seja: as.integer, as.logical, as.numeric, as.factor as.complex ou as.<em>character</em>.</p>
+<p>Para o exemplo acima, teríamos:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="iniciando-com-o-r.html#cb27-1"></a><span class="kw">as.integer</span>(x)</span></code></pre></div>
+<pre><code>## [1] 0 1 0 1 1</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="iniciando-com-o-r.html#cb29-1"></a><span class="kw">as.logical</span>(x)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE FALSE  TRUE  TRUE</code></pre>
+<p><strong>Dica importante</strong>: Muito cuidado ao converter objetos classificados como FATORES para NUMÉRICOS. Para fazer isso sem perder informação, você precisa converter primeiramente para <em>character</em> e, posteriormente, para <em>numeric</em>.</p>
 </div>
 <div id="valores-faltantes" class="section level2">
 <h2><span class="header-section-number">3.10</span> Valores faltantes</h2>
+<p>Os valores faltantes, também chamados de <strong>missing values</strong> são representados por <em>NA</em> ou <em>NaN</em>.</p>
+<p>Eles não irão influenciar a classe de um objeto, por exemplo:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="iniciando-com-o-r.html#cb31-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="co">#apesar de ser representado por duas letras, pelo padrão do R, ele saberá que não se trata de um texto e sim de valores faltantes.</span></span>
+<span id="cb31-2"><a href="iniciando-com-o-r.html#cb31-2"></a><span class="kw">class</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="data-frames" class="section level2">
 <h2><span class="header-section-number">3.11</span> Data Frames</h2>
+<p>Provavelmente esse é o objeto mais usado no R. É similar a uma matriz, porém com mais possibilidades.</p>
+<p>Os <strong>Data Frames</strong> são tabelas que aceitam colunas de todas as classes. Por exemplo, podemos ter uma coluna com classe <em>numeric</em>, outra <em>logical</em> e outra <em>character</em>. Isso não é possível em uma matriz, onde todas as colunas devem ter a mesma classe.</p>
+<p>Cada coluna em um <em>Data Frame</em> terá um nome. É altamente recomendável que você atribua nomes que realmente representem a variável ali contida. Ou seja, <strong>evite</strong> nomes como X1, X2, X3, etc.</p>
+<p>Também é possível atribuir nomes para as linhas de seu <strong>data frame</strong>.</p>
+<p>É muito comum que você importe seus dados/tabela para o R, porém veja como você pode criar um <em>data frame</em> de forma bem simples:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="iniciando-com-o-r.html#cb33-1"></a>meus_dados &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">produto=</span><span class="kw">c</span>(<span class="st">&quot;roda&quot;</span>,<span class="st">&quot;pneu&quot;</span>,<span class="st">&quot;suspensão&quot;</span>), <span class="dt">preco =</span> <span class="kw">c</span>(<span class="dv">30</span>,<span class="dv">20</span>,<span class="dv">15</span>), <span class="dt">esta_disponivel =</span> <span class="kw">c</span>(T, T, F))</span>
+<span id="cb33-2"><a href="iniciando-com-o-r.html#cb33-2"></a>meus_dados</span></code></pre></div>
+<pre><code>##     produto preco esta_disponivel
+## 1      roda    30            TRUE
+## 2      pneu    20            TRUE
+## 3 suspensão    15           FALSE</code></pre>
+<p>O <strong>data frame</strong> criado acima possui variáveis de texto, numérica e lógica.</p>
 </div>
 <div id="names" class="section level2">
 <h2><span class="header-section-number">3.12</span> Names</h2>
+<p>Os <strong>names</strong> são muito úteis na manipulação dos dados contidos nas matrizes, listas ou <em>data frames</em>.</p>
+<p>Por exemplo, no <em>data frame</em> <strong>meus_dados</strong> criado no item anterior, foi definido que o nome das variáveis são: produto, preco e esta_disponivel.</p>
+<p>Isso pode ser identificado pela função <code>names()</code></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="iniciando-com-o-r.html#cb35-1"></a><span class="kw">names</span>(meus_dados)</span></code></pre></div>
+<pre><code>## [1] &quot;produto&quot;         &quot;preco&quot;           &quot;esta_disponivel&quot;</code></pre>
+<p>Veremos como podemos usar os nomes das colunas no capítulo de manipulação de dados.</p>
+<p>Para alterar os nomes das colunas ou linhas de um <em>data frame</em>, usa-se as funções <code>names()</code> e <code>row.names()</code>.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="iniciando-com-o-r.html#cb37-1"></a><span class="kw">names</span>(meus_dados)&lt;-<span class="kw">c</span>(<span class="st">&quot;novo_nome&quot;</span>,<span class="st">&quot;preco&quot;</span>,<span class="st">&quot;esta_disponivel&quot;</span>) <span class="co">#alterando o nome da 1a coluna</span></span>
+<span id="cb37-2"><a href="iniciando-com-o-r.html#cb37-2"></a>meus_dados</span></code></pre></div>
+<pre><code>##   novo_nome preco esta_disponivel
+## 1      roda    30            TRUE
+## 2      pneu    20            TRUE
+## 3 suspensão    15           FALSE</code></pre>
+<tr><center>
+    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
+  <img src="imagens/insta.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
+  <img src="imagens/youtube.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
+  </center></tr>
 
 </div>
 </div>

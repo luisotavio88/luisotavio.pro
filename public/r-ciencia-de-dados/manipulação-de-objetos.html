@@ -24,7 +24,6 @@
 <meta name="author" content="Luís Otávio" />
 
 
-<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -260,14 +259,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.1.3" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-bolhas---bubble-chart"><i class="fa fa-check"></i><b>11.1.3</b> O Gráfico de Bolhas - Bubble Chart</a></li>
 <li class="chapter" data-level="11.1.4" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-correlação"><i class="fa fa-check"></i><b>11.1.4</b> O gráfico de correlação</a></li>
 <li class="chapter" data-level="11.1.5" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#aperfeiçoando-o-gráfico"><i class="fa fa-check"></i><b>11.1.5</b> Aperfeiçoando o gráfico</a></li>
-<li class="chapter" data-level="11.1.6" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-1---acesso-a-api-do-twitter"><i class="fa fa-check"></i><b>11.1.6</b> PASSO 1 - ACESSO A API DO TWITTER</a></li>
-<li class="chapter" data-level="11.1.7" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-2---buscar-os-tweets-de-cada-repórter"><i class="fa fa-check"></i><b>11.1.7</b> PASSO 2 - BUSCAR OS TWEETS DE CADA REPÓRTER</a></li>
-<li class="chapter" data-level="11.1.8" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-3---visualização-das-buscas-e-o-retweet"><i class="fa fa-check"></i><b>11.1.8</b> PASSO 3 - VISUALIZAÇÃO DAS BUSCAS E O RETWEET</a></li>
-<li class="chapter" data-level="11.1.9" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.9</b> Filtro de dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.10" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#excluir-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.10</b> Excluir dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.11" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-combinando-a-função-which"><i class="fa fa-check"></i><b>11.1.11</b> Filtro de dados combinando a função which()</a></li>
-<li class="chapter" data-level="11.1.12" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-usando-a-função-subset"><i class="fa fa-check"></i><b>11.1.12</b> Filtro de dados usando a função subset()</a></li>
-<li class="chapter" data-level="11.1.13" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtrar-usando-a-função-filter-e-select"><i class="fa fa-check"></i><b>11.1.13</b> Filtrar usando a função filter() e select()</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -292,32 +283,206 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="manipulação-de-objetos" class="section level1">
 <h1><span class="header-section-number"> 6</span> Manipulação de objetos</h1>
-<p>Placeholder</p>
+<p>No Capítulo 3 apresentei o conceito dos vetores, matrizes e listas. Eles são usados a todo momento no R.</p>
+<p>Agora vou mostrar como manipulá-los, extrair ou adicionar valores.</p>
 <div id="manipulação-de-vetores" class="section level2">
 <h2><span class="header-section-number">6.1</span> Manipulação de vetores</h2>
+<p>Para criar um vetor, usamos o comando <code>c()</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="manipulação-de-objetos.html#cb1-1"></a>meu_vetor &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>) </span></code></pre></div>
+<p>O comando acima irá atribuir ao objeto <code>meu_vetor</code> 5 elementos: números pares entre 2 e 10.</p>
 <div id="como-extrair-elementos-de-um-vetor" class="section level3">
 <h3><span class="header-section-number">6.1.1</span> Como extrair elementos de um vetor</h3>
+<p>Para extrair um elemento(s) de um vetor você precisará apenas escrever o nome do vetor e escolher qual(is) elemento(s) deseja extrair.</p>
+<p>Coloque os elementos dentro de colchetes, por exemplo:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="manipulação-de-objetos.html#cb2-1"></a>meu_vetor[<span class="dv">2</span>]  <span class="co">#Extrai o SEGUNDO elemento do vetor</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="manipulação-de-objetos.html#cb4-1"></a>meu_vetor[<span class="dv">3</span><span class="op">:</span><span class="dv">5</span>] <span class="co">#Extrai o TERCEIRO, QUARTO e QUINTO elemento do vetor</span></span></code></pre></div>
+<pre><code>## [1]  6  8 10</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="manipulação-de-objetos.html#cb6-1"></a>meu_vetor[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">5</span>)] <span class="co">#Extrai o PRIMEIRO e o QUINTO elemento do vetor</span></span></code></pre></div>
+<pre><code>## [1]  2 10</code></pre>
+<p>Então, para extrair elementos de um vetor, você precisa colocar dentro dos colchetes quais os elementos devem ser extraídos. Note que você pode colocar um novo vetor dentro dos colchetes, indicando quais serão os elementos.</p>
+<p>Nesse caso, estamos informando explicitamente quais elementos queremos extrair. Porém, também podemos usar uma condição lógica para fazer a extração:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="manipulação-de-objetos.html#cb8-1"></a>meu_vetor2&lt;-<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">1</span>,<span class="dv">4</span>)</span>
+<span id="cb8-2"><a href="manipulação-de-objetos.html#cb8-2"></a>meu_vetor2[meu_vetor2 <span class="op">&gt;</span><span class="st"> </span><span class="dv">7</span>]  <span class="co">#os elementos que atenderem a condição lógica serão extraídos.</span></span></code></pre></div>
+<pre><code>## [1]  9 10 11</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="manipulação-de-objetos.html#cb10-1"></a><span class="co">#Note que a condição lógica irá retornar um vetor de TRUE ou FALSE.</span></span>
+<span id="cb10-2"><a href="manipulação-de-objetos.html#cb10-2"></a><span class="co">#O resultado será TRUE quando o elemento do vetor for maior que 7 e FALSE no caso contrário.</span></span>
+<span id="cb10-3"><a href="manipulação-de-objetos.html#cb10-3"></a><span class="co">#Então, o comando meu_vetor2[meu_vetor2 &gt; 7] irá retornar os elementos correspondentes</span></span>
+<span id="cb10-4"><a href="manipulação-de-objetos.html#cb10-4"></a><span class="co">#quando a condição for igual a TRUE.</span></span>
+<span id="cb10-5"><a href="manipulação-de-objetos.html#cb10-5"></a>meu_vetor2 <span class="op">&gt;</span><span class="st"> </span><span class="dv">7</span> </span></code></pre></div>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE</code></pre>
 </div>
 <div id="como-atribuir-valores-a-elementos-de-um-vetor" class="section level3">
 <h3><span class="header-section-number">6.1.2</span> Como atribuir valores a elementos de um vetor</h3>
+<p>Para atribuir um valor a um elemento de um vetor, vamos utilizar o mesmo raciocínio desenvolvido até aqui.</p>
+<p>Considere o vetor</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="manipulação-de-objetos.html#cb12-1"></a>meu_vetor</span></code></pre></div>
+<pre><code>## [1]  2  4  6  8 10</code></pre>
+<p>e suponha que você deseje atribuir o valor 1 para o quinto elemento deste vetor</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="manipulação-de-objetos.html#cb14-1"></a>meu_vetor[<span class="dv">5</span>] &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb14-2"><a href="manipulação-de-objetos.html#cb14-2"></a>meu_vetor <span class="co">#resultado</span></span></code></pre></div>
+<pre><code>## [1] 2 4 6 8 1</code></pre>
 </div>
 </div>
 <div id="manipulação-de-matrizes" class="section level2">
 <h2><span class="header-section-number">6.2</span> Manipulação de matrizes</h2>
+<p>Os vetores só têm uma dimensão, representam apenas uma variável. Já as matrizes são bidimensionais.</p>
+<p>Isso quer dizer que a matriz é uma tabela com linhas e colunas.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="manipulação-de-objetos.html#cb16-1"></a><span class="co"># CRIANDO UMA MATRIZ</span></span>
+<span id="cb16-2"><a href="manipulação-de-objetos.html#cb16-2"></a>minha_matriz &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dt">nrow=</span><span class="dv">5</span>,<span class="dt">ncol=</span><span class="dv">3</span>) </span>
+<span id="cb16-3"><a href="manipulação-de-objetos.html#cb16-3"></a>minha_matriz</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    6   11
+## [2,]    2    7   12
+## [3,]    3    8   13
+## [4,]    4    9   14
+## [5,]    5   10   15</code></pre>
+<p>Na criação da matriz acima, informei que os dados da matriz são os números de 1 até 15, que a matriz possui 5 linhas e 3 colunas.</p>
+<p>Sempre que for manipular uma matriz, você precisará levar em consideração seus dois índices. O primeiro índice representa a <em>linha</em> e o segundo representa a <em>coluna</em>.</p>
 <div id="como-extrair-elementos-de-uma-matriz" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> Como extrair elementos de uma matriz</h3>
+<p>Considere a matriz que criamos no item anterior:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="manipulação-de-objetos.html#cb18-1"></a>minha_matriz</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    6   11
+## [2,]    2    7   12
+## [3,]    3    8   13
+## [4,]    4    9   14
+## [5,]    5   10   15</code></pre>
+<p>Agora, suponha que você deseja extrair o elemento localizado na última linha e na última coluna.</p>
+<p>Ou seja, você deseja extrair o elemento que está na linha=5, coluna=3.</p>
+<p>Para extrair esse elemento, basta chamar a <code>minha_matriz</code> e restringir pelos índices linha=5 e coluna=3.</p>
+<p>Na prática, basta executar o seguinte comando:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="manipulação-de-objetos.html#cb20-1"></a>minha_matriz[<span class="dv">5</span>,<span class="dv">3</span>]   <span class="co">#O primeiro índice sempre se refere a LINHA e o segundo sempre se refere a COLUNA.</span></span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<p>E se quisermos extrair uma linha ou coluna inteira?</p>
+<p>É muito simples extrair uma linha ou uma coluna inteira. Por exemplo, para extrair uma linha basta que você informe qual é a linha e não faça nenhuma restrição nas colunas.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="manipulação-de-objetos.html#cb22-1"></a><span class="co"># Extração da segunda linha da matriz</span></span>
+<span id="cb22-2"><a href="manipulação-de-objetos.html#cb22-2"></a></span>
+<span id="cb22-3"><a href="manipulação-de-objetos.html#cb22-3"></a>minha_matriz[<span class="dv">2</span>,]  <span class="co">#defini a linha que quero extrair e deixei o campo das colunas vazio.</span></span></code></pre></div>
+<pre><code>## [1]  2  7 12</code></pre>
+<p>O mesmo raciocínio se aplica para extrair uma coluna:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="manipulação-de-objetos.html#cb24-1"></a><span class="co"># Extração da terceira coluna da matriz</span></span>
+<span id="cb24-2"><a href="manipulação-de-objetos.html#cb24-2"></a>minha_matriz[,<span class="dv">3</span>]  <span class="co">#defini a coluna que quero extrair e deixei o campo das linhas vazio.</span></span></code></pre></div>
+<pre><code>## [1] 11 12 13 14 15</code></pre>
+<p>Os exemplos acima extraíram apenas 1 linha ou 1 coluna. Porém, o mesmo funciona para várias linhas ou colunas.</p>
+<p>Por exemplo, agora vamos extrair a 1ª e a 3ª coluna.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="manipulação-de-objetos.html#cb26-1"></a>minha_matriz[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)] <span class="co">#O índice das linhas está vazio, pois quero extrair todas as linhas.</span></span></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1   11
+## [2,]    2   12
+## [3,]    3   13
+## [4,]    4   14
+## [5,]    5   15</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="manipulação-de-objetos.html#cb28-1"></a>                      <span class="co">#O vetor c(1,3) irá definir a extração das colunas 1 e 3. </span></span></code></pre></div>
 </div>
 <div id="como-atribuir-valores-a-elementos-de-uma-matriz" class="section level3">
 <h3><span class="header-section-number">6.2.2</span> Como atribuir valores a elementos de uma matriz</h3>
+<p>Suponha que deseja atribuir o valor 1 para o elemento localizado na 2ª linha e 3ª coluna de uma matriz:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="manipulação-de-objetos.html#cb29-1"></a>minha_matriz[<span class="dv">2</span>,<span class="dv">3</span>] &lt;-<span class="dv">1</span></span>
+<span id="cb29-2"><a href="manipulação-de-objetos.html#cb29-2"></a>minha_matriz</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    6   11
+## [2,]    2    7    1
+## [3,]    3    8   13
+## [4,]    4    9   14
+## [5,]    5   10   15</code></pre>
+<p>Também é possível atribuir valores para toda a linha ou toda a coluna:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="manipulação-de-objetos.html#cb31-1"></a>minha_matriz[,<span class="dv">3</span>] &lt;-<span class="dv">21</span><span class="op">:</span><span class="dv">25</span>   <span class="co">#Irá atribuir os valores 21,22,23,24 e 25 para a terceira coluna da matriz</span></span>
+<span id="cb31-2"><a href="manipulação-de-objetos.html#cb31-2"></a>minha_matriz</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    6   21
+## [2,]    2    7   22
+## [3,]    3    8   23
+## [4,]    4    9   24
+## [5,]    5   10   25</code></pre>
 </div>
 </div>
 <div id="manipulação-de-listas" class="section level2">
 <h2><span class="header-section-number">6.3</span> Manipulação de Listas</h2>
+<p>Listas são objetos onde podemos armazenar elementos, vetores ou matrizes de diferentes classes.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="manipulação-de-objetos.html#cb33-1"></a>minha_lista&lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">vetor_numerico=</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,<span class="dt">texto=</span><span class="st">&quot;esse é um elemento de texto&quot;</span>,<span class="dt">matriz=</span>minha_matriz)</span>
+<span id="cb33-2"><a href="manipulação-de-objetos.html#cb33-2"></a>minha_lista</span></code></pre></div>
+<pre><code>## $vetor_numerico
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $texto
+## [1] &quot;esse é um elemento de texto&quot;
+## 
+## $matriz
+##      [,1] [,2] [,3]
+## [1,]    1    6   21
+## [2,]    2    7   22
+## [3,]    3    8   23
+## [4,]    4    9   24
+## [5,]    5   10   25</code></pre>
+<p>Então, o comando acima gerou uma lista de tamanho igual a 3. O primeiro elemento da lista é um vetor numérico, o segundo é um texto e o terceiro a matriz que criamos anteriormente.</p>
 </div>
 <div id="como-extrair-elementos-ou-objetos-de-uma-lista" class="section level2">
 <h2><span class="header-section-number">6.4</span> Como extrair elementos ou objetos de uma lista</h2>
+<p>Note que ao criar a lista, foram atribuídos nomes para cada elemento da lista, o primeiro foi chamado de <em>vetor_numero</em>, o segundo de <em>texto</em> e o terceiro de <em>matriz</em>.</p>
+<p>Então, esses nomes podem ser utilizados na extração dos elementos de uma lista.</p>
+<p>Para isso, usamos o símbolo <em>$</em>.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="manipulação-de-objetos.html#cb35-1"></a>minha_lista<span class="op">$</span>vetor_numerico</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p>O comando acima representa a extração do <em>vetor_numerico</em> que está dentro da lista <em>minha_lista</em>.</p>
+<p>Como o <em>vetor_numerico</em> é o primeiro elemento da lista, ele também pode ser extraído da seguinte forma:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="manipulação-de-objetos.html#cb37-1"></a>minha_lista[[<span class="dv">1</span>]]  <span class="co">#na extração em listas, usa-se colchetes duplos.</span></span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p>E como extrair elementos que estão dentro dos objetos <em>vetor_numero</em>, <em>texto</em> ou <em>matriz</em>?</p>
+<p>Suponha que você queira extrair o <em>terceiro</em> elemento dentro do <em>vetor_numero</em>:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="manipulação-de-objetos.html#cb39-1"></a><span class="co">#Primeiro acessamos o *vetor_numero* usando [[1]]</span></span>
+<span id="cb39-2"><a href="manipulação-de-objetos.html#cb39-2"></a><span class="co">#e depois acessamos o *terceiro elemento* usando [[3]]</span></span>
+<span id="cb39-3"><a href="manipulação-de-objetos.html#cb39-3"></a>minha_lista[[<span class="dv">1</span>]][[<span class="dv">3</span>]] </span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Ou, de forma equivalente:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="manipulação-de-objetos.html#cb41-1"></a>minha_lista<span class="op">$</span>vetor_numerico[[<span class="dv">3</span>]]</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>A extração dos elementos da matriz, que está dentro da lista <code>minha_lista</code>, é bem similar.</p>
+<p>Suponha que precise extrair o elemento que está na <em>terceira linha</em> e <em>segunda coluna</em> da matriz:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="manipulação-de-objetos.html#cb43-1"></a>minha_lista<span class="op">$</span>matriz[[<span class="dv">3</span>,<span class="dv">2</span>]]</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
 <div id="como-atribuir-valores-a-elementos-de-uma-lista" class="section level3">
 <h3><span class="header-section-number">6.4.1</span> Como atribuir valores a elementos de uma lista</h3>
+<p>Tanto para os vetores, matrizes e listas, a atribuição de valores funciona da mesma maneira que fazemos para extrair os dados. Porém, a diferença é que não vamos simplesmente pedir para o R mostrar os dados ou atribuí-los a algum objeto. Fazemos exatamente o contrário: atribuímos algum valor àquele elemento do vetor, matriz ou lista.</p>
+<p>No exemplo a seguir, a <em>matriz</em> recebe o valor 5 para a linha 4, coluna 3.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="manipulação-de-objetos.html#cb45-1"></a>minha_lista<span class="op">$</span>matriz[<span class="dv">4</span>,<span class="dv">3</span>] &lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb45-2"><a href="manipulação-de-objetos.html#cb45-2"></a>minha_lista<span class="op">$</span>matriz</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    6   21
+## [2,]    2    7   22
+## [3,]    3    8   23
+## [4,]    4    9    5
+## [5,]    5   10   25</code></pre>
+<p>Também podemos adicionar um objeto completamente novo para a nossa lista:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="manipulação-de-objetos.html#cb47-1"></a>novo_vetor&lt;-<span class="kw">c</span>(<span class="dv">50</span><span class="op">:</span><span class="dv">60</span>)</span>
+<span id="cb47-2"><a href="manipulação-de-objetos.html#cb47-2"></a>minha_lista<span class="op">$</span>novo_vetor&lt;-novo_vetor</span>
+<span id="cb47-3"><a href="manipulação-de-objetos.html#cb47-3"></a>minha_lista</span></code></pre></div>
+<pre><code>## $vetor_numerico
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $texto
+## [1] &quot;esse é um elemento de texto&quot;
+## 
+## $matriz
+##      [,1] [,2] [,3]
+## [1,]    1    6   21
+## [2,]    2    7   22
+## [3,]    3    8   23
+## [4,]    4    9    5
+## [5,]    5   10   25
+## 
+## $novo_vetor
+##  [1] 50 51 52 53 54 55 56 57 58 59 60</code></pre>
+<tr><center>
+    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
+  <img src="imagens/insta.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
+  <img src="imagens/youtube.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
+  </center></tr>
 
 </div>
 </div>

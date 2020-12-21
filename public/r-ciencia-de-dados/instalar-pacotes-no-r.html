@@ -24,7 +24,6 @@
 <meta name="author" content="Luís Otávio" />
 
 
-<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -260,14 +259,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.1.3" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-bolhas---bubble-chart"><i class="fa fa-check"></i><b>11.1.3</b> O Gráfico de Bolhas - Bubble Chart</a></li>
 <li class="chapter" data-level="11.1.4" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#o-gráfico-de-correlação"><i class="fa fa-check"></i><b>11.1.4</b> O gráfico de correlação</a></li>
 <li class="chapter" data-level="11.1.5" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#aperfeiçoando-o-gráfico"><i class="fa fa-check"></i><b>11.1.5</b> Aperfeiçoando o gráfico</a></li>
-<li class="chapter" data-level="11.1.6" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-1---acesso-a-api-do-twitter"><i class="fa fa-check"></i><b>11.1.6</b> PASSO 1 - ACESSO A API DO TWITTER</a></li>
-<li class="chapter" data-level="11.1.7" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-2---buscar-os-tweets-de-cada-repórter"><i class="fa fa-check"></i><b>11.1.7</b> PASSO 2 - BUSCAR OS TWEETS DE CADA REPÓRTER</a></li>
-<li class="chapter" data-level="11.1.8" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#passo-3---visualização-das-buscas-e-o-retweet"><i class="fa fa-check"></i><b>11.1.8</b> PASSO 3 - VISUALIZAÇÃO DAS BUSCAS E O RETWEET</a></li>
-<li class="chapter" data-level="11.1.9" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.9</b> Filtro de dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.10" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#excluir-dados-pelas-linhas-e-colunas"><i class="fa fa-check"></i><b>11.1.10</b> Excluir dados pelas linhas e colunas</a></li>
-<li class="chapter" data-level="11.1.11" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-combinando-a-função-which"><i class="fa fa-check"></i><b>11.1.11</b> Filtro de dados combinando a função which()</a></li>
-<li class="chapter" data-level="11.1.12" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtro-de-dados-usando-a-função-subset"><i class="fa fa-check"></i><b>11.1.12</b> Filtro de dados usando a função subset()</a></li>
-<li class="chapter" data-level="11.1.13" data-path="criando-gráficos-no-r.html"><a href="criando-gráficos-no-r.html#filtrar-usando-a-função-filter-e-select"><i class="fa fa-check"></i><b>11.1.13</b> Filtrar usando a função filter() e select()</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -292,17 +283,76 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="instalar-pacotes-no-r" class="section level1">
 <h1><span class="header-section-number"> 4</span> Instalar Pacotes no R</h1>
-<p>Placeholder</p>
+<p>O R é uma linguagem inicialmente dedicada a métodos estatísticos. Como a Estatística é uma ciência extremamente ampla, são os pacotes que permitem o R ser um software tão completo!</p>
+<p>Olha só:</p>
+<p>O R é utilizado por pessoas da área de economia, previsões do tempo, área de saúde, demografia, machine learning, deep learning e várias outras…</p>
+<p>Sendo que cada uma das áreas citadas ainda tem vários subnichos.</p>
+<p>Então o que acontece é o seguinte:</p>
+<p>existem milhares de pessoas ao redor do mundo que são muito boas em suas áreas e criam pacotes dentro do R para atender demandas específicas. Que, geralmente, ainda não tinham sido solucionadas de forma eficaz.</p>
+<p>Isso só é possível porque o R é um software Open Source. Isso significa que as pessoas podem contribuir para melhorar as funcionalidades do programa! Com certeza, isso é determinante para o R ser tão completo.</p>
+<p>O que estou falando é que se um especialista da sua área de uma universidade renomada publica um pacote no R, ele estará disponível para você usar no seu computador! Gratuitamente.</p>
+<p>Agora que você já entendeu o contexto, vamos definir o que é um pacote do R:</p>
+<p><strong>Um Pacote é um conjunto de funções dentro do R, geralmente relacionados a um tema específico.</strong></p>
+<p>Além disso, os pacotes também têm uma documentação. Essa documentação explica para o que serve cada função do pacote. Te explica como usar cada função e ainda fornece exemplos práticos de uso.</p>
 <div id="como-instalar-um-pacote-no-r-ou-rstudio" class="section level2">
 <h2><span class="header-section-number">4.1</span> Como instalar um pacote no R ou RStudio</h2>
+<p>Quando fazemos o download do R, também já estamos baixando os pacotes considerados básicos.</p>
+<p>Mas muitas vezes você vai precisar de um pacote específico, pode ser para fazer um gráfico mais bonito, para trabalhar com datas de uma forma mais eficiente ou para trabalhar com mais qualidade com o próprio tema do seu projeto.</p>
+<p>E para isso vamos fazer o download desse pacote, é muito simples!</p>
+<p>O <strong>ggplot2</strong> é um pacote muito usado para fazer gráficos mais elaborados, com grande capacidade de personalização.</p>
+<p>Vamos usá-lo aqui como exemplo.</p>
+<p>Existem três maneiras comuns para se instalar um pacote.</p>
+<p>As duas primeiras são as maneiras mais tradicionais. Já a terceira será utilizada quando o pacote não estiver disponível para download na rede do R.</p>
 <div id="usando-o-botão-de-instalação" class="section level3">
 <h3><span class="header-section-number">4.1.1</span> Usando o botão de instalação</h3>
+<p>Essa forma é muito intuitiva, clique na aba “Packages” (veja na imagem) e depois em “Install”. Irá abrir uma tela para você escolher o pacote que deseja instalar.</p>
+<p><img src="imagens/4_pacotes_botao_instalacao.png" /></p>
+<p>Escreva o nome o pacote e clique em “Install”. Simples assim! Mas ainda falta um detalhe.</p>
+<p><img src="imagens/4_pacotes_install.png" /></p>
+<p>Agora o pacote já está instalado no R, em sua biblioteca.</p>
+<p><strong>Mas falta um detalhe, precisamos ir lá na biblioteca e buscar esse pacote!</strong></p>
+<p>Para carregar o pacote instalado, basta executar o seguinte código:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="instalar-pacotes-no-r.html#cb1-1"></a><span class="kw">library</span>(ggplot2) <span class="co">#Esse exemplo irá carregar o pacote ggplot2, </span></span>
+<span id="cb1-2"><a href="instalar-pacotes-no-r.html#cb1-2"></a><span class="co">#então coloque o nome do pacote que você instalou e deseja carregar.</span></span></code></pre></div>
 </div>
 <div id="usando-o-comando-de-instalação" class="section level3">
 <h3><span class="header-section-number">4.1.2</span> Usando o comando de instalação</h3>
+<p>O primeiro passo é escrever o comando <code>install.packages("ggplot2")</code> e executar o código!</p>
+<p><img src="imagens/4_pacotes_comando_install.png" /></p>
+<p>Execute o código:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="instalar-pacotes-no-r.html#cb2-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>) <span class="co">#Esse exemplo irá instalar o pacote ggplot2, </span></span>
+<span id="cb2-2"><a href="instalar-pacotes-no-r.html#cb2-2"></a><span class="co"># então coloque o nome do pacote que você deseja instalar.</span></span></code></pre></div>
+<p>Depois que o código for executado, o pacote será instalado.</p>
+<p>Isso quer dizer que o pacote está instalado no R, em sua biblioteca.</p>
+<p>Mas também precisamos ir lá na biblioteca e buscar esse pacote.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="instalar-pacotes-no-r.html#cb3-1"></a><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>) <span class="co">#Esse exemplo irá carregar o pacote ggplot2,</span></span>
+<span id="cb3-2"><a href="instalar-pacotes-no-r.html#cb3-2"></a><span class="co"># então coloque o nome do pacote que você instalou e deseja carregar.</span></span></code></pre></div>
 </div>
 <div id="usando-o-devtools" class="section level3">
 <h3><span class="header-section-number">4.1.3</span> Usando o Devtools</h3>
+<p>A rede onde estão armazenados os pacotes do R é conhecida como CRAN.</p>
+<p>Em alguns casos, o pacote que você deseja instalar não estará disponível no CRAN.</p>
+<p>Há uma maneira muito simples de resolver isso. Vários desenvolvedores de pacotes os armazenam no <a href="https://www.github.com">Github</a>.</p>
+<p>Imagine que você esteja procurando no Google como solucionar um problema e encontre um pacote que resolverá sua questão, mas não está disponível no CRAN.</p>
+<p>Provavelmente o pacote está disponível no <strong>Github</strong> e poderá ser instalado usando o pacote <strong>Devtools</strong>.</p>
+<p>O primeiro passo é instalar o Devtools (que está disponível para ser instalada normalmente pela rede do R).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="instalar-pacotes-no-r.html#cb4-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
+<p><strong>O script a seguir deve ser adaptado ao pacote que você quiser instalar.</strong> Você o encontrará na página do Github do pacote que irá instalar. Provavelmente na seção <strong>Readme</strong>.</p>
+<p>Para exemplificar, vou instalar o pacote <strong>rCharts</strong>, que não está disponível para instalação no CRAN usando os primeiros métodos falados aqui.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="instalar-pacotes-no-r.html#cb5-1"></a><span class="kw">library</span>(devtools)</span>
+<span id="cb5-2"><a href="instalar-pacotes-no-r.html#cb5-2"></a><span class="kw">install_github</span>(<span class="st">&#39;ramnathv/rCharts&#39;</span>) <span class="co"># ramnathv é o usuário do Github que criou o pacote rCharts</span></span></code></pre></div>
+<p>Pronto. O comando acima irá instalar o pacote rCharts que não pode ser instalado pelas duas primeiras formas mostradas.</p>
+<p>Seguindo o mesmo raciocínio anterior, você precisará chamar o pacote antes de utilizá-lo:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="instalar-pacotes-no-r.html#cb6-1"></a><span class="kw">library</span>(rCharts)</span></code></pre></div>
+<tr><center>
+    <th><a href="https://www.instagram.com/_u/luisotavio.pro" target="_blank">
+  <img src="imagens/insta.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A" target="_blank">
+  <img src="imagens/youtube.png" alt="" style="height:42px;">
+</a></th>
+    <th><a href="https://www.luisotavio.pro" target="_blank"><b>www.luisotavio.pro</b></a></th>
+  </center></tr>
 
 </div>
 </div>
