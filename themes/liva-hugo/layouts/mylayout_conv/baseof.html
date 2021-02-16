@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}pt-BR{{ end }}">
-    {{- partial "head.html" . -}}
-    <head>
-        <!-- Event snippet for CADASTROU - AULA conversion page -->
-        <script>
-            gtag('event', 'conversion', {'send_to': 'AW-471443405/MIzmCLPN_vUBEM3P5uAB'});
-        </script>
-    </head>
+    {{- partial "head_conv.html" . -}}
     <body>
         {{- partial "preloader.html" . -}}
         {{- partial "header.html" . -}}
