@@ -9,9 +9,12 @@ type: semheader
 ---
 <img src="https://www.luisotavio.pro/images/gallery/6.jpg" height="150" alt="Foto Luís" align="right" style="margin: 0 1em 0 1em" />
 
-**Aula ao vivo toda segunda-feira às 20hs sobre Ciência de Dados.** 
+**Aula ao vivo SEGUNDA-FEIRA ÀS 20hs sobre Ciência de Dados.** 
 
 Aula para quem deseja iniciar em Ciência de Dados e transformar a sua carreira.
+
+
+**100% APLICÁVEL**
 
 ```{r,echo=FALSE}
 library(shiny)

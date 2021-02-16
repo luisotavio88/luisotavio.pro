@@ -5,7 +5,7 @@ date: '2020-11-09'
 slug: confirmacao-live
 categories: []
 tags: []
-type: mylayout
+type: mylayout_conv
 ---
 
 Sua participação está garantida na live!
@@ -15,3 +15,4 @@ Mas para garantir que você não vai esquecer, recomendo fortemente que você **
 Assim o Youtube irá te avisar da live quando ela começar!
 
 [**Aperte aqui e defina o lembrete da nossa live**](https://www.youtube.com/channel/UCC3Vw7R-fKS-uYXYRhJ983A/live)
+
