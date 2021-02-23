@@ -9,7 +9,7 @@ output: html_document
 
 [**Assistir a live de Análise de Agrupamentos**](https://www.youtube.com/watch?v=Qv2Yiz657WE){target="_blank"}
 
-- A Análise de agrupamentos também é chamada de Análise de Cluster ou de Análise de Conglomerados.
+#### A Análise de agrupamentos também é chamada de Análise de Cluster ou de Análise de Conglomerados.
 
 
 
@@ -48,11 +48,13 @@ Posts citados:
 - Precisamos de uma medida de **similaridade** ou **dissimilaridade**
 
 - Variáveis quantitativas - medidas de dissimilaridade (distância Euclidiana, Mahalanobis, Minkowski, etc)
-Exemplo: Clientes da loja RFM
+
+Exemplo: Clientes de uma loja (Método RFM)
 
 
 - Variáveis qualitativas - medidas de similaridade (concordância simples,  concordância de Jaccard)
-Exemplo: Pacientes médicos (bebe, fuma, exercício físico)
+
+Exemplo: Pacientes médicos (bebida alcoolica, fumante, exercício físico)
 
 ## Técnicas Hierárquicas
 - Número de grupos é definido depois da análise
