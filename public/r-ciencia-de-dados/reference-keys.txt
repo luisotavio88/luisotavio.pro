@@ -85,3 +85,9 @@ excluir-dados-pelas-linhas-e-colunas
 filtro-de-dados-combinando-a-função-which
 filtro-de-dados-usando-a-função-subset
 filtrar-usando-a-função-filter-e-select
+conteúdo-exclusivo-para-o-grupo-de-whatsapp---live-análise-de-agrupamentos-22022021
+análise-de-agrupamentos
+como-fazemos-para-agrupar-os-elementos
+técnicas-hierárquicas
+métodos-de-ligação-qual-o-critério-para-juntar-grupos
+mão-na-massa

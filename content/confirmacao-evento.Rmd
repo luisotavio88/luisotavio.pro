@@ -1,0 +1,11 @@
+---
+title: SEMANA DO CIENTISTA DE DADOS!
+author: ''
+date: '2020-02-20'
+slug: confirmacao-evento
+categories: []
+tags: []
+type: mylayout_evento
+---
+
+

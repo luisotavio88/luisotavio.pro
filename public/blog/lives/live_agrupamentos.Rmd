@@ -1,0 +1,129 @@
+---
+title: "Análise de agrupamentos"
+author: "luisotavio.pro"
+date: "22/02/2021"
+output: html_document
+---
+
+## Conteúdo exclusivo para o grupo de Whatsapp - Live Análise de Agrupamentos 22/02/2021
+
+[**Assistir a live de Análise de Agrupamentos**](https://www.youtube.com/watch?v=Qv2Yiz657WE){target="_blank"}
+
+- A Análise de agrupamentos também é chamada de Análise de Cluster ou de Análise de Conglomerados.
+
+
+
+Quais são os principais métodos de Machine Learning?
+
+- Aprendizado supervisionado: Regressão ou Classificação
+
+Regressão - Previsão de um valor contínuo
+
+Classificação - Classificar o elemento em uma categoria
+
+- Aprendizado não supervisionado: **Análise de agrupamentos**
+
+obs.: no aprendizado não supervisionado não existe um rótulo (variável resposta) para avaliar se a previsão foi correta ou não.
+
+# Análise de agrupamentos
+
+Objetivo: Dividir os elementos da amostra em grupos, de forma que os elementos do mesmo grupo sejam similares entre si para as variáveis do estudo e, ao mesmo tempo, sejam diferentes dos elementos dos outros grupos.
+
+Exemplos:
+
+- Agrupar produtos do Mercado com o mesmo posicionamento
+- Segmentar clientes de acordo com o perfil de consumo
+- Classificar cidades de acordo com suas características populacionais e economicas.
+- Google News - Separar notícias pelo mesmo tema
+
+Posts citados:
+
+[Análise de agrupamento para texto](https://www.luisotavio.pro/blog/aplicacao-de-ciencia-de-dados-nas-vagas-de-emprego/){target="_blank"}
+
+[Análise de agrupamento para segmentação de clientes](https://www.luisotavio.pro/blog/segmentacao-de-clientes-no-e-commerce/){target="_blank"}
+
+
+### Como fazemos para agrupar os elementos???
+
+- Precisamos de uma medida de **similaridade** ou **dissimilaridade**
+
+- Variáveis quantitativas - medidas de dissimilaridade (distância Euclidiana, Mahalanobis, Minkowski, etc)
+Exemplo: Clientes da loja RFM
+
+
+- Variáveis qualitativas - medidas de similaridade (concordância simples,  concordância de Jaccard)
+Exemplo: Pacientes médicos (bebe, fuma, exercício físico)
+
+## Técnicas Hierárquicas
+- Número de grupos é definido depois da análise
+- Técnicas aglomerativas (começa com n grupos) ou divisivas (começa com 1 grupo)
+
+### Métodos de ligação (qual o critério para juntar grupos???)
+
+- Ligação Simples -> a distância entre os clusters é a menor distância entre os elementos
+- Ligação Completa -> a distância entre os clusters é a maior distância entre os elementos
+- Média das distâncias
+- Centróide - > Ponto médio dentro do Grupo. A distância será a distância entre os centroides.
+- Ward -> agrupam-se os conglomerados que minimizam a variância dos grupos.
+
+
+## Mão na Massa
+
+```{r,warning=FALSE}
+data(iris) # carregando o conjunto de dados iris
+?iris # informações sobre o conjunto
+iris$Species<-NULL # excluindo a variável resposta
+iris <- data.frame(scale(iris)) # padronizando os valores
+
+agrupamento<-hclust(dist(iris)) # calculando o agrupamento para o conjunto de dados, método padrão = "completo"
+agrupamento
+```
+
+```{r}
+agrupamento<-hclust(method="centroid",dist(iris))# calculando o agrupamento para o conjunto de dados, método = "centroid"
+agrupamento
+```
+
+```{r}
+agrupamento<-hclust(dist(iris)) # calculando o agrupamento para o conjunto de dados, método padrão = "completo"
+plot(agrupamento, cex = 0.6) # dendograma
+rect.hclust(agrupamento, k = 3, border = 2:5) # circular os k grupos do dendograma
+```
+
+```{r}
+grupos <- cutree(agrupamento, k = 3) # grupo de cada um dos 150 elementos
+grupos
+```
+
+```{r}
+# Número de elementos em cada grupo
+table(grupos)
+```
+
+```{r,warning=FALSE,message=FALSE}
+library(factoextra) 
+fviz_cluster(list(data = iris, cluster = grupos)) #### Visualização das 2 primeiras dimensões da Análise de componentes principais do conjunto de dados.
+```
+
+```{r}
+fviz_nbclust(iris, FUN = hcut, method = "wss") 
+# Visualização do tradeoff entre soma de quadrados internos e número de grupos
+#wss = total within sum of square
+```
+
+
+## Técnicas Não-hierárquicas
+- O número de grupos é definido previamente
+
+### Kmeans
+
+O método de clusterização **K-means** classifica os objetos dentro de múltiplos grupos, de forma que a variação dentro do grupo seja minimizada pela soma dos quadrados das distâncias Euclidianas entre os itens e seus centróides.
+
+1 - é gerado k centróides aleatórios
+2 - Atribuição do Cluster - calcula a distância entre o ponto e cada centróide. Atribui o elemento para o grupo do centróide mais perto. (usando a dist. Euclidiana)
+3 - Movimentação dos centróides -	é calculada a média dos valores dos pontos de dados de cada cluster e o valor médio será o novo centróide
+4 - Otimização - as fases 2 e 3 são repetidas até o cluster se tornar estável ou algum critério de parada tenha sido atingido.
+
+```{r}
+kmeans(iris, centers=3, iter.max = 10) ## algoritmo k-means com 3 grupos e máximo de 10 iterações.
+```
