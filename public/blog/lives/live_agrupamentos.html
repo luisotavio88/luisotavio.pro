@@ -420,9 +420,8 @@ summary {
 <div id="conteúdo-exclusivo-para-o-grupo-de-whatsapp---live-análise-de-agrupamentos-22022021" class="section level2">
 <h2>Conteúdo exclusivo para o grupo de Whatsapp - Live Análise de Agrupamentos 22/02/2021</h2>
 <p><a href="https://www.youtube.com/watch?v=Qv2Yiz657WE" target="_blank"><strong>Assistir a live de Análise de Agrupamentos</strong></a></p>
-<ul>
-<li>A Análise de agrupamentos também é chamada de Análise de Cluster ou de Análise de Conglomerados.</li>
-</ul>
+<div id="a-análise-de-agrupamentos-também-é-chamada-de-análise-de-cluster-ou-de-análise-de-conglomerados." class="section level4">
+<h4>A Análise de agrupamentos também é chamada de Análise de Cluster ou de Análise de Conglomerados.</h4>
 <p>Quais são os principais métodos de Machine Learning?</p>
 <ul>
 <li>Aprendizado supervisionado: Regressão ou Classificação</li>
@@ -433,6 +432,7 @@ summary {
 <li>Aprendizado não supervisionado: <strong>Análise de agrupamentos</strong></li>
 </ul>
 <p>obs.: no aprendizado não supervisionado não existe um rótulo (variável resposta) para avaliar se a previsão foi correta ou não.</p>
+</div>
 </div>
 <div id="análise-de-agrupamentos" class="section level1">
 <h1>Análise de agrupamentos</h1>
@@ -451,9 +451,13 @@ summary {
 <h3>Como fazemos para agrupar os elementos???</h3>
 <ul>
 <li><p>Precisamos de uma medida de <strong>similaridade</strong> ou <strong>dissimilaridade</strong></p></li>
-<li><p>Variáveis quantitativas - medidas de dissimilaridade (distância Euclidiana, Mahalanobis, Minkowski, etc) Exemplo: Clientes da loja RFM</p></li>
-<li><p>Variáveis qualitativas - medidas de similaridade (concordância simples, concordância de Jaccard) Exemplo: Pacientes médicos (bebe, fuma, exercício físico)</p></li>
+<li><p>Variáveis quantitativas - medidas de dissimilaridade (distância Euclidiana, Mahalanobis, Minkowski, etc)</p></li>
 </ul>
+<p>Exemplo: Clientes de uma loja (Método RFM)</p>
+<ul>
+<li>Variáveis qualitativas - medidas de similaridade (concordância simples, concordância de Jaccard)</li>
+</ul>
+<p>Exemplo: Pacientes médicos (bebida alcoolica, fumante, exercício físico)</p>
 </div>
 <div id="técnicas-hierárquicas" class="section level2">
 <h2>Técnicas Hierárquicas</h2>
@@ -475,9 +479,8 @@ summary {
 <div id="mão-na-massa" class="section level2">
 <h2>Mão na Massa</h2>
 <pre class="r"><code>data(iris) # carregando o conjunto de dados iris
-?iris # informações sobre o conjunto</code></pre>
-<pre><code>## starting httpd help server ... done</code></pre>
-<pre class="r"><code>iris$Species&lt;-NULL # excluindo a variável resposta
+?iris # informações sobre o conjunto
+iris$Species&lt;-NULL # excluindo a variável resposta
 iris &lt;- data.frame(scale(iris)) # padronizando os valores
 
 agrupamento&lt;-hclust(dist(iris)) # calculando o agrupamento para o conjunto de dados, método padrão = &quot;completo&quot;

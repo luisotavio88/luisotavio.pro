@@ -71,7 +71,7 @@ Exemplo: Pacientes médicos (bebida alcoolica, fumante, exercício físico)
 
 ## Mão na Massa
 
-```{r,warning=FALSE}
+```{r,warning=FALSE,message=FALSE}
 data(iris) # carregando o conjunto de dados iris
 ?iris # informações sobre o conjunto
 iris$Species<-NULL # excluindo a variável resposta
