@@ -1,0 +1,142 @@
+---
+title: "O PASSO A PASSO PARA VOCÊ SE TORNAR UM CIENTISTA DE DADOS"
+author: "luisotavio.pro"
+date: "04/03/2021"
+output:
+  rmarkdown::html_document:
+    theme: lumen
+---
+
+(esse material complementar foi 100% produzido usando a linguagem R)
+
+## Conteúdo exclusivo para o grupo de Whatsapp - AULA 03 - O PASSO A PASSO PARA VOCÊ SE TORNAR UM CIENTISTA DE DADOS
+
+[**Clique aqui para assistir as aulas da semana do Cientista de Dados**](http://lp.luisotavio.pro/aulas){target="_blank"}
+
+
+### Perguntas recebidas
+
+- Fernando – Formei em história e não sei nada de programação e tenho vontade de estudar estatística, você acha que eu consigo?
+
+Na aula 2 citei dois exemplos de estudantes de Letras e Ciências Sociais, cursos que não tem a menor ligação com programação ou estatísticas e fizeram excelentes trabalhos.
+
+Programar pode ser realmente muito difícil em algumas áreas, como as áreas de segurança ou criptografia, por exemplo. Porém, a programação para Ciência de Dados é muito mais simples.
+
+O seu objetivo é transformar em código os conceitos de Ciência de Dados que irá aprender.
+
+- Ana Clara – Trabalho em uma pequena empresa, é possível aplicar Ciência de Dados?
+
+Com certeza. Os casos mais famosos são do Facebook, Netflix, Amazon ou Google. Essas empresas geram um impacto muito maior e por isso são os casos mais conhecidos de Ciência de Dados.
+
+Porém, as técnicas de Ciência de Dados podem ser utilizadas em qualquer empresa, de qualquer tamanho. Basta que ela tenha dados. Dados não são necessariamente tabelas com números. Também podem ser imagens ou texto.
+
+- Ricardo e Mateus – Quanto vai custar o curso?
+
+É uma formação profissional em Ciência de Dados e irá te preparar para ser um Cientista de Dados. Portanto, não será um curso barato. Os cursos similares custam entre 4 e 8 mil reais.
+
+Porém, teremos um bom desconto para a primeira turma **Ciência de Dados: do ZERO ao PRO**.
+
+- Pedro – Já olhei outros cursos de Ciência de Dados e todos que são completos tem entre 10 meses e 1 ano. Certeza que dá pra aprender tudo em 5 meses?
+
+O curso é sem enrolação, sem firulas. Então você irá aprender exatamente o que precisa saber para ter segurança e resolver problemas reais das empresas. Quem estiver comprometido com o método estará pronto para o mercado em até 5 meses sim. 
+
+# MÉTODO DO ZERO AO PRO
+
+### 1 – Introdução 
+
+- O que é ciência de dados, big data, machine learning, IA
+- R e RStudio
+- Todos os passos de um projeto de Ciência de Dados 
+
+### 2 -  Linguagem R 
+
+- Todos os vídeos da Playlist + E-book
+https://youtube.com/playlist?list=PLU2j52KzxuSzOyF2zLZt7BN4WX3PRz9Mj
+
+- Métodos para otimizar sua programação (incluindo for vs lapply)
+- Como criar funções na linguagem R
+- Como encontrar erros no seu código - Debugging
+- Melhores práticas e como criar repositórios no Github
+
+### 3 – Introdução a Estatística
+
+- Tipos de variáveis, escalas de medidas, tipos de gráficos, medidas de tendência central, histogramas, boxplots, medidas de dispersão, covariância e correlação
+- Probabilidade e valor esperado
+- Distribuições discretas e contínuas, normal, normal padrão, z-score, regra empírica, t-student, qui-quadrado, F
+- Tudo que você precisa saber sobre o p-valor, tipos de erros, selecionar hipóteses, realizar o teste para a média e para a proporção
+- Poder do teste, amostragem e bootstraping
+
+### 4 – Leitura e limpeza dos dados
+- Ler diferentes arquivos de dados (excel, csv, SQL)
+- Leitura de APIs
+- Como buscar informações em sites da Internet (Webscraping)
+- Limpeza dos dados (entenda cada variável com a qual você está trabalhando, identifique erros, valores ausentes e registros corrompidos.)
+
+### 5 – Análise Exploratória
+
+- Estatísticas Descritivas
+- Os melhores gráficos para explorar seus dados
+- Encontre padrões em seus dados por meio de visualizações/gráficos
+
+### 6 – Machine Learning (SERÁ bastante prática – casos reais)
+
+- Introdução ao Machine Learning
+- Métodos de Regressão
+- Métodos de Classificação
+- Métodos de Agrupamento
+- Como fazer o pré-processamento dos dados
+- Como garantir a qualidade dos resultados (Validação Cruzada)
+- Como corrigir o Overfitting (Regularização)
+- Como selecionar as melhores variáveis para o seu modelo
+
+### 7- O produto do seu projeto (Visualização de dados e/ou Produção)
+
+- Crie relatórios automatizados na linguagem R (RMarkdown)
+- Crie painéis interativos que impressionam
+- Crie APIs para disponilizar os resultados do seu modelo de Machine Learning (Plumber)
+
+### 8 – Projeto Final
+
+- Aplicações práticas do conteúdo estudado com problemas reais do Mercado de Trabalho.
+
+
+### Destaques finais
+
+- O curso **Ciência de Dados: do ZERO ao PRO** ainda terá mais dois conteúdos bônus que serão divulgados aqui no grupo no **domingo**.
+
+- As aulas ficarão gravadas na plataforma do curso - Você pode assistir quantas vezes quiser.
+
+- Material complementar com o conteúdo do curso.
+
+- Espaço para dúvidas na plataforma + mentoria de dúvidas (live mensal para dúvidas)
+
+- Meu objetivo com o curso: Criar *cases* de sucesso = pessoas que sabiam pouco ou NADA de programação e estatística e conquistaram a primeira vaga como Cientista de Dados.
+
+## CRONOGRAMA:
+
+As inscrições para o curso **Ciência de dados: do ZERO ao PRO** abrem na segunda-feira (08/03). 
+
+**Veja abaixo:**
+
+- **público geral** (caso ainda tenham vagas disponíveis):
+
+  - Segunda-feira (08/03) às 9 horas:
+  
+  Preço + Link de compra + Bônus
+
+- **Para quem está no Grupo Vip no Whatsapp**:
+
+  - Domingo (07/03)  às 9 horas:
+  
+  Preço + Bônus
+  
+  - Segunda-feira (08/03) às 8 horas:
+  
+  Link de compra
+
+
+Obrigado por acompanhar. Bora transformar a sua carreira.
+
+Vamo que vamo!
+
+Luís Otávio

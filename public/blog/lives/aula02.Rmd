@@ -1,8 +1,10 @@
 ---
 title: "TODAS AS ETAPAS DE UM PROJETO DE CIÊNCIA DE DADOS"
 author: "luisotavio.pro"
-date: "01/03/2021"
-output: html_document
+date: "03/03/2021"
+output:
+  rmarkdown::html_document:
+    theme: lumen
 ---
 
 (esse material complementar foi 100% produzido usando a linguagem R)

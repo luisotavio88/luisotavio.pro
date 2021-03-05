@@ -2,7 +2,9 @@
 title: "Ciência de Dados | A grande oportunidade"
 author: "luisotavio.pro"
 date: "01/03/2021"
-output: html_document
+output:
+  rmarkdown::html_document:
+    theme: lumen
 ---
 
 (esse material complementar foi 100% produzido usando a linguagem R)
