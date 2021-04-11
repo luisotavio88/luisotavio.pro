@@ -7,7 +7,13 @@ output:
   theme: lumen
 ---
 
+
 ### Projeto luisotavio.pro
+<center>
+```{r, out.width = "300px",echo=F}
+knitr::include_graphics("vaga_estagio.jpeg")
+```
+</center>
 
 A Ciência de Dados tem mudado drasticamente o mercado mundial. Seja com a criação de produtos baseados em inteligência artificial guiada por dados, por otimizações que resultam em benefícios para o consumidor ou economia para as empresas.
 
