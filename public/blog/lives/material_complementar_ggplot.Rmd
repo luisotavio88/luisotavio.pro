@@ -1,0 +1,405 @@
+---
+title: "Como criar gráficos usando o ggplot | Tutorial Completo ggplot2"
+author: "luisotavio.pro"
+date: "19/03/2021"
+output:
+  rmarkdown::html_document:
+    includes:
+      in_header: pixel_senha_ggplot.html
+theme: lumen
+---
+
+(esse material complementar foi 100% produzido usando a linguagem R)
+
+Esse é um material complementar, ou seja, não substitui você assistir a live completa.
+
+[**Clique aqui para assistir a live**](https://youtu.be/e8seIwgj77c){target="_blank"}
+
+
+Objetivo: te ensinar todos os conceitos para fazer qualquer gráfico usando a biblioteca ggplot2
+
+**ggplot2** é uma biblioteca da linguagem R que te permite construir vários e vários tipos de gráficos diferentes.
+
+
+MAIOR VANTAGEM NA MINHA OPINIÃO => 
+os gráficos possuem uma capacidade de customização absurda!
+
+Isso só é possível porque os gráficos são compostos por vários elementos independentes.
+
+### Os 3 elementos de QUALQUER gráfico ggplot
+
+1 - OS DADOS
+
+2 - ESTÉTICA -> quais serão as variáveis de cada eixo
+
+3 - OBJETO GEOMÉTRICO - Como as observações serão representadas no gráfico.
+Geralmente se utiliza a função geom*** para criar essa camada.
+
+
+### PARTE PRÁTICA
+
+Primeiro passo:
+instalar a biblioteca ```ggplot2```, caso você não tenha feito antes
+
+```{r,eval=FALSE}
+install.packages("ggplot2")
+```
+
+
+#### carregar a biblioteca
+```{r,warning=FALSE,message=FALSE}
+library(ggplot2)
+```
+
+
+Cabeçalho dos dados
+```{r,message=F,warning=F}
+library(knitr)
+kable(head(mtcars))
+```
+
+
+#### NOSSO PRIMEIRO GRÁFICO
+
+Lembre-se: **o gráfico ggplot é composto por 3 elementos**
+
+1 - Dados = mtcars
+
+2 - Estética (definição dos eixos) = aes(x = wt, y = hp)
+
+3 - Marcas geográficas = geom_point()
+
+```{r,message=F,warning=F}
+ggplot(mtcars, aes(x = wt, y = hp)) + 
+  geom_point()
+```
+
+
+#### Fazendo Histogramas (gráfico de frequência) para variáveis contínuas e categóricas
+
+```{r,message=F,warning=F}
+kable(head(iris))
+ggplot(iris, aes(x=Sepal.Length, fill=Species)) +
+  geom_histogram( color="#e9ecef", alpha=0.6, position = 'identity')
+```
+
+O parâmetro _alpha_ define a transparência da cor.
+
+
+#### Construindo um gráfico tradicional de colunas ou barras:
+
+```{r,message=F,warning=F}
+### alterando o tema dos nossos gráficos
+library(dplyr)
+theme_set(theme_bw())
+```
+
+```{r,message=F,warning=F}
+## calcular o peso médio dos carros por cilindros
+meus_dados<-mtcars %>%
+  group_by(cyl) %>%
+  summarise(peso = mean(wt)) %>%
+  ungroup()
+```
+
+```{r,message=F,warning=F}
+### como fazer um gráfico de coluna
+ggplot(meus_dados, aes(x=cyl, y=peso)) + 
+  geom_bar(stat="identity", width=0.8, fill="tomato3") 
+```
+
+O parâmetro width define a largura das colunas. O parâmetro fill define a cor que irá preencher as colunas.
+
+O comando acima (função geom_bar com stat="identity") é equivalente a função geom_col.
+
+```{r,message=F,warning=F}
+ggplot(meus_dados, aes(x=cyl, y=peso)) + 
+  geom_col(width=1.5, fill="tomato3") 
+```
+
+#### Como fazer para definir as escalas dos eixos?
+
+Delimitando as amplitudes do eixo x e do eixo y.
+
+```{r,message=F,warning=F}
+ggplot(iris, aes(x=Sepal.Length, y=Petal.Length)) + 
+  geom_point() +
+  # garantir que o gráfico tem o ponto (0,0)
+  expand_limits(x = 0, y = 0) +
+  # escolhendo as amplitudes dos eixos
+  xlim(0,8) + ylim(0,8)
+```
+
+#### Como adicionar a reta de regressão e o r^2
+
+```{r,message=F,warning=F}
+# install.packages("ggpmisc")
+library(ggpmisc)
+# Transformar a variável cilindros em categórica
+mtcars$cyl <- as.factor(mtcars$cyl)
+```
+
+### Criando nosso gráfico
+
+```{r,message=F,warning=F}
+g<-ggplot(data = mtcars, aes(x = wt, y = hp)) +
+  #suavização
+  geom_smooth(method = "lm", se=FALSE, formula = y ~ x) +
+  # escrever a formula do modelo + r2
+  stat_poly_eq(formula = y ~ x, 
+               aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")), 
+               parse = TRUE) +    
+  #adicionar os pontos e colorir de acordo com o número de cilindros
+  geom_point(aes(colour = cyl)) 
+```
+
+#### adicione o texto que você quiser
+
+```{r,message=F,warning=F}
+g + geom_text(x = 3, y = 200, label = "texto que você quiser escrever")
+```
+
+#### VOCÊ PODE ESCOLHER UM TEMA PARA O SEU GRÁFICO
+
+
+```{r,message=F,warning=F}
+g + theme_bw() 
+```
+
+```{r,message=F,warning=F}
+g + theme_linedraw()
+```
+
+```{r,message=F,warning=F}
+g + theme_light()
+```
+
+```{r,message=F,warning=F}
+g + theme_dark()
+```
+
+```{r,message=F,warning=F}
+g + theme_minimal()
+```
+
+```{r,message=F,warning=F}
+g + theme_classic()
+```
+
+#### Criar as coordenadas do gráfico de acordo com uma variável ou duas variáveis
+
+Criando gráficos para cada categoria da variável ```am```
+
+```{r,message=F,warning=F}
+g + facet_grid( ~ am)
+```
+
+Criando gráficos para cada combinação das variáveis ```am``` e ```gear```
+
+```{r,message=F,warning=F}
+g + facet_grid(gear ~ am)
+```
+
+#### Gráfico de dispersão com 1 grupo - Adicionar TÍTULO
+
+```{r,message=F,warning=F}
+ggplot(mtcars, aes(wt, mpg, colour = factor(cyl))) + 
+  geom_point() + 
+  #Adicionar título e subtítulo
+  labs(title = "Aqui o seu título", subtitle = "Aqui o seu subtítulo")+
+  #título do eixo x
+  xlab(label = "Peso do carro") + 
+  #título do eixo y
+  ylab(label = "Milhas por galão") +
+  #centralizando o título
+  theme(plot.title = element_text(hjust = 0.5)) +
+  #centralizando o subtítulo
+  theme(plot.subtitle = element_text(hjust = 0.5))+
+  #mudando a cor do título
+  theme(plot.title = element_text(color = "blue"))
+```
+
+#### Opções de customização do texto 
+
+```{r,eval=F}
+?element_text
+```
+
+#### PIRAMIDE ETÁRIA
+
+Carregar os dados da pirâmide etária
+
+```{r,message=F,warning=F}
+source("dados.R")
+kable(head(data))
+```
+
+```{r,message=F,warning=F}
+ggplot(data)+
+  # Gerar a estrutura do gráfico e colorir por sexo
+  geom_bar(aes(x=Age,y=PopPerc,fill=Gender),stat='identity')+
+  # Girar o gráfico
+  coord_flip()+
+  # arrumar valores do eixo x
+  scale_y_continuous(breaks=seq(-10,10,1),
+                     labels=function(x){paste(abs(x),'%')})+
+  # títulos
+  labs(x='',y='Population (%)',
+       title='Gráfico Etário - Brasil',
+       caption='Fonte: PopulationPyramid.net')
+```
+
+#### Como criar Boxplots
+#####  definir tema clássico
+```{r,message=F,warning=F}
+theme_set(theme_classic())
+```
+
+
+```{r,message=F,warning=F}
+g <- ggplot(iris, aes(x = Species, y = Sepal.Length))
+g + geom_boxplot(varwidth=T, fill="tomato") +
+  ### girar os valores do eixo x
+  theme(axis.text.x = element_text(angle=60))+
+  # ajustar os valores verticalmente
+  theme(axis.text.x = element_text(vjust=0.6,angle=60))+
+  ## remover título, valores e tracinho do eixo x  
+  theme(axis.title.x=element_blank(), #remove o titulo
+        axis.text.x=element_blank(), #remove o texto do valor
+        axis.ticks.x=element_blank()) #remove o tracinho
+```
+
+#### BÔNUS 1
+
+```{r,message=F,warning=F}
+# install.packages("ggthemes")
+library(ggthemes)
+```
+
+Nossos dados:
+```{r,message=F,warning=F}
+kable(head(ToothGrowth))
+```
+
+Construindo boxplots para os grupos de _dose_ pela variável _len_
+
+```{r,message=F,warning=F}
+ggplot(ToothGrowth, aes(y = len,group=dose)) + 
+  geom_boxplot()
+```
+
+#### Transformar a variável _dose_ de numérica para categórica
+
+```{r,message=F,warning=F}
+ToothGrowth$dose <- as.factor(ToothGrowth$dose)
+```
+
+
+#### usando o tema da biblioteca ggthemes 
+```{r,message=F,warning=F}
+ggplot(ToothGrowth, aes(y = len, group=dose)) +
+  geom_boxplot(aes(fill = dose)) +
+  theme_economist() + scale_fill_economist()
+```
+
+
+#### BÔNUS 2
+
+Como circular um mapa e marcar os pontos que você deseja
+
+```{r,eval=F}
+devtools::install_github("dkahle/ggmap")
+devtools::install_github("hrbrmstr/ggalt")
+```
+
+```{r,message=F,warning=F}
+library(ggmap)
+library(ggalt)
+```
+
+Você precisa entrar no site do google, fazer o seu cadastro e copiar o seu token:
+
+[**https://cloud.google.com/maps-platform/**](https://cloud.google.com/maps-platform/){target="_blank"}
+
+Link da biblioteca:
+
+[**https://github.com/dkahle/ggmap**](https://github.com/dkahle/ggmap){target="_blank"}
+
+#### Fazer autenticação
+```{r,eval=F}
+register_google(key = "[your key]", write = TRUE)
+```
+
+#### Coordenadas de Belo Horizonte
+```{r,message=F,warning=F}
+bh <-  geocode("Belo Horizonte")  # longitude e latitude
+```
+
+#### Buscar os mapas
+##### Google Satellite Map
+
+```{r,message=F,warning=F}
+bh_sat_map <- qmap("Belo Horizonte", zoom=12, source = "google", maptype="satellite")  
+```
+
+##### Google Road Map
+
+```{r,message=F,warning=F}
+bh_road_map <- qmap("Belo Horizonte", zoom=12, source = "google", maptype="roadmap") 
+```
+
+##### Google Hybrid Map
+
+```{r,message=F,warning=F}
+bh_hybrid_map <- qmap("Belo Horizonte", zoom=12, source = "google", maptype="hybrid") 
+```
+
+
+#####  Pegar coordenadas de alguns lugares da cidade
+
+```{r,message=F,warning=F}
+lugares_bh <- c("Padre Eustáquio",
+                "Savassi",
+                "Estádio Mineirão")
+```
+
+```{r,message=F,warning=F}
+lugares_bh_loc <- geocode(lugares_bh)  # long e lat
+lugares_bh_loc
+```
+
+##### MAPA COM AS MARCAÇÕES
+
+```{r,message=F,warning=F}
+# escolha um dos três abaixo: bh_hybrid_map ou bh_sat_map ou bh_road_map
+
+# bh_hybrid_map+
+# bh_sat_map+
+bh_road_map +
+  
+### marcar os pontos escolhidos
+geom_point(aes(x=lon, y=lat),
+data = lugares_bh_loc, 
+alpha = 0.7, 
+size = 7, 
+color = "tomato") + 
+## Criar o círculo 
+geom_encircle(aes(x=lon, y=lat),
+data = lugares_bh_loc, 
+size = 2, color = "blue")
+```
+
+
+#### LIVRO DO GGPLOT -> [**https://ggplot2-book.org/**](https://ggplot2-book.org/){target="_blank"}
+
+________________________________________    
+
+Espero que tenha gostado do material complementar!
+
+Continue acompanhando o meu trabalho e me ajude a divulgar para mais pessoas! :)
+
+Blog: [**luisotavio.pro**](https://www.luisotavio.pro){target="_blank"}
+
+Instagram: [**instagram.com/luisotavio.pro**](https://instagram.com/luisotavio.pro){target="_blank"}
+
+Youtube: [**youtube.com/c/luisotaviopro**](https://youtube.com/c/luisotaviopro){target="_blank"}
