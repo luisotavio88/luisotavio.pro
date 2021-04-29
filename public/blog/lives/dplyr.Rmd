@@ -1,0 +1,463 @@
+---
+title: "Como manipular dados com o dplyr |Tutorial completo"
+author: "luisotavio.pro"
+date: "26/03/2021"
+output:
+  rmarkdown::html_document:
+    includes:
+      in_header: pixel_senha_dplyr.html
+theme: lumen
+---
+
+(esse material complementar foi 100% produzido usando a linguagem R)
+
+Esse é um material complementar, ou seja, não substitui você assistir a live completa.
+
+[**Clique aqui para assistir a live**](https://youtu.be/qKGdU5yAK8s){target="_blank"}
+
+
+## Objetivo: você irá aprender TODOS os macetes de MANIPULAÇÃO DE DADOS
+
+**A biblioteca dplyr é a MELHOR biblioteca para manipualação/transformação dos dados.**
+
+-> Simples e rápido
+
+-> Organização (operador pipe)
+
+-> Input é uma tibble e Output é uma tibble
+
+A biblioteca dplyr faz parte do framework tidyverse. Saiba mais em:
+[https://www.tidyverse.org/](https://www.tidyverse.org/){target="_blank"}
+
+### Primeiro passo
+
+```{r,warning=F,message=F}
+# install.packages("dplyr")  #Instalar o pacote dplyr
+# install.packages("tidyverse")  #Instalar o pacote tidyverse
+
+# Para usar a biblioteca dplyr, você pode instalar ela diretamente OU instalar o tidyverse.
+
+library(dplyr) #executar essa linha 
+library(tidyverse) #ou essa
+
+# install.packages("nycflights13")
+library(nycflights13) # biblioteca com o nosso conjunto de dados
+
+```
+
+
+### Voos da grande NY no ano de 2013
+
+```{r}
+# Conjunto de dados que usamos na live
+flights
+```
+
+
+### DPLYR
+
+OS PRINCIPAIS VERBOS:
+
+- Filter
+- Arrange
+- Select
+- Mutate
+- Rename
+- Summarise 
+
+
+Características em comum de todas as funções acima:
+
+- O primeiro argumento é SEMPRE o conjunto de dados (tibble)
+
+- Todos podem ser combinados com o group_by
+
+
+
+### O OPERADOR PIPE
+
+Maneira tradicional
+
+```{r}
+numeros <- 0:100
+mean(numeros)
+```
+
+Operador pipe
+
+```{r}
+numeros %>%
+mean()
+```
+
+
+### A Função filter
+
+IRÁ retornar as linhas (observações) que satisfaçam as condições estabelecidas
+
+#### Como filtrar apenas os vôos de Abril?
+
+```{r}
+flights %>%
+filter(month == 4)
+```
+
+#### Como filtrar os vôos de Janeiro OU Dezembro?
+
+```{r}
+flights %>%
+filter(month == 1 | month == 12)
+```
+
+#### Como filtrar os vôos dos primeiros 15 dias de julho?
+
+```{r}
+flights %>%
+filter(month == 7 & day <= 15)
+```
+
+
+
+### DADOS AGRUPADOS + FILTRO
+
+#### Como filtrar os voos que atrasaram acima da média de cada mês?
+
+```{r}
+atraso_mes<-flights %>% 
+group_by(month) %>% 
+filter(dep_delay > mean(dep_delay, na.rm = TRUE))
+```
+
+### DADOS AGRUPADOS + FILTRO DE MAIORES VALORES 
+
+#### Como filtrar os 2 voos mais atrasados de cada mês?
+
+```{r}
+flights %>% 
+group_by(month) %>% 
+slice_max(dep_delay,n = 2)
+```
+
+O equivalente para buscar os valores mínimos é a função slice_min()
+
+### Criar conjunto de dados
+
+```{r}
+teste <- c(0,1,1,1,0,1,1,1,1)
+grupo <- c(1,1,1,2,2,2,3,3,3)
+dados <- tibble(teste,grupo)
+```
+
+### FILTRO + AGRUPAMENTO -> condição ALGUM
+
+#### Como filtrar os grupos que tem valor 0 para a variável teste?
+
+```{r}
+dados %>% 
+group_by(grupo) %>% 
+filter(any(teste == 0))
+```
+
+### FILTRO + AGRUPAMENTO -> condição TODOS
+
+#### Como filtrar os grupos que tem todos os valores da variável teste iguais a 1?
+
+```{r}
+dados %>% 
+group_by(grupo) %>% 
+filter(all(teste == 1))
+```
+
+#### Funções úteis para se combinar com a função filter
+
+-   ==   filtrar os valores iguais a ...
+
+-   ex: >,>=,< ou <= filtrar valores maiores, maiores ou iguais, menores ou menores ou iguais
+
+-   &, |, ! ou xor() "e","ou","diferente", "ou exclusivo".
+
+-   is.na()  #verifica se o valor é NA
+
+-   between()   - entre os valores
+-   near()      - valores próximos, você define a tolerância
+
+
+### A FUNÇÃO ARRANGE - ORDENAR O SEU CONJUNTO DE DADOS
+
+#### ordem crescente
+
+```{r}
+flights %>%
+arrange(dep_time)
+```
+
+#### ordem decrescente
+
+```{r}
+flights %>%
+arrange(desc(dep_time))
+```
+
+#### ordenando por mais de 1 variável
+
+```{r}
+flights %>%
+arrange(desc(month),desc(day),dep_time)
+```
+
+
+### A FUNÇÃO SELECT
+
+#### Selecionar as colunas pelo nome
+
+```{r}
+flights %>%
+select(year,month,day,arr_time)
+```
+
+#### excluir as colunas pelo nome
+
+```{r}
+ncol(flights)
+
+flights%>%
+select(-day,-month)
+
+ncol(flights%>%
+select(-day,-month))
+
+```
+
+#### selecionar colunas pela classe
+
+```{r}
+iris<-as_tibble(iris)  
+iris
+```
+
+```{r}
+iris %>%
+select(where(is.numeric))
+#### OU
+iris %>%
+select_if(is.numeric)
+```
+
+#### selecionar as colunas que contém um texto no nome
+
+Escolhendo as colunas pelo sufixo
+
+```{r}
+iris %>% 
+select(ends_with("Width"))
+```
+
+Use starts_with() para definir o prefixo 
+
+```{r}
+iris %>% 
+select(starts_with("Petal"))
+```
+
+#### Escolha as colunas que possuem um determinado texto
+
+```{r}
+iris %>% 
+select(contains("Petal"))
+```
+
+#### matches permite expressões regex
+
+```{r}
+iris %>% 
+select(matches("Petal|Sepal"))
+```
+
+### A FUNÇÃO MUTATE
+
+A diferença entre o mutate e o transmute
+
+#### mutate -> somente adiciona novas variáveis OU transforma variáveis existentes  
+
+#### multiplicando Sepal.Width x Sepal.Length
+```{r}
+iris <- iris %>%
+mutate(medida_sepala = Sepal.Length*Sepal.Width) #nova variável
+```
+
+#### atraso acumulado - medir o atraso acumulativo para o atraso dos voos
+
+```{r}
+flights %>%
+arrange(year,month,day,dep_time) %>% # ordenar os voos 
+select(year,month,day,dep_time,dep_delay) %>% # selecionar colunas
+mutate(tempo_perdido = cumsum(dep_delay)) #nova variável
+```
+
+#### transmute -> adiciona novas variáveis e exclui as outras 
+
+```{r}
+flights %>%
+arrange(year,month,day) %>% # ordenar os voos 
+transmute(tempo_perdido = cumsum(dep_delay)) #nova variável
+```
+
+### A função mutate_if - TRANSFORMAÇÃO CONDICIONAL
+```{r}
+iris
+```
+
+#### criando uma função
+```{r}
+multiplica_2<- function(x) (x*2)
+```
+
+Exemplo:
+```{r}
+multiplica_2(5)
+
+```
+
+
+#### Conjunto iris
+```{r}
+iris
+```
+
+```{r}
+iris %>% 
+mutate_if(is.double, multiplica_2)
+```
+
+
+#### A FUNÇÃO RENAME
+-> Altera os nomes, porém a ordem das colunas é mantida
+
+```{r}
+flights %>%
+rename(ano = year,mes = month,dia = day)
+```
+
+
+#### todos as letras maiúsculas
+```{r}
+flights %>%
+rename_with(toupper)
+```
+
+
+
+#### todas as letras minúsculas
+```{r}
+flights %>%
+rename_with(tolower)
+```
+
+#### Substituir "_" por "." no nome da variável
+
+```{r}
+flights %>%
+rename_with(~ gsub("_", ".", .x))
+```
+
+### A FUNÇÃO SUMMARISE
+
+Funções úteis:
+Media central: mean(), median()
+Variação: sd(), IQR(), mad()
+Amplitude: min(), max(), quantile()
+Posição: first(), last(), nth(),
+Frequencia: n(), n_distinct()
+Lógicas: any(), all()
+
+#### Tempo médio de atraso por mês
+
+grupo -> mês
+
+estatística -> média dos atrasos
+
+```{r}
+flights %>%
+group_by(month) %>%
+summarise(atraso_medio = mean(dep_delay,na.rm = T),
+atraso_desvio = sd(dep_delay,na.rm = T)) %>%
+  ungroup()
+```
+
+#### quantidade de atrasos maiores que 30 minutos por mês
+
+```{r}
+flights %>%
+filter(dep_delay>30) %>%
+group_by(month) %>%
+summarise(qnt_atrasos = n()) %>%
+ungroup()
+```
+
+
+### Bônus Tibble
+
+Um tibble é o data.frame MODERNO.
+
+As duas principais diferenças entre um tibble e um data frame:
+
+
+#### 1 - Impressão da tabela:
+
+- Tibble sempre mostra as 10 primeiras linhas 
+- Somente as colunas que couberem na tela.
+- Mostra a classe de cada variável
+
+```{r}
+class(iris)
+iris
+class(as_tibble(iris))
+as_tibble(iris)
+```
+
+
+#### 2 - Extração 
+
+Extraindo pelo nome:
+```{r}
+head(flights$year) #resultado é um vetor
+head(flights[["year"]])  #resultado é um vetor
+```
+
+Extraindo pela posição:
+```{r}
+head(flights[[1]])
+```
+
+Usando o %>% (pipe)
+```{r}
+head(flights %>% .$year)
+head(flights %>% .[["year"]])
+```
+
+
+
+#### O tibble não permite escrever o nome incompleto
+
+```{r}
+class(mtcars)
+head(mtcars$mp)
+mtcars<-as_tibble(mtcars)
+head(mtcars$mp)
+```
+
+________________________________________    
+
+Espero que tenha gostado do material complementar!
+
+Continue acompanhando o meu trabalho e me ajude a divulgar para mais pessoas! :)
+
+Blog: [**luisotavio.pro**](https://www.luisotavio.pro){target="_blank"}
+
+Instagram: [**instagram.com/luisotavio.pro**](https://instagram.com/luisotavio.pro){target="_blank"}
+
+Youtube: [**youtube.com/c/luisotaviopro**](https://youtube.com/c/luisotaviopro){target="_blank"}
+
+
+
+
