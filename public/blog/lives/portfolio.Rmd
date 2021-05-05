@@ -151,6 +151,6 @@ Titanic, Iris, Mtcars, House Prices (Boston).
 
 - Curso focado na transformação da sua carreira
 
-- **Se inscreva em [clicando aqui](http://lp.luisotavio.pro/intensivao-ciencia-dados){target="_blank"} e entre no grupo de Whatsapp específico para o Intensivão Ciência de Dados.**
+- **Se inscreva [clicando aqui](http://lp.luisotavio.pro/intensivao-ciencia-dados){target="_blank"} e entre no grupo de Whatsapp específico para o Intensivão Ciência de Dados.**
 
 - Te espero na segunda-feira às 20h.
