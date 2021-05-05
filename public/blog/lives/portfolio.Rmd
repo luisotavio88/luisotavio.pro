@@ -1,0 +1,156 @@
+---
+title: "Portfólio de Ciência de Dados | Tudo que você precisa saber"
+author: "luisotavio.pro"
+date: "03/05/2021"
+output:
+  rmarkdown::html_document:
+    includes:
+      in_header: pixel_senha_portfolio.html
+theme: lumen
+---
+
+(esse material complementar foi 100% produzido usando a linguagem R)
+
+Esse é um material complementar, ou seja, não substitui você assistir a live completa.
+
+[**Clique aqui para assistir a live**](https://youtu.be/VDlnGZCwf1g){target="_blank"}
+
+Tópicos abordados:
+
+- Quem precisa de um portfólio em Ciência de Dados?
+
+- Tópicos que você deve colocar no seu Portfólio
+
+- Onde encontro dados para fazer meus projetos?
+
+- Quais projetos você deve colocar?
+
+- Qual ferramenta usar para criar o meu Portfólio?
+
+- Dicas Extras
+
+
+### O objetivo de um portfólio: mostrar para o recrutador que você consegue resolver problemas tão complexos como os que você vai encontrar na empresa.
+
+
+## 1 - Quem precisa de um portfólio em Ciência de Dados?
+
+Quanto mais novo:
+
+- Menos networking
+
+- Menos resultados
+
+- Menos cursos você tem
+
+- Mais você precisará de um portfólio
+
+
+Projetos, você precisa fazer Projetos!
+
+- Você vai aprender muito mais rápido
+
+- Você consegue realmente mostrar o que você usou e qual problema resolveu
+
+- Fazendo um projeto para o seu portfólio, você se esforçará mais que o normal
+
+
+## 2 - Tópicos que você deve colocar no seu Portfólio
+
+[https://themes.gohugo.io//theme/academic/#about](https://themes.gohugo.io//theme/academic/#about){target="_blank"}
+
+Facilite a vida do recrutador e conte tudo em uma página
+
+1 - Sobre você
+
+2 - Links importantes
+
+3 - Interesses
+
+4 - Educação
+
+5 - Experiência
+
+6 - Projetos
+
+7 - Posts
+
+8 - Certificados
+
+9 - Contatos
+
+
+## 3 - Onde encontro dados para fazer meus projetos?
+
+- Webscraping (sites que permitem)
+
+    verificar no robots.txt
+    
+- APIs (twitter, instagram, google/youtube)
+
+- Kaggle
+
+- [https://dados.gov.br/](https://dados.gov.br/){target="_blank"}
+
+- [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/){target="_blank"}
+
+
+## 4 - Quais projetos que você deve colocar?
+
+Portfólio mínimo:
+(sem considerar que você optou por focar em uma área específica)
+
+- Regressão
+
+- Classificação
+
+- Análise de agrupamentos
+
+(pelo menos um dos projetos deve ser do início ao fim, incluindo captura dos dados, análise exploratória completa e um painel interativo)
+
+Resultado vs ferramentas
+
+Qualidade vs Quantidade
+
+- Faça pelo menos um projeto completo, do início ao fim - todos os passos muito bem feitos.
+
+- Fazer um projeto de forma profunda valerá mais do que fazer 5 de forma rasa
+
+- Você pode fazer outros que não sejam do primeiro passo até o último. 
+Se você escolher fazer uma parte do projeto (criação de modelos de Machine Learning, por exemplo), também aprofunde nessa etapa e não pule etapas.
+
+- Faça o seu projeto ser reproduzível 
+
+
+## 5 - Qual ferramenta usar para criar o meu Portfólio?
+
+- R blogdown (hugo) + [Netlify](https://www.netlify.com/){target="_blank"}
+
+- [Github](https://github.com/){target="_blank"}
+
+Tutorial completo da biblioteca blogdown (em inglês):
+
+[https://bookdown.org/yihui/blogdown/](https://bookdown.org/yihui/blogdown/){target="_blank"}
+
+
+[Post - Start blogging in 5 minutes on Netlify with Hugo and blogdown](https://www.r-bloggers.com/2019/09/start-blogging-in-5-minutes-on-netlify-with-hugo-and-blogdown-september-2019-update/){target="_blank"}
+
+
+## Dicas extras:
+
+- Evite problemas muito comuns:
+Titanic, Iris, Mtcars, House Prices (Boston).
+
+- Explique bem o que está sendo feito, os conceitos e as decisões que você tomou.
+
+- Explique de forma que um não-Cientista de Dados consiga entender.
+
+# Curso de Ciência de Dados para iniciantes:
+
+- Será gratuito somente para quem assistir ao vivo
+
+- Curso focado na transformação da sua carreira
+
+- **Se inscreva em [clicando aqui](http://lp.luisotavio.pro/intensivao-ciencia-dados){target="_blank"} e entre no grupo de Whatsapp específico para o Intensivão Ciência de Dados.**
+
+- Te espero na segunda-feira às 20h.
