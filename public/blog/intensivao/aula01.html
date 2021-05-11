@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>INTENSIVÃO CIÊNCIA DE DADOS</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Luís Otávio" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script language=javascript>
+    senha = 'soocomeco';
+    senhadig = prompt("Digite a senha","")
+    if (senha != senhadig){
+    alert('Senha incorreta. A senha foi disponibilizada durante a aula');
+    top.location.href='https://youtu.be/e8seIwgj77c';
+    }
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# INTENSIVÃO CIÊNCIA DE DADOS
+## ⚔<br/>Curso completo para iniciantes em Ciência de Dados
+### Luís Otávio
+### 2021/05/10
+
+---
+
+class: center, inverse
+background-image: url('imagens/valeu_.jpg')
+
+# Ciência de Dados: do ZERO ao PRO
+
+&lt;style&gt;
+.remark-slide-content {
+  font-size: 25px;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.bg_airbnb {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_airbnb::before {    
+      content: "";
+      background-image: url('https://images.contentstack.io/v3/assets/bltb428ce5d46f8efd8/blt658bec41bb26fbcc/5e72666ea833ab066c0f103e/BeloRauschBG.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_facebook {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_facebook::before {    
+      content: "";
+      background-image: url('https://www.teahub.io/photos/full/10-109853_facebook-background.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_spotify {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_spotify::before {    
+      content: "";
+      background-image: url('https://images.hdqwalls.com/download/spotify-logo-1y-2560x1440.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_uber {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_uber::before {    
+      content: "";
+      background-image: url('https://api.time.com/wp-content/uploads/2016/02/uber-logo.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_amazon {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_amazon::before {    
+      content: "";
+      background-image: url('http://selectmyspace.com/wp-content/uploads/2018/07/3-Amazing-Amazon-HQ2-Contender-Cities--1080x675.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_fracasso {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_fracasso::before {    
+      content: "";
+      background-image: url('imagens/fracasso.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+}
+
+.bg_aprender {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_aprender::before {    
+      content: "";
+      background-image: url('imagens/aprender.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+}
+
+.bg_presente {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_presente::before {    
+      content: "";
+      background-image: url('imagens/presente.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_jornada {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_jornada::before {    
+      content: "";
+      background-image: url('imagens/jornada.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_comprometimento {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_comprometimento::before {    
+      content: "";
+      background-image: url('imagens/comprometimento.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_ciclo {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ciclo::before {    
+      content: "";
+      background-image: url('imagens/ciclo.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_senha {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_senha::before {    
+      content: "";
+      background-image: url('imagens/senha.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_carreira {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_carreira::before {    
+      content: "";
+      background-image: url('imagens/carreira.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+
+.my-one-page-font h1 {
+  font-size: 35px;
+  color: white
+}
+
+.my-one-page-white h2{
+  font-size: 40px;
+  color: white
+}
+
+.my-one-page-small-font {
+  font-size: 15px;
+  color: white;
+}
+
+.my-one-page-giga {
+  font-size: 50px;
+}
+
+.remark-slide-number {
+  font-size: 0pt;
+  margin-bottom: -110.6px;
+  margin-right: 10000px;
+  color: #FFFFFF; /* white */
+  opacity: 0; /* default: 0.5 */
+}
+
+.my-one-page-letra-menor {
+  font-size: 20px;
+}
+
+&lt;/style&gt;
+
+
+
+
+
+---
+class: my-one-page-letra-menor
+
+# O que pode acontecer com você
+
+--
+.pull-left[
+- Conhecer práticas das melhores empresas do mercado
+]
+--
+.pull-right[
+- Ter ideias de como solucionar problemas usando dados
+]
+--
+.pull-left[
+- Conhecer novas formas de captação de dados
+]
+--
+.pull-right[
+- Saber exatamente como preparar os dados antes de aplicar seu modelo de Machine Learning
+]
+--
+.pull-left[
+- Qual técnica de Machine Lerning usar
+]
+--
+.pull-right[
+- Conhecer todas as etapas de um projeto de Ciência de Dados
+]
+--
+.pull-left[
+- Descobrir exatamente o que fazer para limpar um conjunto de dados]
+--
+.pull-right[
+- Passos para executar uma exploração de dados completa] 
+--
+.pull-left[
+- Importância de uma cultura orientada a dados
+]
+--
+.pull-right[
+- As ferramentas e melhores formas para visualizar dados
+]
+--
+
+- Como comunicar os resultados do seu projeto
+
+
+---
+class: center, inverse
+background-image: url('imagens/rumoaopro_.jpg')
+
+---
+class: center, inverse
+background-image: url('imagens/escada.jpeg')
+
+---
+class: center, inverse
+background-image: url('imagens/escada_seta.jpg')
+
+---
+class: center, inverse
+background-image: url('imagens/escada_gratuito.jpg')
+
+---
+class: bg_presente
+# Meu presente para você
+
+--
+
+🔑🔑🔑🔑🔑
+Senha no final da aula
+
+---
+class: bg_jornada
+
+# Jornada do Aluno
+
+---
+class: bg_aprender
+
+# O que você vai aprender
+
+- Aplicações práticas da Ciência de Dados
+
+- O passo a passo para fazer um projeto de Ciência de Dados
+
+- Formas de coleta de dados
+
+- Como fazer uma Análise Exploratória excepcional
+
+- Machine Learning
+
+- Visualização de Dados
+
+- A carreira do Cientista de Dados
+
+---
+class: bg_comprometimento
+
+# Qual o seu comprometimento?
+
+--
+
+## EU ESTOU 100% COMPROMETIDO
+
+---
+class: inverse, bg_fracasso
+
+
+# Dificuldades profissionais
+
+### Em qual você se encaixa?
+
+--
+
+1 - Um robô pode fazer o seu trabalho atual?
+
+--
+
+2 - Não sei programar, então não posso ser um Cientista de Dados
+
+--
+
+3 - Não tenho faculdade
+
+--
+
+4 - Não tenho dinheiro para fazer bons cursos
+
+--
+
+5 - Meu mercado de trabalho é ruim
+
+--
+
+6 - Não tenho pessoas próximas para pedir ajuda
+
+--
+
+7 - O meu trabalho não é tão importante para a empresa
+
+---
+class: center, inverse
+background-image: url('imagens/inimigo.jpg')
+
+# Esse é o meu inimigo
+
+
+---
+class: center, inverse
+background-image: url('imagens/ciencia_de_dados_empresas.jpeg')
+
+# Ciência de Dados na prática
+
+
+---
+class: bg_facebook
+
+# Facebook
+
+- Como você ficou sabendo do Intensivão Ciência de Dados?
+
+--
+
+- Estudo do comportamento de seu usuário, buscando insights para melhorar o seu produto
+
+--
+
+- Você sabe o que é Deep Learning?
+
+  - Reconhecimento facial e análise de texto
+  
+  - Interesse das pessoas (Facebook é uma empresa de publicidade)
+  
+  - Relação entre fotos e textos
+  
+  - Achar pessoas com perfis parecidos
+  
+
+---
+class: bg_airbnb
+
+# Airbnb
+
+Será que uma empresa de hospitalidade que não possui nem propriedades, possui dados? 
+
+--
+
+Fontes de dados do Airbnb:
+
+- Informações dos viajantes
+
+- Informações do proprietário
+
+- Registros de hospedagens
+
+- Tráfego do site
+
+---
+class: bg_airbnb
+
+# Airbnb
+
+### Quais os objetivos do time de cientista de dados?
+
+- Fornecer os melhores resultados de pesquisa aos seus clientes. As preferências do usuário são combinadas com as características do host e do imóvel.
+
+- Auxiliar o time de marketing
+
+---
+class: bg_airbnb
+
+# Airbnb
+
+Em 2014, o Airbnb descobriu que os usuários de alguns países clicavam no link do bairro, fuçavam as fotos e não faziam nenhuma reserva.
+
+Para resolver esse problema, o Airbnb lançou uma versão diferente para os usuários desses países e substituiu os links de vizinhança pelos principais destinos turísticos. 
+
+A solução gerou uma melhoria de 10% na taxa de aumento para esses usuários.
+
+---
+class: bg_spotify
+
+# Spotify
+
+### Como o Spotify te indica uma música nova?
+
+--
+
+- É gerado quase 1TB por dia somente com informações dos usuários
+
+- Os dados são usados para gerar playlists e recomendações personalizadas para cada usuário
+
+- O algortimo pode, por exemplo, buscar a playlist de um usuário e encontrar playlists semelhantes. Então, o algoritmo de _collaborative filtering_ irá recomendar ao usuário as músicas que estão em playlists semelhantes, mas não estão na sua própria.
+
+---
+class: bg_spotify
+
+# Spotify
+
+### Principais fontes de dados do Spotify:
+
+- Playlists (quais músicas devem ser tratadas como similares)
+
+- Histórico individual (qual a ordem as músicas são tocadas)
+
+- Likes, deslikes e "pular" nas radios do Spotify (informações sobre as combinações de músicas)
+
+---
+class: bg_uber
+
+# Uber
+
+### Fontes de Dados do Uber:
+
+- Informações dos motoristas
+
+- Informações dos consumidores
+
+- Informações das corridas
+
+---
+class: bg_uber
+
+# Uber
+
+### Preço da corrida
+
+- Varia de acordo com o tempo e distância
+
+- Algortimos que irão avaliar o trânsito e condições do tempo
+
+- Preço dinâmico: oferta e demanda. 
+
+--
+
+### Curiosidades:
+
+- Plataforma _Michelangelo_: Os times do Uber conseguem de forma simples e prática criar protótipos e colocar em produção soluções de Machine Learning
+
+- Funcionalidade de carona no uber.
+
+---
+class: bg_amazon
+
+# Amazon
+
+### Transformação do E-commerce com Ciência de Dados:
+
+--
+
+- Uso de Ciência de Dados para melhorar a satisfação do consumidor
+
+--
+
+- Sistema de recomendação para aumento das vendas (collaborative filtering)
+
+--
+
+- A recomendação pode ser por perfil de compra similar a outros usuários ou pela avaliação dos produtos.
+
+--
+
+- Previsão da demanda de seus produtos por região, assim enviam os produtos para o depósito mais próximo.
+
+--
+
+- Otimização dos preços: atividade do usuário, histórico dos pedidos, preços dos concorrentes, estoque do produto, etc
+
+--
+
+- Detecção de compras ou vendedores fraudulentos
+
+
+---
+class: bg_ciclo, my-one-page-small-font
+# As etapas de um projeto completo
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Adaptado de:
+
+Wickham, H. and G. Grolemund (2016). R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 
+
+---
+# Obtenção dos Dados
+
+--
+
+- Excel
+
+--
+
+- Banco de Dados
+
+--
+
+- WebScraping
+
+--
+
+- APIs
+---
+class: bg_ciclo
+# Etapa de Limpeza
+
+---
+# Limpeza dos dados
+
+- Cada linha do seu conjunto de dados é uma observação 
+
+- Cada coluna é uma variável
+
+- Cada célula é um valor
+
+
+|                  |  mpg| cyl| disp|  hp| drat|    wt|  qsec| vs| am| gear| carb|
+|:-----------------|----:|---:|----:|---:|----:|-----:|-----:|--:|--:|----:|----:|
+|Mazda RX4         | 21.0|   6|  160| 110| 3.90| 2.620| 16.46|  0|  1|    4|    4|
+|Mazda RX4 Wag     | 21.0|   6|  160| 110| 3.90| 2.875| 17.02|  0|  1|    4|    4|
+|Datsun 710        | 22.8|   4|  108|  93| 3.85| 2.320| 18.61|  1|  1|    4|    1|
+|Hornet 4 Drive    | 21.4|   6|  258| 110| 3.08| 3.215| 19.44|  1|  0|    3|    1|
+|Hornet Sportabout | 18.7|   8|  360| 175| 3.15| 3.440| 17.02|  0|  0|    3|    2|
+
+
+---
+# Limpeza dos dados
+
+- Formato que você precisa dos dados (_pivoting_)
+
+--
+
+Formato amplo
+
+
+```r
+library(datarium)
+knitr::kable(head(marketing,5))
+```
+
+
+
+| youtube| facebook| newspaper| sales|
+|-------:|--------:|---------:|-----:|
+|  276.12|    45.36|     83.04| 26.52|
+|   53.40|    47.16|     54.12| 12.48|
+|   20.64|    55.08|     83.16| 11.16|
+|  181.80|    49.56|     70.20| 22.20|
+|  216.96|    12.96|     70.08| 15.48|
+
+---
+# Limpeza dos dados
+
+Formato longo 
+
+
+```r
+library(tidyverse)
+longer&lt;-marketing %&gt;% 
+  pivot_longer(c("youtube","facebook","newspaper"), names_to = "midia", values_to = "investimento")
+knitr::kable(head(longer,5))
+```
+
+
+
+| sales|midia     | investimento|
+|-----:|:---------|------------:|
+| 26.52|youtube   |       276.12|
+| 26.52|facebook  |        45.36|
+| 26.52|newspaper |        83.04|
+| 12.48|youtube   |        53.40|
+| 12.48|facebook  |        47.16|
+
+---
+# Limpeza dos dados
+
+### Separação dos valores de uma coluna
+
+
+```r
+knitr::kable(head(table3,5))
+```
+
+
+
+|country     | year|rate              |
+|:-----------|----:|:-----------------|
+|Afghanistan | 1999|745/19987071      |
+|Afghanistan | 2000|2666/20595360     |
+|Brazil      | 1999|37737/172006362   |
+|Brazil      | 2000|80488/174504898   |
+|China       | 1999|212258/1272915272 |
+
+---
+# Limpeza dos dados
+
+### Separação dos valores de uma coluna
+
+
+```r
+table3&lt;- table3 %&gt;% 
+  separate(rate, into = c("Casos", "População"), sep = "/")
+knitr::kable(head(table3,5))
+```
+
+
+
+|country     | year|Casos  |População  |
+|:-----------|----:|:------|:----------|
+|Afghanistan | 1999|745    |19987071   |
+|Afghanistan | 2000|2666   |20595360   |
+|Brazil      | 1999|37737  |172006362  |
+|Brazil      | 2000|80488  |174504898  |
+|China       | 1999|212258 |1272915272 |
+
+---
+# Limpeza dos dados
+
+### Valores ausentes
+
+- Valores NA
+
+- Células vazias
+
+--
+
+### O que fazer?
+
+- Substituir o valor faltante (imputação)
+
+- Excluir a observação com dados faltantes
+
+---
+class: bg_ciclo
+# Etapa de Transformação
+
+---
+# Transformação dos dados
+
+--
+
+- Criar novas variáveis
+
+    - combinar variáveis já existentes
+    - criar variável categórica usando filtros
+    - transformar variáveis já existentes
+    - calcular estatísticas específicas para cada grupo
+    - criar variável lógica usando filtros
+    
+--
+
+- Ordenar os Dados
+
+--
+
+- Selecionar as colunas
+
+--
+
+- Criar grupos
+
+
+---
+class: bg_ciclo
+# Etapa de Visualização
+
+---
+# Visualização
+
+--
+
+- Encontrar padrões nos dados que não esperamos
+
+--
+
+- Criar novas hipóteses
+
+--
+
+- Pode nos mostrar que precisamos coletar outros dados ou estamos investigando algo que não faz sentido
+
+--
+
+- Não é escalável. Precisa de um humano para interpretar
+
+---
+class: bg_ciclo
+# Etapa de Modelagem
+
+---
+# Criação de Modelos
+
+--
+
+- Os modelos servem para responder as nossas perguntas
+
+--
+
+- Fácil de escalar
+
+--
+
+- Todos os modelos tem seus pressupostos 
+
+--
+
+- Sinais e Ruídos
+
+---
+# Criação de Modelos
+
+### Dados de Treino e Dados de Teste
+
+--
+
+- Para testar um modelo, você precisa usar dados independentes!
+
+- ou seja: quando você for avaliar o seu modelo, você não pode usar os mesmos dados que usou para ajustá-lo.
+
+--
+
+- Dividir o conjunto de dados:
+      - Dados de Treino (70%)
+      - Dados de Teste (30%)
+      
+---
+class: bg_ciclo
+# Etapa de Comunicação
+
+---
+# Comunicação
+
+- Você precisa tornar todo o seu trabalho útil
+
+--
+
+- Falar a linguagem de quem irá consumir seus resultados:
+    - Chefe
+    - Cliente
+    - Site
+    
+--
+
+- Relatórios
+
+--
+
+- Painéis Interativos
+
+--
+
+- Resultados do seu modelo de Machine Learning
+
+---
+class: bg_carreira, my-one-page-white
+# Aula 4 
+
+## O plano para a sua carreira
+
+---
+class: bg_senha,my-one-page-white
+# Senha do material complementar
+
+## soocomeco
+
+
+---
+class: bg_airbnb
+# Fim do Módulo 1
+
+### Te vejo amanhã às 20h
+## Módulo 2
+
+![](imagens/aula2.png)
+
+#### Marque na sua agenda e ative o lembrete do Youtube
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
