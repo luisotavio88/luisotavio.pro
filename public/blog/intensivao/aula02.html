@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>INTENSIVÃO CIÊNCIA DE DADOS - AULA 02</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Luís Otávio" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script language=javascript>
+    senha = 'explorador';
+    senhadig = prompt("Digite a senha","")
+    if (senha != senhadig){
+    alert('Senha incorreta. A senha foi disponibilizada durante a aula');
+    top.location.href='https://www.youtube.com/watch?v=2ctLoFvZl8U';
+    }
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# INTENSIVÃO CIÊNCIA DE DADOS - AULA 02
+## ⚔<br/>Curso completo para iniciantes em Ciência de Dados
+### Luís Otávio
+### 2021/05/11
+
+---
+
+class: center, inverse
+background-image: url('imagens/valeu_.jpg')
+
+# Ciência de Dados: do ZERO ao PRO
+
+&lt;style&gt;
+.remark-slide-content {
+  font-size: 25px;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.bg_airbnb {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_airbnb::before {    
+      content: "";
+      background-image: url('https://images.contentstack.io/v3/assets/bltb428ce5d46f8efd8/blt658bec41bb26fbcc/5e72666ea833ab066c0f103e/BeloRauschBG.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_ml {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ml::before {    
+      content: "";
+      background-image: url('imagens/machine_learning.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_rumoaopro {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_rumoaopro::before {    
+      content: "";
+      background-image: url('imagens/rumoaopro_.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_ny {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ny::before {    
+      content: "";
+      background-image: url('imagens/ny.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_ny_fosco {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ny_fosco::before {    
+      content: "";
+      background-image: url('imagens/ny.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_form {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_form::before {    
+      content: "";
+      background-image: url('imagens/formulario.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_armadilha {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_armadilha::before {    
+      content: "";
+      background-image: url('imagens/armadilha.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_fracasso {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_fracasso::before {    
+      content: "";
+      background-image: url('imagens/fracasso.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+}
+
+.bg_aprender {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_aprender::before {    
+      content: "";
+      background-image: url('imagens/aprender.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+}
+
+.bg_presente {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_presente::before {    
+      content: "";
+      background-image: url('imagens/presente.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_jornada {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_jornada::before {    
+      content: "";
+      background-image: url('imagens/jornada.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_comprometimento {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_comprometimento::before {    
+      content: "";
+      background-image: url('imagens/comprometimento.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_ciclo {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ciclo::before {    
+      content: "";
+      background-image: url('imagens/ciclo.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_senha {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_senha::before {    
+      content: "";
+      background-image: url('imagens/senha.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_carreira {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_carreira::before {    
+      content: "";
+      background-image: url('imagens/carreira.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+
+.my-one-page-font h1 {
+  font-size: 35px;
+  color: white
+}
+
+.my-one-page-white h2{
+  font-size: 40px;
+  color: white
+}
+
+.my-one-page-small-font {
+  font-size: 15px;
+  color: white;
+}
+
+.my-one-page-giga {
+  font-size: 50px;
+}
+
+.remark-slide-number {
+  font-size: 0pt;
+  margin-bottom: -110.6px;
+  margin-right: 10000px;
+  color: #FFFFFF; /* white */
+  opacity: 0; /* default: 0.5 */
+}
+
+.my-one-page-letra-menor {
+  font-size: 20px;
+}
+
+&lt;/style&gt;
+
+
+
+
+
+---
+class: my-one-page-letra-menor
+
+# O que pode acontecer com você
+
+--
+.pull-left[
+- Conhecer práticas das melhores empresas do mercado
+]
+--
+.pull-right[
+- Ter ideias de como solucionar problemas usando dados
+]
+--
+.pull-left[
+- Conhecer novas formas de captação de dados
+]
+--
+.pull-right[
+- Saber exatamente como preparar os dados antes de aplicar seu modelo de Machine Learning
+]
+--
+.pull-left[
+- Qual técnica de Machine Lerning usar
+]
+--
+.pull-right[
+- Conhecer todas as etapas de um projeto de Ciência de Dados
+]
+--
+.pull-left[
+- Descobrir exatamente o que fazer para limpar um conjunto de dados]
+--
+.pull-right[
+- Passos para executar uma exploração de dados completa] 
+--
+.pull-left[
+- Importância de uma cultura orientada a dados
+]
+--
+.pull-right[
+- As ferramentas e melhores formas para visualizar dados
+]
+--
+
+- Como comunicar os resultados do seu projeto
+
+---
+class: bg_jornada
+
+# Jornada do Aluno
+
+---
+class: center, inverse
+background-image: url('imagens/rumoaopro_.jpg')
+
+---
+class: center, inverse
+background-image: url('imagens/escada.jpeg')
+
+---
+class: center, inverse
+background-image: url('imagens/escada_gratuito.jpg')
+
+---
+
+class: center, inverse
+background-image: url('imagens/escada_seta.jpg')
+
+---
+class: bg_presente
+# Meu presente para você
+
+--
+
+🔑🔑🔑🔑🔑
+Senha no final da aula
+
+---
+
+class: bg_aprender
+
+# O que você vai aprender
+
+- Apicações práticas da Ciência de Dados
+
+- O passo a passo para fazer um projeto de Ciência de Dados
+
+- Formas de coleta de dados
+
+- Desafios comuns na limpeza de dados
+
+- Como fazer uma Análise Exploratória 
+
+- Machine Learning
+
+- Visualização de Dados
+
+- A carreira do Cientista de Dados
+
+---
+
+class: bg_aprender
+
+# O que você vai aprender
+
+- ✅ Aplicações práticas da Ciência de Dados
+
+- ✅ O passo a passo para fazer um projeto de Ciência de Dados
+
+- ✅ Formas de coleta de dados
+
+- ✅ Desafios comuns na limpeza de dados
+
+- Como fazer uma Análise Exploratória 
+
+- Machine Learning
+
+- Visualização de Dados
+
+- A carreira do Cientista de Dados
+
+---
+class: bg_comprometimento
+
+# Qual o seu comprometimento?
+
+--
+
+## EU ESTOU 100% COMPROMETIDO
+
+---
+class: center, inverse
+background-image: url('imagens/inimigo.jpg')
+# Esse é o meu inimigo
+
+--
+
+Ciência de Dados é resolver o problema das empresas usando dados.
+
+---
+class: bg_armadilha
+
+# Armadilhas da Ciência de Dados
+
+--
+
+1 - Assumir que os seus dados que você recebeu estão prontos
+
+--
+
+2 - Não explorar o seu conjunto de dados antes de criar modelos
+
+--
+
+3 - Interpretação errada entre correlação e causalidade
+
+--
+
+4 - Achar o modelo perfeito
+
+--
+
+5 - Não ter uma base de comparação (grupo controle)
+
+--
+
+6 - Ignorar a visão do especialista
+
+--
+
+7 - Tornar o trabalho muito complexo
+
+--
+
+8 - Automatizar e não monitorar
+
+---
+class: bg_form
+
+# Formulário
+
+---
+class: bg_ny, my-one-page-white
+# Estudo com os dados do Airbnb
+
+--
+
+## Explorar os dados do Airbnb para a Cidade de Nova Iorque
+
+---
+class: bg_ny_fosco
+# Fonte de dados
+
+Os dados foram buscados na Plataforma Kaggle.
+
+Veja mais informações em:
+
+[https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data]()
+
+---
+class: bg_ny_fosco
+
+# Análise Exploratória - Perguntas
+
+--
+
+Qual o preço médio para cada tipo de oferta?
+
+--
+
+Qual é o preço médio por região?
+
+--
+
+Qual a quantidade de ofertas por região?
+
+--
+
+Há alguma relação entre o tipo de acomodação e a região?
+
+--
+
+Quais as variáveis se relacionam com o preço?
+
+---
+class: bg_ny_fosco
+# Leitura dos dados
+
+
+```r
+library(readr)
+library(knitr)
+
+airbnb_ny &lt;- read_delim("./conjunto_de_dados/AB_NYC_2019.csv", 
+                          "\t", escape_double = FALSE, trim_ws = TRUE)
+
+head(airbnb_ny)
+```
+
+```
+## # A tibble: 6 x 16
+##      id nome_apto host_id host_nome localizacao_ger~ bairro latitude longitude
+##   &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1  2539 Clean &amp; ~    2787 John      Brooklyn         Kensi~     40.6     -74.0
+## 2  2595 Skylit M~    2845 Jennifer  Manhattan        Midto~     40.8     -74.0
+## 3  3647 THE VILL~    4632 Elisabeth Manhattan        Harlem     40.8     -73.9
+## 4  3831 Cozy Ent~    4869 LisaRoxa~ Brooklyn         Clint~     40.7     -74.0
+## 5  5022 Entire A~    7192 Laura     Manhattan        East ~     40.8     -73.9
+## 6  5099 Large Co~    7322 Chris     Manhattan        Murra~     40.7     -74.0
+## # ... with 8 more variables: tipo_acomodacao &lt;chr&gt;, preco &lt;dbl&gt;,
+## #   min_diarias &lt;dbl&gt;, n_avaliacoes &lt;dbl&gt;, ultima_avaliacao &lt;date&gt;,
+## #   avaliacoes_por_mes &lt;dbl&gt;, propriedades_host_n &lt;dbl&gt;,
+## #   disponibilidade_365 &lt;dbl&gt;
+```
+
+---
+class: bg_ny_fosco
+# Limpeza de valores incoerentes
+
+
+```r
+library(dplyr)
+# remover valores de preço igual a 0
+airbnb_ny &lt;-airbnb_ny %&gt;%
+  filter(preco &gt;0)
+
+# Frequencia do tipo de acomodação
+kable(table(airbnb_ny$tipo_acomodacao))
+```
+
+
+
+|Var1            |  Freq|
+|:---------------|-----:|
+|Entire home/apt | 25164|
+|Private room    | 22268|
+|Shared room     |  1154|
+
+---
+class: bg_ny_fosco
+# Preço Médio por Acomodação/região
+
+
+```r
+library(ggplot2)   
+qplot(localizacao_geral, preco, data = airbnb_ny, 
+      geom="boxplot", fill = tipo_acomodacao)
+```
+
+---
+class: bg_ny_fosco
+# Preço Médio por Acomodação/região
+
+![](aula02_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+class: bg_ny_fosco,my-one-page-font
+# Histogramas dos preços por Tipo de acomodação
+
+
+```r
+ggplot(airbnb_ny, aes(x=preco, fill=tipo_acomodacao)) +
+  geom_histogram( color="#e9ecef", alpha=0.8, position = 'identity',bins=70)
+```
+
+![](aula02_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+---
+class: bg_ny_fosco
+# Preço por tipo de apartamento
+
+
+```r
+# Preço por tipo de apartamento
+preco_tipo &lt;- airbnb_ny %&gt;%
+  group_by(tipo_acomodacao) %&gt;%
+  summarise(media_preco = mean(preco))
+
+ggplot(preco_tipo, aes(x=tipo_acomodacao, y=media_preco)) + 
+  geom_col(width=0.5, fill="#290b52")
+```
+
+---
+class: bg_ny_fosco
+# Preço por tipo de apartamento
+
+![](aula02_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+
+---
+class: bg_ny_fosco
+# Transformar para o formato amplo
+
+
+```r
+## Tipo de apartamento por região
+acomodacao_regiao&lt;-airbnb_ny %&gt;%
+  group_by(localizacao_geral,tipo_acomodacao) %&gt;%
+  summarise(n = n())
+
+library(tidyr)
+acomodacao_regiao&lt;- acomodacao_regiao %&gt;% 
+    pivot_wider(names_from = tipo_acomodacao,
+                values_from = "n")
+kable(head(acomodacao_regiao))
+```
+
+
+---
+class: bg_ny_fosco
+# Transformar para o formato amplo
+
+
+|localizacao_geral | Entire home/apt| Private room| Shared room|
+|:-----------------|---------------:|------------:|-----------:|
+|Bronx             |             378|          650|          60|
+|Brooklyn          |            9510|        10107|         411|
+|Manhattan         |           13015|         7953|         479|
+|Queens            |            2088|         3370|         195|
+|Staten Island     |             173|          188|           9|
+
+---
+class: bg_ny_fosco
+# Stats por local e tipo
+
+
+```r
+## Tipo de apartamento por região
+acomodacao_regiao&lt;-airbnb_ny %&gt;%
+  group_by(localizacao_geral,tipo_acomodacao) %&gt;%
+  summarise(n = n())
+kable(head(acomodacao_regiao))
+```
+
+---
+class: bg_ny_fosco
+# Stats por local e tipo
+
+
+|localizacao_geral |tipo_acomodacao |     n|
+|:-----------------|:---------------|-----:|
+|Bronx             |Entire home/apt |   378|
+|Bronx             |Private room    |   650|
+|Bronx             |Shared room     |    60|
+|Brooklyn          |Entire home/apt |  9510|
+|Brooklyn          |Private room    | 10107|
+|Brooklyn          |Shared room     |   411|
+
+---
+class: bg_ny_fosco
+# Transformar para o formato amplo
+
+
+```r
+library(tidyr)
+acomodacao_regiao&lt;- acomodacao_regiao %&gt;% 
+    pivot_wider(names_from = tipo_acomodacao,values_from = "n")
+kable(acomodacao_regiao)
+```
+
+
+---
+class: bg_ny_fosco
+# Transformar para o formato amplo
+
+
+|localizacao_geral | Entire home/apt| Private room| Shared room|
+|:-----------------|---------------:|------------:|-----------:|
+|Bronx             |             378|          650|          60|
+|Brooklyn          |            9510|        10107|         411|
+|Manhattan         |           13015|         7953|         479|
+|Queens            |            2088|         3370|         195|
+|Staten Island     |             173|          188|           9|
+
+---
+class: bg_ny_fosco
+# Comparando o tipo de aluguel/região
+
+
+```r
+library(janitor)
+acomodacao_regiao &lt;- acomodacao_regiao %&gt;% adorn_percentages()
+acomodacao_regiao
+```
+
+```
+## # A tibble: 5 x 4
+## # Groups:   localizacao_geral [5]
+##   localizacao_geral `Entire home/apt` `Private room` `Shared room`
+##   &lt;chr&gt;                         &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Bronx                         0.347          0.597        0.0551
+## 2 Brooklyn                      0.475          0.505        0.0205
+## 3 Manhattan                     0.607          0.371        0.0223
+## 4 Queens                        0.369          0.596        0.0345
+## 5 Staten Island                 0.468          0.508        0.0243
+```
+
+---
+class: bg_ny_fosco
+# Voltando para o formato longo
+
+
+```r
+### voltando pro formato longer
+acomodacao_regiao &lt;- acomodacao_regiao %&gt;% 
+  pivot_longer(c("Entire home/apt","Private room","Shared room"), 
+               names_to = "tipo_acomodacao", 
+               values_to = "prop")
+head(acomodacao_regiao)
+```
+
+```
+## # A tibble: 6 x 3
+## # Groups:   localizacao_geral [2]
+##   localizacao_geral tipo_acomodacao   prop
+##   &lt;chr&gt;             &lt;chr&gt;            &lt;dbl&gt;
+## 1 Bronx             Entire home/apt 0.347 
+## 2 Bronx             Private room    0.597 
+## 3 Bronx             Shared room     0.0551
+## 4 Brooklyn          Entire home/apt 0.475 
+## 5 Brooklyn          Private room    0.505 
+## 6 Brooklyn          Shared room     0.0205
+```
+
+---
+
+class: bg_ny_fosco
+# Gráfico comparativo
+
+```r
+ggplot(acomodacao_regiao,aes(x=tipo_acomodacao,y=prop,group=localizacao_geral)) +
+  geom_line(aes(color=localizacao_geral),size=1.5) + 
+  theme_minimal()
+```
+
+---
+class: bg_ny_fosco
+# Gráfico comparativo
+![](aula02_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+
+---
+class: bg_ny_fosco
+# Separar somente residência inteira
+
+```r
+airbnb_ny_resid&lt;- airbnb_ny %&gt;%
+  filter(tipo_acomodacao =='Entire home/apt')
+
+### Preço por região
+preco_regiao &lt;- airbnb_ny_resid %&gt;%
+  group_by(localizacao_geral) %&gt;%
+  summarise(media_preco = mean(preco))
+kable(preco_regiao)
+```
+
+
+
+|localizacao_geral | media_preco|
+|:-----------------|-----------:|
+|Bronx             |    125.1984|
+|Brooklyn          |    167.6464|
+|Manhattan         |    222.4810|
+|Queens            |    141.1724|
+|Staten Island     |    134.9538|
+
+---
+class: bg_ny_fosco
+# Gráfico - Preço por região
+
+
+```r
+ggplot(preco_regiao, aes(x=localizacao_geral, y=media_preco)) + geom_col(width=0.5, fill="#d94a11")
+```
+
+![](aula02_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
+
+---
+class: bg_ny_fosco
+# Estatísticas do preço
+
+
+```r
+summary(airbnb_ny_resid$preco)
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    10.0   120.0   160.0   192.9   225.0   999.0
+```
+
+---
+class: bg_ny_fosco
+# Separando em grupos de preço
+
+
+```r
+library(Hmisc)
+airbnb_ny_resid$preco_categoria&lt;- cut2(airbnb_ny_resid$preco,g=3)
+table(airbnb_ny_resid$preco_categoria)
+```
+
+```
+## 
+## [ 10,131) [131,201) [201,999] 
+##      8531      9239      7394
+```
+
+```r
+levels(airbnb_ny_resid$preco_categoria) &lt;- c("Barato", "Médio", "Caro")
+```
+
+---
+class: bg_ny_fosco
+# Como usar o mapa do Google
+
+Você precisa entrar no site do google, fazer o seu cadastro e copiar o seu token:
+
+[https://cloud.google.com/maps-platform/]()
+
+Link da biblioteca:
+
+[https://github.com/dkahle/ggmap]()
+
+Fazer autenticação
+
+
+```r
+register_google(key = "[your key]", write = TRUE)
+```
+
+---
+class: bg_ny_fosco
+# Estatísticas no mapa de NY
+
+
+```r
+library(ggmap)
+# library(ggalt)
+mapa_ny &lt;- qmap("New York", zoom=11, source = "google", maptype="roadmap")
+mapa_ny
+```
+
+![](aula02_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+
+---
+class: bg_ny_fosco
+# Marcar ofertas no mapa
+
+
+```r
+mapa_ny +
+  ### marcar os pontos do conjunto de dados
+  geom_point(aes(x=longitude, y=latitude,colour = preco_categoria),
+             data = airbnb_ny_resid, 
+             alpha = 0.7, 
+             size = 0.2, 
+             )
+```
+
+---
+class: bg_ny_fosco
+# Marcar ofertas no mapa
+
+![](aula02_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
+
+---
+class: bg_ny_fosco
+# Existe relação entre as variáveis?
+
+
+```r
+cor(airbnb_ny_resid[,c("preco","min_diarias","n_avaliacoes","avaliacoes_por_mes","propriedades_host_n","disponibilidade_365")],use="complete.obs")
+```
+
+```
+##                            preco min_diarias n_avaliacoes avaliacoes_por_mes
+## preco                1.000000000 -0.03710185  -0.05787492       -0.006175561
+## min_diarias         -0.037101848  1.00000000  -0.07351755       -0.134441563
+## n_avaliacoes        -0.057874915 -0.07351755   1.00000000        0.536964995
+## avaliacoes_por_mes  -0.006175561 -0.13444156   0.53696500        1.000000000
+## propriedades_host_n  0.083951082  0.06956941  -0.08180502       -0.011896173
+## disponibilidade_365  0.172541281  0.13348669   0.23041255        0.229208900
+##                     propriedades_host_n disponibilidade_365
+## preco                        0.08395108           0.1725413
+## min_diarias                  0.06956941           0.1334867
+## n_avaliacoes                -0.08180502           0.2304125
+## avaliacoes_por_mes          -0.01189617           0.2292089
+## propriedades_host_n          1.00000000           0.2284722
+## disponibilidade_365          0.22847220           1.0000000
+```
+
+---
+class: bg_ny_fosco
+# Existe relação entre as variáveis?
+
+
+```r
+plot(airbnb_ny_resid$disponibilidade_365,
+     airbnb_ny_resid$preco)
+```
+
+![](aula02_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
+
+---
+class: bg_rumoaopro
+
+# Resultados
+
+- Identificar cada etapa de um projeto de Ciência de Dados
+
+--
+
+- Como as maiores empresas do mundo usam Ciência de Dados
+
+--
+
+- Conhecimento sobre limpeza de dados
+
+--
+
+- Como fazer uma exploração de dados
+
+--
+
+- Conhecimento em Machine Learning
+
+--
+
+- Visualização de Dados
+
+--
+
+- Carreira do Cientista de Dados
+
+---
+class: bg_form
+
+# Formulário
+
+---
+class: bg_carreira, my-one-page-white
+# Aula 4 
+
+## O plano para a sua carreira
+
+---
+class: bg_senha,my-one-page-white
+# Senha do material complementar
+
+## explorador
+
+
+---
+class: bg_ml
+# Fim do Módulo 2
+
+### Te vejo amanhã às 20h
+## Módulo 3
+
+![](imagens/aula3.png)
+#### Marque na sua agenda e ative o lembrete do Youtube
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
