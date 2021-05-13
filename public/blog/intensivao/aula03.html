@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>INTENSIVÃO CIÊNCIA DE DADOS - AULA 03</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Luís Otávio" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script language=javascript>
+    senha = 'rumoaopro';
+    senhadig = prompt("Digite a senha","")
+    if (senha != senhadig){
+    alert('Senha incorreta. A senha foi disponibilizada durante a aula');
+    top.location.href='https://youtu.be/kLMKc5eqyQg';
+    }
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# INTENSIVÃO CIÊNCIA DE DADOS - AULA 03
+## ⚔<br/>Curso completo para iniciantes em Ciência de Dados
+### Luís Otávio
+### 2021/05/12
+
+---
+
+class: center, inverse, bg_mapa
+
+# Ciência de Dados: do ZERO ao PRO
+
+&lt;style&gt;
+.remark-slide-content {
+  font-size: 25px;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+
+.bg_caminhada {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_caminhada::before {    
+      content: "";
+      background-image: url('imagens/caminhada.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+
+.bg_ml2 {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ml2::before {    
+      content: "";
+      background-image: url('imagens/ml2.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+}
+
+.bg_holdout {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_holdout::before {    
+      content: "";
+      background-image: url('imagens/holdout.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_validacao {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_validacao::before {    
+      content: "";
+      background-image: url('imagens/validacao.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+
+.bg_airbnb {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_airbnb::before {    
+      content: "";
+      background-image: url('https://images.contentstack.io/v3/assets/bltb428ce5d46f8efd8/blt658bec41bb26fbcc/5e72666ea833ab066c0f103e/BeloRauschBG.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_ajustes {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ajustes::before {    
+      content: "";
+      background-image: url('imagens/ajustes.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_mapa {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_mapa::before {    
+      content: "";
+      background-image: url('imagens/mapa.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_ml {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ml::before {    
+      content: "";
+      background-image: url('imagens/machine_learning.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_rumoaopro {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_rumoaopro::before {    
+      content: "";
+      background-image: url('imagens/rumoaopro_.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_ny {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ny::before {    
+      content: "";
+      background-image: url('imagens/ny.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_ny_fosco {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ny_fosco::before {    
+      content: "";
+      background-image: url('imagens/ny.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_form {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_form::before {    
+      content: "";
+      background-image: url('imagens/formulario.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+.bg_armadilha {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_armadilha::before {    
+      content: "";
+      background-image: url('imagens/armadilha.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_fracasso {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_fracasso::before {    
+      content: "";
+      background-image: url('imagens/fracasso.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+}
+
+.bg_aprender {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_aprender::before {    
+      content: "";
+      background-image: url('imagens/aprender.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+      z-index: -1;
+}
+
+.bg_presente {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_presente::before {    
+      content: "";
+      background-image: url('imagens/presente.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_jornada {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_jornada::before {    
+      content: "";
+      background-image: url('imagens/jornada.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_comprometimento {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_comprometimento::before {    
+      content: "";
+      background-image: url('imagens/comprometimento.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+      z-index: -1;
+}
+
+.bg_ciclo {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_ciclo::before {    
+      content: "";
+      background-image: url('imagens/ciclo.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_senha {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_senha::before {    
+      content: "";
+      background-image: url('imagens/senha.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+.bg_carreira {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_carreira::before {    
+      content: "";
+      background-image: url('imagens/carreira.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      z-index: -1;
+}
+
+
+.my-one-page-font h1 {
+  font-size: 35px;
+  color: white
+}
+
+.my-one-page-white h2{
+  font-size: 40px;
+  color: white
+}
+
+.my-one-page-small-font {
+  font-size: 15px;
+  color: white;
+}
+
+.my-one-page-giga {
+  font-size: 50px;
+}
+
+.remark-slide-number {
+  font-size: 0pt;
+  margin-bottom: -110.6px;
+  margin-right: 10000px;
+  color: #FFFFFF; /* white */
+  opacity: 0; /* default: 0.5 */
+}
+
+.my-one-page-letra-menor {
+  font-size: 20px;
+}
+
+&lt;/style&gt;
+
+
+
+
+---
+background-image: url('imagens/ciencia_de_dados_empresas.jpeg')
+
+---
+class: my-one-page-letra-menor
+
+# Os possíveis resultados do Intensivão
+
+--
+.pull-left[
+- Conhecer práticas das melhores empresas do mercado
+]
+--
+.pull-right[
+- Ter ideias de como solucionar problemas usando dados
+]
+--
+.pull-left[
+- Conhecer novas formas de captação de dados
+]
+--
+.pull-right[
+- Saber exatamente como preparar os dados antes de aplicar seu modelo de Machine Learning
+]
+--
+.pull-left[
+- Qual técnica de Machine Lerning usar
+]
+--
+.pull-right[
+- Conhecer todas as etapas de um projeto de Ciência de Dados
+]
+--
+.pull-left[
+- Descobrir exatamente o que fazer para limpar um conjunto de dados]
+--
+.pull-right[
+- Passos para executar uma exploração de dados completa] 
+--
+.pull-left[
+- Importância de uma cultura orientada a dados
+]
+--
+.pull-right[
+- As ferramentas e melhores formas para visualizar dados
+]
+--
+
+- Como comunicar os resultados do seu projeto
+
+---
+class: center, inverse
+background-image: url('imagens/rumoaopro_.jpg')
+
+---
+class: bg_presente
+# Meu presente para você
+
+--
+
+🔑🔑🔑🔑🔑
+Senha no final da aula
+
+---
+class: center, inverse
+background-image: url('imagens/inimigo.jpg')
+# Conteúdo prático
+
+--
+
+Ciência de Dados é resolver o problema das empresas usando dados.
+
+---
+class: center,bg_ml
+# Machine Learning
+
+---
+class: center, inverse
+background-image: url('imagens/escada.jpeg')
+
+---
+class: center, inverse
+background-image: url('imagens/escada_seta.jpg')
+
+
+---
+class: center, inverse
+background-image: url('imagens/escada_gratuito.jpg')
+
+---
+background-image: url('imagens/ciencia_de_dados_empresas.jpeg')
+# Machine Learning - Cases
+
+---
+class: bg_ml2
+# Machine Learning - Outras aplicações
+
+1 - Filtro do nosso e-mail (Spam ou Não)
+
+--
+
+2 - Recomendação de produtos
+
+--
+
+3 - Marketing Personalizado (Google e Facebook)
+
+--
+
+4 - Preços dinâmicos
+
+--
+
+5 - Google Tradutor
+
+--
+
+6 - Assistente de voz
+
+--
+
+7 - Reconhecimento de Imagens
+
+--
+
+8 - Detecção de fraude
+
+--
+
+9 - Segmentação de Clientes
+
+---
+class: bg_ml2
+#O que é Machine Learning?
+
+Conceito antigo:
+
+Campo de estudo que dá ao computador a habilidade de aprender sem ser explicitamente programado.
+
+---
+class: bg_ml2
+#O que é Machine Learning?
+
+### Conceito atual (Tom Mitchell):
+
+O algoritmo irá aprender a partir de uma experiência "E", usando uma série de tarefas "T" e medida de performance "P",
+se a sua performance na tarefa T, medida P, melhora ao longo da experiência E.
+
+E = A experiência de jogar damas milhares de vezes
+
+T = o movimento (decisão) realizado pelo algoritmo no jogo de damas
+
+P = a probabilidade do algoritmo ganhar o jogo
+
+---
+class: bg_ml2,my-one-page-font
+#Tipos de Algoritmos de Machine Learning
+
+--
+
+APRENDIZADO SUPERVISIONADO -&gt; REGRESSÃO E CLASSIFICAÇÃO
+
+--
+
+APRENDIZADO NÃO SUPERVISIONADO -&gt; AGRUPAMENTO (CLUSTERING)
+
+--
+
+APRENDIZADO POR REFORÇO
+
+---
+class: bg_ml2
+#Passo a passo
+
+### 1 - OBJETIVO (PERGUNTA) - PROBLEMA QUE QUEREMOS RESOLVER
+
+A PERGUNTA IRÁ GUIAR A BUSCA DOS DADOS
+
+---
+class: bg_ml2
+#Passo a passo
+
+### 2 - DADOS 
+
+Você pode ajustar o melhor algoritmo possível aos seus dados, se os dados forem ruins para a sua pergunta, o resultado será ruim.
+
+Por melhor que seja o seu modelo
+
+Garbage in, garbage out.
+
+---
+class: bg_ml2
+#Passo a passo
+
+### 3 - VARIÁVEIS
+
+Façam sentido para o problema em questão
+
+Conter informações relevantes
+
+--
+
+Correlação espúria
+
+--
+
+Erros:
+
+1 - Automatizar a seleção das variáveis (usar com cuidado)
+
+2 - Deletar informações sem bons motivos
+
+3 - Não estar atento as peculiaridades do seu caso
+
+---
+class: bg_ml2
+#Passo a passo
+
+### 4 - Algoritmos
+
+O que devo buscar em um algoritmo de ML?
+
+- Acurácia
+
+vs
+
+- Interpretável (árvore de decisão)
+- Simples
+- Rápido
+- Escalável
+
+---
+class: bg_ajustes
+#Passo a passo
+
+### Underfitting e Overfitting
+
+--
+
+- Como corrigir o Overfitting?
+
+  - Simplificar o modelo
+  
+--
+
+  - Aumentar a quantidade de dados
+  
+--
+
+  - Regularização
+
+---
+class: bg_holdout
+# Técnica Holdout
+
+--
+
+Técnicas de validação do modelo para saber como o modelo irá generalizar na prática
+
+--
+
+Dados de treinamento: usado para treinar o modelo
+
+Dados de teste: usados para comprovar que o modelo realmente funciona. São dados que ainda não foram usados.
+
+---
+class: bg_validacao
+# Validação Cruzada
+
+---
+class: bg_ml2
+# 5 - Avaliação
+### Problemas de Regressão:
+
+- MSE (média dos erros ao quadrado)
+
+- MAE (média dos erros absolutos)
+
+--
+
+### Problemas de Classificação:
+
+- Acurácia (acertos/total)
+
+(usar em conjunto de dados com classes de mesmo tamanho)
+
+- F1 Score
+
+(utilizada quando se tem classes desbalanceadas)
+
+
+---
+class: bg_form
+
+# Respostas
+
+---
+class: bg_caminhada
+# Aula 4 
+
+## O plano para a sua carreira
+
+---
+class: bg_senha,my-one-page-white
+# Senha do material complementar
+
+## rumoaopro
+
+---
+class: bg_ml
+# Fim do Módulo 3
+
+### Te vejo amanhã às 20h
+## Módulo 4
+
+![](imagens/aula4.png)
+#### Marque na sua agenda e ative o lembrete do Youtube
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
